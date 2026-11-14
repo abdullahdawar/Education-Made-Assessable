@@ -1,0 +1,163 @@
+:root {
+  font-family: Inter, Arial, sans-serif;
+  color: #24334a;
+  background: #f5f8ff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 7%;
+  background: white;
+  border-bottom: 1px solid #e7eaf3;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 800;
+  color: #273d8b;
+}
+
+.header-label {
+  color: #72809a;
+  font-size: 14px;
+}
+
+.hero {
+  padding: 75px 7%;
+  text-align: center;
+  background: linear-gradient(135deg, #e6edff, #fceafa);
+}
+
+.eyebrow {
+  color: #5369c9;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 5vw, 48px);
+  max-width: 780px;
+  margin: 18px auto;
+}
+
+.hero p:last-child {
+  max-width: 580px;
+  margin: auto;
+  line-height: 1.7;
+  color: #66738b;
+}
+
+.content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 45px 25px;
+}
+
+.content h2 {
+  margin-bottom: 24px;
+}
+
+.grade-grid,
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.grade-card,
+.subject-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 30px;
+  border-radius: 18px;
+  background: white;
+  border: 2px solid transparent;
+  box-shadow: 0 8px 24px #26345a0d;
+}
+
+.grade-card {
+  cursor: pointer;
+  text-align: left;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.grade-card:hover {
+  transform: translateY(-5px);
+}
+
+.grade-card.active {
+  border-color: #5369c9;
+  background: #f0f3ff;
+}
+
+.grade-icon {
+  font-size: 35px;
+}
+
+.grade-card strong,
+.subject-card strong {
+  font-size: 20px;
+}
+
+.grade-card small,
+.subject-card small {
+  color: #7d89a0;
+}
+
+.subjects {
+  margin-top: 55px;
+}
+
+.subject-card span {
+  font-size: 30px;
+}
+
+@media (max-width: 700px) {
+  .header {
+    padding: 18px;
+  }
+
+  .header-label {
+    display: none;
+  }
+
+  .grade-grid,
+  .subject-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grade-card,
+  .subject-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .grade-grid,
+  .subject-grid {
+    grid-template-columns: 1fr;
+  }
+}
