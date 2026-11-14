@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 const grades = [1, 2, 3, 4, 5, 6]
@@ -14,6 +14,27 @@ const subjects = [
 
 function App() {
   const [selectedGrade, setSelectedGrade] = useState<number | null>(null)
+  const [apiStatus, setApiStatus] = useState('Checking connection...')
+
+  useEffect(() => {
+    const controller = new AbortController()
+
+    fetch('/api/health', { signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) throw new Error('API unavailable')
+        return response.json()
+      })
+      .then((data) => {
+        setApiStatus(data.status === 'ok' ? 'API Connected' : 'API Unavailable')
+      })
+      .catch((error) => {
+        if (error.name !== 'AbortError') {
+          setApiStatus('API Offline')
+        }
+      })
+
+    return () => controller.abort()
+  }, [])
 
   const availableSubjects =
     selectedGrade === null
@@ -26,7 +47,7 @@ function App() {
     <main className="app">
       <header className="header">
         <div className="brand">📚 Education Made Assessable</div>
-        <span className="header-label">Learning Platform</span>
+        <span className="header-label">{apiStatus}</span>
       </header>
 
       <section className="hero">
