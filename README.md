@@ -92,8 +92,7 @@ and `file_url`. The import uses the description field as a language tag
 (`en` or `ps`) because the table has no language column. Answer keys use
 the `other` type and private references. The API exposes only worksheets
 and tests, and the frontend build includes only the four student PDFs.
-The source repository contains the review keys and should retain its
-existing access controls.
+Store answer-key review copies outside the public checkout.
 
 The approved counting import is in
 [curriculum/tools/import-counting-chapter.py](curriculum/tools/import-counting-chapter.py).

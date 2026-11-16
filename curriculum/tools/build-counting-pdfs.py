@@ -77,15 +77,13 @@ def packet(pashto):
 
     worksheets = table_rows(sections[3])
     tests = table_rows(sections[4])
-    answers = table_rows(sections[5])
-    assert (len(worksheets), len(tests), len(answers)) == (7, 3, 10)
+    assert (len(worksheets), len(tests)) == (7, 3)
     language = int(pashto)
     practice = []
     groups = [
         (worksheets, label("Worksheet", "تمرینپاڼه"), label("Say or write your answers before looking at the key.", "ځوابونه لومړی ووایئ یا یې ولیکئ، بیا ځوابپاڼه وګورئ.")),
         (tests, label("Chapter test", "د څپرکي ازموینه"), label("Three marks. Work on your own before looking at the key.", "درې نمرې. لومړی په خپله پوښتنې حل کړئ، بیا ځوابپاڼه وګورئ.")),
     ]
-    keys = []
     offset = 0
     for items, heading, instructions in groups:
         is_test = items is tests
@@ -100,12 +98,8 @@ def packet(pashto):
                 + box(label("Your task", "ستاسو دنده"), row[language], "" if is_test else "mint")
                 + f'<h2>{label("Show your work here", "خپل کار دلته وښيئ")}</h2><div class="answer"></div>',
                 context, offset + number, "test" if is_test else "worksheet"))
-        entries = ''.join(f'<div class="key"><strong>{numeral(i)}</strong><p>{inline(row[language])}</p></div>'
-                          for i, row in enumerate(answers[offset:offset + len(items)], 1))
-        marking = label("Give one mark per answer. Accept equivalent counting methods and explanations.", "د هر سم ځواب لپاره یوه نمره ورکړئ. د شمېرلو نورې سمې لارې او سم لاملونه ومنئ.") if is_test else ""
-        keys.append(page(f'<h1>{label("Answer key", "ځوابپاڼه")}</h1><h2>{heading}</h2><p>{marking}</p>{entries}', context, len(keys) + 1))
         offset += len(items)
-    return {"notes": notes, "worksheets-and-tests": practice, "answer-keys": keys}
+    return {"notes": notes, "worksheets-and-tests": practice}
 
 
 def main():

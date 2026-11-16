@@ -55,8 +55,5 @@ Use a desktop browser and a phone or its responsive viewport at 375 px.
    seven worksheet and three test links per language, all four student
    PDFs, and the absence of answer keys from API responses and static files.
 
-The two review key PDFs are tracked in the feature branch. GitHub access is
-separate from student application access. In the current public repository,
-anonymous users can fetch the keys. The repository containing the review PDFs
-must have restricted access before this branch can meet a requirement to keep
-answers private. Pashto remains pending fluent-language review before public release.
+Keep review copies of answer keys in private storage outside the checkout.
+Pashto remains pending fluent-language review before public release.

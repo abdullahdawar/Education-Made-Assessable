@@ -35,3 +35,6 @@ Pashto review or rendering issues. Keep review assets local until approved.
 The counting sample generator is `curriculum/tools/build-counting-pdfs.py`.
 It uses Python 3 and local Chrome, with no application dependencies. Run it
 from the repository root. Outputs under `output/pdf/` are for review.
+
+The public generator writes the four student PDFs. Store answer keys in
+private storage outside the checkout.
