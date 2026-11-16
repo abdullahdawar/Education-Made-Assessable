@@ -28,6 +28,7 @@ type chapterTranslation struct {
 	LanguageCode string  `json:"languageCode"`
 	Title        string  `json:"title"`
 	Content      *string `json:"content"`
+	PDFURL       *string `json:"pdfUrl,omitempty"`
 }
 
 func scanItem(rows *sql.Rows, item *curriculumItem) error {
@@ -48,9 +49,9 @@ func registerCurriculum(mux *http.ServeMux, db *sql.DB) {
 		return rows.Scan(&item.ID, &item.Name, &item.GradeID, &item.Number)
 	}))
 	mux.HandleFunc("GET /api/chapters/{chapterID}/content", curriculumList(db, "chapterID", `
-		SELECT language_code, title, content FROM chapter_content
+		SELECT language_code, title, content, pdf_url FROM chapter_content
 		WHERE chapter_id = ? ORDER BY language_code`, func(rows *sql.Rows, item *chapterTranslation) error {
-		return rows.Scan(&item.LanguageCode, &item.Title, &item.Content)
+		return rows.Scan(&item.LanguageCode, &item.Title, &item.Content, &item.PDFURL)
 	}))
 }
 

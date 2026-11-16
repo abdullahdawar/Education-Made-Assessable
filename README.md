@@ -66,10 +66,34 @@ appears under its language code.
 | `/api/grades` | Array of grades with `id` and `name` |
 | `/api/grades/{gradeID}/subjects` | Array of subjects with `id` and `name` |
 | `/api/subjects/{subjectID}/chapters` | Array of chapters across grades with `id`, `name`, `gradeId`, and `chapterNumber` |
-| `/api/chapters/{chapterID}/content` | Array of translations with `languageCode`, `title`, and nullable `content` |
+| `/api/chapters/{chapterID}/content` | Array of translations with `languageCode`, `title`, and nullable `content` and optional `pdfUrl` |
 
 Empty results return `[]`. Invalid IDs return HTTP 400.
 
 Chapter content returns one entry per stored language. A chapter can have
 entries for English (`en`) and Pashto (`ps`), and the response preserves the database language
 codes.
+
+
+### Student learning flow
+
+React requests grades, subjects, chapters, and translations as the student
+navigates. The subject chapter route returns chapters across grades, so the
+student view filters by the selected grade. The lesson displays English or
+right-to-left Pashto and uses the selected translation's PDF link when present.
+Video, worksheet, and test slots display an unavailable state until resource
+data is supplied. The existing API account reads five tables and resource
+slots require no additional database access.
+
+Run the frontend checks from `frontend` with `npm test`, `npm run lint`,
+and `npm run build`. The frontend tests use Node's built-in test runner
+with TypeScript stripping (Node 24).
+
+The [Grade 1 Mathematics draft](curriculum/grade-1-mathematics-counting.md)
+is ready for content review before a database insert is prepared.
+
+### Milestone 3 design
+
+The [visual design requirements](curriculum/milestone-3-visual-design.md)
+cover reusable website and print design, bilingual A4 learning materials,
+accessibility, and review before publication.

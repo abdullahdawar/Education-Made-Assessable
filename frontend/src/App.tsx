@@ -1,131 +1,150 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
+import {
+  chaptersForGrade, resourceLink, translationForLanguage,
+  type Chapter, type CurriculumItem, type Language, type Translation,
+} from './curriculum'
+import { useCurriculum } from './useCurriculum'
+import './design.css'
 import './App.css'
 
-interface CurriculumItem {
-  id: number
-  name: string
+function CurriculumResults<T>({ path, label, children }: {
+  path: string
+  label: string
+  children: (items: T[]) => ReactNode
+}) {
+  const { result, retry } = useCurriculum<T>(path)
+  if (result.status === 'loading') return <p className="notice" role="status">Loading {label}…</p>
+  if (result.status === 'error') {
+    return <div className="notice" role="alert">
+      <p>We couldn’t load {label}.</p>
+      <button className="control" onClick={retry}>Try again</button>
+    </div>
+  }
+  return children(result.items)
 }
 
-async function fetchItems(path: string, signal: AbortSignal): Promise<CurriculumItem[]> {
-  const response = await fetch(path, { signal })
-  if (!response.ok) throw new Error('Curriculum unavailable')
-  return response.json()
+function Choices<T extends CurriculumItem>({ items, empty, select, subtitle, icon }: {
+  items: T[]
+  empty: string
+  select: (item: T) => void
+  subtitle?: (item: T) => string
+  icon: string
+}) {
+  if (!items.length) return <p className="notice">{empty}</p>
+  return <ul className="choices">
+    {items.map((item) => <li key={item.id}>
+      <button className="choice" onClick={() => select(item)}>
+        <span className="choice-icon" aria-hidden="true">{icon}</span>
+        <span className="choice-title">
+          {subtitle && <small>{subtitle(item)}</small>}
+          <strong>{item.name}</strong>
+        </span>
+        <span aria-hidden="true">→</span>
+      </button>
+    </li>)}
+  </ul>
+}
+
+function Resource({ title, tone, icon, children }: {
+  title: string; tone: string; icon: string; children: ReactNode
+}) {
+  return <section className={`panel resource resource-${tone}`}>
+    <h2><span aria-hidden="true">{icon}</span> {title}</h2>
+    {children}
+  </section>
+}
+
+function Practice({ label, count }: { label: string; count: number }) {
+  return <ol className="practice">
+    {Array.from({ length: count }, (_, index) => <li key={index}>
+      <span>{label} {index + 1}</span>
+      <small>Unavailable</small>
+    </li>)}
+  </ol>
+}
+
+function Lesson({ chapter }: { chapter: Chapter }) {
+  const [language, setLanguage] = useState<Language>('en')
+  return <>
+    <div className="language" role="group" aria-label="Lesson language">
+      <button className="control" aria-pressed={language === 'en'} onClick={() => setLanguage('en')}>English</button>
+      <button className="control" lang="ps" aria-pressed={language === 'ps'} onClick={() => setLanguage('ps')}>پښتو</button>
+    </div>
+    <CurriculumResults<Translation> path={`/api/chapters/${chapter.id}/content`} label="lesson content">
+      {(items) => {
+        const lesson = translationForLanguage(items, language)
+        const pdf = resourceLink(lesson?.pdfUrl)
+        return <div className="lesson-grid">
+          <article className="panel" lang={language} dir={language === 'ps' ? 'rtl' : 'ltr'}>
+            <h2>{lesson?.title ?? (language === 'ps' ? 'لوست' : 'Lesson')}</h2>
+            <div className="lesson-text">{lesson?.content?.trim() || (language === 'ps'
+              ? 'د دې څپرکي پښتو لوست لا نشته.'
+              : 'The English lesson for this chapter is not available yet.')}</div>
+          </article>
+          <aside className="resources" aria-label="Chapter resources">
+            <Resource title="PDF notes" tone="notes" icon="▤">
+              {pdf ? <a href={pdf}>Open {language === 'ps' ? 'Pashto' : 'English'} notes (PDF)</a> : <p>No PDF notes for this language yet.</p>}
+            </Resource>
+            <Resource title="Educational videos" tone="videos" icon="▶">
+              <p>No videos available yet.</p>
+            </Resource>
+            <Resource title="Worksheets" tone="worksheets" icon="✎"><Practice label="Worksheet" count={7} /></Resource>
+            <Resource title="Chapter tests" tone="tests" icon="✓"><Practice label="Test" count={3} /></Resource>
+          </aside>
+        </div>
+      }}
+    </CurriculumResults>
+  </>
 }
 
 function App() {
-  const [selectedGrade, setSelectedGrade] = useState<number | null>(null)
-  const [grades, setGrades] = useState<CurriculumItem[] | null>(null)
-  const [gradeError, setGradeError] = useState(false)
-  const [subjectResult, setSubjectResult] = useState<{ gradeId: number; items: CurriculumItem[] | null } | null>(null)
-  const [apiStatus, setApiStatus] = useState('Checking connection...')
+  const [grade, setGrade] = useState<CurriculumItem>()
+  const [subject, setSubject] = useState<CurriculumItem>()
+  const [chapter, setChapter] = useState<Chapter>()
 
+  const heading = useRef<HTMLHeadingElement>(null)
+  const previousPage = useRef('')
+  const page = [grade?.id, subject?.id, chapter?.id].join('/')
   useEffect(() => {
-    const controller = new AbortController()
+    if (previousPage.current && previousPage.current !== page) heading.current?.focus()
+    previousPage.current = page
+  }, [page])
 
-    fetch('/api/health', { signal: controller.signal })
-      .then((response) => {
-        if (!response.ok) throw new Error('API unavailable')
-        return response.json()
-      })
-      .then((data) => {
-        setApiStatus(data.status === 'ok' ? 'API Connected' : 'API Unavailable')
-      })
-      .catch((error) => {
-        if (error.name !== 'AbortError') {
-          setApiStatus('API Offline')
-        }
-      })
+  function showGrades() {
+    setGrade(undefined)
+    setSubject(undefined)
+    setChapter(undefined)
+  }
 
-    return () => controller.abort()
-  }, [])
-
-  useEffect(() => {
-    const controller = new AbortController()
-    fetchItems('/api/grades', controller.signal)
-      .then(setGrades)
-      .catch(() => {
-        if (!controller.signal.aborted) setGradeError(true)
-      })
-    return () => controller.abort()
-  }, [])
-
-  useEffect(() => {
-    if (selectedGrade === null) return
-    const controller = new AbortController()
-    fetchItems(`/api/grades/${selectedGrade}/subjects`, controller.signal)
-      .then((items) => {
-        if (!controller.signal.aborted) setSubjectResult({ gradeId: selectedGrade, items })
-      })
-      .catch(() => {
-        if (!controller.signal.aborted) setSubjectResult({ gradeId: selectedGrade, items: null })
-      })
-    return () => controller.abort()
-  }, [selectedGrade])
-
-  const gradeName = grades?.find((grade) => grade.id === selectedGrade)?.name
-  const currentSubjects = subjectResult?.gradeId === selectedGrade ? subjectResult : null
-
-  return (
-    <main className="app">
-      <header className="header">
-        <div className="brand">📚 Education Made Assessable</div>
-        <span className="header-label">{apiStatus}</span>
-      </header>
-
-      <section className="hero">
-        <p className="eyebrow">WELCOME TO YOUR LEARNING SPACE</p>
-        <h1>Learning made simple. Progress made visible.</h1>
-        <p>
-          Explore lessons, practice worksheets, and assessments
-          designed for students in Grades 1–6.
-        </p>
-      </section>
-
-      <section className="content">
-        <h2>Choose your grade</h2>
-        {gradeError && <p role="alert">Grades are temporarily unavailable.</p>}
-        {!gradeError && grades === null && <p role="status">Loading grades…</p>}
-        {grades?.length === 0 && <p>No grades are available yet.</p>}
-        <div className="grade-grid">
-          {grades?.map((grade) => (
-            <button
-              key={grade.id}
-              className={`grade-card ${selectedGrade === grade.id ? 'active' : ''}`}
-              onClick={() => {
-                if (selectedGrade !== grade.id) {
-                  setSubjectResult(null)
-                  setSelectedGrade(grade.id)
-                }
-              }}
-              aria-pressed={selectedGrade === grade.id}
-            >
-              <span className="grade-icon">🎒</span>
-              <strong>{grade.name}</strong>
-              <small>Explore subjects</small>
-            </button>
-          ))}
-        </div>
-
-        {selectedGrade !== null && (
-          <section className="subjects">
-            <h2>{gradeName} Subjects</h2>
-            {currentSubjects === null && <p role="status">Loading subjects…</p>}
-            {currentSubjects?.items === null && <p role="alert">Subjects are temporarily unavailable.</p>}
-            {currentSubjects?.items?.length === 0 && <p>No subjects are available for this grade.</p>}
-            <div className="subject-grid">
-              {currentSubjects?.items?.map((subject) => (
-                <div className="subject-card" key={subject.id}>
-                  <span>📖</span>
-                  <strong>{subject.name}</strong>
-                  <small>Lessons coming soon</small>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-      </section>
+  return <div className="app">
+    <header className="header"><span className="brand"><span aria-hidden="true">✦</span> Education Made Assessable</span></header>
+    <main className="content">
+      {grade && <nav className="breadcrumbs" aria-label="Learning path">
+        <button className="control" onClick={showGrades}>All grades</button>
+        {subject
+          ? <button className="control" onClick={() => { setSubject(undefined); setChapter(undefined) }}>{grade.name}</button>
+          : <span aria-current="page">{grade.name}</span>}
+        {subject && (chapter
+          ? <button className="control" onClick={() => setChapter(undefined)}>{subject.name}</button>
+          : <span aria-current="page">{subject.name}</span>)}
+        {chapter && <span aria-current="page">Chapter {chapter.chapterNumber}</span>}
+      </nav>}
+      <div className={grade ? "intro" : "intro intro-home"}>
+        <h1 ref={heading} tabIndex={-1}>{chapter?.name ?? (subject ? `${subject.name} chapters` : grade ? `${grade.name} subjects` : 'Choose your grade')}</h1>
+        {!grade && <>
+          <p>Find your lessons, notes, and practice activities.</p>
+          <div className="hero-art" aria-hidden="true"><span>★</span><span>✎</span><span>✦</span></div>
+        </>}
+      </div>
+      {!grade ? <CurriculumResults<CurriculumItem> path="/api/grades" label="grades">
+        {(items) => <Choices items={items} select={setGrade} icon="★" empty="No grades are available yet." />}
+      </CurriculumResults> : !subject ? <CurriculumResults<CurriculumItem> key={grade.id} path={`/api/grades/${grade.id}/subjects`} label="subjects">
+        {(items) => <Choices items={items} select={setSubject} icon="✦" empty="No subjects are available for this grade yet." />}
+      </CurriculumResults> : !chapter ? <CurriculumResults<Chapter> key={`${grade.id}/${subject.id}`} path={`/api/subjects/${subject.id}/chapters`} label="chapters">
+        {(items) => <Choices items={chaptersForGrade(items, grade.id)} select={setChapter} icon="▤" subtitle={(item) => `Chapter ${item.chapterNumber}`} empty="No chapters are available for this grade and subject yet." />}
+      </CurriculumResults> : <Lesson key={chapter.id} chapter={chapter} />}
     </main>
-  )
+  </div>
 }
 
 export default App
