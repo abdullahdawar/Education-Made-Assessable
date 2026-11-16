@@ -1,9 +1,11 @@
 package main
 
 import (
+	"database/sql"
 	"encoding/json"
 	"log"
 	"net/http"
+	"time"
 )
 
 type HealthResponse struct {
@@ -12,7 +14,25 @@ type HealthResponse struct {
 }
 
 func main() {
+	db, err := openDatabase()
+	if err != nil {
+		log.Fatal(err)
+	}
+	if db != nil {
+		defer db.Close()
+	}
+
+	log.Println("Education Made Assessable API running at http://localhost:8080")
+
+	server := &http.Server{Addr: ":8080", Handler: newMux(db), ReadHeaderTimeout: 5 * time.Second, WriteTimeout: 10 * time.Second, IdleTimeout: 60 * time.Second}
+	if err := server.ListenAndServe(); err != nil {
+		log.Fatal(err)
+	}
+}
+
+func newMux(db *sql.DB) *http.ServeMux {
 	mux := http.NewServeMux()
+	registerCurriculum(mux, db)
 
 	mux.HandleFunc("GET /api/health", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
@@ -27,9 +47,5 @@ func main() {
 		}
 	})
 
-	log.Println("Education Made Assessable API running at http://localhost:8080")
-
-	if err := http.ListenAndServe(":8080", mux); err != nil {
-		log.Fatal(err)
-	}
+	return mux
 }
