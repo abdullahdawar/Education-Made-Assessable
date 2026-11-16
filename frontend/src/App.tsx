@@ -3,6 +3,8 @@ import {
   chaptersForGrade, translationForLanguage,
   type Chapter, type CurriculumItem, type Language, type PracticeResource, type Translation,
 } from './curriculum'
+import { AdventureHero, ChapterJourney, ChoiceGrid, CountingIllustration } from './LearningWorld'
+import { gradeTheme } from './gradeTheme'
 import { chapterPdf } from './chapterPdfs'
 import { useCurriculum } from './useCurriculum'
 import './design.css'
@@ -22,28 +24,6 @@ function CurriculumResults<T>({ path, label, children }: {
     </div>
   }
   return children(result.items)
-}
-
-function Choices<T extends CurriculumItem>({ items, empty, select, subtitle, icon }: {
-  items: T[]
-  empty: string
-  select: (item: T) => void
-  subtitle?: (item: T) => string
-  icon: string
-}) {
-  if (!items.length) return <p className="notice">{empty}</p>
-  return <ul className="choices">
-    {items.map((item) => <li key={item.id}>
-      <button className="choice" onClick={() => select(item)}>
-        <span className="choice-icon" aria-hidden="true">{icon}</span>
-        <span className="choice-title">
-          {subtitle && <small>{subtitle(item)}</small>}
-          <strong>{item.name}</strong>
-        </span>
-        <span aria-hidden="true">→</span>
-      </button>
-    </li>)}
-  </ul>
 }
 
 function Resource({ title, tone, icon, children }: {
@@ -74,7 +54,7 @@ function Practice({ label, count, kind, language, items }: {
   </ol>
 }
 
-function Lesson({ chapter }: { chapter: Chapter }) {
+function Lesson({ chapter, counting }: { chapter: Chapter; counting: boolean }) {
   const [language, setLanguage] = useState<Language>('en')
   return <>
     <div className="language" role="group" aria-label="Lesson language">
@@ -86,12 +66,13 @@ function Lesson({ chapter }: { chapter: Chapter }) {
         const lesson = translationForLanguage(items, language)
         const pdf = chapterPdf(lesson?.pdfUrl)
         return <div className="lesson-grid">
-          <article className="panel" lang={language} dir={language === 'ps' ? 'rtl' : 'ltr'}>
+          <article className="panel reading-panel" lang={language} dir={language === 'ps' ? 'rtl' : 'ltr'}>
             <h2>{lesson?.title ?? (language === 'ps' ? 'لوست' : 'Lesson')}</h2>
             {language === 'ps' && lesson && <p>د پښتو متن د ژبنۍ کتنې لپاره چمتو شوی دی.</p>}
             <div className="lesson-text">{lesson?.content?.trim() || (language === 'ps'
               ? 'د دې څپرکي پښتو لوست لا نشته.'
               : 'The English lesson for this chapter is not available yet.')}</div>
+            {counting && lesson && <CountingIllustration language={language} />}
           </article>
           <aside className="resources" aria-label="Chapter resources">
             <Resource title="PDF notes" tone="notes" icon="▤">
@@ -99,6 +80,9 @@ function Lesson({ chapter }: { chapter: Chapter }) {
             </Resource>
             <Resource title="Educational videos" tone="videos" icon="▶">
               <p>No videos available yet.</p>
+            </Resource>
+            <Resource title="Mini-games" tone="games" icon="◇">
+              <p>No games available yet.</p>
             </Resource>
             <CurriculumResults<PracticeResource> path={`/api/chapters/${chapter.id}/practice`} label="worksheets and tests">
               {(resources) => <>
@@ -137,7 +121,10 @@ function App() {
   }
 
   return <div className="app">
-    <header className="header"><span className="brand"><span aria-hidden="true">✦</span> Education Made Assessable</span></header>
+    <header className="header"><div className="masthead">
+      <button className="brand" onClick={showGrades}><span className="brand-mark" aria-hidden="true">✦</span> Education Made Assessable</button>
+      <span className="masthead-label">Grades 1–6</span>
+    </div></header>
     <main className="content">
       {grade && <nav className="breadcrumbs" aria-label="Learning path">
         <button className="control" onClick={showGrades}>All grades</button>
@@ -149,20 +136,24 @@ function App() {
           : <span aria-current="page">{subject.name}</span>)}
         {chapter && <span aria-current="page">Chapter {chapter.chapterNumber}</span>}
       </nav>}
-      <div className={grade ? "intro" : "intro intro-home"}>
-        <h1 ref={heading} tabIndex={-1}>{chapter?.name ?? (subject ? `${subject.name} chapters` : grade ? `${grade.name} subjects` : 'Choose your grade')}</h1>
-        {!grade && <>
-          <p>Find your lessons, notes, and practice activities.</p>
-          <div className="hero-art" aria-hidden="true"><span>★</span><span>✎</span><span>✦</span></div>
-        </>}
-      </div>
-      {!grade ? <CurriculumResults<CurriculumItem> path="/api/grades" label="grades">
-        {(items) => <Choices items={items} select={setGrade} icon="★" empty="No grades are available yet." />}
-      </CurriculumResults> : !subject ? <CurriculumResults<CurriculumItem> key={grade.id} path={`/api/grades/${grade.id}/subjects`} label="subjects">
-        {(items) => <Choices items={items} select={setSubject} icon="✦" empty="No subjects are available for this grade yet." />}
+      {!grade ? <AdventureHero heading={heading} /> :
+        <section key={page} className={`page-banner theme-${gradeTheme(grade).tone}`}>
+          <p>{grade.name}{subject && <> <span aria-hidden="true">/</span> {subject.name}</>}</p>
+          <h1 ref={heading} tabIndex={-1}>{chapter?.name ?? (subject ? 'Chapter journey' : 'Choose a subject')}</h1>
+        </section>}
+      {!grade ? <section id="grade-worlds" tabIndex={-1} className="worlds" aria-labelledby="worlds-heading">
+        <h2 id="worlds-heading">Choose your grade</h2>
+        <CurriculumResults<CurriculumItem> path="/api/grades" label="grades">
+          {(items) => <ChoiceGrid items={items} select={setGrade} mode="grade" />}
+        </CurriculumResults>
+      </section> : !subject ? <CurriculumResults<CurriculumItem> key={grade.id} path={`/api/grades/${grade.id}/subjects`} label="subjects">
+        {(items) => <ChoiceGrid items={items} select={setSubject} mode="subject" />}
       </CurriculumResults> : !chapter ? <CurriculumResults<Chapter> key={`${grade.id}/${subject.id}`} path={`/api/subjects/${subject.id}/chapters`} label="chapters">
-        {(items) => <Choices items={chaptersForGrade(items, grade.id)} select={setChapter} icon="▤" subtitle={(item) => `Chapter ${item.chapterNumber}`} empty="No chapters are available for this grade and subject yet." />}
-      </CurriculumResults> : <Lesson key={chapter.id} chapter={chapter} />}
+        {(items) => <ChapterJourney chapters={chaptersForGrade(items, grade.id)} select={setChapter} grade={grade} />}
+      </CurriculumResults> : <Lesson key={chapter.id} chapter={chapter} counting={
+        grade.name === 'Grade 1' && subject.name === 'Mathematics' && chapter.chapterNumber === 1
+          && chapter.name === 'Counting collections from 0 to 20'
+      } />}
     </main>
   </div>
 }
