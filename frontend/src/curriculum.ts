@@ -34,3 +34,10 @@ export function resourceLink(value?: string) {
     return undefined
   }
 }
+
+export interface PracticeResource {
+  kind: 'worksheet' | 'test'
+  number: number
+  languageCode: Language
+  pdfUrl: string
+}

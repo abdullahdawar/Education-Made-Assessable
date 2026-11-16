@@ -66,7 +66,8 @@ appears under its language code.
 | `/api/grades` | Array of grades with `id` and `name` |
 | `/api/grades/{gradeID}/subjects` | Array of subjects with `id` and `name` |
 | `/api/subjects/{subjectID}/chapters` | Array of chapters across grades with `id`, `name`, `gradeId`, and `chapterNumber` |
-| `/api/chapters/{chapterID}/content` | Array of translations with `languageCode`, `title`, and nullable `content` and optional `pdfUrl` |
+| `/api/chapters/{chapterID}/content` | Array of translations with `languageCode`, `title`, nullable `content`, and optional `pdfUrl` |
+| `/api/chapters/{chapterID}/practice` | Array of student activities with `kind`, `number`, `languageCode`, and `pdfUrl` |
 
 Empty results return `[]`. Invalid IDs return HTTP 400.
 
@@ -81,9 +82,27 @@ React requests grades, subjects, chapters, and translations as the student
 navigates. The subject chapter route returns chapters across grades, so the
 student view filters by the selected grade. The lesson displays English or
 right-to-left Pashto and uses the selected translation's PDF link when present.
-Video, worksheet, and test slots display an unavailable state until resource
-data is supplied. The existing API account reads five tables and resource
-slots require no additional database access.
+The practice endpoint supplies worksheet and test links for the selected
+language. Each activity opens its page in the practice PDF. Video slots
+display an unavailable state until video data is supplied.
+
+The practice endpoint requires column-level SELECT on `chapter_resources`
+for `id`, `chapter_id`, `resource_type`, `resource_number`, `description`
+and `file_url`. The import uses the description field as a language tag
+(`en` or `ps`) because the table has no language column. Answer keys use
+the `other` type and private references. The API exposes only worksheets
+and tests, and the frontend build includes only the four student PDFs.
+The source repository contains the review keys and should retain its
+existing access controls.
+
+The approved counting import is in
+[curriculum/tools/import-counting-chapter.py](curriculum/tools/import-counting-chapter.py).
+It reads `EMA_IMPORT_USER` and `EMA_IMPORT_PASSWORD` from the environment.
+Give the import writer SELECT on the six curriculum tables used in the
+import and INSERT on chapters, chapter_content and chapter_resources only.
+The importer snapshots the affected rows to an owner-only file outside the
+repository and inserts all rows in one transaction. A rerun verifies an
+existing import and stops on conflicts.
 
 Run the frontend checks from `frontend` with `npm test`, `npm run lint`,
 and `npm run build`. The frontend tests use Node's built-in test runner

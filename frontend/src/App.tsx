@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import {
-  chaptersForGrade, resourceLink, translationForLanguage,
-  type Chapter, type CurriculumItem, type Language, type Translation,
+  chaptersForGrade, translationForLanguage,
+  type Chapter, type CurriculumItem, type Language, type PracticeResource, type Translation,
 } from './curriculum'
+import { chapterPdf } from './chapterPdfs'
 import { useCurriculum } from './useCurriculum'
 import './design.css'
 import './App.css'
@@ -54,12 +55,22 @@ function Resource({ title, tone, icon, children }: {
   </section>
 }
 
-function Practice({ label, count }: { label: string; count: number }) {
+function Practice({ label, count, kind, language, items }: {
+  label: string
+  count: number
+  kind: PracticeResource['kind']
+  language: Language
+  items: PracticeResource[]
+}) {
   return <ol className="practice">
-    {Array.from({ length: count }, (_, index) => <li key={index}>
-      <span>{label} {index + 1}</span>
-      <small>Unavailable</small>
-    </li>)}
+    {Array.from({ length: count }, (_, index) => {
+      const number = index + 1
+      const item = items.find((entry) => entry.kind === kind && entry.number === number && entry.languageCode === language)
+      const href = chapterPdf(item?.pdfUrl)
+      return <li key={number}>
+        {href ? <a href={href}>{label} {number} (PDF)</a> : <><span>{label} {number}</span><small>Unavailable</small></>}
+      </li>
+    })}
   </ol>
 }
 
@@ -73,10 +84,11 @@ function Lesson({ chapter }: { chapter: Chapter }) {
     <CurriculumResults<Translation> path={`/api/chapters/${chapter.id}/content`} label="lesson content">
       {(items) => {
         const lesson = translationForLanguage(items, language)
-        const pdf = resourceLink(lesson?.pdfUrl)
+        const pdf = chapterPdf(lesson?.pdfUrl)
         return <div className="lesson-grid">
           <article className="panel" lang={language} dir={language === 'ps' ? 'rtl' : 'ltr'}>
             <h2>{lesson?.title ?? (language === 'ps' ? 'لوست' : 'Lesson')}</h2>
+            {language === 'ps' && lesson && <p>د پښتو متن د ژبنۍ کتنې لپاره چمتو شوی دی.</p>}
             <div className="lesson-text">{lesson?.content?.trim() || (language === 'ps'
               ? 'د دې څپرکي پښتو لوست لا نشته.'
               : 'The English lesson for this chapter is not available yet.')}</div>
@@ -88,8 +100,16 @@ function Lesson({ chapter }: { chapter: Chapter }) {
             <Resource title="Educational videos" tone="videos" icon="▶">
               <p>No videos available yet.</p>
             </Resource>
-            <Resource title="Worksheets" tone="worksheets" icon="✎"><Practice label="Worksheet" count={7} /></Resource>
-            <Resource title="Chapter tests" tone="tests" icon="✓"><Practice label="Test" count={3} /></Resource>
+            <CurriculumResults<PracticeResource> path={`/api/chapters/${chapter.id}/practice`} label="worksheets and tests">
+              {(resources) => <>
+                <Resource title="Worksheets" tone="worksheets" icon="✎">
+                  <Practice label="Worksheet" count={7} kind="worksheet" language={language} items={resources} />
+                </Resource>
+                <Resource title="Chapter tests" tone="tests" icon="✓">
+                  <Practice label="Test" count={3} kind="test" language={language} items={resources} />
+                </Resource>
+              </>}
+            </CurriculumResults>
           </aside>
         </div>
       }}

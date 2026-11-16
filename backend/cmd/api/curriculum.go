@@ -31,6 +31,13 @@ type chapterTranslation struct {
 	PDFURL       *string `json:"pdfUrl,omitempty"`
 }
 
+type practiceResource struct {
+	Kind     string `json:"kind"`
+	Number   int    `json:"number"`
+	Language string `json:"languageCode"`
+	PDFURL   string `json:"pdfUrl"`
+}
+
 func scanItem(rows *sql.Rows, item *curriculumItem) error {
 	return rows.Scan(&item.ID, &item.Name)
 }
@@ -52,6 +59,15 @@ func registerCurriculum(mux *http.ServeMux, db *sql.DB) {
 		SELECT language_code, title, content, pdf_url FROM chapter_content
 		WHERE chapter_id = ? ORDER BY language_code`, func(rows *sql.Rows, item *chapterTranslation) error {
 		return rows.Scan(&item.LanguageCode, &item.Title, &item.Content, &item.PDFURL)
+	}))
+	mux.HandleFunc("GET /api/chapters/{chapterID}/practice", curriculumList(db, "chapterID", `
+		SELECT resource_type, resource_number, description, file_url
+		FROM chapter_resources
+		WHERE chapter_id = ? AND resource_type IN ('worksheet', 'test')
+		  AND description IN ('en', 'ps') AND resource_number > 0
+		  AND file_url IS NOT NULL
+		ORDER BY resource_type, resource_number, id`, func(rows *sql.Rows, item *practiceResource) error {
+		return rows.Scan(&item.Kind, &item.Number, &item.Language, &item.PDFURL)
 	}))
 }
 
