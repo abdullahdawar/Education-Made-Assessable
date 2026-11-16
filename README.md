@@ -116,3 +116,8 @@ is ready for content review before a database insert is prepared.
 The [visual design requirements](curriculum/milestone-3-visual-design.md)
 cover reusable website and print design, bilingual A4 learning materials,
 accessibility, and review before publication.
+
+### Production import and owner review
+
+See the [production import and browser verification checklist](docs/chapter-learning-review.md)
+for remote MySQL configuration, deployment checks, and answer-key access.

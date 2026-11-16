@@ -13,10 +13,25 @@ TITLE = "Counting collections from 0 to 20"
 STEM = "grade-1-counting"
 
 
+def connection_args():
+    host = os.environ.get("EMA_IMPORT_HOST")
+    socket = os.environ.get("EMA_IMPORT_SOCKET")
+    if host and socket:
+        raise ValueError("Set either EMA_IMPORT_HOST or EMA_IMPORT_SOCKET")
+    if host:
+        ca = os.environ["EMA_IMPORT_TLS_CA"]
+        port = int(os.environ.get("EMA_IMPORT_PORT", "3306"))
+        if not 1 <= port <= 65535:
+            raise ValueError("EMA_IMPORT_PORT must be between 1 and 65535")
+        return ["--protocol=TCP", f"--host={host}", f"--port={port}",
+                "--ssl-mode=VERIFY_IDENTITY", f"--ssl-ca={ca}"]
+    return ["--protocol=SOCKET", f"--socket={socket or '/tmp/mysql.sock'}"]
+
+
 def query(sql):
     env = dict(os.environ, MYSQL_PWD=os.environ["EMA_IMPORT_PASSWORD"])
     result = subprocess.run(
-        ["mysql", "--no-defaults", "--protocol=SOCKET", "--socket=/tmp/mysql.sock",
+        ["mysql", "--no-defaults", "--no-login-paths", *connection_args(),
          "--user", os.environ["EMA_IMPORT_USER"], "--default-character-set=utf8mb4",
          "--batch", "--raw", "--skip-column-names", DATABASE],
         input=sql, text=True, capture_output=True, env=env,
@@ -85,7 +100,8 @@ def verify(data, lessons, resources):
 def main():
     lessons, resources = approved_rows()
     data = snapshot()
-    directory = Path.home() / ".config/education-made-assessable/backups"
+    directory = Path(os.environ.get("EMA_IMPORT_BACKUP_DIR",
+                                    Path.home() / ".config/education-made-assessable/backups"))
     directory.mkdir(mode=0o700, parents=True, exist_ok=True)
     with tempfile.NamedTemporaryFile(mode="w", dir=directory, prefix="counting-before-", suffix=".json", delete=False) as backup:
         json.dump(data, backup, ensure_ascii=False, indent=2)
