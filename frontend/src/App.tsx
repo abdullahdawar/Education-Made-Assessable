@@ -1,14 +1,20 @@
-import { useEffect, useRef, useState, type ReactNode } from 'react'
+import { lazy, Suspense, useEffect, useRef, useState, type ReactNode } from 'react'
 import {
   chaptersForGrade, translationForLanguage,
   type Chapter, type CurriculumItem, type Language, type PracticeResource, type Translation,
 } from './curriculum'
 import { AdventureHero, ChapterJourney, ChoiceGrid, CountingIllustration } from './LearningWorld'
 import { gradeTheme } from './gradeTheme'
+import { ChapterVideos } from './ChapterVideos'
 import { chapterPdf } from './chapterPdfs'
 import { useCurriculum } from './useCurriculum'
 import './design.css'
 import './App.css'
+
+const CountingAdventure = lazy(() => import('./games/CountingAdventure').then((module) => ({ default: module.CountingAdventure })))
+const ShapeSorter = import.meta.env.DEV
+  ? lazy(() => import('./games/ShapeSorter').then((module) => ({ default: module.ShapeSorter })))
+  : null
 
 function CurriculumResults<T>({ path, label, children }: {
   path: string
@@ -56,11 +62,18 @@ function Practice({ label, count, kind, language, items }: {
 
 function Lesson({ chapter, counting }: { chapter: Chapter; counting: boolean }) {
   const [language, setLanguage] = useState<Language>('en')
+  const [playing, setPlaying] = useState(false)
+  const ps = language === 'ps'
   return <>
     <div className="language" role="group" aria-label="Lesson language">
       <button className="control" aria-pressed={language === 'en'} onClick={() => setLanguage('en')}>English</button>
       <button className="control" lang="ps" aria-pressed={language === 'ps'} onClick={() => setLanguage('ps')}>پښتو</button>
     </div>
+    {counting && playing && <div className="activity-zone theme-cloud">
+      <Suspense fallback={<p className="notice" role="status" lang={language}>{ps ? 'لوبه پرانیستل کېږي…' : 'Loading game…'}</p>}>
+        <CountingAdventure language={language} />
+      </Suspense>
+    </div>}
     <CurriculumResults<Translation> path={`/api/chapters/${chapter.id}/content`} label="lesson content">
       {(items) => {
         const lesson = translationForLanguage(items, language)
@@ -79,10 +92,14 @@ function Lesson({ chapter, counting }: { chapter: Chapter; counting: boolean }) 
               {pdf ? <a href={pdf}>Open {language === 'ps' ? 'Pashto' : 'English'} notes (PDF)</a> : <p>No PDF notes for this language yet.</p>}
             </Resource>
             <Resource title="Educational videos" tone="videos" icon="▶">
-              <p>No videos available yet.</p>
+              <ChapterVideos chapterId={chapter.id} language={language} />
             </Resource>
             <Resource title="Mini-games" tone="games" icon="◇">
-              <p>No games available yet.</p>
+              {counting
+                ? <button className="control" lang={language} disabled={playing} onClick={() => setPlaying(true)}>
+                  {ps ? 'د شمېرلو لوبه' : 'Play Counting Adventure'}
+                </button>
+                : <p>No games available yet.</p>}
             </Resource>
             <CurriculumResults<PracticeResource> path={`/api/chapters/${chapter.id}/practice`} label="worksheets and tests">
               {(resources) => <>
@@ -158,4 +175,21 @@ function App() {
   </div>
 }
 
-export default App
+function Review() {
+  const [language, setLanguage] = useState<Language>('en')
+  if (!ShapeSorter) return null
+  return <main className="content activity-zone theme-orbit">
+    <div className="language" role="group" aria-label="Game language">
+      <button className="control" aria-pressed={language === 'en'} onClick={() => setLanguage('en')}>English</button>
+      <button className="control" lang="ps" aria-pressed={language === 'ps'} onClick={() => setLanguage('ps')}>پښتو</button>
+    </div>
+    <Suspense fallback={<p role="status">Loading review prototype…</p>}>
+      <ShapeSorter language={language} />
+    </Suspense>
+  </main>
+}
+
+export default function Entry() {
+  const review = import.meta.env.DEV && new URLSearchParams(window.location.search).get('review') === 'shape-sorter'
+  return review ? <Review /> : <App />
+}

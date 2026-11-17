@@ -310,3 +310,9 @@ h2 { font-size: clamp(1.45rem, 3vw, 2.15rem); letter-spacing: -.025em; }
 @media (prefers-reduced-motion: no-preference) {
   .page-banner { animation: mascot-arrive 220ms ease-out both; }
 }
+
+.activity-zone { margin-block: 0 18px; }
+.activity-zone .control { min-height: 48px; }
+.chapter-video { display: grid; gap: 8px; margin-block: 12px; }
+.chapter-video h3 { margin: 0; }
+.chapter-video iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 12px; }
