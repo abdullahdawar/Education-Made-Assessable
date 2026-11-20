@@ -45,6 +45,8 @@ export function GameShell({ title, instructions, rounds, language }: {
   const complete = state.feedback === 'complete'
   const correct = state.feedback === 'correct'
   const round = rounds[state.round]
+  const feedback = correct ? `${labels.correct} ${labels.starEarned} ${round.explanation}` :
+    state.feedback === 'retry' ? `${labels.retry} ${round.hint}` : ''
 
   useEffect(() => {
     heading.current?.focus()
@@ -60,10 +62,11 @@ export function GameShell({ title, instructions, rounds, language }: {
       <img src={mascot} width="96" height="72" alt="" />
     </div>
     <div className="game-progress">
-      <label>{labels.round} {numbers.format(state.round + 1)} / {totalLabel}
-        <progress value={state.stars} max={rounds.length} />
-      </label>
-      <strong className="game-score" aria-label={`${labels.stars}: ${starsLabel} / ${totalLabel}`}><span aria-hidden="true">★</span> {starsLabel} / {totalLabel}</strong>
+      <div className="game-round-progress">
+        {labels.round} <bdi dir="ltr">{numbers.format(state.round + 1)} / {totalLabel}</bdi>
+        <progress aria-label={labels.stars} value={state.stars} max={rounds.length} />
+      </div>
+      <strong className="game-score"><span aria-hidden="true">★</span> {labels.stars} <bdi dir="ltr">{starsLabel} / {totalLabel}</bdi></strong>
     </div>
     <label className="game-toggle"><input type="checkbox" checked={celebrations} onChange={(event) => setCelebrations(event.target.checked)} /> {labels.celebrate}</label>
     <h3 ref={heading} tabIndex={-1}>{complete ? labels.complete : round.prompt}</h3>
@@ -71,7 +74,7 @@ export function GameShell({ title, instructions, rounds, language }: {
       <div className="game-star-wall" aria-hidden="true">
         {Array.from({ length: state.stars }, (_, index) => <span key={index}>★</span>)}
       </div>
-      <p>{labels.stars}: {starsLabel} / {totalLabel}</p>
+      <p>{labels.stars}: <bdi dir="ltr">{starsLabel} / {totalLabel}</bdi></p>
       <button className="control game-primary" onClick={() => {
         dispatch({ type: 'replay' })
       }}>{labels.replay}</button>
@@ -79,9 +82,10 @@ export function GameShell({ title, instructions, rounds, language }: {
       <div key={state.round}>
         {round.play(correct, (isCorrect) => dispatch({ type: 'answer', round: state.round, correct: isCorrect }))}
       </div>
-      <p role="status" aria-atomic="true" className="game-feedback">
-        {correct ? `${labels.correct} ${labels.starEarned} ${round.explanation}` :
-          state.feedback === 'retry' ? `${labels.retry} ${round.hint}` : ''}
+      <p className="game-feedback">
+        {/* Alternate between mounted regions so an identical retry updates a live region again. */}
+        <span role="status" aria-atomic="true">{state.attempts % 2 === 1 ? feedback : ''}</span>
+        <span role="status" aria-atomic="true">{state.attempts % 2 === 0 ? feedback : ''}</span>
       </p>
       {correct && <button ref={continueButton} className="control game-primary"
         onClick={() => dispatch({ type: 'next', round: state.round })}>

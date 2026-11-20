@@ -16,13 +16,26 @@ test('wrong answers give a retry with no star, and a corrected round scores once
   assert.equal(answer(correct, false), correct)
 })
 
+test('consecutive wrong answers update feedback without awarding a star', () => {
+  const wrong = { type: 'answer', round: 0, correct: false }
+  const first = updateSession(initialSession, wrong, 2)
+  const second = updateSession(first, wrong, 2)
+  assert.equal(first.attempts, 1)
+  assert.equal(second.attempts, 2)
+  assert.equal(second.stars, 0)
+  const solved = updateSession(second, { ...wrong, correct: true }, 2)
+  assert.equal(solved.attempts, 3)
+  assert.equal(updateSession(solved, wrong, 2), solved)
+  assert.equal(updateSession(solved, { type: 'next', round: 0 }, 2).attempts, 0)
+})
+
 test('stale events cannot score and replay resets a completed session', () => {
   let state = updateSession(initialSession, { type: 'answer', round: 0, correct: true }, 2)
   state = updateSession(state, { type: 'next', round: 0 }, 2)
   assert.equal(updateSession(state, { type: 'answer', round: 0, correct: true }, 2), state)
   state = updateSession(state, { type: 'answer', round: 1, correct: true }, 2)
   state = updateSession(state, { type: 'next', round: 1 }, 2)
-  assert.deepEqual(state, { round: 1, stars: 2, feedback: 'complete' })
+  assert.deepEqual(state, { round: 1, stars: 2, attempts: 1, feedback: 'complete' })
   assert.equal(updateSession(state, { type: 'answer', round: 1, correct: true }, 2), state)
   assert.deepEqual(updateSession(state, { type: 'replay' }, 2), initialSession)
 })

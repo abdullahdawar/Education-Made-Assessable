@@ -57,3 +57,8 @@ Use a desktop browser and a phone or its responsive viewport at 375 px.
 
 Keep review copies of answer keys in private storage outside the checkout.
 Pashto remains pending fluent-language review before public release.
+
+## Grade 1 release status
+
+See the [Milestone 5B release-readiness checklist](grade-1-release-readiness.md)
+for current evidence and pending signoffs.
