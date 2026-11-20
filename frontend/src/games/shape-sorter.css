@@ -1,0 +1,11 @@
+.shape-stage { display: grid; justify-items: center; gap: 12px; }
+.shape-select, .shape-bin { display: grid; place-items: center; gap: 8px; }
+.shape-select[aria-pressed="true"], .shape-bin[data-filled="true"] { background: #fff0bc; border: 2px solid #542b96; }
+.shape-bins { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.shape-bin { border: 2px dashed #6e50a1; border-radius: 10px 10px 18px 18px; }
+.shape-bin .shape { max-width: 65%; }
+.shape { display: block; width: 62px; height: 62px; margin: 16px; background: #542b96; }
+.shape-circle { border-radius: 50%; }
+.shape-triangle { clip-path: polygon(50% 0, 0 100%, 100% 100%); }
+.shape-rectangle { width: 96px; height: 46px; }
+.shape-bin[data-filled="true"]:disabled { opacity: 1; }
