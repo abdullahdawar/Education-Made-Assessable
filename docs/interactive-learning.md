@@ -6,13 +6,20 @@ worktree. Open the URL printed by Vite.
 - Select Grade 1, Mathematics, then Counting collections from 0 to 20.
   Choose Play Counting Adventure in Mini-games. Begin with an incorrect
   answer, use the hint, and answer correctly. Check that a solved round
-  awards one star even if the answer is activated twice. Complete all nine
-  rounds, toggle the optional celebration, and replay.
+  awards one star even if the answer is activated twice. Complete all twelve
+  rounds. In each of the last four rounds, check that the positions change
+  without adding or removing objects and that answers unlock after moving
+  them. Try the optional highlight, one object at a time. Toggle the
+  optional celebration and replay.
 - Switch to Pashto during a round. Check that the round and stars stay put
   while the instructions, numbers, choices and feedback change language.
   Pashto text remains pending fluent-language review.
 - Append `?review=shape-sorter` to the development URL to review shape naming
-  and sorting. There is no student link or production review route.
+  and sorting. Select the shape, place it in an incorrect container, then
+  place it correctly. With a keyboard, use Tab to reach the tile, Space to
+  select it, then Tab and Enter to place it. Confirm that the tile moves into
+  its container, replay clears selection, and switching language retains it.
+  There is no student link or production review route.
 - At 320–375 px and on desktop, test touch, Tab, Shift+Tab, Enter and Space.
   Check visible focus, focus transfer to each new prompt, and announcements
   of hints and results with a screen reader. Enable reduced motion and
@@ -25,7 +32,7 @@ renders progress, focus, feedback and optional celebration. An activity
 supplies prompts, visuals, hints and choices. The game assets load when
 the student chooses to play. Restarting resets the current game.
 
-Counting collections and rearranging six leaves practice Cambridge
+Counting collections and rearranging groups of 6, 8, 11 and 15 practice Cambridge
 `1Nc.01`. The empty tray practices `1Np.01`. Shape Sorter classifies circles,
 squares, triangles and non-square rectangles, including rotated examples.
 Its exact curriculum objective and placement are pending.

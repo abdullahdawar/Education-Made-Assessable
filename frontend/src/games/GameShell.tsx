@@ -6,8 +6,7 @@ import './games.css'
 
 export type GameRound = {
   prompt: string
-  visual: ReactNode
-  options: { label: string; correct: boolean }[]
+  play: (correct: boolean, answer: (correct: boolean) => void) => ReactNode
   hint: string
   explanation: string
 }
@@ -16,12 +15,12 @@ const copy = {
   en: {
     round: 'Round', stars: 'Stars', next: 'Next round', finish: 'See results', retry: 'Try again.',
     correct: 'You got it!', complete: 'Adventure complete!', replay: 'Play again',
-    celebrate: 'Celebration',
+    celebrate: 'Animate the celebration', starEarned: 'One star earned.',
   },
   ps: {
     round: 'پړاو', stars: 'ستوري', next: 'بل پړاو', finish: 'پایله وګورئ', retry: 'بیا هڅه وکړئ.',
     correct: 'سم ځواب!', complete: 'لوبه بشپړه شوه!', replay: 'بیا لوبه وکړئ',
-    celebrate: 'لنډ جشن',
+    celebrate: 'جشن په حرکت وښيئ', starEarned: 'یو ستوری مو وګاټه.',
   },
 }
 
@@ -64,25 +63,24 @@ export function GameShell({ title, instructions, rounds, language }: {
       <label>{labels.round} {numbers.format(state.round + 1)} / {totalLabel}
         <progress value={state.stars} max={rounds.length} />
       </label>
-      <strong aria-label={`${labels.stars}: ${starsLabel} / ${totalLabel}`}><span aria-hidden="true">★</span> {starsLabel}</strong>
+      <strong className="game-score" aria-label={`${labels.stars}: ${starsLabel} / ${totalLabel}`}><span aria-hidden="true">★</span> {starsLabel} / {totalLabel}</strong>
     </div>
-    <label className="game-celebrate"><input type="checkbox" checked={celebrations} onChange={(event) => setCelebrations(event.target.checked)} /> {labels.celebrate}</label>
+    <label className="game-toggle"><input type="checkbox" checked={celebrations} onChange={(event) => setCelebrations(event.target.checked)} /> {labels.celebrate}</label>
     <h3 ref={heading} tabIndex={-1}>{complete ? labels.complete : round.prompt}</h3>
     {complete ? <div className={celebrations ? 'game-finish celebrate' : 'game-finish'}>
+      <div className="game-star-wall" aria-hidden="true">
+        {Array.from({ length: state.stars }, (_, index) => <span key={index}>★</span>)}
+      </div>
       <p>{labels.stars}: {starsLabel} / {totalLabel}</p>
       <button className="control game-primary" onClick={() => {
         dispatch({ type: 'replay' })
       }}>{labels.replay}</button>
     </div> : <>
-      <div key={state.round} className="game-visual">{round.visual}</div>
-      <div className="game-answers">
-        {round.options.map((option) => <button key={option.label} className="control" disabled={correct}
-          onClick={() => dispatch({ type: 'answer', round: state.round, correct: option.correct })}>
-          {option.label}
-        </button>)}
+      <div key={state.round}>
+        {round.play(correct, (isCorrect) => dispatch({ type: 'answer', round: state.round, correct: isCorrect }))}
       </div>
       <p role="status" aria-atomic="true" className="game-feedback">
-        {correct ? `${labels.correct} ${round.explanation}` :
+        {correct ? `${labels.correct} ${labels.starEarned} ${round.explanation}` :
           state.feedback === 'retry' ? `${labels.retry} ${round.hint}` : ''}
       </p>
       {correct && <button ref={continueButton} className="control game-primary"

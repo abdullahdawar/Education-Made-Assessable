@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
 import { initialSession, updateSession } from '../src/games/session.ts'
-import { countingRounds, identifyShape, shapeRounds } from '../src/games/rounds.ts'
+import { countingRounds, identifyShape, shapePlacement, shapeRounds } from '../src/games/rounds.ts'
 import { reviewedVideos, youtubeVideoId } from '../src/youtube.ts'
 
 test('wrong answers give a retry with no star, and a corrected round scores once', () => {
@@ -28,7 +28,11 @@ test('stale events cannot score and replay resets a completed session', () => {
 })
 
 test('counting rounds span zero to twenty with unique correct choices and conservation practice', () => {
-  assert.ok(countingRounds.length >= 8)
+  assert.deepEqual(countingRounds.map(({ count }) => count), [0, 3, 5, 7, 9, 12, 16, 20, 6, 8, 11, 15])
+  assert.deepEqual(
+    countingRounds.filter(({ layout }) => layout === 'rearrange').map(({ count, objective }) => [count, objective]),
+    [[6, '1Nc.01'], [8, '1Nc.01'], [11, '1Nc.01'], [15, '1Nc.01']],
+  )
   assert.ok(countingRounds.some(({ count, objective }) => count === 0 && objective === '1Np.01'))
   assert.ok(countingRounds.some(({ count }) => count === 20))
   assert.ok(countingRounds.some(({ layout, objective }) => layout === 'rearrange' && objective === '1Nc.01'))
@@ -42,6 +46,25 @@ test('rotated shapes retain the same classification', () => {
   const categories = ['circle', 'square', 'triangle', 'rectangle']
   assert.deepEqual(new Set(shapeRounds.map(({ shape }) => shape)), new Set(categories))
   for (const { shape } of shapeRounds) assert.deepEqual(categories.filter((choice) => identifyShape(shape, choice)), [shape])
+})
+
+test('shape placement requires selection, permits retries, and scores a solved bin once', () => {
+  assert.equal(shapePlacement('triangle', 'triangle', false, false), undefined)
+  assert.equal(shapePlacement('triangle', 'triangle', true, true), undefined)
+
+  for (const { shape } of shapeRounds) {
+    const wrong = shape === 'circle' ? 'square' : 'circle'
+    const place = (state, destination) => {
+      const correct = shapePlacement(shape, destination, true, state.feedback === 'correct')
+      return correct === undefined ? state : updateSession(state, { type: 'answer', round: 0, correct }, 1)
+    }
+    const retry = place(initialSession, wrong)
+    assert.equal(retry.feedback, 'retry')
+    assert.equal(retry.stars, 0)
+    const solved = place(retry, shape)
+    assert.equal(solved.stars, 1)
+    assert.equal(place(solved, shape), solved)
+  }
 })
 
 test('video URL validation accepts only exact HTTPS YouTube hosts and canonical IDs', () => {

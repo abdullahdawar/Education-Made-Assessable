@@ -8,19 +8,27 @@ export const countingRounds = [
   { count: 16, choices: [15, 17, 16], layout: 'tray', object: 'seed', objective: '1Nc.01' },
   { count: 20, choices: [20, 18, 19], layout: 'tray', object: 'gem', objective: '1Nc.01' },
   { count: 6, choices: [5, 7, 6], layout: 'rearrange', object: 'leaf', objective: '1Nc.01' },
+  { count: 8, choices: [8, 7, 9], layout: 'rearrange', object: 'seed', objective: '1Nc.01' },
+  { count: 11, choices: [12, 11, 10], layout: 'rearrange', object: 'gem', objective: '1Nc.01' },
+  { count: 15, choices: [14, 16, 15], layout: 'rearrange', object: 'leaf', objective: '1Nc.01' },
 ] as const
 
 export type Shape = 'circle' | 'square' | 'triangle' | 'rectangle'
 
-export const shapeRounds: { shape: Shape; tilt: number; task: 'name' | 'sort' }[] = [
-  { shape: 'circle', tilt: 0, task: 'name' },
-  { shape: 'triangle', tilt: 25, task: 'name' },
-  { shape: 'square', tilt: 45, task: 'sort' },
-  { shape: 'rectangle', tilt: -22, task: 'sort' },
-  { shape: 'triangle', tilt: 180, task: 'sort' },
-  { shape: 'circle', tilt: 0, task: 'sort' },
+export const shapeRounds: { shape: Shape; tilt: number }[] = [
+  { shape: 'circle', tilt: 0 },
+  { shape: 'triangle', tilt: 25 },
+  { shape: 'square', tilt: 45 },
+  { shape: 'rectangle', tilt: -22 },
+  { shape: 'triangle', tilt: 180 },
+  { shape: 'circle', tilt: 0 },
 ]
 
 export function identifyShape(shape: Shape, choice: Shape) {
   return shape === choice
+}
+
+export function shapePlacement(shape: Shape, destination: Shape, selected: boolean, solved: boolean) {
+  if (!selected || solved) return undefined
+  return identifyShape(shape, destination)
 }
