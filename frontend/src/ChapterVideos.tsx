@@ -1,20 +1,24 @@
-import { useState } from 'react'
+import { useId, useState } from 'react'
 import type { Language } from './curriculum'
 import { reviewedVideos, youtubeVideoId } from './youtube'
+
+function focusPlayer(player: HTMLIFrameElement | null) {
+  player?.focus()
+}
 
 function VideoCard({ title, id, embeddingPermitted, language }: {
   title: string; id: string; embeddingPermitted: boolean; language: Language
 }) {
   const [loaded, setLoaded] = useState(false)
+  const titleId = useId()
   const ps = language === 'ps'
   return <article className="chapter-video">
-    <h3>{title}</h3>
+    <h3 id={titleId}>{title}</h3>
     {embeddingPermitted && (loaded
-      ? <iframe title={title} src={`https://www.youtube-nocookie.com/embed/${id}`}
-          allow="encrypted-media; picture-in-picture; fullscreen" referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen />
-      : <button className="control" onClick={() => setLoaded(true)}>{ps ? 'ویډیو پرانیزئ' : 'Load YouTube player'}</button>)}
-    <a href={`https://www.youtube.com/watch?v=${id}`} target="_blank" rel="noopener noreferrer">
+      ? <iframe ref={focusPlayer} title={title} src={`https://www.youtube-nocookie.com/embed/${id}`}
+          allow="encrypted-media; picture-in-picture; fullscreen" referrerPolicy="strict-origin-when-cross-origin" />
+      : <button className="control" aria-describedby={titleId} onClick={() => setLoaded(true)}>{ps ? 'ویډیو پرانیزئ' : 'Load YouTube player'}</button>)}
+    <a href={`https://www.youtube.com/watch?v=${id}`} target="_blank" rel="noopener noreferrer" aria-describedby={titleId}>
       {ps ? 'په یوټیوب کې یې وګورئ' : 'Open on YouTube'}
     </a>
   </article>
