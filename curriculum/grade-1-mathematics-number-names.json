@@ -1,0 +1,39 @@
+{
+  "title": {"en": "Number Names, Quick Looks and Estimates", "ps": "د شمېرو نومونه، په یوه کتنه پېژندل او اټکل"},
+  "names": {
+    "en": ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty"],
+    "ps": ["صفر", "یو", "دوه", "درې", "څلور", "پنځه", "شپږ", "اووه", "اته", "نهه", "لس", "یوولس", "دولس", "دیارلس", "څوارلس", "پنځلس", "شپاړس", "اوولس", "اتلس", "نولس", "شل"]
+  },
+  "lessons": [
+    {
+      "id": "names",
+      "title": {"en": "Say, read and write", "ps": "ووایئ، ولولئ او ولیکئ"},
+      "model": {"en": "The red panda says: Start at zero and say the number names through twenty. A numeral and its name tell the same number. Look at 14. Say “fourteen”. Write 14, then write its name.", "ps": "سور پانډا وايي: له صفر څخه پیل وکړئ او تر شلو پورې د شمېرو نومونه ووایئ. شمېره او نوم یې هماغه عدد ښيي. ۱۴ ته وګورئ. «څوارلس» ووایئ. ۱۴ ولیکئ، بیا یې نوم ولیکئ."},
+      "check": {"en": "Point to 0, 8 and 20. Read their names aloud. Cover the chart and write each numeral and its name. Uncover it to check.", "ps": "۰، ۸ او ۲۰ ته ګوته ونیسئ. نومونه یې په لوړ غږ ولولئ. جدول پټ کړئ او هره شمېره او نوم یې ولیکئ. بیا جدول ښکاره کړئ او خپل کار وګورئ."}
+    },
+    {
+      "id": "quick",
+      "title": {"en": "Know a familiar pattern at a glance", "ps": "اشنا بڼه په یوه کتنه وپېژنئ"},
+      "model": {"en": "Look at the dots like the face of a die. You can see four corners and one middle dot: five. In the ten-frame, the full row shows five and the next row shows three more. You can recognise eight without counting each dot. A familiar pattern can tell you the exact amount.", "ps": "ټکو ته د لوبې د مکعب د مخ په شان وګورئ. په څلورو کونجونو کې څلور ټکي او په منځ کې یو ټکی وینئ: پنځه. په لس‌خانه‌ییز چوکاټ کې بشپړ کتار پنځه ښيي او په بل کتار کې درې نور ټکي دي. له یو په یو شمېرلو پرته اته پېژندلی شئ. اشنا بڼه دقیق شمېر ښودلی شي."},
+      "check": {"en": "Draw a ten-frame and fill both rows. Look at it as two familiar groups. How many dots do you see? Tell what helped you know.", "ps": "لس‌خانه‌ییز چوکاټ رسم کړئ او دواړه کتارونه ډک کړئ. د دوو اشنا ډلو په توګه ورته وګورئ. څو ټکي وینئ؟ ووایئ چې څنګه پوه شوئ."}
+    },
+    {
+      "id": "estimate",
+      "title": {"en": "Estimate, then count to check", "ps": "اټکل وکړئ، بیا یې په شمېرلو وازمویئ"},
+      "model": {"en": "The red panda sees scattered seeds. She thinks there are about 12. That is an estimate. She then touches each seed once as she counts and gets 13. That is the exact count. An estimate can be close even when it is different from the count.", "ps": "سور پانډا خورې شوې دانې ویني. فکر کوي چې شاوخوا ۱۲ دانې دي. دا اټکل دی. بیا د شمېرلو پر مهال هرې دانې ته یو ځل ګوته نیسي او ۱۳ دانې شمېري. دا دقیق شمېر دی. اټکل دقیق شمېر ته نږدې کېدای شي، که څه هم ورسره توپیر ولري."},
+      "check": {"en": "Look at a group of up to 20 pencils or people. Say about how many you see before counting. Count each one once. Tell your estimate and your exact count separately.", "ps": "تر ۲۰ پورې پنسلونو یا کسانو یوې ډلې ته وګورئ. له شمېرلو مخکې ووایئ چې شاوخوا څو دي. هر یو یو ځل وشمېرئ. خپل اټکل او دقیق شمېر جلا جلا ووایئ."}
+    }
+  ],
+  "practice": [
+    {"stage":{"en":"Guided introduction","ps":"لارښوول شوی پیل"},"tasks":[{"en":"Say the numbers from 0 to 6. Read each prompt aloud and write both its numeral and its name.","ps":"له ۰ څخه تر ۶ پورې شمېرې ووایئ. هره بېلګه په لوړ غږ ولولئ او شمېره او نوم دواړه ولیکئ."}],"names":[0,1,2,3,4,5,6]},
+    {"stage":{"en":"Another representation","ps":"د ښودلو بله بڼه"},"tasks":[{"en":"Look at each pattern. Write how many dots you see without counting one by one. Draw or tell the groups you recognised.","ps":"هرې بڼې ته وګورئ. له یو په یو شمېرلو پرته ولیکئ چې څو ټکي وینئ. هغه ډلې رسم کړئ یا یې ووایئ چې ومو پېژندلې."}],"pictures":[["dice",3],["frame",5],["frame",8]]},
+    {"stage":{"en":"Independent practice","ps":"خپلواک تمرین"},"tasks":[{"en":"Say the numbers from 7 to 13. Read each prompt aloud and write both its numeral and its name.","ps":"له ۷ څخه تر ۱۳ پورې شمېرې ووایئ. هره بېلګه په لوړ غږ ولولئ او شمېره او نوم دواړه ولیکئ."}],"names":[7,8,9,10,11,12,13]},
+    {"stage":{"en":"Varied examples","ps":"بېلابېلې بېلګې"},"tasks":[{"en":"Estimate the dots in each group and write your estimate. Then mark each dot once, count and write the exact number.","ps":"په هره ډله کې ټکي اټکل کړئ او خپل اټکل ولیکئ. بیا هر ټکی یو ځل نښه کړئ، ویې شمېرئ او دقیق شمېر ولیکئ."}],"pictures":[["scatter",9],["scatter",16],["scatter",20]]},
+    {"stage":{"en":"Mixed practice","ps":"ګډ تمرین"},"tasks":[{"en":"Say the numbers from 14 to 20. Read each prompt aloud and write both its numeral and its name. Look at the frame and write how many dots you recognise.","ps":"له ۱۴ څخه تر ۲۰ پورې شمېرې ووایئ. هره بېلګه په لوړ غږ ولولئ او شمېره او نوم دواړه ولیکئ. چوکاټ ته وګورئ او ولیکئ چې څو ټکي پکې پېژنئ."}],"names":[14,15,16,17,18,19,20],"pictures":[["frame",10]]},
+    {"stage":{"en":"Real-world application","ps":"په ورځني ژوند کې کارول"},"tasks":[{"en":"Find up to 20 safe classroom or home objects, such as pencils. Ask someone to spread them out. Write your estimate first. Count, record the exact count as a numeral and name, and sketch the collection.","ps":"په ټولګي یا کور کې تر ۲۰ پورې خوندي شیان، لکه پنسلونه، پیدا کړئ. له چا وغواړئ چې سره یې خواره کړي. لومړی خپل اټکل ولیکئ. بیا یې وشمېرئ، دقیق شمېر په شمېره او نوم ولیکئ او د ډلې انځور رسم کړئ."}]},
+    {"stage":{"en":"Explain and check","ps":"تشریح او کتنه"},"tasks":[{"en":"Look at the frame. Show how its pattern helps you recognise the amount. For the scattered group, write an estimate first and then the exact count. Explain why the two numbers may differ.","ps":"چوکاټ ته وګورئ. وښيئ چې بڼه یې څنګه د شمېر په پېژندلو کې مرسته کوي. د خورو ټکو لپاره لومړی اټکل او بیا دقیق شمېر ولیکئ. ووایئ چې ولې دواړه شمېرې توپیر لرلی شي."}],"pictures":[["frame",9],["scatter",15]]},
+    {"stage":{"en":"Core recognition","ps":"بنسټیزه پېژندنه"},"tasks":[{"en":"Say the number sequence from 0 to 20. Read the prompts aloud and write both the numeral and its name. Look at the die pattern and give its exact amount without counting one by one.","ps":"له ۰ څخه تر ۲۰ پورې شمېرې په ترتیب ووایئ. بېلګې په لوړ غږ ولولئ او شمېره او نوم دواړه ولیکئ. د مکعب بڼې ته وګورئ او له یو په یو شمېرلو پرته دقیق شمېر ووایئ."}],"names":[0,5,11,18,20],"pictures":[["dice",6]]},
+    {"stage":{"en":"Application","ps":"کارونه"},"tasks":[{"en":"Write the number shown in the ten-frame. The scattered dots stand for people in a playground. Record an estimate first. Count each person once and write the exact count as a numeral and a name.","ps":"په چوکاټ کې ښودل شوی شمېر ولیکئ. خواره ټکي د لوبغالي کسان ښيي. لومړی اټکل ولیکئ. هر کس یو ځل وشمېرئ او دقیق شمېر په شمېره او نوم ولیکئ."}],"pictures":[["frame",7],["scatter",19]]},
+    {"stage":{"en":"Reasoning and explanation","ps":"دلیل او تشریح"},"tasks":[{"en":"Explain how the rows let you recognise the frame amount without counting each dot. For the scattered group, record your own estimate, then count and record the exact total. Tell how you checked and why the estimate may differ from the exact count.","ps":"تشریح کړئ چې کتارونه څنګه له یو په یو شمېرلو پرته د چوکاټ شمېر درښيي. د خورو ټکو لپاره خپل اټکل ولیکئ، بیا یې وشمېرئ او دقیق شمېر ولیکئ. ووایئ چې څنګه مو وکوت او ولې اټکل له دقیق شمېر سره توپیر لرلی شي."}],"pictures":[["frame",10],["scatter",17]]}
+  ]
+}

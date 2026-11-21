@@ -1,0 +1,82 @@
+{
+  "number": 8,
+  "title": "Books, instructions and information",
+  "titlePs": "کتابونه، لارښوونې او معلومات",
+  "game": "Text explorer",
+  "icon": "🌱",
+  "intro": "A story entertains. Instructions help a reader do something. Information gives facts and a recount tells an experience. Look for titles, lists, labels and pictures that help the reader find something.",
+  "support": "کیسه، لارښوونې، معلومات او د پېښې بیان بېلې دندې لري. سرلیک، لړ، نښه او انځور وګورئ.",
+  "text": "Grow a Bean\nYou need: a bean, a pot, soil, water.\n1. Put soil in the pot. 2. Plant the bean. 3. Add a little water.\nCaption: A small shoot grows above the soil.\nRecount: Yesterday I planted a bean. Today I saw a shoot.",
+  "model": "The list tells what to gather. The steps tell what to do in order. The caption tells what a picture shows. An information book may have a contents page that sends you to headings. A poem may use short lines and rhyme.",
+  "activity": "Find the cover, title and contents in a real book. Write one heading and two labels for a plant drawing. Write two instructions for a familiar task.",
+  "adult": "Provide a simple story or poem and a real information book. Ask the learner to explain which features fit each purpose and check their independent instructions.",
+  "adultPs": "یوه لنډه کیسه یا نظم او معلوماتي کتاب ورکړئ. ماشوم دې د هرې لیکنې نښې او مقصد ووایي او خپلې لارښوونې ولیکي.",
+  "rounds": [
+    {
+      "prompt": "Choose the item listed first.",
+      "choices": [
+        "water",
+        "bean",
+        "soil"
+      ],
+      "answer": [
+        "bean"
+      ],
+      "hint": "Read the You need list.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Order the actions for the instructions.",
+      "choices": [
+        "Add water",
+        "Plant the bean",
+        "Put soil in the pot"
+      ],
+      "answer": [
+        "Put soil in the pot",
+        "Plant the bean",
+        "Add water"
+      ],
+      "hint": "Follow steps one, two and three.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "What shows what a picture is about?",
+      "choices": [
+        "caption",
+        "cover",
+        "contents"
+      ],
+      "answer": [
+        "caption"
+      ],
+      "hint": "It appears next to the picture.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    }
+  ],
+  "tasks": [
+    "Point to the heading. Say what the reader will learn to do.",
+    "Copy three items from the You need list.",
+    "Sketch a young plant. Put English labels on the shoot and soil.",
+    "Find the title, cover and contents of a real book. Say what each helps you do.",
+    "Copy the steps in order, then read them to a partner.",
+    "Write two clear instructions for washing a cup. Add a heading.",
+    "Write a two-sentence recount of something you did yesterday.",
+    "Read the caption: Two leaves grow above the soil. What grows above the soil? Add a caption to your own plant drawing.",
+    "Write a heading, a materials list and two steps for getting a school bag ready.",
+    "Compare the bean instructions with a familiar short poem. Describe one difference in appearance and one difference in purpose."
+  ],
+  "audioPending": false,
+  "codes": [
+    "*1Rs.02",
+    "1Rs.03",
+    "1Rs.04",
+    "*1Ws.02",
+    "*1Ri.03",
+    "*1Ri.04",
+    "1Ri.08",
+    "*1Wc.04",
+    "1Wc.05",
+    "*1Wp.05"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "number": 10,
+  "title": "Reading choices and writer reflection",
+  "titlePs": "د لوست ټاکنه او د لیکنې کتنه",
+  "game": "Reading circle",
+  "icon": "📖",
+  "intro": "A reader can choose a story, poem or information book. Tell what you enjoy and link it with something you know. When you read your own writing aloud, listen for one thing that works and one that could be clearer.",
+  "support": "کیسه، نظم یا معلوماتي کتاب وټاکئ. د خوښې لامل ووایئ. خپله لیکنه په غږ ولولئ او وګورئ چې کوم ځای روښانه دی.",
+  "text": "Story: The Lost Ball\nPoem: Rain on My Window\nInformation book: How Seeds Grow\nMy note: I liked the rain poem. It reminded me of my window.",
+  "model": "The note gives a choice and a personal connection. You might say, “I would choose the poem again because I like the sound of the words.”",
+  "activity": "Choose a real book or short text to read or hear. Write one reason for your choice. Read your reason aloud and explain it.",
+  "adult": "Give access to real stories, rhymes and information books. Let the learner choose independently and discuss their own writing without grading their preferences.",
+  "adultPs": "کیسې، نظمونه او معلوماتي کتابونه ورکړئ. ماشوم دې خپله ټاکنه وکړي او پر خپلې لیکنې خبرې وکړي.",
+  "rounds": [
+    {
+      "prompt": "Which title is the information book?",
+      "choices": [
+        "The Lost Ball",
+        "Rain on My Window",
+        "How Seeds Grow"
+      ],
+      "answer": [
+        "How Seeds Grow"
+      ],
+      "hint": "Look for the title that tells how something works.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Choose the two words that start the personal note.",
+      "choices": [
+        "liked",
+        "I",
+        "It",
+        "rain"
+      ],
+      "answer": [
+        "I",
+        "liked"
+      ],
+      "hint": "Read the start of My note.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which title invites you to hear a rhyme?",
+      "choices": [
+        "Rain on My Window",
+        "How Seeds Grow",
+        "The Lost Ball"
+      ],
+      "answer": [
+        "Rain on My Window"
+      ],
+      "hint": "Look at the poem label.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    }
+  ],
+  "tasks": [
+    "Choose a book to read or hear. Write its title.",
+    "Choose a story and a poem from a shelf. What made you pick each?",
+    "Tell someone about a story or poem you liked.",
+    "Complete in your own words: This book made me think of ...",
+    "Read a short piece of your own writing aloud. Mark a part you are proud of.",
+    "Write a note recommending something you read at home.",
+    "Try an information book. Say what you learnt and whether you would read another.",
+    "Choose one real text independently. Write a reason for choosing it.",
+    "Talk about something from a text that reminds you of a real experience.",
+    "Read one of your own pieces aloud. Explain one word you chose and one thing you would improve."
+  ],
+  "audioPending": false,
+  "codes": [
+    "*1Ra.01",
+    "1Ra.04",
+    "1Ra.05",
+    "1Wp.06"
+  ]
+}

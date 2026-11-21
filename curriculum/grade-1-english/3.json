@@ -1,0 +1,75 @@
+{
+  "number": 3,
+  "title": "Common words, verbs and plurals",
+  "titlePs": "عامې کلمې، فعلونه او جمع",
+  "game": "Word changes",
+  "icon": "📚",
+  "intro": "Some frequent words need extra practice. Read each word in a sentence and notice any unusual spelling. Word endings can show more than one thing or a change in an action.",
+  "support": "عامې کلمې په جمله کې ولولئ او ځانګړې لیکنه یې وګورئ. پایونه د ډېرو شیانو یا د کار بدلون ښودلی شي.",
+  "text": "I see one box. I see two boxes.\nThe cat jumps. It jumped. It is jumping.\nWe have one pen and two pens.\nthe · was · one · said",
+  "model": "Box becomes boxes when there is more than one. Jump keeps its base spelling in jumps, jumped and jumping. In said, pay attention to the unusual ai spelling.",
+  "activity": "Read all four common words, cover them, write them and look again to check. Start a spelling log for a word you want to remember.",
+  "adult": "Ask the learner to read the verb forms in context. Help them look up a spelling and add it to a small log for future work.",
+  "adultPs": "ماشوم دې فعلونه په جمله کې ولولي. د یوې کلمې سمه لیکنه پیدا او په وړوکي لړ کې یې ولیکئ.",
+  "rounds": [
+    {
+      "prompt": "Select the plural of box.",
+      "choices": [
+        "box",
+        "boxs",
+        "boxes"
+      ],
+      "answer": [
+        "boxes"
+      ],
+      "hint": "Box takes es for more than one.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Select the word for an action that already happened: It ___.",
+      "choices": [
+        "jumping",
+        "jumps",
+        "jumped"
+      ],
+      "answer": [
+        "jumped"
+      ],
+      "hint": "Look for the ed ending.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Select the spelling of the word in: She ___ hello.",
+      "choices": [
+        "sed",
+        "said",
+        "sayd"
+      ],
+      "answer": [
+        "said"
+      ],
+      "hint": "This common word has an unusual ai spelling.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    }
+  ],
+  "tasks": [
+    "Read the and was in sentences that an adult writes. Copy both once.",
+    "Write one pen and then two pens. Circle the added letter.",
+    "Draw one box and three boxes. Label both drawings.",
+    "Read jumps, jumped and jumping. Underline their endings.",
+    "Cover one and said. Write each from memory and check it.",
+    "Ask someone to help spell an unfamiliar classroom word. Write it in your log.",
+    "Read the short passage aloud. Explain what boxes tells you and use it in a new sentence.",
+    "Write the plural forms of cat and dish. Say why each changes.",
+    "Read: I look. He looks. He looked. He is looking. Point to each ending.",
+    "Write a new sentence containing said. Check it against the word in your spelling log."
+  ],
+  "audioPending": true,
+  "codes": [
+    "1Rw.04",
+    "1Rw.07",
+    "1Ww.04",
+    "1Ww.06",
+    "*1Ww.07"
+  ]
+}

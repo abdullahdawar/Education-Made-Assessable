@@ -1,0 +1,82 @@
+{
+  "number": 11,
+  "title": "Listen, ask and discuss",
+  "titlePs": "واورئ، وپوښتئ او خبرې وکړئ",
+  "game": "Listening partners",
+  "icon": "🗣",
+  "intro": "Listen to the whole instruction before you act. Take turns, give a useful detail, and ask a short question when something is unclear. Notice how a gesture or tone can help the listener.",
+  "support": "لومړی ټوله لارښوونه واورئ. په وار خبرې وکړئ، اړین معلومات ورکړئ او که څه روښانه نه وي پوښتنه وکړئ.",
+  "text": "Practice script for an adult\nPut a pencil on the table. Then put a book beside it.\nSpeaker: I felt glad when my group found the missing card.\nListener: Where did you find it?",
+  "model": "The listener asks about a missing detail. In a group, wait until the speaker is done. Look for a gesture or change in tone that helps you understand.",
+  "activity": "Work in a small group. One person describes an event. Each listener asks one relevant question, then tells what they heard.",
+  "adult": "Give a fresh sequence orally without showing the written script. Observe the actions. For group work note whether each child takes a turn, listens without interrupting, responds to a view and adjusts to a listener.",
+  "adultPs": "نوې لارښوونې یوازې په غږ ورکړئ. کړنې وګورئ. په ډله کې وار، غوږ نیول او د نورو نظر ته ځواب وګورئ.",
+  "rounds": [
+    {
+      "prompt": "For this written rehearsal, order the two objects in the script.",
+      "choices": [
+        "book",
+        "pencil",
+        "card"
+      ],
+      "answer": [
+        "pencil",
+        "book"
+      ],
+      "hint": "The pencil comes before the book.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which question asks for the place?",
+      "choices": [
+        "How do you feel?",
+        "Where did you find it?",
+        "Who was there?"
+      ],
+      "answer": [
+        "Where did you find it?"
+      ],
+      "hint": "A place question begins with Where.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Choose the feeling named by the speaker.",
+      "choices": [
+        "glad",
+        "tired",
+        "cross"
+      ],
+      "answer": [
+        "glad"
+      ],
+      "hint": "Read the speaker line.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    }
+  ],
+  "tasks": [
+    "Listen to an adult give two actions. Do them in the order you hear.",
+    "Tell a partner about one thing you did. Include where it happened.",
+    "Listen to a short account and ask one question about what you heard.",
+    "Read a short message. Ask one question about what you read.",
+    "In a small group, pass a speaking object. Wait for your turn and share an idea.",
+    "Restate a partner's idea in your own words before giving your own.",
+    "Tell about a feeling. Use a gesture or change your tone to help the listener.",
+    "Have an adult give fresh oral directions without showing the words. Follow both steps and explain the order.",
+    "In a group, share a feeling and one useful detail. Listen to another view and respond to it.",
+    "Listen to a new brief story. Ask a useful question and explain what detail you still need."
+  ],
+  "audioPending": true,
+  "codes": [
+    "1SLm.01",
+    "1SLm.02",
+    "1SLm.03",
+    "*1SLm.04",
+    "*1SLm.05",
+    "1SLs.01",
+    "1SLs.02",
+    "*1SLg.01",
+    "*1SLg.02",
+    "1SLg.03",
+    "1SLg.04"
+  ]
+}

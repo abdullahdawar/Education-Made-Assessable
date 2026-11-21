@@ -1,0 +1,473 @@
+{
+  "number": 7,
+  "title": {
+    "en": "Equal parts and halves",
+    "ps": "برابرې برخې او نیمایي"
+  },
+  "game": {
+    "en": "Fraction Factory",
+    "ps": "د برخو کارخانه"
+  },
+  "lessons": [
+    {
+      "code": "1Nf.01",
+      "title": {
+        "en": "Equal and unequal splits",
+        "ps": "برابر او نابرابر وېش"
+      },
+      "explain": {
+        "en": "One whole can be split into two parts. In an equal split, both parts are the same size. Compare by folding or laying one part over the other.",
+        "ps": "یو بشپړ شی په دوو برخو وېشل کېږي. په برابر وېش کې دواړه برخې هم‌اندازه دي. په قات کولو یا د یوې برخې پر بلې ایښودلو یې پرتله کړئ."
+      },
+      "diagram": {
+        "en": "Equal: ■ ■ / ■ ■",
+        "ps": "برابر: ■ ■ / ■ ■"
+      },
+      "example": {
+        "en": "The equal split gives two matching pieces. A split of one square and three squares gives unequal pieces.",
+        "ps": "برابر وېش دوه هم‌اندازه ټوټې ورکوي. یوه خانه او درې خانې نابرابرې برخې جوړوي."
+      },
+      "check": {
+        "en": "Draw a rectangle. Show one equal split and one unequal split.",
+        "ps": "مستطیل رسم کړئ. یو برابر او یو نابرابر وېش وښيئ."
+      }
+    },
+    {
+      "code": "1Nf.02",
+      "title": {
+        "en": "One of two equal shares",
+        "ps": "له دوو برابرو برخو یوه"
+      },
+      "explain": {
+        "en": "Share objects one at a time between two plates. A half is one share when both plates have the same number.",
+        "ps": "شیان په وار سره پر دوو پتنوسونو ووېشئ. کله چې دواړه پتنوسونه برابر وي یوه برخه نیمایي ده."
+      },
+      "diagram": {
+        "en": "Plate A: ● ● ●\nPlate B: ● ● ●",
+        "ps": "لومړی پتنوس: ● ● ●\nدویم پتنوس: ● ● ●"
+      },
+      "example": {
+        "en": "Sharing six counters equally gives three on each plate. Either share is one half of the original group.",
+        "ps": "د شپږو دانو برابر وېش په هر پتنوس کې درې ورکوي. هره برخه د لومړۍ ډلې نیمایي ده."
+      },
+      "check": {
+        "en": "Share eight counters equally. Point to one half of the set.",
+        "ps": "اته دانې برابرې ووېشئ. د ډلې یوې نیمایي ته ګوته ونیسئ."
+      }
+    },
+    {
+      "code": "1Nf.03",
+      "title": {
+        "en": "Find half of an amount",
+        "ps": "د شمېر نیمایي پیدا کړئ"
+      },
+      "explain": {
+        "en": "To find half of an amount, split it into two equal shares and count one share. Use examples where each share is a whole number.",
+        "ps": "د یوه شمېر د نیمایي لپاره یې په دوو برابرو برخو ووېشئ او یوه برخه وشمېرئ. داسې بېلګې وکاروئ چې برخه بشپړ عدد وي."
+      },
+      "diagram": {
+        "en": "10 counters → [5] [5]",
+        "ps": "۱۰ دانې: [۵] [۵]"
+      },
+      "example": {
+        "en": "Ten shared equally gives five in one share. Half of ten is five.",
+        "ps": "لس چې برابر ووېشل شي په یوه برخه کې پنځه کېږي. د لسو نیمایي پنځه ده."
+      },
+      "check": {
+        "en": "Find half of 12 objects and show your two groups.",
+        "ps": "د ۱۲ شیانو نیمایي پیدا کړئ او دواړه ډلې وښيئ."
+      }
+    },
+    {
+      "code": "1Nf.04",
+      "title": {
+        "en": "Put the halves together",
+        "ps": "نیمایي برخې یو ځای کړئ"
+      },
+      "explain": {
+        "en": "Two halves of the same whole fit back together. Line up their matching edges or bring the equally sized groups together.",
+        "ps": "د هماغه بشپړ شي دوه نیمایي برخې بېرته سره یو ځای کېږي. برابرې څنډې سره برابرې کړئ یا هم‌اندازه ډلې سره یو ځای کړئ."
+      },
+      "diagram": {
+        "en": "Two halves: [■ ■] [■ ■]\nOne whole: [■ ■ ■ ■]",
+        "ps": "دوه نیمایي: [■ ■] [■ ■]\nیو بشپړ: [■ ■ ■ ■]"
+      },
+      "example": {
+        "en": "Two matching strips become the original four-square strip when joined.",
+        "ps": "دوه برابرې پټې چې یو ځای شي د څلورو خانو لومړۍ پټه جوړوي."
+      },
+      "check": {
+        "en": "Fold and split a paper strip. Rejoin both halves and draw the whole.",
+        "ps": "کاغذي پټه قات او ووېشئ. دواړه نیمایي بېرته یو ځای او بشپړه پټه رسم کړئ."
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "code": "1Nf.01",
+      "prompt": {
+        "en": "Build an equal two-part split of a strip of six squares.",
+        "ps": "د شپږو خانو پټه په دوو برابرو برخو ووېشئ."
+      },
+      "tiles": [
+        {
+          "en": "2",
+          "ps": "۲"
+        },
+        {
+          "en": "3",
+          "ps": "۳"
+        },
+        {
+          "en": "4",
+          "ps": "۴"
+        },
+        {
+          "en": "6",
+          "ps": "۶"
+        }
+      ],
+      "solution": [
+        1,
+        1
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Both shares should have the same number of squares.",
+        "ps": "د دواړو برخو خانې باید برابرې وي."
+      },
+      "explain": {
+        "en": "Three and three are equal parts of six.",
+        "ps": "درې او درې د شپږو برابرې برخې دي."
+      }
+    },
+    {
+      "code": "1Nf.02",
+      "prompt": {
+        "en": "Two plates share eight counters equally. Fill the first plate and then the second.",
+        "ps": "اته دانې پر دوو پتنوسونو برابرې ووېشئ. لومړی یو او بیا بل ډک کړئ."
+      },
+      "tiles": [
+        {
+          "en": "5",
+          "ps": "۵"
+        },
+        {
+          "en": "8",
+          "ps": "۸"
+        },
+        {
+          "en": "4",
+          "ps": "۴"
+        },
+        {
+          "en": "2",
+          "ps": "۲"
+        }
+      ],
+      "solution": [
+        2,
+        2
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Give one to each plate in turn.",
+        "ps": "په وار هر پتنوس ته یوه دانه ورکړئ."
+      },
+      "explain": {
+        "en": "Each plate gets four. One plate is one half.",
+        "ps": "هر پتنوس څلور دانې اخلي. یو پتنوس نیمایي ده."
+      }
+    },
+    {
+      "code": "1Nf.03",
+      "prompt": {
+        "en": "Choose half of 14, then half of 6.",
+        "ps": "د ۱۴ نیمایي او بیا د ۶ نیمایي وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "7",
+          "ps": "۷"
+        },
+        {
+          "en": "4",
+          "ps": "۴"
+        },
+        {
+          "en": "14",
+          "ps": "۱۴"
+        },
+        {
+          "en": "3",
+          "ps": "۳"
+        }
+      ],
+      "solution": [
+        0,
+        3
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Split each amount into two equal groups.",
+        "ps": "هر شمېر په دوو برابرو ډلو ووېشئ."
+      },
+      "explain": {
+        "en": "Half of fourteen is seven and half of six is three.",
+        "ps": "د څوارلسو نیمایي اووه او د شپږو نیمایي درې ده."
+      }
+    },
+    {
+      "code": "1Nf.04",
+      "prompt": {
+        "en": "One half of a strip is 4 squares. Choose the other half and then the whole.",
+        "ps": "د یوې پټې نیمایي ۴ خانې دي. بله نیمایي او بیا بشپړه پټه وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "2",
+          "ps": "۲"
+        },
+        {
+          "en": "8",
+          "ps": "۸"
+        },
+        {
+          "en": "4",
+          "ps": "۴"
+        },
+        {
+          "en": "6",
+          "ps": "۶"
+        }
+      ],
+      "solution": [
+        2,
+        1
+      ],
+      "take": 2,
+      "hint": {
+        "en": "The halves match. Join them to get the whole.",
+        "ps": "نیمایي سره برابرې دي. یو ځای یې کړئ چې بشپړه شي."
+      },
+      "explain": {
+        "en": "Two groups of four make eight squares.",
+        "ps": "د څلورو دوه ډلې اته خانې جوړوي."
+      }
+    },
+    {
+      "code": "1Nf.01",
+      "prompt": {
+        "en": "A paper strip is eight squares long. Make an unequal split with the smaller piece three squares long. Choose the smaller then the larger piece.",
+        "ps": "کاغذي پټه اته خانې ده. نابرابر وېش کې کوچنۍ برخه درې خانې ده. لومړی کوچنۍ او بیا لویه برخه وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "4",
+          "ps": "۴"
+        },
+        {
+          "en": "5",
+          "ps": "۵"
+        },
+        {
+          "en": "3",
+          "ps": "۳"
+        },
+        {
+          "en": "8",
+          "ps": "۸"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        2,
+        1
+      ],
+      "hint": {
+        "en": "Keep all eight squares, with a piece of three first.",
+        "ps": "ټولې اته خانې وساتئ؛ لومړۍ برخه درې خانې ده."
+      },
+      "explain": {
+        "en": "Three and five are unequal parts of eight.",
+        "ps": "درې او پنځه د اتو نابرابرې برخې دي."
+      }
+    },
+    {
+      "code": "1Nf.03",
+      "prompt": {
+        "en": "Work out half of 2, then half of 20. Choose both results.",
+        "ps": "د ۲ نیمایي او بیا د ۲۰ نیمایي پیدا کړئ. دواړه پایلې وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "2",
+          "ps": "۲"
+        },
+        {
+          "en": "1",
+          "ps": "۱"
+        },
+        {
+          "en": "10",
+          "ps": "۱۰"
+        },
+        {
+          "en": "12",
+          "ps": "۱۲"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        1,
+        2
+      ],
+      "hint": {
+        "en": "Share each amount into two equal groups.",
+        "ps": "هره شمېره پر دوو برابرو ډلو ووېشئ."
+      },
+      "explain": {
+        "en": "Half of two is one and half of twenty is ten.",
+        "ps": "د دوو نیمایي یو او د شلو نیمایي لس ده."
+      }
+    },
+    {
+      "code": "1Nf.04",
+      "prompt": {
+        "en": "Two halves form a strip. A half has six squares. Pick both halves and then the whole.",
+        "ps": "دوه نیمایي یوه پټه جوړوي. یوه نیمایي شپږ خانې لري. دواړه نیمایي او بیا بشپړه پټه وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "6",
+          "ps": "۶"
+        },
+        {
+          "en": "10",
+          "ps": "۱۰"
+        },
+        {
+          "en": "12",
+          "ps": "۱۲"
+        },
+        {
+          "en": "7",
+          "ps": "۷"
+        }
+      ],
+      "take": 3,
+      "solution": [
+        0,
+        0,
+        2
+      ],
+      "hint": {
+        "en": "Use two matching pieces and count all their squares together.",
+        "ps": "دوه برابرې برخې وکاروئ او ټولې خانې ګډې وشمېرئ."
+      },
+      "explain": {
+        "en": "Six and six rejoin to make a twelve-square strip.",
+        "ps": "شپږ او شپږ د دولسو خانو پټه جوړوي."
+      }
+    }
+  ],
+  "practice": [
+    {
+      "codes": [
+        "1Nf.01"
+      ],
+      "task": {
+        "en": "Draw two rectangles. Divide the first into equal parts and the second into unequal parts.",
+        "ps": "دوه مستطیلونه رسم کړئ. لومړی په برابرو او دویم په نابرابرو برخو ووېشئ."
+      }
+    },
+    {
+      "codes": [
+        "1Nf.02"
+      ],
+      "task": {
+        "en": "Share 4 buttons on two plates. Circle one half, then repeat with 10 buttons.",
+        "ps": "۴ تڼۍ پر دوو پتنوسونو ووېشئ. یوه نیمایي په دایره کې ونیسئ، بیا له ۱۰ تڼیو سره همداسې وکړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Nf.03"
+      ],
+      "task": {
+        "en": "Find half of 6 and half of 16. Draw the equal groups.",
+        "ps": "د ۶ او ۱۶ نیمایي پیدا کړئ. برابرې ډلې رسم کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Nf.04"
+      ],
+      "task": {
+        "en": "Fold a paper shape into halves. Trace the halves side by side to show the whole.",
+        "ps": "کاغذي بڼه په نیمایي قات کړئ. نیمایي سره څنګ په څنګ رسم کړئ چې بشپړه بڼه ښکاره شي."
+      }
+    },
+    {
+      "codes": [
+        "1Nf.01",
+        "1Nf.03"
+      ],
+      "task": {
+        "en": "Circle the equal split of 8: 3 and 5, or 4 and 4. Then find half of 18.",
+        "ps": "د ۸ برابر وېش په دایره کې ونیسئ: ۳ او ۵، که ۴ او ۴. بیا د ۱۸ نیمایي پیدا کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Nf.02",
+        "1Nf.04"
+      ],
+      "task": {
+        "en": "Share 12 safe objects between two people. Draw one half. Put the shares back together and draw the whole.",
+        "ps": "۱۲ خوندي شیان پر دوو کسانو ووېشئ. یوه نیمایي رسم کړئ. برخې بېرته یو ځای او بشپړه ډله رسم کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Nf.01",
+        "1Nf.04"
+      ],
+      "task": {
+        "en": "Explain why a piece can be called a half. Use a drawing to show how two halves remake a whole.",
+        "ps": "ووایئ چې ولې یوې ټوټې ته نیمایي ویل کېږي. په رسم وښيئ چې دوه نیمایي څنګه بشپړ جوړوي."
+      }
+    },
+    {
+      "codes": [
+        "1Nf.01",
+        "1Nf.02"
+      ],
+      "task": {
+        "en": "Draw an equal and an unequal split of a square. Share 14 dots equally, and mark one half.",
+        "ps": "یو مربع په برابر او نابرابر ډول ووېشئ. ۱۴ ټکي برابر ووېشئ او یوه نیمایي نښه کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Nf.03",
+        "1Nf.04"
+      ],
+      "task": {
+        "en": "Find half of 20. Draw two halves of a strip of 12 squares, then put them together.",
+        "ps": "د ۲۰ نیمایي پیدا کړئ. د ۱۲ خانو د پټې دوه نیمایي رسم کړئ، بیا یې یو ځای کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Nf.01",
+        "1Nf.02",
+        "1Nf.04"
+      ],
+      "task": {
+        "en": "Show why a split of 2 and 6 cannot give two halves of 8. Draw two true halves and join them.",
+        "ps": "وښيئ چې ولې ۲ او ۶ د ۸ دوه نیمایي نه دي. دوه سمې نیمایي رسم او یو ځای کړئ."
+      }
+    }
+  ]
+}

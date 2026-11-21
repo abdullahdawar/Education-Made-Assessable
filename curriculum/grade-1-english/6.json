@@ -1,0 +1,87 @@
+{
+  "number": 6,
+  "title": "Making sentences",
+  "titlePs": "جملې جوړول",
+  "game": "Sentence workshop",
+  "icon": "✏",
+  "intro": "A sentence tells a complete idea. Its word order and verb help it make sense. Begin with a capital, use capitals for names and I, and put a full stop at the end of a statement.",
+  "support": "جمله بشپړ فکر څرګندوي. د کلمو ترتیب او فعل ته پام وکړئ. د جملې پیل، نومونه او I په لوی توري ولیکئ.",
+  "text": "Mina sees a bird. The bird sees an ant.\nI see a tree and a nest. Mina looks and I listen.",
+  "model": "Mina names a person and sees shows an action. Introduce a bird, then say the bird. Use an before ant here. And joins a tree and a nest, or the statements Mina looks and I listen.",
+  "activity": "Read the text and mark sentence boundaries. Say two new statements about the scene. Write them with clear spaces and full stops.",
+  "adult": "Ask the child to explain word order, articles and what and links. Collect independent writing with a name, I and more than one sentence.",
+  "adultPs": "له ماشومه د کلمو ترتیب او د نښو دنده وپوښتئ. د څو جملو خپله لیکنه وګورئ.",
+  "rounds": [
+    {
+      "prompt": "Build a statement with the words and its ending.",
+      "choices": [
+        "bird",
+        ".",
+        "The",
+        "sings"
+      ],
+      "answer": [
+        "The",
+        "bird",
+        "sings",
+        "."
+      ],
+      "hint": "Start with The, then name what sings.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Complete: I see ___ ant.",
+      "choices": [
+        "a",
+        "an",
+        "and"
+      ],
+      "answer": [
+        "an"
+      ],
+      "hint": "Ant starts with a vowel sound.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Join these two parts: Mina looks ___ I listen.",
+      "choices": [
+        "an",
+        "the",
+        "and"
+      ],
+      "answer": [
+        "and"
+      ],
+      "hint": "Choose the word that joins two ideas.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    }
+  ],
+  "tasks": [
+    "Copy the first sentence. Circle the capital and the full stop.",
+    "Find the sentences that name Mina. Point to the verbs.",
+    "Put bird, The and sings in order and add an ending mark.",
+    "Choose a, an or the in: I see ___ apple. ___ apple is red.",
+    "Find what and joins in the two examples. Write your own pair of joined words.",
+    "Write two statements about home. Use I and a name.",
+    "Reread your two statements to an adult. Explain where you placed each full stop.",
+    "Write a sentence about a cat. Begin with a capital and end with a full stop.",
+    "Write two statements about a person and an object. Use a or an on first mention and the on the next.",
+    "Write three short sentences. Join two ideas using and. Check the verb, capitals and full stops."
+  ],
+  "audioPending": false,
+  "codes": [
+    "1Rg.01",
+    "1Rg.02",
+    "1Rg.03",
+    "1Rg.04",
+    "1Rg.05",
+    "1Rg.06",
+    "1Rg.07",
+    "1Wg.01",
+    "1Wg.02",
+    "1Wg.03",
+    "1Wg.04",
+    "1Wg.05",
+    "1Wg.06"
+  ]
+}

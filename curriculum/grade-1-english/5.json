@@ -1,0 +1,79 @@
+{
+  "number": 5,
+  "title": "Read together, read aloud",
+  "titlePs": "ګډ او لوړ غږ لوستل",
+  "game": "Rhyme theatre",
+  "icon": "🌧",
+  "intro": "Read a poem to hear its pulse and rhymes. Read story sentences once to work out the words and again to make them sound like talk. Pause at each full stop.",
+  "support": "نظم په غږ ولولئ او وزن او قافیه یې واورئ. جمله بیا په څرګند غږ ولولئ او په پای کې تم شئ.",
+  "text": "Tap, tap, little rain.\nTap, tap, on my pane.\nTap, tap, then the sun.\nTap, tap, rain is done.\n\nOn my way home, I see a puddle. I jump over it.",
+  "model": "Rain and pane rhyme. Tap, tap comes back. A window pane is a sheet of glass. In the story, pause after puddle and then read the next sentence.",
+  "activity": "Clap the repeated beat with a partner. Cover the poem and say a line. Read both story sentences independently.",
+  "adult": "Read the poem to the learner, then invite joining the repeated words. Listen to an unaided reading of a fresh short text and observe expression and stops.",
+  "adultPs": "نظم ماشوم ته ولولئ. ماشوم دې تکراري کلمې درسره ووایي. نوې لنډه لیکنه دې په خپله ولولي؛ غږ او تم کېدل یې واورئ.",
+  "rounds": [
+    {
+      "prompt": "Complete the rhyme after rain.",
+      "choices": [
+        "sun",
+        "pane",
+        "tap"
+      ],
+      "answer": [
+        "pane"
+      ],
+      "hint": "Look at the end of line two.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Build the phrase that repeats.",
+      "choices": [
+        "Tap",
+        "sun",
+        "rain"
+      ],
+      "answer": [
+        "Tap",
+        "Tap"
+      ],
+      "hint": "The first two words are the same.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which ending mark tells you to pause after puddle?",
+      "choices": [
+        "!",
+        ",",
+        "."
+      ],
+      "answer": [
+        "."
+      ],
+      "hint": "Find the end of the first story sentence.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    }
+  ],
+  "tasks": [
+    "Point to a word that is repeated. Read it with a partner.",
+    "Circle rain and pane. Say what you notice about their ends.",
+    "Draw the picture the first two lines suggest.",
+    "Read the poem with an adult and tap its rhythm on a table.",
+    "Read the puddle sentences twice. Mark where you pause.",
+    "Choose a familiar rhyme to say with someone at home.",
+    "Read the puddle sentences independently. Tell which word you read more fluently the second time.",
+    "Recite two lines of the rain poem. Show the rhythm as you say them.",
+    "Read aloud: The rain stops. A bird sings. Pause at the full stops.",
+    "Tell how the repetition helps you join the poem. Draw the scene and explain one detail."
+  ],
+  "audioPending": true,
+  "codes": [
+    "1Rv.05",
+    "*1Ri.01",
+    "1Ri.14",
+    "1Ra.02",
+    "1Ra.03",
+    "1SLp.01",
+    "1SLp.02",
+    "1SLp.03"
+  ]
+}
