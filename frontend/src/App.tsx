@@ -5,7 +5,7 @@ import {
 } from './curriculum'
 import { AdventureHero, ChapterJourney, ChoiceGrid, CountingIllustration } from './LearningWorld'
 import { gradeTheme } from './gradeTheme'
-import type { MathsPack } from './MathsChapter'
+import type { MathsPack } from './mathsPack'
 import { NumberNamesLesson } from './NumberNamesLesson'
 import { numberNamesTitle, chapterNumeral } from './numberNames'
 import { ChapterVideos } from './ChapterVideos'
@@ -78,9 +78,11 @@ function Lesson({ chapter, counting, numberNames, expanded }: { chapter: Chapter
     let current = true
     async function load() {
       try {
-        const { loadMathsPack } = await import('./MathsChapter')
+        const { loadMathsPack } = await import('./mathsPack')
         const result = await loadMathsPack(chapter.chapterNumber)
-        if (current && result?.title.en === chapter.name) setPack(result)
+        if (!current) return
+        if (result?.title.en === chapter.name) setPack(result)
+        else setPackError(true)
       } catch {
         if (current) setPackError(true)
       }
