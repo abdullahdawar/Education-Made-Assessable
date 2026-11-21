@@ -1,0 +1,25 @@
+.number-lesson { display: grid; gap: 18px; }
+.number-lesson section { min-width: 0; }
+.number-lesson h3 { margin: 12px 0 6px; }
+.number-check { margin-block: 12px; padding: 12px; border-radius: 12px; background: var(--sun); }
+.number-name-chart { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(125px, 100%), 1fr)); gap: 6px; list-style: none; padding: 0; }
+.number-name-chart li { background: var(--mint); border-radius: 8px; padding: 6px 8px; }
+.number-name-chart bdi { font-weight: 750; margin-inline-end: 4px; }
+.number-patterns { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-block: 12px; }
+.number-pattern { display: inline-grid; max-width: 100%; padding: 5px; background: var(--lavender); border-radius: 8px; gap: 3px; }
+.pattern-dice { grid-template-columns: repeat(3, 26px); }
+.pattern-frame { grid-template-columns: repeat(5, 26px); }
+.pattern-cell { display: grid; place-items: center; aspect-ratio: 1; }
+.pattern-frame .pattern-cell { background: white; border: 1px solid var(--indigo); border-radius: 3px; }
+.pattern-cell.filled::before, .sample-seed { content: ''; display: block; width: 14px; height: 14px; border-radius: 50%; background: var(--indigo); }
+.number-scatter { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; justify-items: center; max-width: 300px; padding: 12px; border: 1px dashed var(--indigo); border-radius: 12px; margin-block: 12px; }
+.number-scatter > :nth-child(3n) { translate: 4px -4px; }
+.number-scatter > :nth-child(3n + 1) { translate: -4px 4px; }
+.number-scatter :is(button, .preview-seed) { width: min(100%, 48px); min-height: 48px; padding: 2px; display: grid; place-items: center; }
+.number-scatter button[aria-pressed=true] { opacity: 1; outline: 2px solid var(--indigo); background: var(--sun); }
+.number-modes { display: flex; gap: 8px; flex-wrap: wrap; margin-block-end: 10px; }
+.number-modes button { max-width: 100%; }
+.number-estimate { display: flex; flex-wrap: wrap; align-items: end; gap: 8px; }
+.number-estimate label { display: grid; gap: 4px; }
+.number-estimate input { font: inherit; min-height: 44px; inline-size: 6em; padding: 4px 8px; }
+.muted-scatter .sample-seed { margin: 4px; }

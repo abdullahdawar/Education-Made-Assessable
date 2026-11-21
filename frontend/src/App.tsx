@@ -5,6 +5,8 @@ import {
 } from './curriculum'
 import { AdventureHero, ChapterJourney, ChoiceGrid, CountingIllustration } from './LearningWorld'
 import { gradeTheme } from './gradeTheme'
+import { NumberNamesLesson } from './NumberNamesLesson'
+import { numberNamesTitle, chapterNumeral } from './numberNames'
 import { ChapterVideos } from './ChapterVideos'
 import { chapterPdf } from './chapterPdfs'
 import { useCurriculum } from './useCurriculum'
@@ -12,6 +14,7 @@ import './design.css'
 import './App.css'
 
 const CountingAdventure = lazy(() => import('./games/CountingAdventure').then((module) => ({ default: module.CountingAdventure })))
+const NumberExplorer = lazy(() => import('./games/NumberExplorer').then((module) => ({ default: module.NumberExplorer })))
 const ShapeSorter = import.meta.env.DEV
   ? lazy(() => import('./games/ShapeSorter').then((module) => ({ default: module.ShapeSorter })))
   : null
@@ -41,9 +44,10 @@ function Resource({ title, tone, icon, children }: {
   </section>
 }
 
-function Practice({ label, count, kind, language, items }: {
+function Practice({ label, count, kind, language, items, localized }: {
   label: string
   count: number
+  localized: boolean
   kind: PracticeResource['kind']
   language: Language
   items: PracticeResource[]
@@ -53,25 +57,27 @@ function Practice({ label, count, kind, language, items }: {
       const number = index + 1
       const item = items.find((entry) => entry.kind === kind && entry.number === number && entry.languageCode === language)
       const href = chapterPdf(item?.pdfUrl)
+      const name = `${label} ${localized ? chapterNumeral(number, language) : number}`
       return <li key={number}>
-        {href ? <a href={href}>{label} {number} (PDF)</a> : <><span>{label} {number}</span><small>Unavailable</small></>}
+        {href ? <a href={href}>{name} (PDF)</a> : <><span>{name}</span><small>{localized ? 'نشته' : 'Unavailable'}</small></>}
       </li>
     })}
   </ol>
 }
 
-function Lesson({ chapter, counting }: { chapter: Chapter; counting: boolean }) {
+function Lesson({ chapter, counting, numberNames }: { chapter: Chapter; counting: boolean; numberNames: boolean }) {
   const [language, setLanguage] = useState<Language>('en')
   const [playing, setPlaying] = useState(false)
+  const localized = numberNames && language === 'ps'
   const ps = language === 'ps'
   return <>
     <div className="language" role="group" aria-label="Lesson language">
       <button className="control" aria-pressed={language === 'en'} onClick={() => setLanguage('en')}>English</button>
       <button className="control" lang="ps" aria-pressed={language === 'ps'} onClick={() => setLanguage('ps')}>پښتو</button>
     </div>
-    {counting && playing && <div className="activity-zone theme-cloud">
+    {(counting || numberNames) && playing && <div className="activity-zone theme-cloud">
       <Suspense fallback={<p className="notice" role="status" lang={language}>{ps ? 'لوبه پرانیستل کېږي…' : 'Loading game…'}</p>}>
-        <CountingAdventure language={language} />
+        {numberNames ? <NumberExplorer language={language} /> : <CountingAdventure language={language} />}
       </Suspense>
     </div>}
     <CurriculumResults<Translation> path={`/api/chapters/${chapter.id}/content`} label="lesson content">
@@ -82,32 +88,33 @@ function Lesson({ chapter, counting }: { chapter: Chapter; counting: boolean }) 
           <article className="panel reading-panel" lang={language} dir={language === 'ps' ? 'rtl' : 'ltr'}>
             <h2>{lesson?.title ?? (language === 'ps' ? 'لوست' : 'Lesson')}</h2>
             {language === 'ps' && lesson && <p>د پښتو متن د ژبنۍ کتنې لپاره چمتو شوی دی.</p>}
-            <div className="lesson-text">{lesson?.content?.trim() || (language === 'ps'
+            {numberNames && lesson ? <NumberNamesLesson language={language} /> : <div className="lesson-text">{lesson?.content?.trim() || (language === 'ps'
               ? 'د دې څپرکي پښتو لوست لا نشته.'
-              : 'The English lesson for this chapter is not available yet.')}</div>
+              : 'The English lesson for this chapter is not available yet.')}</div>}
             {counting && lesson && <CountingIllustration language={language} />}
           </article>
-          <aside className="resources" aria-label="Chapter resources">
-            <Resource title="PDF notes" tone="notes" icon="▤">
-              {pdf ? <a href={pdf}>Open {language === 'ps' ? 'Pashto' : 'English'} notes (PDF)</a> : <p>No PDF notes for this language yet.</p>}
+          <aside className="resources" aria-label={localized ? 'د څپرکي سرچینې' : 'Chapter resources'}
+            lang={numberNames ? language : undefined} dir={localized ? 'rtl' : undefined}>
+            <Resource title={localized ? 'د لوست یادښتونه' : 'PDF notes'} tone="notes" icon="▤">
+              {pdf ? <a href={pdf}>{localized ? 'پښتو یادښتونه پرانیزئ (PDF)' : `Open ${ps ? 'Pashto' : 'English'} notes (PDF)`}</a> : <p>No PDF notes for this language yet.</p>}
             </Resource>
-            <Resource title="Educational videos" tone="videos" icon="▶">
+            <Resource title={localized ? 'ښوونیزې ویډیوګانې' : 'Educational videos'} tone="videos" icon="▶">
               <ChapterVideos chapterId={chapter.id} language={language} />
             </Resource>
-            <Resource title="Mini-games" tone="games" icon="◇">
-              {counting
+            <Resource title={localized ? 'کوچنۍ لوبې' : 'Mini-games'} tone="games" icon="◇">
+              {(counting || numberNames)
                 ? <button className="control" lang={language} disabled={playing} onClick={() => setPlaying(true)}>
-                  {ps ? 'د شمېرلو لوبه' : 'Play Counting Adventure'}
+                  {numberNames ? (ps ? 'د شمېرو سپړنه پیل کړئ' : 'Play Number Explorer') : (ps ? 'د شمېرلو لوبه' : 'Play Counting Adventure')}
                 </button>
                 : <p>No games available yet.</p>}
             </Resource>
             <CurriculumResults<PracticeResource> path={`/api/chapters/${chapter.id}/practice`} label="worksheets and tests">
               {(resources) => <>
-                <Resource title="Worksheets" tone="worksheets" icon="✎">
-                  <Practice label="Worksheet" count={7} kind="worksheet" language={language} items={resources} />
+                <Resource title={localized ? 'تمرینپاڼې' : 'Worksheets'} tone="worksheets" icon="✎">
+                  <Practice label={localized ? 'تمرینپاڼه' : 'Worksheet'} localized={localized} count={7} kind="worksheet" language={language} items={resources} />
                 </Resource>
-                <Resource title="Chapter tests" tone="tests" icon="✓">
-                  <Practice label="Test" count={3} kind="test" language={language} items={resources} />
+                <Resource title={localized ? 'د څپرکي ازموینې' : 'Chapter tests'} tone="tests" icon="✓">
+                  <Practice label={localized ? 'ازموینه' : 'Test'} localized={localized} count={3} kind="test" language={language} items={resources} />
                 </Resource>
               </>}
             </CurriculumResults>
@@ -170,6 +177,9 @@ function App() {
       </CurriculumResults> : <Lesson key={chapter.id} chapter={chapter} counting={
         grade.name === 'Grade 1' && subject.name === 'Mathematics' && chapter.chapterNumber === 1
           && chapter.name === 'Counting collections from 0 to 20'
+      } numberNames={
+        grade.name === 'Grade 1' && subject.name === 'Mathematics' && chapter.chapterNumber === 2
+          && chapter.name === numberNamesTitle
       } />}
     </main>
   </div>
