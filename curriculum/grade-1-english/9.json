@@ -1,0 +1,79 @@
+{
+  "number": 9,
+  "title": "Read, infer and explain",
+  "titlePs": "لوستل، اټکل او تشریح",
+  "game": "Clue detective",
+  "icon": "🌧",
+  "intro": "Some answers are stated clearly. For others, use a clue and explain your thinking. Stop before an ending and predict what might happen. More than one prediction can make sense.",
+  "support": "ځینې ځوابونه په لیکنه کې ښکاره دي. د نورو لپاره نښه پیدا کړئ او خپله خبره تشریح کړئ. تر پای مخکې اټکل وکړئ.",
+  "text": "Lina put her book in a bag. Dark clouds filled the sky. She heard a rumble and ran towards home.\nEnding: At home she took the dry book out of her bag.",
+  "model": "The first sentence says where the book is. Dark clouds and a rumble suggest a storm. That clue supports a prediction about rain, even though the text does not say it rains.",
+  "activity": "Cover the ending. Say what could happen next and give a clue. Ask someone to read a new short story aloud and answer one question about it.",
+  "adult": "Read one fresh passage aloud without showing it. Ask a literal and an inference question. Record the learner’s spoken answer and the clue they used.",
+  "adultPs": "نوې لنډه لیکنه په لوړ غږ ولولئ او مه یې ښکاره کوئ. یوه ښکاره او یوه د نښې پوښتنه وکړئ. د ماشوم ځواب او نښه ثبت کړئ.",
+  "rounds": [
+    {
+      "prompt": "Where did Lina put the book?",
+      "choices": [
+        "in a bag",
+        "under a chair",
+        "on a shelf"
+      ],
+      "answer": [
+        "in a bag"
+      ],
+      "hint": "The first sentence states this.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Select the two clues for a possible storm, in story order.",
+      "choices": [
+        "dry book",
+        "dark clouds",
+        "rumble"
+      ],
+      "answer": [
+        "dark clouds",
+        "rumble"
+      ],
+      "hint": "Look for a sky clue and a sound clue.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which word tells what the book was like at the end?",
+      "choices": [
+        "wet",
+        "dark",
+        "dry"
+      ],
+      "answer": [
+        "dry"
+      ],
+      "hint": "Read the ending.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    }
+  ],
+  "tasks": [
+    "Say where Lina put the book. Point to the words that tell you.",
+    "List two things Lina notices before she runs.",
+    "Cover the ending. Predict what may happen next. Give a clue.",
+    "Say why Lina might run. Tell which event supports your idea.",
+    "Explain which event could happen in your life. Make up one imaginary change.",
+    "Have an adult read a short passage. Answer one spoken question about it.",
+    "Write two list entries about the story. Read your notes to a partner.",
+    "Read: Lina hangs her wet coat by the door. She puts her dry book on a chair. What does she put on the chair? Write two facts from the text.",
+    "Read: Omar left wet shoes by the door. There were puddles outside. Explain where he might have walked.",
+    "Listen to a new passage an adult reads. Ask for one question about a fact and one about a clue. Say why you chose each answer."
+  ],
+  "audioPending": true,
+  "codes": [
+    "*1Ri.05",
+    "*1Ri.09",
+    "1Ri.10",
+    "1Ri.11",
+    "1Ri.12",
+    "*1Ri.13",
+    "1Ra.06",
+    "1Wp.04"
+  ]
+}

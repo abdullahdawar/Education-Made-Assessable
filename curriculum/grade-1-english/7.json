@@ -1,0 +1,81 @@
+{
+  "number": 7,
+  "title": "Telling and writing stories",
+  "titlePs": "کیسې ویل او لیکل",
+  "game": "Story path",
+  "icon": "🎒",
+  "intro": "Stories have characters and a place. A beginning introduces the situation, a middle shows what happens, and an ending tells what changes. Plan aloud before writing.",
+  "support": "کیسه کرکټرونه او ځای لري. پیل، منځ او پای وګورئ. لومړی خپله کیسه ووایئ، بیا یې ولیکئ.",
+  "text": "Once upon a time, Sami packed a red bag.\nAt the park, he dropped his apple.\nA friend found it and Sami said thank you.",
+  "model": "First Sami packs. Next he drops the apple. Last the friend helps. A three-picture retelling could use one caption for each event. A short poem can use a repeating starter, such as “I see”.",
+  "activity": "Draw three boxes for the story and write one sentence under each. Say a different ending, then write it.",
+  "adult": "Listen for the main events in order without the text visible. Ask the child to say a plan, then write an original story or a two-line patterned poem.",
+  "adultPs": "کیسه پټه کړئ او اصلي پېښې په ترتیب واورئ. ماشوم دې لومړی پلان ووایي او بیا خپله کیسه یا لنډ نظم ولیکي.",
+  "rounds": [
+    {
+      "prompt": "Put the event words in story order.",
+      "choices": [
+        "found",
+        "packed",
+        "dropped"
+      ],
+      "answer": [
+        "packed",
+        "dropped",
+        "found"
+      ],
+      "hint": "Look at the first verb. The friend appears at the end.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Who is the main character?",
+      "choices": [
+        "Sami",
+        "the friend",
+        "the park"
+      ],
+      "answer": [
+        "Sami"
+      ],
+      "hint": "Who packs the bag and drops the apple?",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Where does Sami drop the apple?",
+      "choices": [
+        "at home",
+        "at the park",
+        "at school"
+      ],
+      "answer": [
+        "at the park"
+      ],
+      "hint": "Read the second line.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    }
+  ],
+  "tasks": [
+    "Name the main character and draw where the middle happens.",
+    "Point to the first, middle and last events. Tell them aloud.",
+    "Draw a picture of the apple event and write a caption.",
+    "Draw three panels and retell the story using your own captions.",
+    "Say a different ending. Write one sentence that could finish the story.",
+    "Start an original story with Once upon a time. Plan three events aloud.",
+    "Write a two-line poem starting each line with I see. Read it to someone.",
+    "Retell Sami's story without the page. Draw three panels and label them.",
+    "Write an opening for a story about a child at home. Add a problem and an ending.",
+    "Write and read a two-line repeating poem about the park. Explain the pattern you used."
+  ],
+  "audioPending": false,
+  "codes": [
+    "1Wv.02",
+    "1Rs.01",
+    "1Ws.01",
+    "*1Ri.02",
+    "1Ri.06",
+    "1Ri.07",
+    "*1Wc.01",
+    "1Wc.02",
+    "1Wc.03"
+  ]
+}
