@@ -1,0 +1,138 @@
+{
+  "number": 5,
+  "title": "Read together, read aloud",
+  "titlePs": "ګډ او لوړ غږ لوستل",
+  "game": "Rhyme theatre",
+  "icon": "🌧",
+  "intro": "Read a poem to hear its pulse and rhymes. Read story sentences once to work out the words and again to make them sound like talk. Pause at each full stop.",
+  "support": "نظم په غږ ولولئ او وزن او قافیه یې واورئ. جمله بیا په څرګند غږ ولولئ او په پای کې تم شئ.",
+  "text": "Tap, tap, little rain.\nTap, tap, on my pane.\nTap, tap, then the sun.\nTap, tap, rain is done.\n\nMy red bag is wet. I set it on a mat.",
+  "model": "Rain and pane rhyme. Tap, tap comes back. A window pane is a sheet of glass. Practise the letter sounds in the bag story before reading. Pause at each full stop.",
+  "activity": "Read the bag sentences silently. Draw what you picture from each sentence.",
+  "adult": "Read the rain poem once. Invite an echo of one line, then pause before the repeated words. Listen for the learner’s entry and pace.",
+  "adultPs": "شعر یو ځل ولولئ. یوه کرښه بیا ووایئ او له ماشومه وغواړئ چې درسره یې تکرار کړي.",
+  "rounds": [
+    {
+      "prompt": "Complete the rhyme after rain.",
+      "choices": [
+        "sun",
+        "pane",
+        "tap"
+      ],
+      "answer": [
+        "pane"
+      ],
+      "hint": "Look at the end of line two.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Build the phrase that repeats.",
+      "choices": [
+        "Tap",
+        "sun",
+        "rain"
+      ],
+      "answer": [
+        "Tap",
+        "Tap"
+      ],
+      "hint": "The first two words are the same.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which mark ends “My red bag is wet.”?",
+      "choices": [
+        "!",
+        ",",
+        "."
+      ],
+      "answer": [
+        "."
+      ],
+      "hint": "Find the end of the first story sentence.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "In “Tap, tap, on my pane,” what does pane mean?",
+      "choices": [
+        "the glass in a window",
+        "a drop of rain",
+        "a mat on the floor"
+      ],
+      "answer": [
+        "the glass in a window"
+      ],
+      "hint": "Think about the part of a window the rain can tap on.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which pair ends with the same sound in the poem?",
+      "choices": [
+        "little and rain",
+        "sun and done",
+        "tap and pane"
+      ],
+      "answer": [
+        "sun and done"
+      ],
+      "hint": "Compare the sound after the first consonant.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "My red bag is wet. I set it on a mat. What is on the mat?",
+      "choices": [
+        "a red bag",
+        "a wet hat",
+        "a cup"
+      ],
+      "answer": [
+        "a red bag"
+      ],
+      "hint": "It refers to the bag in the sentence before it.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Read “A bird sits. A bird sings.” What changes in the second sentence?",
+      "choices": [
+        "the action",
+        "the animal",
+        "the place"
+      ],
+      "answer": [
+        "the action"
+      ],
+      "hint": "Compare sits with sings.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    }
+  ],
+  "tasks": [
+    "Point to a word that is repeated. Read it with a partner.",
+    "Circle rain and pane. Say what you notice about their ends.",
+    "Draw the picture the first two lines suggest.",
+    "Read the poem with an adult and tap its rhythm on a table.",
+    "Read the two sentences about the wet bag twice. Mark where you pause.",
+    "Choose a familiar rhyme to say with someone at home.",
+    "Reread the wet bag sentences. Underline a word you read more easily on the second try.",
+    "Recite two lines of the rain poem. Show the rhythm as you say them.",
+    "Read aloud: The rain stops. A bird sings. Pause at the full stops.",
+    "Read “Tap, tap” and mark the words that repeat. Draw the scene and label one detail."
+  ],
+  "audioPending": true,
+  "codes": [
+    "1Rv.05",
+    "*1Ri.01",
+    "1Ri.14",
+    "1Ra.02",
+    "1Ra.03",
+    "1SLp.01",
+    "1SLp.02",
+    "1SLp.03"
+  ],
+  "adultTasks": [
+    1,
+    4,
+    6,
+    8,
+    9
+  ]
+}

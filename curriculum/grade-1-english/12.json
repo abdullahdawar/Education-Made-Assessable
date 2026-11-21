@@ -1,0 +1,139 @@
+{
+  "number": 12,
+  "title": "Perform, speak and reflect",
+  "titlePs": "تمثیل، خبرې او کتنه",
+  "game": "Panda stage",
+  "icon": "🎭",
+  "intro": "Play a character in an imagined scene. Use words and actions to make the character clear. Explain how you felt about the activity and how a gesture may give a clue about a feeling.",
+  "support": "په خیالي صحنه کې یو کرکټر تمثیل کړئ. خبرې او کړنې وکاروئ. ووایئ چې تمرین څنګه و او د بدن حرکت څنګه د احساس نښه کېدای شي.",
+  "text": "Silent rehearsal\nRafi acts as a visitor: Hello. My name is Rafi.\nMina acts as the host: Welcome! Please sit here.\nRafi smiles and waves.\nAfter the play: I liked welcoming my partner.",
+  "model": "A wave can be a greeting. A smile can suggest happiness. A movement or expression can give several possible clues. A reflection can explain what you enjoyed or what you would try next.",
+  "activity": "Read the silent script. Label the speaker of each line. Write one greeting that fits a new role.",
+  "adult": "Set up a pretend library. Let the learner choose visitor or librarian, take a turn in role and then swap roles. Ask what they enjoyed and what they might change. Record a detail from their performance. Offer words, gesture or an agreed communication aid.",
+  "adultPs": "د کتابتون تمثیل وکړئ. ماشوم دې خپل رول وټاکي، بیا دې رولونه بدل کړي. د خوښې او بدلون په اړه ترې وپوښتئ.",
+  "rounds": [
+    {
+      "prompt": "Order the two short greetings in the script.",
+      "choices": [
+        "Welcome!",
+        "Hello.",
+        "Goodbye."
+      ],
+      "answer": [
+        "Hello.",
+        "Welcome!"
+      ],
+      "hint": "The visitor speaks before the host.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which action was used as a greeting?",
+      "choices": [
+        "waves",
+        "sits",
+        "writes"
+      ],
+      "answer": [
+        "waves"
+      ],
+      "hint": "Read what Rafi does.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which begins a personal reflection?",
+      "choices": [
+        "Please sit here.",
+        "Hello, visitor.",
+        "I liked welcoming my partner."
+      ],
+      "answer": [
+        "I liked welcoming my partner."
+      ],
+      "hint": "A reflection says what the speaker thought about the activity.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "In a pretend library, which line fits the librarian’s role?",
+      "choices": [
+        "I can help you find a book.",
+        "Put the ball in the goal.",
+        "Please water the bean."
+      ],
+      "answer": [
+        "I can help you find a book."
+      ],
+      "hint": "Think about what a librarian helps visitors do.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Rafi looks down and speaks quietly. Which reflection treats that as a clue?",
+      "choices": [
+        "Rafi might feel shy.",
+        "Rafi must be angry.",
+        "Rafi cannot hear anyone."
+      ],
+      "answer": [
+        "Rafi might feel shy."
+      ],
+      "hint": "A gesture gives a possible clue about a feeling.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which line tells something about the speaker?",
+      "choices": [
+        "I like drawing birds.",
+        "Please sit here.",
+        "The library is open."
+      ],
+      "answer": [
+        "I like drawing birds."
+      ],
+      "hint": "A personal statement can tell what you enjoy.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which line suggests a change after the play?",
+      "choices": [
+        "Next time I will pause before I reply.",
+        "Welcome to the library!",
+        "Hello, my name is Rafi."
+      ],
+      "answer": [
+        "Next time I will pause before I reply."
+      ],
+      "hint": "Look for something to try on a future turn.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    }
+  ],
+  "tasks": [
+    "Act out a greeting as the visitor. Speak clearly.",
+    "Choose the host role and welcome a partner.",
+    "Show a wave or explain another way to greet someone.",
+    "Say your name and one thing you enjoy.",
+    "Describe a possible feeling for a smiling character. Give another possibility.",
+    "With a partner, act out a visit to a classroom or a shop.",
+    "Tell what you liked about your role-play and what you would change.",
+    "Act out a new scene with a partner. Show your role through words or actions.",
+    "Make a short personal statement about a familiar hobby.",
+    "Describe how a character's movement or face might show a feeling. Then tell what you enjoyed about the activity."
+  ],
+  "audioPending": true,
+  "codes": [
+    "1SLp.04",
+    "1SLp.05",
+    "1SLr.01",
+    "1SLr.02"
+  ],
+  "adultTasks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ]
+}

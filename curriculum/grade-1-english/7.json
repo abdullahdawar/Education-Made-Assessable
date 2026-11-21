@@ -1,0 +1,137 @@
+{
+  "number": 7,
+  "title": "Telling and writing stories",
+  "titlePs": "کیسې ویل او لیکل",
+  "game": "Story path",
+  "icon": "🎒",
+  "intro": "Stories have characters and a place. A beginning introduces the situation, a middle shows what happens, and an ending tells what changes. Plan aloud before writing.",
+  "support": "کیسه کرکټرونه او ځای لري. پیل، منځ او پای وګورئ. لومړی خپله کیسه ووایئ، بیا یې ولیکئ.",
+  "text": "Once upon a time, Sami packed a red bag. At the park his apple rolled under a bench. Sami could not reach it. A friend used a stick to roll it back. Sami thanked his friend.",
+  "model": "First Sami packs. Next the apple rolls away. Last the friend helps. A three-picture retelling can use a short caption per event. A poem can repeat a starter such as “I see”.",
+  "activity": "Make three boxes for the beginning, the problem and the ending. Add one line under each picture.",
+  "adult": "Have the learner retell with three objects or drawings. Ask which event caused the problem and which action solved it.",
+  "adultPs": "له ماشومه وغواړئ چې کیسه په درې انځورونو کې بیا ووایي. ستونزه او حل ترې وپوښتئ.",
+  "rounds": [
+    {
+      "prompt": "Order the actions in the story.",
+      "choices": [
+        "rolls back",
+        "packs",
+        "rolls away"
+      ],
+      "answer": [
+        "packs",
+        "rolls away",
+        "rolls back"
+      ],
+      "hint": "Put packing first. Then find the problem and its solution.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Who is the main character?",
+      "choices": [
+        "Sami",
+        "the friend",
+        "the park"
+      ],
+      "answer": [
+        "Sami"
+      ],
+      "hint": "Who packs the bag and drops the apple?",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Where does the apple roll away?",
+      "choices": [
+        "at home",
+        "at the park",
+        "at school"
+      ],
+      "answer": [
+        "at the park"
+      ],
+      "hint": "Read the second line.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Where did the apple roll?",
+      "choices": [
+        "under a bench",
+        "into the bag",
+        "beside the gate"
+      ],
+      "answer": [
+        "under a bench"
+      ],
+      "hint": "Find the line that tells where it rolled.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which action fixes the problem?",
+      "choices": [
+        "Sami packs a bag.",
+        "A friend rolls the apple back.",
+        "Sami goes to the park."
+      ],
+      "answer": [
+        "A friend rolls the apple back."
+      ],
+      "hint": "Which action makes the apple reachable?",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Sami cannot reach the apple. A friend brings a stick. Which next event uses that clue?",
+      "choices": [
+        "The friend uses the stick to move the apple.",
+        "Sami buys a hat.",
+        "The apple grows into a tree at once."
+      ],
+      "answer": [
+        "The friend uses the stick to move the apple."
+      ],
+      "hint": "Choose a possibility that uses what the friend brought.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which phrase puts an event after another event?",
+      "choices": [
+        "Once upon a time",
+        "Next to it",
+        "After that"
+      ],
+      "answer": [
+        "After that"
+      ],
+      "hint": "We need words about time here.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    }
+  ],
+  "tasks": [
+    "Name the main character and draw where the middle happens.",
+    "Point to the first, middle and last events. Tell them aloud.",
+    "Draw a picture of the apple event and write a caption.",
+    "Draw three panels and retell the story using your own captions.",
+    "Say a different ending. Write one sentence that could finish the story.",
+    "Start an original story with Once upon a time. Plan three events aloud.",
+    "Write a two-line poem starting each line with I see. Read it to someone.",
+    "Read: Sal packed a bag. A ball fell out. Sal went back for it. Draw three events and add one caption to each.",
+    "Write an opening for a story about a child at home. Add a problem and an ending.",
+    "Write and read a two-line repeating poem about the park. Explain the pattern you used."
+  ],
+  "audioPending": false,
+  "codes": [
+    "1Wv.02",
+    "1Rs.01",
+    "1Ws.01",
+    "*1Ri.02",
+    "1Ri.06",
+    "1Ri.07",
+    "*1Wc.01",
+    "1Wc.02",
+    "1Wc.03"
+  ],
+  "adultTasks": [
+    2,
+    7
+  ]
+}

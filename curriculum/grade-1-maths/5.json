@@ -1,0 +1,385 @@
+{
+  "number": 5,
+  "title": {
+    "en": "Joining, taking away and finding differences",
+    "ps": "یو ځای کول، کمول او توپیر موندل"
+  },
+  "game": {
+    "en": "Addition Adventure",
+    "ps": "د جمعې سفر"
+  },
+  "lessons": [
+    {
+      "code": "1Ni.02",
+      "title": {
+        "en": "Join groups and count on",
+        "ps": "ډلې یو ځای کړئ او مخکې وشمېرئ"
+      },
+      "explain": {
+        "en": "Addition can join two collections. To count on, keep the first total in mind and say one new number for each object added.",
+        "ps": "جمع دوه ډلې یو ځای کولی شي. د مخکې شمېرلو لپاره لومړی ټول شمېر په یاد وساتئ او د هر زیات شي لپاره یوه نوې شمېره ووایئ."
+      },
+      "diagram": {
+        "en": "Join: ● ● ● ● + ● ● ●\nCount on: 4 → 5 → 6 → 7",
+        "ps": "یو ځای کول: ● ● ● ● + ● ● ●\nمخکې شمېرل: ۴، ۵، ۶، ۷"
+      },
+      "example": {
+        "en": "Four pencils and three more make seven. Starting at four, the added pencils are five, six and seven.",
+        "ps": "څلور پنسلونه او درې نور اووه کېږي. له څلورو پیل وکړئ؛ د زیاتو پنسلونو لپاره پنځه، شپږ او اووه ووایئ."
+      },
+      "check": {
+        "en": "You have 6 pencils and get 2 more. Show joining and then counting on.",
+        "ps": "۶ پنسلونه لرئ او ۲ نور اخلئ. یو ځای کول او بیا مخکې شمېرل وښيئ."
+      }
+    },
+    {
+      "code": "1Ni.03",
+      "title": {
+        "en": "Take away, count back, compare",
+        "ps": "کم کړئ، شاته وشمېرئ او پرتله کړئ"
+      },
+      "explain": {
+        "en": "To take away, remove objects and count what remains. You can count back one step for each removed object. To find a difference, pair the groups and count what has no partner.",
+        "ps": "د کمولو لپاره شیان لرې کړئ او پاتې شیان وشمېرئ. د هر لرې شوي شي لپاره یو ګام شاته شمېرلی شئ. د توپیر لپاره ډلې سره جوړې کړئ او بې جوړې شیان وشمېرئ."
+      },
+      "diagram": {
+        "en": "Back 2: 7 → 6 → 5\nCompare: ● ● ● ● ● / ● ● ●",
+        "ps": "دوه شاته: ۷، ۶، ۵\nپرتله: ● ● ● ● ● / ● ● ●"
+      },
+      "example": {
+        "en": "Seven minus two leaves five. When five counters are compared with three, two have no partner. The difference is two.",
+        "ps": "له اوو دوه کم کړئ، پنځه پاتې کېږي. له پنځو او درېیو دانو سره دوه دانې بې جوړې پاتې کېږي. توپیر دوه دی."
+      },
+      "check": {
+        "en": "Make groups of 8 and 5. Show how many more are in the bigger group.",
+        "ps": "د ۸ او ۵ ډلې جوړې کړئ. وښيئ چې په لویه ډله کې څو ډېر دي."
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "code": "1Ni.02",
+      "prompt": {
+        "en": "Start with 6 and count on 3. Choose each landing in order.",
+        "ps": "له ۶ څخه پیل وکړئ او ۳ مخکې وشمېرئ. هر ځای په ترتیب وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "10",
+          "ps": "۱۰"
+        },
+        {
+          "en": "8",
+          "ps": "۸"
+        },
+        {
+          "en": "7",
+          "ps": "۷"
+        },
+        {
+          "en": "9",
+          "ps": "۹"
+        }
+      ],
+      "solution": [
+        2,
+        1,
+        3
+      ],
+      "take": 3,
+      "hint": {
+        "en": "Say the next number for each added object.",
+        "ps": "د هر زیات شي لپاره بله شمېره ووایئ."
+      },
+      "explain": {
+        "en": "Seven, eight and nine are three count-on steps.",
+        "ps": "اووه، اته او نهه درې مخکې ګامونه دي."
+      }
+    },
+    {
+      "code": "1Ni.03",
+      "prompt": {
+        "en": "Start at 10 and take away two. Choose each backward landing.",
+        "ps": "له ۱۰ څخه پیل وکړئ او دوه کم کړئ. هر شاتنی ځای وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "8",
+          "ps": "۸"
+        },
+        {
+          "en": "7",
+          "ps": "۷"
+        },
+        {
+          "en": "9",
+          "ps": "۹"
+        },
+        {
+          "en": "11",
+          "ps": "۱۱"
+        }
+      ],
+      "solution": [
+        2,
+        0
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Take one step back for each object removed.",
+        "ps": "د هر لرې شوي شي لپاره یو ګام شاته راشئ."
+      },
+      "explain": {
+        "en": "Nine, then eight.",
+        "ps": "لومړی نهه، بیا اته."
+      }
+    },
+    {
+      "code": "1Ni.03",
+      "prompt": {
+        "en": "Pair a group of 7 with a group of 4. Choose the number of pairs, then the number left without a partner.",
+        "ps": "د ۷ ډله د ۴ له ډلې سره جوړه کړئ. لومړی د جوړو شمېر، بیا بې جوړې شمېر وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "3",
+          "ps": "۳"
+        },
+        {
+          "en": "7",
+          "ps": "۷"
+        },
+        {
+          "en": "4",
+          "ps": "۴"
+        },
+        {
+          "en": "2",
+          "ps": "۲"
+        }
+      ],
+      "solution": [
+        2,
+        0
+      ],
+      "take": 2,
+      "hint": {
+        "en": "The smaller group sets the number of pairs.",
+        "ps": "کوچنۍ ډله د جوړو شمېر ټاکي."
+      },
+      "explain": {
+        "en": "There are four pairs and three unmatched counters.",
+        "ps": "څلور جوړې او درې بې جوړې دانې دي."
+      }
+    },
+    {
+      "code": "1Ni.02",
+      "prompt": {
+        "en": "Join a tray of 7 spoons and a tray of 5. Choose the two tray amounts in that order, then the total.",
+        "ps": "د ۷ او ۵ کاشوغو پتنوسونه یو ځای کړئ. د دواړو شمېرې په ترتیب او بیا ټول شمېر وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "12",
+          "ps": "۱۲"
+        },
+        {
+          "en": "5",
+          "ps": "۵"
+        },
+        {
+          "en": "7",
+          "ps": "۷"
+        },
+        {
+          "en": "11",
+          "ps": "۱۱"
+        }
+      ],
+      "take": 3,
+      "solution": [
+        2,
+        1,
+        0
+      ],
+      "hint": {
+        "en": "Keep both trays. Use one count for each spoon.",
+        "ps": "دواړه پتنوسونه وساتئ. هره کاشوغه یو ځل وشمېرئ."
+      },
+      "explain": {
+        "en": "Seven plus five makes twelve.",
+        "ps": "اووه جمع پنځه دولس کېږي."
+      }
+    },
+    {
+      "code": "1Ni.03",
+      "prompt": {
+        "en": "You have 6 counters. Put away all 6. Choose how many you put away, then how many are left.",
+        "ps": "۶ دانې لرئ. ټولې ۶ لرې کړئ. لومړی لرې شوې او بیا پاتې دانې وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "0",
+          "ps": "۰"
+        },
+        {
+          "en": "1",
+          "ps": "۱"
+        },
+        {
+          "en": "6",
+          "ps": "۶"
+        },
+        {
+          "en": "5",
+          "ps": "۵"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        2,
+        0
+      ],
+      "hint": {
+        "en": "Look at what remains after every counter is removed.",
+        "ps": "له ټولو دانو لرې کولو وروسته پاتې وګورئ."
+      },
+      "explain": {
+        "en": "Six counters go away. Zero remain.",
+        "ps": "شپږ دانې لرې کېږي. صفر پاتې کېږي."
+      }
+    },
+    {
+      "code": "1Ni.03",
+      "prompt": {
+        "en": "Pair 8 cups with 8 plates. Choose how many pairs, then how many cups have no plate.",
+        "ps": "۸ پیالې له ۸ بشقابونو سره جوړې کړئ. لومړی جوړې، بیا بې بشقابه پیالې وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "0",
+          "ps": "۰"
+        },
+        {
+          "en": "1",
+          "ps": "۱"
+        },
+        {
+          "en": "8",
+          "ps": "۸"
+        },
+        {
+          "en": "16",
+          "ps": "۱۶"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        2,
+        0
+      ],
+      "hint": {
+        "en": "Give one plate to each cup.",
+        "ps": "هرې پیالې ته یو بشقاب ورکړئ."
+      },
+      "explain": {
+        "en": "Eight pairs leave zero cups without plates.",
+        "ps": "اته جوړې دي او صفر پیالې بې بشقابه دي."
+      }
+    }
+  ],
+  "practice": [
+    {
+      "codes": [
+        "1Ni.02"
+      ],
+      "task": {
+        "en": "Draw 3 leaves and 4 more. Join the groups and write the total.",
+        "ps": "۳ پاڼې او ۴ نورې رسم کړئ. ډلې یو ځای کړئ او ټول شمېر ولیکئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ni.02"
+      ],
+      "task": {
+        "en": "Start at 8. Draw the steps for counting on 3 and write where you land.",
+        "ps": "له ۸ څخه پیل وکړئ. درې مخکې ګامونه رسم کړئ او وروستۍ شمېره ولیکئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ni.03"
+      ],
+      "task": {
+        "en": "Draw 9 apples. Cross out 4. Count those left.",
+        "ps": "۹ مڼې رسم کړئ. پر ۴ کرښه راکاږئ. پاتې مڼې وشمېرئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ni.03"
+      ],
+      "task": {
+        "en": "Start at 11. Count back 3. Draw each landing and record the result.",
+        "ps": "له ۱۱ څخه پیل وکړئ. درې شاته وشمېرئ. هر ځای رسم کړئ او پایله ولیکئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ni.03"
+      ],
+      "task": {
+        "en": "Draw pairs between 7 spoons and 5 cups. How many spoons have no cup?",
+        "ps": "۷ کاشوغې له ۵ پیالو سره جوړې کړئ. څو کاشوغې پیاله نه لري؟"
+      }
+    },
+    {
+      "codes": [
+        "1Ni.02",
+        "1Ni.03"
+      ],
+      "task": {
+        "en": "Put 6 pencils and 2 more together. Then give away 3. Draw what happens at each step.",
+        "ps": "۶ پنسلونه له ۲ نورو سره یو ځای کړئ. بیا ۳ ورکړئ. هر ګام رسم کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ni.02",
+        "1Ni.03"
+      ],
+      "task": {
+        "en": "Explain when you would count on and when you would count back. Show one example of each.",
+        "ps": "ووایئ چې کله مخکې او کله شاته شمېرئ. د دواړو یوه یوه بېلګه وښيئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ni.02"
+      ],
+      "task": {
+        "en": "Join 5 and 4 counters. Then start at 5 and count on 4. Record both methods.",
+        "ps": "۵ او ۴ دانې سره یو ځای کړئ. بیا له ۵ څخه ۴ مخکې وشمېرئ. دواړه لارې ولیکئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ni.03"
+      ],
+      "task": {
+        "en": "There are 12 cups. Put away 5 by counting back. How many remain? Compare your remainder with 4 cups.",
+        "ps": "۱۲ پیالې دي. په شاته شمېرلو ۵ ټولې کړئ. څو پاتې دي؟ پاتې پیالې له ۴ پیالو سره پرتله کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ni.03"
+      ],
+      "task": {
+        "en": "One child has 9 cards and another has 6. Draw matching pairs and explain the difference.",
+        "ps": "یو ماشوم ۹ او بل ۶ کارتونه لري. جوړې رسم کړئ او توپیر تشریح کړئ."
+      }
+    }
+  ]
+}

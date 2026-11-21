@@ -1,0 +1,142 @@
+{
+  "number": 1,
+  "title": "Letters, sounds and handwriting",
+  "titlePs": "توري، غږونه او لیکدود",
+  "game": "Alphabet path",
+  "icon": "🐱",
+  "intro": "Letters have names. In words, letters also represent sounds. Listen to a grown-up model a sound, then point to its letter. To blend, say the sounds together without adding a little vowel at the end.",
+  "support": "توري نومونه لري او په کلمو کې غږونه ښيي. له مشر سره غږ واورئ او توری وښيئ. د کلمې غږونه سره یو ځای کړئ.",
+  "text": "A a · B b · C c · D d · E e · F f · G g\nH h · I i · J j · K k · L l · M m · N n\nO o · P p · Q q · R r · S s · T t · U u\nV v · W w · X x · Y y · Z z\ncat · map · pin · sun\n\nA cat sat. A cat ran.",
+  "model": "A map is a picture that shows where places are. In map, m, a and p spell three sounds. Blend the sounds to read the word. In “A cat sat,” learn A before reading the sentence. Sit comfortably and hold the pencil lightly.",
+  "activity": "Trace a, m and s with a finger, then write one of each. Follow the draft formation reference with an adult.",
+  "adult": "Show a picture of a cap. Ask the child to say cap slowly, then write the letters for its sounds.",
+  "adultPs": "رجوع د تورو د لیکلو بېلګو ته وکړئ. له ماشومه وغواړئ چې د cap غږونه ورو ووایي او توري یې ولیکي.",
+  "rounds": [
+    {
+      "prompt": "Build map.",
+      "choices": [
+        "p",
+        "m",
+        "a",
+        "s"
+      ],
+      "answer": [
+        "m",
+        "a",
+        "p"
+      ],
+      "hint": "Start with m, then find the vowel.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Put the first three alphabet letters in order.",
+      "choices": [
+        "c",
+        "d",
+        "a",
+        "b"
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "hint": "Start with a.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Find the upper-case partner of n.",
+      "choices": [
+        "M",
+        "N",
+        "P"
+      ],
+      "answer": [
+        "N"
+      ],
+      "hint": "Look for the matching letter name.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Build the sound spellings in sun from left to right.",
+      "choices": [
+        "n",
+        "u",
+        "s"
+      ],
+      "answer": [
+        "s",
+        "u",
+        "n"
+      ],
+      "hint": "Start with the letter for the first sound in sun.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which letter changes pin into pan?",
+      "choices": [
+        "i",
+        "n",
+        "a"
+      ],
+      "answer": [
+        "a"
+      ],
+      "hint": "Compare the middle letters.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "A cat sat. Which two words end with the same two sounds?",
+      "choices": [
+        "cat",
+        "sat",
+        "ran"
+      ],
+      "answer": [
+        "cat",
+        "sat"
+      ],
+      "hint": "Check the endings of the first two word choices.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Join the capital to its lower-case partner: G.",
+      "choices": [
+        "q",
+        "g",
+        "j"
+      ],
+      "answer": [
+        "g"
+      ],
+      "hint": "Look for the small form of G.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    }
+  ],
+  "tasks": [
+    "Trace A and a in the air. Write them on paper. Tell their name.",
+    "Copy B b, D d and M m. Point to the upper-case letter in each pair.",
+    "Read cat and pin to an adult. Tell how you joined the sounds.",
+    "Put g, e and f in alphabet order. Say the letters before g.",
+    "Listen to two sounds your adult chooses. Write a letter for each.",
+    "Say the sounds in sun. Write each letter and then write the whole word.",
+    "Hold a pencil comfortably and write your own simple word from sounds. Tell which letters you chose.",
+    "Circle the vowel in map and pin. Change the vowel in pin to make pan.",
+    "Read “A cat sat.” Draw that scene. Write a label with three sounds.",
+    "Write A a and M m without tracing. Explain where you start each lower-case letter."
+  ],
+  "audioPending": true,
+  "codes": [
+    "1Rw.01",
+    "1Rw.05",
+    "1Ww.01",
+    "1Ww.05",
+    "1Rv.04",
+    "1Wp.01",
+    "1Wp.02"
+  ],
+  "adultTasks": [
+    3,
+    5
+  ]
+}

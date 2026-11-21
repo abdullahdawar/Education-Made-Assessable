@@ -1,0 +1,131 @@
+{
+  "number": 4,
+  "title": "Picture clues and describing words",
+  "titlePs": "انځوریزې نښې او د تشریح کلمې",
+  "game": "Picture detective",
+  "icon": "🪁",
+  "intro": "Pictures can help you work out meaning after you try to read the word. Choose describing words that help a reader see what you mean.",
+  "support": "لومړی کلمه ولولئ. بیا انځور ته وګورئ چې مانا یې روښانه شي. د تشریح لپاره ځانګړې کلمې وټاکئ.",
+  "text": "A red kite tugs at its string. Mina wraps both hands around the string. Leaves race past her feet. The wind is brisk.",
+  "model": "Use letter sounds to read the word. Then check meaning against the sentence and any picture. Brisk here means moving quickly. Tugs means pulls.",
+  "activity": "Draw the kite scene. Add labels for two details that help someone picture it.",
+  "adult": "Show a familiar object. Ask the learner to name two details a partner could use to identify it.",
+  "adultPs": "یو پېژندل شوی شی وښایئ. له ماشومه دوه داسې ځانګړنې وغواړئ چې بل څوک پرې شی وپېژني.",
+  "rounds": [
+    {
+      "prompt": "Mina wraps both hands around something. Select it.",
+      "choices": [
+        "wind",
+        "string",
+        "kite"
+      ],
+      "answer": [
+        "string"
+      ],
+      "hint": "Read the middle sentence.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Select the words that describe the kite colour and the wind, in that order.",
+      "choices": [
+        "red",
+        "long",
+        "brisk"
+      ],
+      "answer": [
+        "red",
+        "brisk"
+      ],
+      "hint": "The first sentence describes the kite; the second describes its string.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which word describes the wind?",
+      "choices": [
+        "long",
+        "brisk",
+        "red"
+      ],
+      "answer": [
+        "brisk"
+      ],
+      "hint": "Read the last sentence.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "“A kite tugs at the string.” Which word could replace tugs here?",
+      "choices": [
+        "pulls",
+        "rests",
+        "falls"
+      ],
+      "answer": [
+        "pulls"
+      ],
+      "hint": "Imagine the string growing tight in Mina’s hands.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Leaves race past Mina. What does brisk tell you about the wind?",
+      "choices": [
+        "moving quickly",
+        "very warm",
+        "completely still"
+      ],
+      "answer": [
+        "moving quickly"
+      ],
+      "hint": "Think about how the leaves move.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which detail would help a friend choose between a striped bag and a plain bag?",
+      "choices": [
+        "striped",
+        "big",
+        "useful"
+      ],
+      "answer": [
+        "striped"
+      ],
+      "hint": "Choose a detail that tells the bags apart.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "A leaf feels rough. Which word describes an opposite feel?",
+      "choices": [
+        "green",
+        "smooth",
+        "wide"
+      ],
+      "answer": [
+        "smooth"
+      ],
+      "hint": "Think of a leaf with a flat, even surface.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    }
+  ],
+  "tasks": [
+    "Read the first sentence. Draw a picture of its main object.",
+    "Find the string in a drawing of a kite. Tell how the drawing helps.",
+    "Copy two interesting words from the text into a word bank.",
+    "Say a word that describes the wind. Use it in a sentence of your own.",
+    "Describe the size, shape and colour of a toy in three English phrases.",
+    "Draw an object from home and write a caption using a word from your list.",
+    "Read your caption to a partner and ask which word helped them imagine the object.",
+    "Read: The tiny boat rocks. Draw it and point to the clue that explains boat.",
+    "Read: A small boat rocks. A long rope holds it by the bank. Add a label to a drawing and use one describing word for a new object.",
+    "Explain how a picture might help a reader understand string, after trying to read the word."
+  ],
+  "audioPending": false,
+  "codes": [
+    "1Rv.01",
+    "1Rv.02",
+    "*1Rv.03",
+    "*1Wv.01",
+    "*1Wv.03"
+  ],
+  "adultTasks": [
+    7
+  ]
+}

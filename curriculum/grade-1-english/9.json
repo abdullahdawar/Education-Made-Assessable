@@ -1,0 +1,135 @@
+{
+  "number": 9,
+  "title": "Read, infer and explain",
+  "titlePs": "لوستل، اټکل او تشریح",
+  "game": "Clue detective",
+  "icon": "🌧",
+  "intro": "Some answers are stated clearly. For others, use a clue and explain your thinking. Stop before an ending and predict what might happen. More than one prediction can make sense.",
+  "support": "ځینې ځوابونه په لیکنه کې ښکاره دي. د نورو لپاره نښه پیدا کړئ او خپله خبره تشریح کړئ. تر پای مخکې اټکل وکړئ.",
+  "text": "Lina put her book in a bag. Dark clouds filled the sky. She heard a rumble and ran towards home.\nEnding: At home she took the dry book out of her bag.",
+  "model": "A literal answer is on the page. To infer, combine a clue with what you know. To predict, stop before the ending and suggest a next event that fits a clue.",
+  "activity": "Cover the ending after reading the first three sentences. Write or draw a possible next event and underline a clue.",
+  "adult": "Say without showing print: “Sam held out a bowl. The dog wagged its tail and ran over.” Ask what Sam held and why the dog might come. Ask which words helped.",
+  "adultPs": "له ښکاره کولو پرته نوې لنډه کیسه ولولئ. د یوې څرګندې پېښې او یوې نښې په اړه پوښتنه وکړئ.",
+  "rounds": [
+    {
+      "prompt": "Where did Lina put the book?",
+      "choices": [
+        "in a bag",
+        "under a chair",
+        "on a shelf"
+      ],
+      "answer": [
+        "in a bag"
+      ],
+      "hint": "The first sentence states this.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Select the two clues for a possible storm, in story order.",
+      "choices": [
+        "dry book",
+        "dark clouds",
+        "rumble"
+      ],
+      "answer": [
+        "dark clouds",
+        "rumble"
+      ],
+      "hint": "Look for a sky clue and a sound clue.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which word tells what the book was like at the end?",
+      "choices": [
+        "wet",
+        "dark",
+        "dry"
+      ],
+      "answer": [
+        "dry"
+      ],
+      "hint": "Read the ending.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Nia set her lunch on a bench. A crow hopped near it. Nia pulled the lunch close. Where was the lunch at first?",
+      "choices": [
+        "on a bench",
+        "in her hand",
+        "on the grass"
+      ],
+      "answer": [
+        "on a bench"
+      ],
+      "hint": "Read the first sentence for the stated location.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Nia set her lunch on a bench. A crow hopped near it. Nia pulled the lunch close. Why might she do that?",
+      "choices": [
+        "to keep it away from the crow",
+        "to dry the bench",
+        "to help a seed grow"
+      ],
+      "answer": [
+        "to keep it away from the crow"
+      ],
+      "hint": "Connect the crow coming close with Nia moving her lunch.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Nia puts her lunch down. A crow hops closer and looks at it. What is one possible next event supported by the crow’s action?",
+      "choices": [
+        "The crow tries to peck the lunch.",
+        "The bench turns into a boat.",
+        "Nia plants a tree."
+      ],
+      "answer": [
+        "The crow tries to peck the lunch."
+      ],
+      "hint": "Choose a next event that builds on what the crow is already doing.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "The step was slick. Tom slipped as he went up. Which event helps explain slick?",
+      "choices": [
+        "Tom slipped.",
+        "Tom went up.",
+        "There was a step."
+      ],
+      "answer": [
+        "Tom slipped."
+      ],
+      "hint": "Think of the action that suggests the step was hard to grip.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    }
+  ],
+  "tasks": [
+    "Say where Lina put the book. Point to the words that tell you.",
+    "List two things Lina notices before she runs.",
+    "Cover the ending. Predict what may happen next. Give a clue.",
+    "Say why Lina might run. Tell which event supports your idea.",
+    "Explain which event could happen in your life. Make up one imaginary change.",
+    "Have an adult read a short passage. Answer one spoken question about it.",
+    "Write two list entries about the story. Read your notes to a partner.",
+    "Read: Lina hangs her wet coat by the door. She puts her dry book on a chair. What does she put on the chair? Write two facts from the text.",
+    "Read: Omar left wet shoes by the door. There were puddles on the path. His socks were dry. Where might Omar have walked? Explain with a clue.",
+    "Read: Sara has a dry towel. Her dog comes in wet and shakes by the door. Stop here. Predict what Sara might do. Give a clue."
+  ],
+  "audioPending": true,
+  "codes": [
+    "*1Ri.05",
+    "*1Ri.09",
+    "1Ri.10",
+    "1Ri.11",
+    "1Ri.12",
+    "*1Ri.13",
+    "1Ra.06",
+    "1Wp.04"
+  ],
+  "adultTasks": [
+    6,
+    7
+  ]
+}

@@ -1,0 +1,542 @@
+[
+  {
+    "code": "1Rw.01",
+    "chapter": 1,
+    "scope": "Name alphabet letters and associate each with its usual sound.",
+    "evidence": "Adult sound and letter check for all 26."
+  },
+  {
+    "code": "1Rw.02",
+    "chapter": 2,
+    "scope": "Recognise letter groups for consonant and vowel digraphs and trigraphs.",
+    "evidence": "Hear and match th, sh, ch, ai, ee and igh."
+  },
+  {
+    "code": "1Rw.03",
+    "chapter": 2,
+    "scope": "Blend adjacent consonant sounds without dropping either sound.",
+    "evidence": "Listen to a learner read brush and sand."
+  },
+  {
+    "code": "1Rw.04",
+    "chapter": 3,
+    "scope": "Read verbs ending in s, ed and ing.",
+    "evidence": "Read the forms in a sentence aloud."
+  },
+  {
+    "code": "1Rw.05",
+    "chapter": 1,
+    "scope": "Decode regular words using letter\u2013sound knowledge.",
+    "evidence": "Read unfamiliar decodable CVC words aloud."
+  },
+  {
+    "code": "1Rw.06",
+    "chapter": 2,
+    "scope": "Sound out parts of new words.",
+    "evidence": "Observe how a child attempts a new word."
+  },
+  {
+    "code": "1Rw.07",
+    "chapter": 3,
+    "scope": "Begin recognising common regular and exception words on sight.",
+    "evidence": "Sample isolated words and the same words in a passage."
+  },
+  {
+    "code": "1Ww.01",
+    "chapter": 1,
+    "scope": "Find usual written spellings for heard sounds.",
+    "evidence": "Dictate sounds without displaying the options."
+  },
+  {
+    "code": "1Ww.02",
+    "chapter": 2,
+    "scope": "Choose spellings for adjacent consonants and consonant digraphs.",
+    "evidence": "Dictate and check both sounds and shared spellings."
+  },
+  {
+    "code": "1Ww.03",
+    "chapter": 2,
+    "scope": "Connect rhyming words to recurring spellings.",
+    "evidence": "Say and compare a rhyme family."
+  },
+  {
+    "code": "1Ww.04",
+    "chapter": 3,
+    "scope": "Use noun plurals in s and es and explain the change in meaning.",
+    "evidence": "Write labels for one and several items."
+  },
+  {
+    "code": "1Ww.05",
+    "chapter": 1,
+    "scope": "Choose plausible sound spellings for simple and attempted words.",
+    "evidence": "Keep an independent writing sample."
+  },
+  {
+    "code": "1Ww.06",
+    "chapter": 3,
+    "scope": "Accurately spell familiar words including exceptions.",
+    "evidence": "Check familiar words in unprompted writing."
+  },
+  {
+    "code": "*1Ww.07",
+    "chapter": 3,
+    "scope": "Get spelling help and retain useful entries in a personal log.",
+    "evidence": "Inspect a log and observe later reuse."
+  },
+  {
+    "code": "1Rv.01",
+    "chapter": 4,
+    "scope": "Show initial understanding of words and sentences read.",
+    "evidence": "Match a sentence to an action or explain it."
+  },
+  {
+    "code": "1Rv.02",
+    "chapter": 4,
+    "scope": "Use an illustration to work out what an unfamiliar word means.",
+    "evidence": "Explain the picture clue after attempting to decode the word."
+  },
+  {
+    "code": "*1Rv.03",
+    "chapter": 4,
+    "scope": "Collect useful or interesting words from reading for writing.",
+    "evidence": "Point to a word in a source text and record it."
+  },
+  {
+    "code": "1Rv.04",
+    "chapter": 1,
+    "scope": "Say the alphabet in sequence.",
+    "evidence": "Listen to complete oral recital."
+  },
+  {
+    "code": "1Rv.05",
+    "chapter": 5,
+    "scope": "Explore sounds and words such as rhyme and rhythm in reading.",
+    "evidence": "Join in and explain sound patterns."
+  },
+  {
+    "code": "1Rg.01",
+    "chapter": 6,
+    "scope": "Reread with awareness of sentence boundaries and links among word groups.",
+    "evidence": "Hear rereading and ask what each word group does."
+  },
+  {
+    "code": "1Rg.02",
+    "chapter": 6,
+    "scope": "Explain full stops and different jobs of capitals in texts.",
+    "evidence": "Find examples of names, I and sentence starts."
+  },
+  {
+    "code": "1Rg.03",
+    "chapter": 6,
+    "scope": "Locate individual sentences in a text.",
+    "evidence": "Mark sentence boundaries."
+  },
+  {
+    "code": "1Rg.04",
+    "chapter": 6,
+    "scope": "Notice and explore sentences joined with and.",
+    "evidence": "Show both joined parts."
+  },
+  {
+    "code": "1Rg.05",
+    "chapter": 6,
+    "scope": "Explore how verbs and word order make statements work.",
+    "evidence": "Repair a scrambled statement and explain."
+  },
+  {
+    "code": "1Rg.06",
+    "chapter": 6,
+    "scope": "Find nouns and verbs in text.",
+    "evidence": "Point to examples and identify their jobs."
+  },
+  {
+    "code": "1Rg.07",
+    "chapter": 6,
+    "scope": "Explore when a, an and the are used.",
+    "evidence": "Explain first and subsequent references to an object."
+  },
+  {
+    "code": "*1Wv.01",
+    "chapter": 4,
+    "scope": "Use words appropriate to a familiar topic.",
+    "evidence": "Describe an object using precise words."
+  },
+  {
+    "code": "1Wv.02",
+    "chapter": 7,
+    "scope": "Begin using familiar storytelling phrases.",
+    "evidence": "Use a suitable opening in an original story."
+  },
+  {
+    "code": "*1Wv.03",
+    "chapter": 4,
+    "scope": "Draw on a personal word list to vary writing.",
+    "evidence": "Compare the list and a description."
+  },
+  {
+    "code": "1Wg.01",
+    "chapter": 6,
+    "scope": "Start and end a sentence with a capital and full stop.",
+    "evidence": "Write an independent sentence."
+  },
+  {
+    "code": "1Wg.02",
+    "chapter": 6,
+    "scope": "Use full stops for some sentences in longer writing.",
+    "evidence": "Review a short passage."
+  },
+  {
+    "code": "1Wg.03",
+    "chapter": 6,
+    "scope": "Capitalise I, names and some sentence beginnings in longer work.",
+    "evidence": "Review a short passage including I and a name."
+  },
+  {
+    "code": "1Wg.04",
+    "chapter": 6,
+    "scope": "Write simple sentences.",
+    "evidence": "Write about a familiar picture or event."
+  },
+  {
+    "code": "1Wg.05",
+    "chapter": 6,
+    "scope": "Join words and clauses with and.",
+    "evidence": "Write one example of each joining pattern."
+  },
+  {
+    "code": "1Wg.06",
+    "chapter": 6,
+    "scope": "Choose appropriate articles in sentences.",
+    "evidence": "Write about first and later mentions."
+  },
+  {
+    "code": "1Rs.01",
+    "chapter": 7,
+    "scope": "Discuss how events run from beginning to middle to end.",
+    "evidence": "Reorder and retell an illustrated narrative."
+  },
+  {
+    "code": "*1Rs.02",
+    "chapter": 8,
+    "scope": "Recognise structures across fiction, non-fiction and simple poetry.",
+    "evidence": "Compare features across several text types."
+  },
+  {
+    "code": "1Rs.03",
+    "chapter": 8,
+    "scope": "Recognise a book's cover, title and contents.",
+    "evidence": "Locate a chosen part in a real book."
+  },
+  {
+    "code": "1Rs.04",
+    "chapter": 8,
+    "scope": "Notice how appearance and images vary with a text's purpose.",
+    "evidence": "Explain contrasting visual features."
+  },
+  {
+    "code": "1Ws.01",
+    "chapter": 7,
+    "scope": "Order and extend a short sequence of familiar events or actions.",
+    "evidence": "Sequence captions and add a new event."
+  },
+  {
+    "code": "*1Ws.02",
+    "chapter": 8,
+    "scope": "Use basic organisation suitable for the form of writing.",
+    "evidence": "Create a heading and labelled diagram."
+  },
+  {
+    "code": "*1Ri.01",
+    "chapter": 5,
+    "scope": "Explore stories and poems including what images contribute.",
+    "evidence": "Read examples and explain an image clue."
+  },
+  {
+    "code": "*1Ri.02",
+    "chapter": 7,
+    "scope": "Identify features typical of simple stories.",
+    "evidence": "Name characters, setting and key events."
+  },
+  {
+    "code": "*1Ri.03",
+    "chapter": 8,
+    "scope": "Explore different simple non-fiction forms.",
+    "evidence": "Read recount, instructions and information examples."
+  },
+  {
+    "code": "*1Ri.04",
+    "chapter": 8,
+    "scope": "Identify some purposes and features of non-fiction forms.",
+    "evidence": "Select an appropriate form for a reader's purpose."
+  },
+  {
+    "code": "*1Ri.05",
+    "chapter": 9,
+    "scope": "Find meanings that are directly stated.",
+    "evidence": "Point to the line that answers a question."
+  },
+  {
+    "code": "1Ri.06",
+    "chapter": 7,
+    "scope": "Orally retell most relevant parts of a familiar story.",
+    "evidence": "Listen to the retelling without answer tiles."
+  },
+  {
+    "code": "1Ri.07",
+    "chapter": 7,
+    "scope": "Recognise main characters and describe what happens to them.",
+    "evidence": "Explain an event for a chosen character."
+  },
+  {
+    "code": "1Ri.08",
+    "chapter": 8,
+    "scope": "Retrieve information in labels, lists and captions.",
+    "evidence": "Find information in each of the three formats."
+  },
+  {
+    "code": "*1Ri.09",
+    "chapter": 9,
+    "scope": "Explore meanings that require clues beyond direct statements.",
+    "evidence": "Offer a supported interpretation."
+  },
+  {
+    "code": "1Ri.10",
+    "chapter": 9,
+    "scope": "Predict what may happen next.",
+    "evidence": "Make a plausible prediction before revealing the ending."
+  },
+  {
+    "code": "1Ri.11",
+    "chapter": 9,
+    "scope": "Infer meaning from story events.",
+    "evidence": "Explain one inference with an event clue."
+  },
+  {
+    "code": "1Ri.12",
+    "chapter": 9,
+    "scope": "Answer simple questions orally after reading or listening.",
+    "evidence": "Observe both read and heard examples."
+  },
+  {
+    "code": "*1Ri.13",
+    "chapter": 9,
+    "scope": "Explain some reasoning when answering text questions.",
+    "evidence": "Record an answer and the clue that supports it."
+  },
+  {
+    "code": "1Ri.14",
+    "chapter": 5,
+    "scope": "Join in with rhyme and repeated parts with understanding.",
+    "evidence": "Hear the learner anticipate and join the refrain."
+  },
+  {
+    "code": "*1Wc.01",
+    "chapter": 7,
+    "scope": "Begin composing simple stories and poems using familiar forms.",
+    "evidence": "Collect a short story and a patterned poem."
+  },
+  {
+    "code": "1Wc.02",
+    "chapter": 7,
+    "scope": "Say ideas or sentences aloud to plan writing.",
+    "evidence": "Observe oral planning before writing."
+  },
+  {
+    "code": "1Wc.03",
+    "chapter": 7,
+    "scope": "Write a brief retelling, for example with picture captions.",
+    "evidence": "Read a sequence of captions independently written."
+  },
+  {
+    "code": "*1Wc.04",
+    "chapter": 8,
+    "scope": "Begin choosing writing language and features for a purpose.",
+    "evidence": "Write simple instructions and a short information text."
+  },
+  {
+    "code": "1Wc.05",
+    "chapter": 8,
+    "scope": "Include suitable facts in familiar non-fiction writing.",
+    "evidence": "Check that facts fit the purpose."
+  },
+  {
+    "code": "*1Ra.01",
+    "chapter": 10,
+    "scope": "Engage with stories, poems and non-fiction read or heard.",
+    "evidence": "Offer a choice and discuss responses across forms."
+  },
+  {
+    "code": "1Ra.02",
+    "chapter": 5,
+    "scope": "Contribute familiar words or phrases in shared reading.",
+    "evidence": "Hear participation in familiar texts."
+  },
+  {
+    "code": "1Ra.03",
+    "chapter": 5,
+    "scope": "Read a simple text aloud independently.",
+    "evidence": "Listen to a new short text without adult prompting."
+  },
+  {
+    "code": "1Ra.04",
+    "chapter": 10,
+    "scope": "Discuss preferences and links to personal experience.",
+    "evidence": "Ask for a preference and a personal connection."
+  },
+  {
+    "code": "1Ra.05",
+    "chapter": 10,
+    "scope": "Start choosing books for pleasure, including listening choices.",
+    "evidence": "Observe a choice and ask why."
+  },
+  {
+    "code": "1Ra.06",
+    "chapter": 9,
+    "scope": "Compare story events and settings with real life.",
+    "evidence": "Discuss a realistic and an imaginary event."
+  },
+  {
+    "code": "1Wp.01",
+    "chapter": 1,
+    "scope": "Develop an effective and comfortable pencil hold.",
+    "evidence": "Observe grip and comfort during actual writing."
+  },
+  {
+    "code": "1Wp.02",
+    "chapter": 1,
+    "scope": "Form capital and lower-case letters correctly.",
+    "evidence": "Inspect writing and starting movements."
+  },
+  {
+    "code": "1Wp.03",
+    "chapter": 2,
+    "scope": "Join selected letters, including letter groups for sounds.",
+    "evidence": "Observe appropriate joins or linked strokes with an approved model."
+  },
+  {
+    "code": "1Wp.04",
+    "chapter": 9,
+    "scope": "Record simple text answers, for example as a list.",
+    "evidence": "Check independently recorded answers."
+  },
+  {
+    "code": "*1Wp.05",
+    "chapter": 8,
+    "scope": "Present work in varied forms including labelled images and captioned panels.",
+    "evidence": "Collect examples across writing and digital work."
+  },
+  {
+    "code": "1Wp.06",
+    "chapter": 10,
+    "scope": "Read one's writing aloud and discuss it.",
+    "evidence": "Hear a read-back and an explanation."
+  },
+  {
+    "code": "1SLm.01",
+    "chapter": 11,
+    "scope": "Speak clearly enough for familiar listeners.",
+    "evidence": "Listen to a short exchange."
+  },
+  {
+    "code": "1SLm.02",
+    "chapter": 11,
+    "scope": "Supply information that matters to the listener.",
+    "evidence": "Ask a partner to act on the information supplied."
+  },
+  {
+    "code": "1SLm.03",
+    "chapter": 11,
+    "scope": "Use suitable words about feelings and events.",
+    "evidence": "Hear a brief recount with a feeling."
+  },
+  {
+    "code": "*1SLm.04",
+    "chapter": 11,
+    "scope": "Use some communication beyond spoken words.",
+    "evidence": "Observe gesture or expression without requiring eye contact."
+  },
+  {
+    "code": "*1SLm.05",
+    "chapter": 11,
+    "scope": "Show awareness of listeners through tone or response to cues.",
+    "evidence": "Observe an adjustment during a pair talk."
+  },
+  {
+    "code": "1SLs.01",
+    "chapter": 11,
+    "scope": "Listen and respond, including to a sequence of instructions.",
+    "evidence": "Adult gives an unseen oral sequence and observes actions."
+  },
+  {
+    "code": "1SLs.02",
+    "chapter": 11,
+    "scope": "Ask short questions about something heard or read.",
+    "evidence": "Collect a learner question after each stimulus type."
+  },
+  {
+    "code": "*1SLg.01",
+    "chapter": 11,
+    "scope": "Work with others in a group.",
+    "evidence": "Observe a shared task and contribution."
+  },
+  {
+    "code": "*1SLg.02",
+    "chapter": 11,
+    "scope": "Show understanding of others' opinions.",
+    "evidence": "Hear the learner restate or respond to a view."
+  },
+  {
+    "code": "1SLg.03",
+    "chapter": 11,
+    "scope": "Listen during discussion without interrupting.",
+    "evidence": "Observe an exchange with a speaking object."
+  },
+  {
+    "code": "1SLg.04",
+    "chapter": 11,
+    "scope": "Take speaking turns and share ideas and feelings.",
+    "evidence": "Observe contributions in a small group."
+  },
+  {
+    "code": "1SLp.01",
+    "chapter": 5,
+    "scope": "Reread sentences aloud with developing fluency and expression.",
+    "evidence": "Hear two readings and compare phrasing."
+  },
+  {
+    "code": "1SLp.02",
+    "chapter": 5,
+    "scope": "Recite short poems with attention to rhythm.",
+    "evidence": "Listen to recitation with a steady pulse."
+  },
+  {
+    "code": "1SLp.03",
+    "chapter": 5,
+    "scope": "Pause at full stops during oral reading.",
+    "evidence": "Observe spoken phrasing at boundaries."
+  },
+  {
+    "code": "1SLp.04",
+    "chapter": 12,
+    "scope": "Act out a simple role or imagined situation.",
+    "evidence": "Observe role-play."
+  },
+  {
+    "code": "1SLp.05",
+    "chapter": 12,
+    "scope": "Make a brief personal statement in a familiar setting.",
+    "evidence": "Listen to a short introduction or preference."
+  },
+  {
+    "code": "1SLr.01",
+    "chapter": 12,
+    "scope": "Reflect aloud on activities and what was enjoyable.",
+    "evidence": "Hear a personal reflection."
+  },
+  {
+    "code": "1SLr.02",
+    "chapter": 12,
+    "scope": "Suggest how gesture or expression may show feelings.",
+    "evidence": "Ask about observable clues and allow alternatives."
+  }
+]

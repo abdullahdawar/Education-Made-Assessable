@@ -1,0 +1,138 @@
+{
+  "number": 8,
+  "title": "Books, instructions and information",
+  "titlePs": "کتابونه، لارښوونې او معلومات",
+  "game": "Text explorer",
+  "icon": "🌱",
+  "intro": "A story entertains. Instructions help a reader do something. Information gives facts and a recount tells an experience. Look for titles, lists, labels and pictures that help the reader find something.",
+  "support": "کیسه، لارښوونې، معلومات او د پېښې بیان بېلې دندې لري. سرلیک، لړ، نښه او انځور وګورئ.",
+  "text": "Grow a Bean\nYou need: a bean, a pot, soil, water.\n1. Put soil in the pot. 2. Plant the bean. 3. Add a little water.\nCaption: A small shoot grows above the soil.\nRecount: Yesterday I planted a bean. Today I saw a shoot.",
+  "model": "The list says what to gather. The steps tell what to do. The caption describes what a picture shows. A contents page can point to headings. A recount tells what happened.",
+  "activity": "Make a sign with two steps for putting a name label on a cup.",
+  "adult": "Give the learner a cup and paper. Ask them to explain two steps for putting a label on the cup. Follow the steps as spoken, then discuss unclear details.",
+  "adultPs": "ماشوم ته پیاله او کاغذ ورکړئ. ترې وغواړئ چې پر پیاله د نوم لیکلو دوې مرحلې درته ووایي.",
+  "rounds": [
+    {
+      "prompt": "Choose the item listed first.",
+      "choices": [
+        "water",
+        "bean",
+        "soil"
+      ],
+      "answer": [
+        "bean"
+      ],
+      "hint": "Read the You need list.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Order the actions for the instructions.",
+      "choices": [
+        "Add water",
+        "Plant the bean",
+        "Put soil in the pot"
+      ],
+      "answer": [
+        "Put soil in the pot",
+        "Plant the bean",
+        "Add water"
+      ],
+      "hint": "Follow steps one, two and three.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "What shows what a picture is about?",
+      "choices": [
+        "caption",
+        "cover",
+        "contents"
+      ],
+      "answer": [
+        "caption"
+      ],
+      "hint": "It appears next to the picture.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which heading helps you find what to gather?",
+      "choices": [
+        "You need",
+        "Yesterday",
+        "A small shoot"
+      ],
+      "answer": [
+        "You need"
+      ],
+      "hint": "Find the words just before the list.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which is a command for making a label?",
+      "choices": [
+        "Write your name.",
+        "I wrote my name.",
+        "My label is blue."
+      ],
+      "answer": [
+        "Write your name."
+      ],
+      "hint": "An instruction tells the reader what to do.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which caption fits a picture of two leaves on a shoot?",
+      "choices": [
+        "A shoot has two leaves.",
+        "Pour in the soil.",
+        "I lost my red hat."
+      ],
+      "answer": [
+        "A shoot has two leaves."
+      ],
+      "hint": "Match the words to what the picture shows.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which line tells about something that already happened?",
+      "choices": [
+        "Add some water.",
+        "Yesterday I planted a bean.",
+        "You need a pot."
+      ],
+      "answer": [
+        "Yesterday I planted a bean."
+      ],
+      "hint": "Look for a word that tells when it happened.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    }
+  ],
+  "tasks": [
+    "Point to the heading. Say what the reader will learn to do.",
+    "Copy three items from the You need list.",
+    "Sketch a young plant. Put English labels on the shoot and soil.",
+    "Find the title, cover and contents of a real book. Say what each helps you do.",
+    "Copy the steps in order, then read them to a partner.",
+    "Write two clear instructions for washing a cup. Add a heading.",
+    "Write a two-sentence recount of something you did yesterday.",
+    "Read the caption: Two leaves grow above the soil. What grows above the soil? Add a caption to your own plant drawing.",
+    "Write a heading, a materials list and two steps for getting a school bag ready.",
+    "Read: “Drop, drop, rain on the pot. / Drop, drop, that is a lot!” Compare it with: “Add a little water to the pot.” Which one guides a job? Explain."
+  ],
+  "audioPending": false,
+  "codes": [
+    "*1Rs.02",
+    "1Rs.03",
+    "1Rs.04",
+    "*1Ws.02",
+    "*1Ri.03",
+    "*1Ri.04",
+    "1Ri.08",
+    "*1Wc.04",
+    "1Wc.05",
+    "*1Wp.05"
+  ],
+  "adultTasks": [
+    4,
+    5
+  ]
+}
