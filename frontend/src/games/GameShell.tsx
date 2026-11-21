@@ -24,15 +24,16 @@ const copy = {
   },
 }
 
-export function GameShell({ title, instructions, rounds, language }: {
+export function GameShell({ title, instructions, rounds, language, formatNumber }: {
   title: string
   instructions: string
   rounds: readonly [GameRound, ...GameRound[]]
   language: Language
+  formatNumber?: (value: number) => string
 }) {
   const labels = copy[language]
-  const numbers = new Intl.NumberFormat(language === 'ps' ? 'ps-AF-u-nu-arabext' : 'en')
-  const totalLabel = numbers.format(rounds.length)
+  const numeral = formatNumber ?? new Intl.NumberFormat(language === 'ps' ? 'ps-AF-u-nu-arabext' : 'en').format
+  const totalLabel = numeral(rounds.length)
   const [state, dispatch] = useReducer(
     (current: typeof initialSession, action: Parameters<typeof updateSession>[1]) =>
       updateSession(current, action, rounds.length),
@@ -41,7 +42,7 @@ export function GameShell({ title, instructions, rounds, language }: {
   const [celebrations, setCelebrations] = useState(false)
   const heading = useRef<HTMLHeadingElement>(null)
   const continueButton = useRef<HTMLButtonElement>(null)
-  const starsLabel = numbers.format(state.stars)
+  const starsLabel = numeral(state.stars)
   const complete = state.feedback === 'complete'
   const correct = state.feedback === 'correct'
   const round = rounds[state.round]
@@ -63,7 +64,7 @@ export function GameShell({ title, instructions, rounds, language }: {
     </div>
     <div className="game-progress">
       <div className="game-round-progress">
-        {labels.round} <bdi dir="ltr">{numbers.format(state.round + 1)} / {totalLabel}</bdi>
+        {labels.round} <bdi dir="ltr">{numeral(state.round + 1)} / {totalLabel}</bdi>
         <progress aria-label={labels.stars} value={state.stars} max={rounds.length} />
       </div>
       <strong className="game-score"><span aria-hidden="true">★</span> {labels.stars} <bdi dir="ltr">{starsLabel} / {totalLabel}</bdi></strong>

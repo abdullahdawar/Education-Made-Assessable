@@ -66,8 +66,8 @@
         "ps": "د کتار له ښودل شوي پیل څخه شروع وکړئ. لومړی، دویم او درېیم د کتار ځای ښيي. تر لسم پورې دوام ورکړئ. ځای ښيي چې شی چېرته دی او ټول شمېر ښيي چې څو دي."
       },
       "diagram": {
-        "en": "Front → red · blue · green · yellow",
-        "ps": "پیل: سور، آبي، شین، ژېړ"
+        "en": "Front → red · blue · green · yellow\nPlaces: first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth",
+        "ps": "پیل: سور، آبي، شین، ژېړ\nځایونه: لومړی، دویم، درېیم، څلورم، پنځم، شپږم، اووم، اتم، نهم، لسم"
       },
       "example": {
         "en": "Blue is second from the front. There are four items altogether.",

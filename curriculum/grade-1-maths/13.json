@@ -1,0 +1,291 @@
+{
+  "number": 13,
+  "title": {
+    "en": "Sorting and representing data",
+    "ps": "د معلوماتو ډلبندي او ښودل"
+  },
+  "game": {
+    "en": "Data Detective",
+    "ps": "د معلوماتو پلټونکی"
+  },
+  "lessons": [
+    {
+      "code": "1Ss.01",
+      "title": {
+        "en": "Ask about a collection",
+        "ps": "د یوې ډلې په اړه وپوښتئ"
+      },
+      "explain": {
+        "en": "Look at the objects already in front of you. A question such as “How many red counters are in this tray?” asks for one fixed answer about the tray. Name the category, sort the objects, and count it.",
+        "ps": "مخامخ شیانو ته وګورئ. «په دې پتنوس کې څو سرې دانې دي؟» د دې پتنوس په اړه یو ثابت ځواب غواړي. ډله ونوموئ، شیان بېل او وشمېرئ."
+      },
+      "diagram": {
+        "en": "Tray: red, blue, red, green, red",
+        "ps": "پتنوس: سور، آبي، سور، شین، سور"
+      },
+      "example": {
+        "en": "The red counters make one category. Count them to answer the question about this tray.",
+        "ps": "سرې دانې یوه ډله ده. د دې پتنوس د پوښتنې د ځواب لپاره یې وشمېرئ."
+      },
+      "check": {
+        "en": "Ask a fixed question about the number of pencils in your tray. Count the correct category.",
+        "ps": "د خپل پتنوس د پنسلونو د شمېر په اړه ثابته پوښتنه وکړئ. سمه ډله وشمېرئ."
+      }
+    },
+    {
+      "code": "1Ss.02",
+      "title": {
+        "en": "Show the same data in different ways",
+        "ps": "هماغه معلومات په بېلو بڼو وښيئ"
+      },
+      "explain": {
+        "en": "Sort real objects or draw them first. Record each category as a list or in a table. In a block graph use one block for each object. In a pictogram use one picture for each object. A Venn diagram uses loops: a red square fits where the “red” and “square” loops overlap. In a Carroll diagram, use rows for red/not red and columns for square/not square. Put each object in the cell that matches both rules.",
+        "ps": "لومړی ریښتیني شیان بېل یا رسم کړئ. هره ډله په لړ یا جدول کې ولیکئ. په بلاکي ګراف کې هر شي ته یو بلاک او په انځوریز ګراف کې هر شي ته یو انځور ورکړئ. په وېن شکل کې کړۍ کارېږي: سور مربع د «سور» او «مربع» کړیو په ګډ ځای کې راځي. په کارول جدول کې کتارونه سور او غیر سور، ستنې مربع او غیر مربع دي. هر شی په هغه خانه کې کېږدئ چې له دواړو قاعدو سره برابر وي."
+      },
+      "diagram": {
+        "en": "Table: apple 3, pear 2\nBlock graph: apples ■■■, pears ■■\nPictogram: apples ●●●, pears ◆◆",
+        "ps": "جدول: مڼه ۳، ناک ۲\nبلاکي ګراف: مڼې ■■■، ناک ■■\nانځوریز ګراف: مڼې ●●●، ناک ◆◆"
+      },
+      "example": {
+        "en": "Three objects in the apple group give three blocks or three apple symbols. A red square belongs at the overlap in Venn and in the red/square cell in Carroll.",
+        "ps": "د مڼو درې شیان درې بلاکونه یا درې د مڼو نښې ورکوي. سور مربع په وېن کې ګډ ځای او په کارول کې د سور او مربع خانه نیسي."
+      },
+      "check": {
+        "en": "Make four counters: a red square, red circle, blue square and blue circle. Sort them in overlapping loops and then in a two-by-two table for the two rules.",
+        "ps": "څلور دانې جوړې کړئ: سور مربع، سره دایره، آبي مربع او آبي دایره. لومړی په ګډو کړیو او بیا د دوو قاعدو لپاره په دوه په دوه جدول کې یې بېلې کړئ."
+      }
+    },
+    {
+      "code": "1Ss.03",
+      "title": {
+        "en": "Compare and tell what you found",
+        "ps": "پرتله کړئ او موندنه ووایئ"
+      },
+      "explain": {
+        "en": "Compare the counts. Say which category has more, less, most or least. Point to the objects or graph that supports your conclusion. If two counts are the same, say they are equal.",
+        "ps": "شمېرې پرتله کړئ. ووایئ کومه ډله ډېره، لږه، تر ټولو ډېره یا تر ټولو لږه ده. هغه شیان یا ګراف وښيئ چې پایله مو ثابتوي. که دوه شمېرې یو شان وي، ووایئ چې برابرې دي."
+      },
+      "diagram": {
+        "en": "Red ■■■■\nBlue ■■\nGreen ■",
+        "ps": "سور ■■■■\nآبي ■■\nشین ■"
+      },
+      "example": {
+        "en": "Red has the most with four. Green has the least with one. Blue has more than green and fewer than red.",
+        "ps": "سور په څلورو تر ټولو ډېر دی. شین په یوه تر ټولو لږ دی. آبي له شین ډېر او له سور لږ دی."
+      },
+      "check": {
+        "en": "Make your own marks for three categories. Tell a partner a conclusion and show the evidence.",
+        "ps": "د درې ډلو نښې جوړې کړئ. ملګري ته پایله ووایئ او ثبوت وښيئ."
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "code": "1Ss.01",
+      "prompt": {
+        "en": "The tray has spoon, cup, spoon, plate. Display the spoon count and then the cup count.",
+        "ps": "په پتنوس کې کاشوغه، پیاله، کاشوغه او بشقاب دي. لومړی د کاشوغو او بیا د پیالو شمېر وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "3",
+          "ps": "۳"
+        },
+        {
+          "en": "1",
+          "ps": "۱"
+        },
+        {
+          "en": "2",
+          "ps": "۲"
+        },
+        {
+          "en": "4",
+          "ps": "۴"
+        }
+      ],
+      "solution": [
+        2,
+        1
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Count only the named category each time.",
+        "ps": "هر ځل یوازې نومول شوې ډله وشمېرئ."
+      },
+      "explain": {
+        "en": "There are two spoons and one cup.",
+        "ps": "دوه کاشوغې او یوه پیاله دي."
+      }
+    },
+    {
+      "code": "1Ss.02",
+      "prompt": {
+        "en": "In a table with rows for red or not red and columns for square or not square, choose the row and column for a red circle.",
+        "ps": "په جدول کې کتارونه سور او غیر سور دي او ستنې مربع او غیر مربع دي. د سرې دایرې کتار او ستنه وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "Square column",
+          "ps": "مربع ستنه"
+        },
+        {
+          "en": "Not red row",
+          "ps": "غیر سور کتار"
+        },
+        {
+          "en": "Not square column",
+          "ps": "غیر مربع ستنه"
+        },
+        {
+          "en": "Red row",
+          "ps": "سور کتار"
+        }
+      ],
+      "solution": [
+        3,
+        2
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Check colour and then check shape.",
+        "ps": "لومړی رنګ او بیا بڼه وګورئ."
+      },
+      "explain": {
+        "en": "A red circle fits the red row and not-square column.",
+        "ps": "سره دایره د سور کتار او غیر مربع ستنه کې راځي."
+      }
+    },
+    {
+      "code": "1Ss.03",
+      "prompt": {
+        "en": "Block graph counts: red 5, blue 2, green 4. Choose the category with most and then least.",
+        "ps": "د بلاکي ګراف شمېرې: سور ۵، آبي ۲، شین ۴. لومړی ډېره او بیا لږه ډله وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "Green",
+          "ps": "شین"
+        },
+        {
+          "en": "Blue",
+          "ps": "آبي"
+        },
+        {
+          "en": "Red",
+          "ps": "سور"
+        }
+      ],
+      "solution": [
+        2,
+        1
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Compare the block counts before choosing.",
+        "ps": "له ټاکلو مخکې د بلاکونو شمېر پرتله کړئ."
+      },
+      "explain": {
+        "en": "Red has the most, and blue has the least.",
+        "ps": "سور تر ټولو ډېر او آبي تر ټولو لږ دی."
+      }
+    }
+  ],
+  "practice": [
+    {
+      "codes": [
+        "1Ss.01"
+      ],
+      "task": {
+        "en": "The tray shows two pencils, three rulers and one eraser. Ask a question about one category and answer it.",
+        "ps": "په پتنوس کې دوه پنسلونه، درې خط‌کشونه او یو پاکوونکی دي. د یوې ډلې پوښتنه او ځواب ورکړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ss.02"
+      ],
+      "task": {
+        "en": "Sort real buttons into two groups or draw them. Make a list and a table for the same objects.",
+        "ps": "تڼۍ په دوو ډلو بېلې یا رسم کړئ. د هماغو شیانو لړ او جدول جوړ کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ss.02"
+      ],
+      "task": {
+        "en": "A tray has four apples and three pears. Show the groups in a block graph and a picture graph, using one mark per object.",
+        "ps": "په پتنوس کې څلور مڼې او درې ناک دي. په بلاکي او انځوریز ګراف کې هر شي ته یوه نښه ورکړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ss.02"
+      ],
+      "task": {
+        "en": "Draw overlapping loops for red and square. Place a red circle, a red square, a blue circle and a blue square in the right places.",
+        "ps": "د سور او مربع ګډې کړۍ رسم کړئ. سره دایره، سور مربع، آبي دایره او آبي مربع په سمو ځایونو کې واچوئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ss.02",
+        "1Ss.03"
+      ],
+      "task": {
+        "en": "Make a Carroll table with red/not red and round/not round. Sort a red circle, a blue circle and a red square. Which row has more?",
+        "ps": "د سور او غیر سور، ګرد او غیر ګرد کارول جدول جوړ کړئ. سره دایره، آبي دایره او سور مربع بېل کړئ. کوم کتار ډېر دی؟"
+      }
+    },
+    {
+      "codes": [
+        "1Ss.01",
+        "1Ss.03"
+      ],
+      "task": {
+        "en": "Count and record two types of classroom objects already on a desk. Ask and answer a fixed question. Say which type is less common.",
+        "ps": "پر مېز دوه ډوله شیان وشمېرئ او ولیکئ. ثابته پوښتنه او ځواب ووایئ. کوم ډول لږ دی؟"
+      }
+    },
+    {
+      "codes": [
+        "1Ss.02",
+        "1Ss.03"
+      ],
+      "task": {
+        "en": "Show two groups in a pictogram. Explain why using one picture per object makes it easier to compare the counts.",
+        "ps": "دوه ډلې په انځوریز ګراف کې وښيئ. ووایئ چې هر شي ته یو انځور پرتله ولې اسانه کوي."
+      }
+    },
+    {
+      "codes": [
+        "1Ss.01",
+        "1Ss.02"
+      ],
+      "task": {
+        "en": "There are two cups, four spoons and three plates. Answer how many spoons. Make a table and one-block-per-object graph.",
+        "ps": "دوه پیالې، څلور کاشوغې او درې بشقابونه دي. د کاشوغو شمېر ووایئ. جدول او د هر شي لپاره یو بلاک ګراف جوړ کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ss.02",
+        "1Ss.03"
+      ],
+      "task": {
+        "en": "Sort a red square, a blue square, a red circle and a green circle in red/square loops. Then put them in a Carroll table. Compare red and not-red totals.",
+        "ps": "سور مربع، آبي مربع، سره دایره او شنه دایره په سور او مربع کړیو کې بېل کړئ. بیا یې په کارول جدول کې واچوئ. د سور او غیر سور شمېر پرتله کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ss.03"
+      ],
+      "task": {
+        "en": "A chart has five marks for birds, three for cats and five for dogs. Tell which has least and explain what is true about the greatest counts.",
+        "ps": "په ګراف کې مرغان پنځه، پیشوګانې درې او سپي پنځه نښې لري. ووایئ کوم لږ دی او د ډېرو شمېرو په اړه څه سم دي."
+      }
+    }
+  ]
+}

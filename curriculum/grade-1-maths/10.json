@@ -70,6 +70,17 @@
       "explain": {
         "en": "Move right, then up.",
         "ps": "ښي خوا ته لاړ شئ، بیا پورته."
+      },
+      "grid": {
+        "start": 2,
+        "goal": 1,
+        "blocked": 0,
+        "moves": [
+          "up",
+          "down",
+          "right",
+          "left"
+        ]
       }
     },
     {
@@ -108,6 +119,17 @@
       "explain": {
         "en": "Go left, then down.",
         "ps": "کیڼې خوا، بیا لاندې."
+      },
+      "grid": {
+        "start": 1,
+        "goal": 2,
+        "blocked": 3,
+        "moves": [
+          "left",
+          "up",
+          "right",
+          "down"
+        ]
       }
     },
     {

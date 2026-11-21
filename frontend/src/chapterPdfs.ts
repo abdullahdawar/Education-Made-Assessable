@@ -20,7 +20,7 @@ const studentPdfs = new Map([
   ['/learning/grade-1-counting-ps-worksheets-and-tests.pdf', psPractice],
 ])
 
-const expandedPdfs = import.meta.glob<string>('../../output/pdf/grade-1-maths-*.pdf', {
+const expandedPdfs = import.meta.glob<string>('../../output/pdf/grade-1-maths-[0-9][0-9]-{en,ps}-{notes,worksheets-and-tests}.pdf', {
   eager: true, query: '?url', import: 'default',
 })
 for (const [path, url] of Object.entries(expandedPdfs)) {

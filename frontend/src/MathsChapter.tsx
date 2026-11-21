@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import type { Language } from './curriculum'
 import { GameShell, type GameRound } from './games/GameShell'
-import { matchesTiles } from './mathsTiles'
+import { gridPosition, matchesTiles } from './mathsTiles'
 
 import './maths-chapter.css'
 
-import type { MathsPack, Round } from './mathsPack'
+import type { Grid, MathsPack, Round } from './mathsPack'
 
 export function MathsLesson({ pack, language }: { pack: MathsPack; language: Language }) {
   return <div className="maths-lessons">
@@ -21,6 +21,8 @@ export function MathsLesson({ pack, language }: { pack: MathsPack; language: Lan
   </div>
 }
 
+const pashtoNumeral = new Intl.NumberFormat('en', { numberingSystem: 'arabext' }).format
+
 const copy = {
   en: {
     instructions: 'Choose the tiles in order. You can use a tile again. Check when you are ready.',
@@ -34,12 +36,28 @@ const copy = {
   },
 }
 
+function Maze({ grid, picked, language }: { grid: Grid; picked: readonly number[]; language: Language }) {
+  const position = gridPosition(grid.start, grid.blocked, picked.map((index) => grid.moves[index]))
+  const labels = language === 'ps'
+    ? { board: 'د لارې جال', square: ['پورته کیڼه', 'پورته ښي', 'لاندې کیڼه', 'لاندې ښي'], panda: 'پانډا', goal: 'موخه', blocked: 'بنده', empty: 'تشه' }
+    : { board: 'Route grid', square: ['Top left', 'Top right', 'Bottom left', 'Bottom right'], panda: 'Panda', goal: 'Goal', blocked: 'Blocked', empty: 'Empty' }
+  return <div className="maths-maze" role="group" aria-label={labels.board} dir="ltr">
+    {labels.square.map((square, index) => {
+      const cell = index === grid.blocked ? labels.blocked : index === position ? labels.panda : index === grid.goal ? labels.goal : labels.empty
+      return <span key={square} aria-label={`${square}: ${cell}`} role="img">
+        {index === grid.blocked ? '×' : index === position ? '◆' : index === grid.goal ? '★' : '·'}
+      </span>
+    })}
+  </div>
+}
+
 function TileBuilder({ round, language, solved, answer }: {
   round: Round; language: Language; solved: boolean; answer: (correct: boolean) => void
 }) {
   const [picked, setPicked] = useState<number[]>([])
   const labels = copy[language]
   return <>
+    {round.grid && <Maze grid={round.grid} picked={picked} language={language} />}
     <div className="game-answers">
       {round.tiles.map((tile, index) => <button className="control" key={index}
         aria-disabled={solved || picked.length === round.take}
@@ -71,7 +89,8 @@ export function MathsGame({ pack, language }: { pack: MathsPack; language: Langu
   const [first, ...rest] = pack.rounds
   return <>
     <GameShell title={pack.game[language]} instructions={labels.instructions}
-      rounds={[makeRound(first), ...rest.map(makeRound)]} language={language} />
+      rounds={[makeRound(first), ...rest.map(makeRound)]} language={language}
+      formatNumber={language === 'ps' ? pashtoNumeral : undefined} />
     <p lang={language} dir={language === 'ps' ? 'rtl' : 'ltr'}>{labels.practice}</p>
   </>
 }

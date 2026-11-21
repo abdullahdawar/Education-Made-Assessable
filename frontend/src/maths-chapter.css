@@ -9,3 +9,5 @@
 .maths-picked { margin-block: 12px; padding: 10px; background: var(--mint); border-radius: 10px; }
 .maths-picked ol { padding-inline-start: 24px; margin-block: 4px; }
 .game-answers button[aria-disabled=true] { opacity: .7; }
+.maths-maze { display: grid; grid-template-columns: repeat(2, 48px); gap: 6px; margin-block: 8px; }
+.maths-maze span { display: grid; place-items: center; height: 48px; border: 1px solid var(--indigo); border-radius: 8px; background: var(--lavender); font-size: 1.35rem; }
