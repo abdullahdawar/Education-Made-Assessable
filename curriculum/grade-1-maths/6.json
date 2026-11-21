@@ -194,6 +194,121 @@
         "en": "Nine plus four is thirteen. Sixteen take away seven is nine.",
         "ps": "نهه جمع څلور دیارلس ده. له شپاړسو اووه کمول نهه ده."
       }
+    },
+    {
+      "code": "1Ni.04",
+      "prompt": {
+        "en": "Complete two ten-frames. The first already has zero counters and the second already has ten. Choose the two amounts to add.",
+        "ps": "دوه چوکاټونه ډک کړئ. لومړی صفر او دویم لس دانې لري. د زیاتولو دوه شمېرې وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "1",
+          "ps": "۱"
+        },
+        {
+          "en": "10",
+          "ps": "۱۰"
+        },
+        {
+          "en": "0",
+          "ps": "۰"
+        },
+        {
+          "en": "9",
+          "ps": "۹"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        1,
+        2
+      ],
+      "hint": {
+        "en": "One frame is empty and the other is full.",
+        "ps": "یو چوکاټ تش او بل ډک دی."
+      },
+      "explain": {
+        "en": "Add ten to zero and zero to ten.",
+        "ps": "صفر ته لس او لسو ته صفر ورزیات کړئ."
+      }
+    },
+    {
+      "code": "1Ni.06",
+      "prompt": {
+        "en": "There are 10 blocks in each tray. Build the double with both trays and then show the total.",
+        "ps": "په هر پتنوس کې ۱۰ دانې دي. دوه برابره جوړه کړئ؛ دواړه پتنوسونه او بیا ټول شمېر وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "10",
+          "ps": "۱۰"
+        },
+        {
+          "en": "18",
+          "ps": "۱۸"
+        },
+        {
+          "en": "20",
+          "ps": "۲۰"
+        },
+        {
+          "en": "12",
+          "ps": "۱۲"
+        }
+      ],
+      "take": 3,
+      "solution": [
+        0,
+        0,
+        2
+      ],
+      "hint": {
+        "en": "Double ten uses two whole groups of ten.",
+        "ps": "د لسو دوه برابره دوه د لسو ډلې دي."
+      },
+      "explain": {
+        "en": "Ten and ten make twenty.",
+        "ps": "لس او لس شل کېږي."
+      }
+    },
+    {
+      "code": "1Ni.05",
+      "prompt": {
+        "en": "Think of a nearby result before each calculation. Check the exact results for 11 + 9 and 18 take away 18, in order.",
+        "ps": "له حساب مخکې نږدې پایله اټکل کړئ. د ۱۱ جمع ۹ او له ۱۸ څخه د ۱۸ کمولو دقیقې پایلې په ترتیب وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "19",
+          "ps": "۱۹"
+        },
+        {
+          "en": "0",
+          "ps": "۰"
+        },
+        {
+          "en": "20",
+          "ps": "۲۰"
+        },
+        {
+          "en": "1",
+          "ps": "۱"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        2,
+        1
+      ],
+      "hint": {
+        "en": "Join the parts in the first calculation. The second removes the whole collection.",
+        "ps": "په لومړي کې برخې یو ځای کړئ. په دویم کې ټوله ډله لرې کېږي."
+      },
+      "explain": {
+        "en": "Eleven plus nine is twenty. Taking everything away leaves zero.",
+        "ps": "یوولس جمع نهه شل کېږي. د ټولو له لرې کولو وروسته صفر پاتې کېږي."
+      }
     }
   ],
   "practice": [

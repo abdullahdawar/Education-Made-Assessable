@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import { readFileSync, readdirSync } from 'node:fs'
 import test from 'node:test'
 import { chaptersForGrade } from '../src/curriculum.ts'
+import { initialSession, updateSession } from '../src/games/session.ts'
 import { gridPosition, matchesTiles } from '../src/mathsTiles.ts'
 
 const root = new URL('../../', import.meta.url)
@@ -41,12 +42,19 @@ test('chapter packs share bilingual task identifiers and student-only practice a
     localized(pack.game)
     assert.equal(pack.practice.length, 10)
     assert.equal(new Set(pack.practice.map(({ task }) => task.en)).size, 10)
-    for (const { code, ...lesson } of pack.lessons) {
+    for (const { code, visual, ...lesson } of pack.lessons) {
       assert.match(code, /^1[A-Z][a-z]\.\d{2}$/)
       Object.values(lesson).forEach(localized)
+      if (visual) {
+        localized(visual.alt)
+        assert.match(visual.file, /^[a-z-]+\.svg$/)
+        assert.match(readFileSync(new URL('figures/' + visual.file, content), 'utf8'), /^<svg\b/)
+      }
     }
     for (const task of pack.practice) {
-      assert.deepEqual(Object.keys(task).sort(), ['codes', 'task'])
+      const { response, ...student } = task
+      assert.deepEqual(Object.keys(student).sort(), ['codes', 'task'])
+      assert.ok(response === undefined || response === 'draw')
       localized(task.task)
     }
     for (const round of pack.rounds) {
@@ -105,4 +113,82 @@ test('Pashto worked equations isolate operators and operands left to right', () 
   const diagram = packs.find(({ number }) => number === 6).lessons.find(({ code }) => code === '1Ni.05').diagram.ps
   assert.ok(diagram.includes('\u2066۸ + ۳ = ۱۱\u2069'))
   assert.ok(diagram.includes('\u2066۱۳ − ۳ = ۱۰\u2069'))
+})
+
+
+function numericTokens(text) {
+  return text.replace(/[۰-۹]/g, (digit) => String('۰۱۲۳۴۵۶۷۸۹'.indexOf(digit))).match(/\d+/g) ?? []
+}
+
+test('new rounds have varied bilingual prompts, unique tile labels and equivalent numeric choices', () => {
+  for (const pack of packs) {
+    assert.ok(pack.rounds.length >= 6)
+    const signatures = new Set()
+    for (const lang of ['en', 'ps']) {
+      assert.equal(new Set(pack.rounds.map(({ prompt }) => prompt[lang])).size, pack.rounds.length)
+      assert.equal(new Set(pack.practice.map(({ task }) => task[lang])).size, 10)
+      for (const round of pack.rounds) {
+        assert.equal(new Set(round.tiles.map((tile) => tile[lang])).size, round.tiles.length)
+      }
+    }
+    for (const round of pack.rounds) {
+      for (const tile of round.tiles) assert.deepEqual(numericTokens(tile.ps), numericTokens(tile.en))
+      signatures.add(round.solution.map((index) => round.tiles[index].en).join(' / '))
+    }
+    assert.ok(signatures.size >= 5, `Chapter ${pack.number} repeats the same solution too often`)
+  }
+})
+
+test('all expanded sessions lock duplicate answers, reject stale advances and replay cleanly', () => {
+  for (const { rounds } of packs) {
+    let state = initialSession
+    for (let index = 0; index < rounds.length; index++) {
+      assert.equal(updateSession(state, { type: 'next', round: index }, rounds.length), state)
+      state = updateSession(state, { type: 'answer', round: index, correct: false }, rounds.length)
+      const once = state
+      state = updateSession(state, { type: 'answer', round: index, correct: false }, rounds.length)
+      assert.equal(state.attempts, once.attempts + 1)
+      assert.equal(state.stars, index)
+      state = updateSession(state, { type: 'answer', round: index, correct: true }, rounds.length)
+      assert.equal(updateSession(state, { type: 'answer', round: index, correct: true }, rounds.length), state)
+      assert.equal(state.stars, index + 1)
+      assert.equal(updateSession(state, { type: 'next', round: index - 1 }, rounds.length), state)
+      state = updateSession(state, { type: 'next', round: index }, rounds.length)
+    }
+    assert.equal(state.feedback, 'complete')
+    assert.equal(state.stars, rounds.length)
+    assert.deepEqual(updateSession(state, { type: 'replay' }, rounds.length), initialSession)
+  }
+})
+
+test('additional numeric rounds agree with independently derived values and routes', () => {
+  const numeric = (chapter, start) => packs.find((pack) => pack.number === chapter).rounds.slice(start)
+    .filter((round) => round.tiles.every((tile) => /^\d+$/.test(tile.en)))
+    .map((round) => round.solution.map((index) => Number(round.tiles[index].en)))
+  assert.deepEqual(numeric(3, 3), [[18 / 2, 18 / 2], [20, 13, 19].sort((a,b) => b-a)])
+  assert.deepEqual(numeric(4, 4), [[1,2,3].map((step) => 13-step), [3+10, 3+10+1]])
+  assert.deepEqual(numeric(5, 3), [[7,5,7+5], [6,6-6], [Math.min(8,8),8-8]])
+  assert.deepEqual(numeric(6, 3), [[10-0,10-10], [10,10,2*10], [11+9,18-18]])
+  assert.deepEqual(numeric(7, 4), [[3,8-3], [2/2,20/2], [6,6,2*6]])
+  assert.deepEqual(numeric(9, 4), [[3*2,3*4]])
+  assert.deepEqual(numeric(13, 3), [
+    ['book','ruler'].map((kind) => ['book','pencil','book','ruler','pencil'].filter((item) => item === kind).length),
+    [5,3].map((number) => number * 1),
+  ])
+})
+
+test('paired print prompts agree on explicit quantities', () => {
+  for (const pack of packs) {
+    for (const [index, exercise] of pack.practice.entries()) {
+      const english = numericTokens(exercise.task.en)
+      // These two Pashto directions spell out the count of steps as “three”.
+      const ps = pack.number === 5 && [1, 3].includes(index)
+        ? exercise.task.ps.replace('درې', '۳')
+        : exercise.task.ps
+      const pashto = numericTokens(ps)
+      if (english.length && pashto.length) {
+        assert.deepEqual(pashto, english, `Chapter ${pack.number}, practice page ${index + 1}`)
+      }
+    }
+  }
 })

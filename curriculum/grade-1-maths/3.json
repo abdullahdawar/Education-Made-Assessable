@@ -190,6 +190,117 @@
         "en": "Blue is second and yellow is fourth.",
         "ps": "آبي دویم او ژېړ څلورم دی."
       }
+    },
+    {
+      "code": "1Np.02",
+      "prompt": {
+        "en": "Regroup 18 sticks into two equal bundles. Choose each bundle.",
+        "ps": "۱۸ لرګي په دوو برابرو ګېډیو کې واچوئ. هره ګېډۍ وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "8",
+          "ps": "۸"
+        },
+        {
+          "en": "9",
+          "ps": "۹"
+        },
+        {
+          "en": "10",
+          "ps": "۱۰"
+        },
+        {
+          "en": "12",
+          "ps": "۱۲"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        1,
+        1
+      ],
+      "hint": {
+        "en": "Both bundles should match and together use all eighteen sticks.",
+        "ps": "ګېډۍ باید برابرې وي او ټول ۱۸ لرګي پکې وي."
+      },
+      "explain": {
+        "en": "Nine and nine make eighteen.",
+        "ps": "نهه او نهه اتلس کېږي."
+      }
+    },
+    {
+      "code": "1Np.03",
+      "prompt": {
+        "en": "Order these amounts from most to fewest: a full tray of 20, a tray of 13, and a tray of 19.",
+        "ps": "۲۰، ۱۳ او ۱۹ له ډېر څخه تر لږ پورې ترتیب کړئ."
+      },
+      "tiles": [
+        {
+          "en": "13",
+          "ps": "۱۳"
+        },
+        {
+          "en": "20",
+          "ps": "۲۰"
+        },
+        {
+          "en": "19",
+          "ps": "۱۹"
+        }
+      ],
+      "take": 3,
+      "solution": [
+        1,
+        2,
+        0
+      ],
+      "hint": {
+        "en": "Compare nineteen and twenty first. They are one apart.",
+        "ps": "لومړی نولس او شل پرتله کړئ. یو توپیر لري."
+      },
+      "explain": {
+        "en": "Twenty, nineteen, thirteen.",
+        "ps": "شل، نولس، دیارلس."
+      }
+    },
+    {
+      "code": "1Np.04",
+      "prompt": {
+        "en": "Ten children stand in a line. Starting at the front, select the place just before tenth, then the place just before sixth.",
+        "ps": "لس ماشومان په کتار کې دي. له پیل څخه د لسم نه مخکې او بیا د شپږم نه مخکې ځای وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "Fifth",
+          "ps": "پنځم"
+        },
+        {
+          "en": "Eighth",
+          "ps": "اتم"
+        },
+        {
+          "en": "Ninth",
+          "ps": "نهم"
+        },
+        {
+          "en": "Seventh",
+          "ps": "اووم"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        2,
+        0
+      ],
+      "hint": {
+        "en": "Say the places in order and stop one place before each named child.",
+        "ps": "ځایونه په ترتیب ووایئ او تر هر نومول شوي ځای یو ځای مخکې ودرېږئ."
+      },
+      "explain": {
+        "en": "Ninth is before tenth. Fifth is before sixth.",
+        "ps": "نهم تر لسم او پنځم تر شپږم مخکې دی."
+      }
     }
   ],
   "practice": [

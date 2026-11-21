@@ -66,8 +66,8 @@
         "ps": "په بشپړ ساعت کې اوږده د دقیقو ستنه دولسو ته وي. لنډه ستنه ساعت ښيي. په نیم ساعت کې اوږده ستنه شپږو ته او لنډه د دوو ساعتونو تر منځ وي."
       },
       "diagram": {
-        "en": "Clock at three: 🕒\nClock at half past three: 🕞",
-        "ps": "درې بجې: 🕒\nدرې نیمې بجې: 🕞"
+        "en": "Left: three o’clock. Right: half past three.",
+        "ps": "کیڼ: درې بجې. ښی: درې نیمې بجې."
       },
       "example": {
         "en": "At 3:00 the short hand is at three and the long hand at twelve. At 3:30 the short hand sits between three and four, and the long hand points down to six.",
@@ -76,6 +76,13 @@
       "check": {
         "en": "Make a paper clock. Move both hands to show five o’clock and half past five.",
         "ps": "کاغذي ساعت جوړ کړئ. دواړه ستنې وخوځوئ او پنځه بجې او پنځه نیمې بجې وښيئ."
+      },
+      "visual": {
+        "file": "clock-hands.svg",
+        "alt": {
+          "en": "Two clock faces. Left: long hand at 12, short hand at 3. Right: long hand at 6, short hand halfway from 3 to 4.",
+          "ps": "دوه ساعتونه. کیڼ: اوږده ستنه پر ۱۲ او لنډه پر ۳. ښی: اوږده ستنه پر ۶ او لنډه د ۳ او ۴ تر منځ."
+        }
       }
     }
   ],
@@ -189,6 +196,120 @@
         "en": "Four o’clock came first, then half past four.",
         "ps": "لومړی څلور بجې وې، بیا څلور نیمې."
       }
+    },
+    {
+      "code": "1Gt.02",
+      "prompt": {
+        "en": "Choose the day just before Monday, then the month just after December.",
+        "ps": "له دوشنبې سمدستي مخکې ورځ او له دسمبر سمدستي وروسته میاشت وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "Saturday",
+          "ps": "شنبه"
+        },
+        {
+          "en": "January",
+          "ps": "جنوري"
+        },
+        {
+          "en": "November",
+          "ps": "نومبر"
+        },
+        {
+          "en": "Sunday",
+          "ps": "یکشنبه"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        3,
+        1
+      ],
+      "hint": {
+        "en": "Days and months both repeat in a cycle.",
+        "ps": "ورځې او میاشتې په دوره کې تکرارېږي."
+      },
+      "explain": {
+        "en": "Sunday comes just before Monday. January follows December.",
+        "ps": "یکشنبه تر دوشنبې مخکې او جنوري له دسمبر وروسته راځي."
+      }
+    },
+    {
+      "code": "1Gt.03",
+      "prompt": {
+        "en": "The long hand is on 12 and the short hand is on 8. Choose that time, then the time a half hour later.",
+        "ps": "اوږده ستنه پر ۱۲ او لنډه پر ۸ ده. هماغه وخت او بیا نیم ساعت وروسته وخت وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "8:30",
+          "ps": "۸:۳۰"
+        },
+        {
+          "en": "9:00",
+          "ps": "۹:۰۰"
+        },
+        {
+          "en": "8:00",
+          "ps": "۸:۰۰"
+        },
+        {
+          "en": "7:30",
+          "ps": "۷:۳۰"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        2,
+        0
+      ],
+      "hint": {
+        "en": "At half past, the long hand points to six and the short hand is just past eight.",
+        "ps": "په نیم ساعت کې اوږده ستنه پر شپږ او لنډه له اتو تېره وي."
+      },
+      "explain": {
+        "en": "Eight o’clock, then half past eight.",
+        "ps": "اته بجې، بیا اته نیمې بجې."
+      }
+    },
+    {
+      "code": "1Gt.01",
+      "prompt": {
+        "en": "Choose a useful unit for brushing your teeth, then for a school holiday lasting about seven days.",
+        "ps": "د غاښونو مینځلو او بیا د ښوونځي د شاوخوا اوو ورځو رخصتۍ لپاره مناسب واحد وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "Weeks",
+          "ps": "اوونۍ"
+        },
+        {
+          "en": "Seconds",
+          "ps": "ثانیې"
+        },
+        {
+          "en": "Minutes",
+          "ps": "دقیقې"
+        },
+        {
+          "en": "Months",
+          "ps": "میاشتې"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        2,
+        0
+      ],
+      "hint": {
+        "en": "One is a short everyday activity; the other is about a full week.",
+        "ps": "یو لنډ ورځنی کار او بل شاوخوا پوره اوونۍ ده."
+      },
+      "explain": {
+        "en": "Minutes suit brushing and weeks suit the holiday.",
+        "ps": "دقیقې د غاښونو مینځلو او اوونۍ د رخصتۍ لپاره مناسبې دي."
+      }
     }
   ],
   "practice": [
@@ -217,7 +338,8 @@
       "task": {
         "en": "Draw clock hands for two o’clock and for half past two. Point to the long hand on each.",
         "ps": "د دوو بجو او دوو نیمو بجو ستنې رسم کړئ. په هر یوه کې اوږدې ستنې ته ګوته ونیسئ."
-      }
+      },
+      "response": "draw"
     },
     {
       "codes": [
@@ -236,7 +358,8 @@
       "task": {
         "en": "Describe your morning in time order. Draw one clock for six o’clock and another for half past seven.",
         "ps": "د سهار کارونه په وختي ترتیب ووایئ. د شپږو او اوو نیمو بجو ساعتونه رسم کړئ."
-      }
+      },
+      "response": "draw"
     },
     {
       "codes": [
@@ -255,7 +378,8 @@
       "task": {
         "en": "Explain how the minute hand shows an exact hour or a half hour. Draw four o’clock and half past four.",
         "ps": "ووایئ چې د دقیقو ستنه بشپړ او نیم ساعت څنګه ښيي. څلور او څلور نیمې بجې رسم کړئ."
-      }
+      },
+      "response": "draw"
     },
     {
       "codes": [
@@ -274,7 +398,8 @@
       "task": {
         "en": "The long hand is on 12 and short on 8. Write the time. Draw what the clock looks like a half hour later.",
         "ps": "اوږده ستنه پر ۱۲ او لنډه پر ۸ ده. وخت ولیکئ. نیم ساعت وروسته بڼه رسم کړئ."
-      }
+      },
+      "response": "draw"
     },
     {
       "codes": [

@@ -43,8 +43,8 @@
         "ps": "لومړی ریښتیني شیان بېل یا رسم کړئ. هره ډله په لړ یا جدول کې ولیکئ. په بلاکي ګراف کې هر شي ته یو بلاک او په انځوریز ګراف کې هر شي ته یو انځور ورکړئ. په وېن شکل کې کړۍ کارېږي: سور مربع د «سور» او «مربع» کړیو په ګډ ځای کې راځي. په کارول جدول کې کتارونه سور او غیر سور، ستنې مربع او غیر مربع دي. هر شی په هغه خانه کې کېږدئ چې له دواړو قاعدو سره برابر وي."
       },
       "diagram": {
-        "en": "Table: apple 3, pear 2\nBlock graph: apples ■■■, pears ■■\nPictogram: apples ●●●, pears ◆◆",
-        "ps": "جدول: مڼه ۳، ناک ۲\nبلاکي ګراف: مڼې ■■■، ناک ■■\nانځوریز ګراف: مڼې ●●●، ناک ◆◆"
+        "en": "Table: apple 3, pear 2\nBlock graph: apples ■■■, pears ■■\nPictogram: apples ●●●, pears ◆◆\nLeft diagram: the left loop is red and the right loop is square. Right table: the top row is red; the left column is square.",
+        "ps": "جدول: مڼه ۳، ناک ۲\nبلاکي ګراف: مڼې ■■■، ناک ■■\nانځوریز ګراف: مڼې ●●●، ناک ◆◆\nپه کیڼ رسم کې کیڼه کړۍ د سور او ښۍ د مربع ده. په ښي جدول کې پاسنی کتار د سور او کیڼه ستنه د مربع ده."
       },
       "example": {
         "en": "Three objects in the apple group give three blocks or three apple symbols. A red square belongs at the overlap in Venn and in the red/square cell in Carroll.",
@@ -53,6 +53,13 @@
       "check": {
         "en": "Make four counters: a red square, red circle, blue square and blue circle. Sort them in overlapping loops and then in a two-by-two table for the two rules.",
         "ps": "څلور دانې جوړې کړئ: سور مربع، سره دایره، آبي مربع او آبي دایره. لومړی په ګډو کړیو او بیا د دوو قاعدو لپاره په دوه په دوه جدول کې یې بېلې کړئ."
+      },
+      "visual": {
+        "file": "categorical-sorts.svg",
+        "alt": {
+          "en": "Left: two overlapping loops. Red circle is in the red loop only, red square in both, blue square in the square loop only, and blue circle outside. Right: a two-by-two table shows the same objects. Top row is red, bottom row is not red. Left column is square, right column is not square.",
+          "ps": "کیڼ: دوه ګډې کړۍ. سره دایره یوازې د سور په کړۍ کې، سور مربع په دواړو کې، آبي مربع یوازې د مربع په کړۍ کې او آبي دایره له دواړو بهر ده. ښی: دوه په دوه جدول هماغه شیان ښيي. پاسنی کتار سور او لاندینی غیر سور دی. کیڼه ستنه مربع او ښۍ غیر مربع ده."
+        }
       }
     },
     {
@@ -189,6 +196,116 @@
         "en": "Red has the most, and blue has the least.",
         "ps": "سور تر ټولو ډېر او آبي تر ټولو لږ دی."
       }
+    },
+    {
+      "code": "1Ss.01",
+      "prompt": {
+        "en": "A desk has a book, a pencil, a book, a ruler and a pencil. Choose the count of books, then the count of rulers.",
+        "ps": "پر مېز کتاب، پنسل، کتاب، خط‌کش او پنسل دي. لومړی د کتابونو او بیا د خط‌کشونو شمېر وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "4",
+          "ps": "۴"
+        },
+        {
+          "en": "2",
+          "ps": "۲"
+        },
+        {
+          "en": "1",
+          "ps": "۱"
+        },
+        {
+          "en": "3",
+          "ps": "۳"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        1,
+        2
+      ],
+      "hint": {
+        "en": "Answer about the items already on this desk.",
+        "ps": "یوازې پر همدې مېز ایښوول شوي شیان وشمېرئ."
+      },
+      "explain": {
+        "en": "There are two books and one ruler.",
+        "ps": "دوه کتابونه او یو خط‌کش شته."
+      }
+    },
+    {
+      "code": "1Ss.02",
+      "prompt": {
+        "en": "A pictogram uses one picture for each object. Make an apple row for five apples, then a pear row for three pears. Choose the two picture counts.",
+        "ps": "انځوریز ګراف د هر شي لپاره یو انځور کاروي. د پنځو مڼو او بیا د درېیو ناکو کتار جوړ کړئ. د انځورونو شمېرې وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "2",
+          "ps": "۲"
+        },
+        {
+          "en": "3",
+          "ps": "۳"
+        },
+        {
+          "en": "5",
+          "ps": "۵"
+        },
+        {
+          "en": "8",
+          "ps": "۸"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        2,
+        1
+      ],
+      "hint": {
+        "en": "Match one picture to one object in each group.",
+        "ps": "په هره ډله کې هر شي ته یو انځور برابر کړئ."
+      },
+      "explain": {
+        "en": "Use five pictures for apples and three for pears.",
+        "ps": "مڼو ته پنځه او ناکو ته درې انځورونه وکاروئ."
+      }
+    },
+    {
+      "code": "1Ss.03",
+      "prompt": {
+        "en": "A block graph shows four books, four pencils and two rulers. Pick the two equal categories in this order: the reading item, then the writing item.",
+        "ps": "بلاکي ګراف څلور کتابونه، څلور پنسلونه او دوه خط‌کشونه ښيي. دوه برابرې ډلې وټاکئ: لومړی د لوستلو او بیا د لیکلو شی."
+      },
+      "tiles": [
+        {
+          "en": "Rulers",
+          "ps": "خط‌کشونه"
+        },
+        {
+          "en": "Books",
+          "ps": "کتابونه"
+        },
+        {
+          "en": "Pencils",
+          "ps": "پنسلونه"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        1,
+        2
+      ],
+      "hint": {
+        "en": "Equal rows have the same number of blocks.",
+        "ps": "برابر کتارونه برابر بلاکونه لري."
+      },
+      "explain": {
+        "en": "Books and pencils both have four blocks.",
+        "ps": "کتابونه او پنسلونه دواړه څلور بلاکونه لري."
+      }
     }
   ],
   "practice": [
@@ -208,7 +325,8 @@
       "task": {
         "en": "Sort real buttons into two groups or draw them. Make a list and a table for the same objects.",
         "ps": "تڼۍ په دوو ډلو بېلې یا رسم کړئ. د هماغو شیانو لړ او جدول جوړ کړئ."
-      }
+      },
+      "response": "draw"
     },
     {
       "codes": [
@@ -217,7 +335,8 @@
       "task": {
         "en": "A tray has four apples and three pears. Show the groups in a block graph and a picture graph, using one mark per object.",
         "ps": "په پتنوس کې څلور مڼې او درې ناک دي. په بلاکي او انځوریز ګراف کې هر شي ته یوه نښه ورکړئ."
-      }
+      },
+      "response": "draw"
     },
     {
       "codes": [
@@ -226,7 +345,8 @@
       "task": {
         "en": "Draw overlapping loops for red and square. Place a red circle, a red square, a blue circle and a blue square in the right places.",
         "ps": "د سور او مربع ګډې کړۍ رسم کړئ. سره دایره، سور مربع، آبي دایره او آبي مربع په سمو ځایونو کې واچوئ."
-      }
+      },
+      "response": "draw"
     },
     {
       "codes": [
@@ -236,7 +356,8 @@
       "task": {
         "en": "Make a Carroll table with red/not red and round/not round. Sort a red circle, a blue circle and a red square. Which row has more?",
         "ps": "د سور او غیر سور، ګرد او غیر ګرد کارول جدول جوړ کړئ. سره دایره، آبي دایره او سور مربع بېل کړئ. کوم کتار ډېر دی؟"
-      }
+      },
+      "response": "draw"
     },
     {
       "codes": [
@@ -266,7 +387,8 @@
       "task": {
         "en": "There are two cups, four spoons and three plates. Answer how many spoons. Make a table and one-block-per-object graph.",
         "ps": "دوه پیالې، څلور کاشوغې او درې بشقابونه دي. د کاشوغو شمېر ووایئ. جدول او د هر شي لپاره یو بلاک ګراف جوړ کړئ."
-      }
+      },
+      "response": "draw"
     },
     {
       "codes": [
@@ -276,7 +398,8 @@
       "task": {
         "en": "Sort a red square, a blue square, a red circle and a green circle in red/square loops. Then put them in a Carroll table. Compare red and not-red totals.",
         "ps": "سور مربع، آبي مربع، سره دایره او شنه دایره په سور او مربع کړیو کې بېل کړئ. بیا یې په کارول جدول کې واچوئ. د سور او غیر سور شمېر پرتله کړئ."
-      }
+      },
+      "response": "draw"
     },
     {
       "codes": [

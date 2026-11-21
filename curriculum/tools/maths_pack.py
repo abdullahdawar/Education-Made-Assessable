@@ -43,6 +43,11 @@ def validate(number, pack):
     for lesson in lessons:
         for key in ("title", "explain", "example", "diagram", "check"):
             bilingual(lesson[key])
+        if visual := lesson.get("visual"):
+            bilingual(visual["alt"])
+            filename = visual["file"]
+            if not re.fullmatch(r"[a-z-]+\.svg", filename) or not (PACKS / "figures" / filename).is_file():
+                raise ValueError(f"Unknown illustration in chapter {number}")
     practice = pack["practice"]
     if len(practice) != 10 or len({row["task"]["en"] for row in practice}) != 10:
         raise ValueError(f"Expected seven distinct worksheets and three distinct tests in chapter {number}")
@@ -50,11 +55,11 @@ def validate(number, pack):
         if {code for row in group for code in row["codes"]} != codes:
             raise ValueError(f"Incomplete worksheet or test coverage in chapter {number}")
     for row in practice:
-        if set(row) != {"codes", "task"} or not row["codes"]:
+        if set(row) - {"codes", "task", "response"} or not row["codes"] or row.get("response", "write") not in {"draw", "write"}:
             raise ValueError("Use only objective codes and student prompts in practice")
         bilingual(row["task"])
     rounds = pack["rounds"]
-    if len(rounds) < 3 or not any(step["take"] > 1 for step in rounds):
+    if len(rounds) < 6 or not any(step["take"] > 1 for step in rounds):
         raise ValueError(f"Expected multi-step building practice in chapter {number}")
     if {step["code"] for step in rounds} != codes:
         raise ValueError(f"Incomplete game coverage in chapter {number}")

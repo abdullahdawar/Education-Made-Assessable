@@ -147,6 +147,112 @@
         "en": "Match fifty to the note and two to the coin.",
         "ps": "پنځوس له نوټ او دوه له سکې سره برابر کړئ."
       }
+    },
+    {
+      "code": "1Nm.01",
+      "prompt": {
+        "en": "A stall marks its coins 1, 2 and 5 rupees. Select the one-rupee coin, then the two-rupee coin.",
+        "ps": "په دوکان کې د ۱، ۲ او ۵ روپیو سکې دي. د یوې روپۍ او بیا د دوو روپیو سکه وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "5 rupee coin",
+          "ps": "د ۵ روپیو سکه"
+        },
+        {
+          "en": "2 rupee coin",
+          "ps": "د ۲ روپیو سکه"
+        },
+        {
+          "en": "1 rupee coin",
+          "ps": "د ۱ روپۍ سکه"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        2,
+        1
+      ],
+      "hint": {
+        "en": "Look at the written value on each coin label.",
+        "ps": "پر هره سکه لیکلي ارزښت ته وګورئ."
+      },
+      "explain": {
+        "en": "One rupee then two rupees.",
+        "ps": "یوه روپۍ، بیا دوه روپۍ."
+      }
+    },
+    {
+      "code": "1Nm.01",
+      "prompt": {
+        "en": "A drawer has coin and note labels. Find a ten-rupee note and then a fifty-rupee note.",
+        "ps": "په کش کې د سکو او نوټونو نښې دي. د لسو او بیا د پنځوسو روپیو نوټ پیدا کړئ."
+      },
+      "tiles": [
+        {
+          "en": "10 rupee coin",
+          "ps": "د ۱۰ روپیو سکه"
+        },
+        {
+          "en": "50 rupee note",
+          "ps": "د ۵۰ روپیو نوټ"
+        },
+        {
+          "en": "20 rupee note",
+          "ps": "د ۲۰ روپیو نوټ"
+        },
+        {
+          "en": "10 rupee note",
+          "ps": "د ۱۰ روپیو نوټ"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        3,
+        1
+      ],
+      "hint": {
+        "en": "The first choice must be a note, even though both a coin and a note can show ten.",
+        "ps": "لومړی باید نوټ وي، که سکه او نوټ دواړه لس هم ښيي."
+      },
+      "explain": {
+        "en": "Both choices are notes, with values ten and fifty.",
+        "ps": "دواړه نوټونه دي او ارزښتونه یې لس او پنځوس دي."
+      }
+    },
+    {
+      "code": "1Nm.01",
+      "prompt": {
+        "en": "Both sides belong to one 5-rupee coin. Then you see one 20-rupee note. Choose the label for each item in order.",
+        "ps": "دواړه مخونه د یوې ۵ روپۍ سکې دي. بیا د ۲۰ روپیو یو نوټ وینئ. د هر شي نښه په ترتیب وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "5 rupee coin",
+          "ps": "د ۵ روپیو سکه"
+        },
+        {
+          "en": "20 rupee note",
+          "ps": "د ۲۰ روپیو نوټ"
+        },
+        {
+          "en": "2 rupee coin",
+          "ps": "د ۲ روپیو سکه"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        0,
+        1
+      ],
+      "hint": {
+        "en": "Turning over a coin does not make it a second coin.",
+        "ps": "د سکې اړول بله سکه نه جوړوي."
+      },
+      "explain": {
+        "en": "Match one coin of five and one note of twenty.",
+        "ps": "د پنځو یوه سکه او د شلو یو نوټ سره برابر کړئ."
+      }
     }
   ],
   "practice": [

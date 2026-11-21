@@ -1,13 +1,14 @@
 """Render bilingual student notes and practice from validated chapter packs."""
 
 import argparse
+from base64 import b64encode
 from html import escape
 import os
 from pathlib import Path
 import subprocess
 from tempfile import TemporaryDirectory
 
-from maths_pack import LANGUAGES, ROOT, load, stem
+from maths_pack import LANGUAGES, PACKS, ROOT, load, stem
 from number_names import numeral
 
 STYLE = (ROOT / "frontend/src/design.css").read_text() + (Path(__file__).parent / "counting-print.css").read_text() + """
@@ -17,6 +18,8 @@ figure { margin: 7mm 0; }
 .diagram { background: var(--mint); border-radius: 4mm; padding: 5mm; white-space: pre-line; font-size: 16pt; }
 figcaption { margin-top: 3mm; font-size: 13pt; }
 .practice-box { white-space: pre-line; }
+.diagram img { display: block; max-width: 100%; width: 106mm; margin: 3mm auto 0; }
+.response .drawing { height: 72mm; border: 1px solid #b9c1d6; border-radius: 3mm; }
 .response { min-height: 110mm; margin-top: 5mm; }
 .response div { height: 12mm; border-bottom: 1px solid #b9c1d6; }
 """
@@ -36,15 +39,20 @@ def pages(pack, lang):
 
     notes, practice = [], []
     for index, lesson in enumerate(pack["lessons"], 1):
-        text = {key: escape(value[lang]) for key, value in lesson.items() if key != "code"}
-        body = (f'<p>{text["explain"]}</p><figure><div class="diagram">{text["diagram"]}</div>'
+        text = {key: escape(value[lang]) for key, value in lesson.items() if key not in ("code", "visual")}
+        artwork = ""
+        if visual := lesson.get("visual"):
+            encoded = b64encode((PACKS / "figures" / visual["file"]).read_bytes()).decode("ascii")
+            artwork = f'<img src="data:image/svg+xml;base64,{encoded}" alt="{escape(visual["alt"][lang])}">'
+        body = (f'<p>{text["explain"]}</p><figure><div class="diagram">{text["diagram"]}{artwork}</div>'
                 f'<figcaption>{text["example"]}</figcaption></figure>'
                 f'<section class="box sun"><h2>{check}</h2><p>{text["check"]}</p></section>')
         notes.append(page(lesson["title"][lang], body, index))
     for index, task in enumerate(pack["practice"], 1):
         heading = ("تمرینپاڼه" if ps else "Worksheet") if index <= 7 else ("ازموینه" if ps else "Test")
         heading += " " + numeral(index if index <= 7 else index - 7, lang)
-        lines = '<div></div>' * 8
+        lines = ('<div class="drawing"></div>' + '<div></div>' * 3
+                 if task.get("response") == "draw" else '<div></div>' * 8)
         body = (f'<p>{name} _____________________</p><section class="box practice-box">'
                 f'<p>{escape(task["task"][lang])}</p></section>'
                 f'<h2>{work}</h2><div class="response" aria-hidden="true">{lines}</div>')

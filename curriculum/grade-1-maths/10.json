@@ -169,6 +169,138 @@
         "en": "The book is between. The bag is below.",
         "ps": "کتاب په منځ او بکس لاندې دی."
       }
+    },
+    {
+      "code": "1Gp.01",
+      "prompt": {
+        "en": "Start in the top-left. The bottom-left square is blocked. Find a two-step route to bottom-right.",
+        "ps": "له پورته کیڼې خوا پیل کړئ. لاندې کیڼه خانه بنده ده. لاندې ښي خوا ته دوه ګامه لاره پیدا کړئ."
+      },
+      "tiles": [
+        {
+          "en": "Left",
+          "ps": "کیڼې خوا"
+        },
+        {
+          "en": "Down",
+          "ps": "لاندې"
+        },
+        {
+          "en": "Right",
+          "ps": "ښي خوا"
+        },
+        {
+          "en": "Up",
+          "ps": "پورته"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        2,
+        1
+      ],
+      "hint": {
+        "en": "Avoid going down on your first move.",
+        "ps": "په لومړي ګام لاندې مه ځئ."
+      },
+      "explain": {
+        "en": "Go right, then down.",
+        "ps": "ښي خوا، بیا لاندې."
+      },
+      "grid": {
+        "start": 0,
+        "goal": 3,
+        "blocked": 2,
+        "moves": [
+          "left",
+          "down",
+          "right",
+          "up"
+        ]
+      }
+    },
+    {
+      "code": "1Gp.01",
+      "prompt": {
+        "en": "Start bottom-right. The top-right is blocked. Plan two moves to top-left.",
+        "ps": "له لاندې ښي خوا پیل کړئ. پورته ښي خوا بنده ده. پورته کیڼې خوا ته دوه ګامه لاره جوړه کړئ."
+      },
+      "tiles": [
+        {
+          "en": "Up",
+          "ps": "پورته"
+        },
+        {
+          "en": "Right",
+          "ps": "ښي خوا"
+        },
+        {
+          "en": "Left",
+          "ps": "کیڼې خوا"
+        },
+        {
+          "en": "Down",
+          "ps": "لاندې"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        2,
+        0
+      ],
+      "hint": {
+        "en": "Move along the bottom row first.",
+        "ps": "لومړی په لاندې کتار کې لاړ شئ."
+      },
+      "explain": {
+        "en": "Left and then up reaches the goal.",
+        "ps": "کیڼې خوا او بیا پورته موخې ته رسېږي."
+      },
+      "grid": {
+        "start": 3,
+        "goal": 0,
+        "blocked": 1,
+        "moves": [
+          "up",
+          "right",
+          "left",
+          "down"
+        ]
+      }
+    },
+    {
+      "code": "1Gp.01",
+      "prompt": {
+        "en": "The key is inside the bag. The bag is beside the chair. Choose the object that is inside something first, then the object beside the chair.",
+        "ps": "کیلي په بکس کې ده. بکس د څوکۍ څنګ ته دی. لومړی دننه او بیا د څوکۍ څنګ ته شی وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "Chair",
+          "ps": "څوکۍ"
+        },
+        {
+          "en": "Key",
+          "ps": "کیلي"
+        },
+        {
+          "en": "Bag",
+          "ps": "بکس"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        1,
+        2
+      ],
+      "hint": {
+        "en": "Use a different reference for each position word.",
+        "ps": "د هر ځای لپاره بېل شی په پام کې ونیسئ."
+      },
+      "explain": {
+        "en": "The key is inside the bag, and the bag is beside the chair.",
+        "ps": "کیلي په بکس کې او بکس د څوکۍ څنګ ته دی."
+      }
     }
   ],
   "practice": [
@@ -206,7 +338,8 @@
       "task": {
         "en": "Draw a two-by-two map. Start bottom-right. Move left then up. Mark where you finish.",
         "ps": "دوه په دوه نقشه رسم کړئ. له لاندې ښي خوا پیل کړئ. کیڼې خوا او بیا پورته لاړ شئ. وروستی ځای نښه کړئ."
-      }
+      },
+      "response": "draw"
     },
     {
       "codes": [
@@ -224,7 +357,8 @@
       "task": {
         "en": "Give two directions to a partner to move a toy on a table. Check that you agree which way is right.",
         "ps": "ملګري ته دوه لارښوونې ورکړئ چې لوبتکه پر مېز وخوځوي. وګورئ چې د ښي لوري په اړه سره موافق یاست."
-      }
+      },
+      "response": "draw"
     },
     {
       "codes": [
@@ -251,7 +385,8 @@
       "task": {
         "en": "On a three-by-three grid start in the centre. Go right, then down. Mark each stop.",
         "ps": "په درې په درې جال کې له منځه پیل کړئ. ښي خوا، بیا لاندې لاړ شئ. هر ځای نښه کړئ."
-      }
+      },
+      "response": "draw"
     },
     {
       "codes": [
@@ -260,7 +395,8 @@
       "task": {
         "en": "Show two routes from the bottom-left to top-right of a two-by-two grid. Describe the steps of each.",
         "ps": "د دوه په دوه جال له لاندې کیڼې خوا پورته ښي خوا ته دوه لارې وښيئ. د هرې لارې ګامونه ووایئ."
-      }
+      },
+      "response": "draw"
     }
   ]
 }

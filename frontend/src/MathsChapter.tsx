@@ -7,13 +7,21 @@ import './maths-chapter.css'
 
 import type { Grid, MathsPack, Round } from './mathsPack'
 
+const figures = import.meta.glob<string>('../../curriculum/grade-1-maths/figures/*.svg', {
+  eager: true, query: '?url', import: 'default',
+})
+
 export function MathsLesson({ pack, language }: { pack: MathsPack; language: Language }) {
   return <div className="maths-lessons">
     {pack.lessons.map((lesson) => <section key={lesson.code}>
       <h3>{lesson.title[language]}</h3>
       <p>{lesson.explain[language]}</p>
       <figure>
-        <div className="maths-diagram">{lesson.diagram[language]}</div>
+        <div className="maths-diagram">
+          {lesson.diagram[language]}
+          {lesson.visual && <img src={figures[`../../curriculum/grade-1-maths/figures/${lesson.visual.file}`]}
+            alt={lesson.visual.alt[language]} />}
+        </div>
         <figcaption>{lesson.example[language]}</figcaption>
       </figure>
       <p className="maths-check">{lesson.check[language]}</p>

@@ -242,6 +242,112 @@
         "en": "The square matches after a quarter turn. The long rectangle matches after a half turn.",
         "ps": "مربع په څلورمه برخه او اوږد مستطیل په نیم تاو کې برابرېږي."
       }
+    },
+    {
+      "code": "1Gg.01",
+      "prompt": {
+        "en": "A square and a long rectangle both have four right-angle corners. Choose the shape whose four sides are all equal. Then choose the longer rectangle.",
+        "ps": "مربع او اوږد مستطیل دواړه څلور قائمه کونجونه لري. لومړی د څلورو برابرو اړخونو بڼه او بیا اوږد مستطیل وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "Long rectangle ▭",
+          "ps": "اوږد مستطیل ▭"
+        },
+        {
+          "en": "Square □",
+          "ps": "مربع □"
+        },
+        {
+          "en": "Circle ○",
+          "ps": "دایره ○"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        1,
+        0
+      ],
+      "hint": {
+        "en": "A square is a rectangle with all sides the same length.",
+        "ps": "مربع هغه مستطیل دی چې ټول اړخونه یې برابر دي."
+      },
+      "explain": {
+        "en": "Square first, then long rectangle.",
+        "ps": "لومړی مربع، بیا اوږد مستطیل."
+      }
+    },
+    {
+      "code": "1Gg.03",
+      "prompt": {
+        "en": "Select the number of flat faces of a cube, then the number of its straight edges.",
+        "ps": "د مکعب د هوارو مخونو شمېر او بیا د نېغو څنډو شمېر وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "4",
+          "ps": "۴"
+        },
+        {
+          "en": "12",
+          "ps": "۱۲"
+        },
+        {
+          "en": "6",
+          "ps": "۶"
+        },
+        {
+          "en": "8",
+          "ps": "۸"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        2,
+        1
+      ],
+      "hint": {
+        "en": "Use a box. Count top and bottom faces too; trace every edge where faces meet.",
+        "ps": "بکس وکاروئ. پاس او لاندې مخونه هم وشمېرئ او د مخونو ګډې څنډې وګورئ."
+      },
+      "explain": {
+        "en": "A cube has six faces and twelve straight edges.",
+        "ps": "مکعب شپږ مخونه او دولس نېغې څنډې لري."
+      }
+    },
+    {
+      "code": "1Gg.07",
+      "prompt": {
+        "en": "A non-square rectangle starts lying flat with the long edges horizontal. Choose how those edges look after a quarter turn, then after a half turn from the original.",
+        "ps": "د غیر مربع مستطیل اوږدې څنډې افقي دي. په څلورمه برخه او بیا له پیل څخه په نیم تاو کې یې بڼه وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "Horizontal",
+          "ps": "افقي"
+        },
+        {
+          "en": "Vertical",
+          "ps": "عمودي"
+        },
+        {
+          "en": "Curved",
+          "ps": "کږه"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        1,
+        0
+      ],
+      "hint": {
+        "en": "A quarter turn swaps horizontal and vertical. A half turn swaps them twice.",
+        "ps": "په څلورمه برخه تاو افقي او عمودي ځای بدلوي. په نیم تاو دوه ځله بدلېږي."
+      },
+      "explain": {
+        "en": "Vertical after a quarter turn, horizontal after a half turn.",
+        "ps": "په څلورمه برخه تاو عمودي او په نیم تاو افقي کېږي."
+      }
     }
   ],
   "practice": [
@@ -279,7 +385,8 @@
       "task": {
         "en": "Trace a square. Turn the card one quarter turn. Show how you checked whether it fits the outline.",
         "ps": "مربع رسم کړئ. کارت څلورمه برخه تاو کړئ. وښيئ چې څنګه مو له رسم سره وکوت."
-      }
+      },
+      "response": "draw"
     },
     {
       "codes": [
@@ -319,7 +426,8 @@
       "task": {
         "en": "Draw two flat shapes with straight sides. Say how many each has. Describe the faces and edges of a cube using a model.",
         "ps": "دوه هوارې نېغ اړخ لرونکې بڼې رسم کړئ. د هرې اړخونه ووایئ. د مکعب مخونه او څنډې په نمونه تشریح کړئ."
-      }
+      },
+      "response": "draw"
     },
     {
       "codes": [
@@ -337,7 +445,8 @@
       "task": {
         "en": "Compare a square and a long rectangle after a quarter turn. Show which still matches its first outline and explain.",
         "ps": "مربع او اوږد مستطیل له څلورمه برخه تاو وروسته پرتله کړئ. وښيئ چې کوم یې له لومړي رسم سره برابر دی او تشریح یې کړئ."
-      }
+      },
+      "response": "draw"
     }
   ]
 }

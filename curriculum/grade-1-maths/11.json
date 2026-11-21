@@ -232,6 +232,105 @@
         "en": "Jug, thermometer, ruler, scales.",
         "ps": "لوښی، ترمامیتر، خط‌کش، تله."
       }
+    },
+    {
+      "code": "1Gg.02",
+      "prompt": {
+        "en": "Three pencils start at the same line: A reaches mark 4, B reaches mark 7 and C reaches mark 5. Order them from shortest to longest.",
+        "ps": "درې پنسلونه له یوې کرښې پیلېږي: لومړی ۴، دویم ۷ او درېیم ۵ ته رسېږي. له لنډ څخه تر اوږد پورې یې ترتیب کړئ."
+      },
+      "tiles": [
+        {
+          "en": "Pencil C",
+          "ps": "درېیم پنسل"
+        },
+        {
+          "en": "Pencil A",
+          "ps": "لومړی پنسل"
+        },
+        {
+          "en": "Pencil B",
+          "ps": "دویم پنسل"
+        }
+      ],
+      "take": 3,
+      "solution": [
+        1,
+        0,
+        2
+      ],
+      "hint": {
+        "en": "The pencils share a starting line. Compare their end marks.",
+        "ps": "د پنسلونو پیل یو دی. د پای نښې پرتله کړئ."
+      },
+      "explain": {
+        "en": "Four, five, seven. A, C, B.",
+        "ps": "څلور، پنځه، اووه. لومړی، درېیم، دویم."
+      }
+    },
+    {
+      "code": "1Gg.05",
+      "prompt": {
+        "en": "The small cup fills with 2 scoops and the big jug fills with 6. The cup is full and the jug is empty. Choose the one that has more water now, then the one that can hold more.",
+        "ps": "وړه پیاله په ۲ او لوی لوښی په ۶ کاشوغو ډکېږي. پیاله ډکه او لوښی تش دی. لومړی هغه وټاکئ چې اوس ډېرې اوبه لري، بیا هغه چې ډېرې اخیستی شي."
+      },
+      "tiles": [
+        {
+          "en": "Jug",
+          "ps": "لوښی"
+        },
+        {
+          "en": "Cup",
+          "ps": "پیاله"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        1,
+        0
+      ],
+      "hint": {
+        "en": "Water in a container now and what it can hold when full are different.",
+        "ps": "اوسنۍ اوبه او د ډکېدو وړ اوبه سره بېلې دي."
+      },
+      "explain": {
+        "en": "The full cup has more now. The jug can hold more.",
+        "ps": "ډکه پیاله اوس ډېرې اوبه لري. لوښی ډېرې اوبه اخیستی شي."
+      }
+    },
+    {
+      "code": "1Gg.08",
+      "prompt": {
+        "en": "Choose a numbered tool to compare two books by mass, then a numbered tool to compare their lengths.",
+        "ps": "د دوو کتابونو د کتلې او بیا د اوږدوالي د پرتلې لپاره شمېره لرونکې الې وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "Ruler",
+          "ps": "خط‌کش"
+        },
+        {
+          "en": "Marked jug",
+          "ps": "نښه لرونکی لوښی"
+        },
+        {
+          "en": "Numbered scale",
+          "ps": "شمېره لرونکې تله"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        2,
+        0
+      ],
+      "hint": {
+        "en": "One tool compares how heavy the books are. The next shows their lengths.",
+        "ps": "یوه اله دروندوالی او بله اوږدوالی پرتله کوي."
+      },
+      "explain": {
+        "en": "Use the scale for mass and the ruler for length.",
+        "ps": "تله د کتلې او خط‌کش د اوږدوالي لپاره وکاروئ."
+      }
     }
   ],
   "practice": [

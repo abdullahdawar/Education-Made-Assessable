@@ -254,6 +254,121 @@
         "en": "Two groups of four make eight squares.",
         "ps": "د څلورو دوه ډلې اته خانې جوړوي."
       }
+    },
+    {
+      "code": "1Nf.01",
+      "prompt": {
+        "en": "A paper strip is eight squares long. Make an unequal split with the smaller piece three squares long. Choose the smaller then the larger piece.",
+        "ps": "کاغذي پټه اته خانې ده. نابرابر وېش کې کوچنۍ برخه درې خانې ده. لومړی کوچنۍ او بیا لویه برخه وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "4",
+          "ps": "۴"
+        },
+        {
+          "en": "5",
+          "ps": "۵"
+        },
+        {
+          "en": "3",
+          "ps": "۳"
+        },
+        {
+          "en": "8",
+          "ps": "۸"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        2,
+        1
+      ],
+      "hint": {
+        "en": "Keep all eight squares, with a piece of three first.",
+        "ps": "ټولې اته خانې وساتئ؛ لومړۍ برخه درې خانې ده."
+      },
+      "explain": {
+        "en": "Three and five are unequal parts of eight.",
+        "ps": "درې او پنځه د اتو نابرابرې برخې دي."
+      }
+    },
+    {
+      "code": "1Nf.03",
+      "prompt": {
+        "en": "Work out half of 2, then half of 20. Choose both results.",
+        "ps": "د ۲ نیمایي او بیا د ۲۰ نیمایي پیدا کړئ. دواړه پایلې وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "2",
+          "ps": "۲"
+        },
+        {
+          "en": "1",
+          "ps": "۱"
+        },
+        {
+          "en": "10",
+          "ps": "۱۰"
+        },
+        {
+          "en": "12",
+          "ps": "۱۲"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        1,
+        2
+      ],
+      "hint": {
+        "en": "Share each amount into two equal groups.",
+        "ps": "هره شمېره پر دوو برابرو ډلو ووېشئ."
+      },
+      "explain": {
+        "en": "Half of two is one and half of twenty is ten.",
+        "ps": "د دوو نیمایي یو او د شلو نیمایي لس ده."
+      }
+    },
+    {
+      "code": "1Nf.04",
+      "prompt": {
+        "en": "Two halves form a strip. A half has six squares. Pick both halves and then the whole.",
+        "ps": "دوه نیمایي یوه پټه جوړوي. یوه نیمایي شپږ خانې لري. دواړه نیمایي او بیا بشپړه پټه وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "6",
+          "ps": "۶"
+        },
+        {
+          "en": "10",
+          "ps": "۱۰"
+        },
+        {
+          "en": "12",
+          "ps": "۱۲"
+        },
+        {
+          "en": "7",
+          "ps": "۷"
+        }
+      ],
+      "take": 3,
+      "solution": [
+        0,
+        0,
+        2
+      ],
+      "hint": {
+        "en": "Use two matching pieces and count all their squares together.",
+        "ps": "دوه برابرې برخې وکاروئ او ټولې خانې ګډې وشمېرئ."
+      },
+      "explain": {
+        "en": "Six and six rejoin to make a twelve-square strip.",
+        "ps": "شپږ او شپږ د دولسو خانو پټه جوړوي."
+      }
     }
   ],
   "practice": [

@@ -171,6 +171,121 @@
         "en": "There are four pairs and three unmatched counters.",
         "ps": "څلور جوړې او درې بې جوړې دانې دي."
       }
+    },
+    {
+      "code": "1Ni.02",
+      "prompt": {
+        "en": "Join a tray of 7 spoons and a tray of 5. Choose the two tray amounts in that order, then the total.",
+        "ps": "د ۷ او ۵ کاشوغو پتنوسونه یو ځای کړئ. د دواړو شمېرې په ترتیب او بیا ټول شمېر وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "12",
+          "ps": "۱۲"
+        },
+        {
+          "en": "5",
+          "ps": "۵"
+        },
+        {
+          "en": "7",
+          "ps": "۷"
+        },
+        {
+          "en": "11",
+          "ps": "۱۱"
+        }
+      ],
+      "take": 3,
+      "solution": [
+        2,
+        1,
+        0
+      ],
+      "hint": {
+        "en": "Keep both trays. Use one count for each spoon.",
+        "ps": "دواړه پتنوسونه وساتئ. هره کاشوغه یو ځل وشمېرئ."
+      },
+      "explain": {
+        "en": "Seven plus five makes twelve.",
+        "ps": "اووه جمع پنځه دولس کېږي."
+      }
+    },
+    {
+      "code": "1Ni.03",
+      "prompt": {
+        "en": "You have 6 counters. Put away all 6. Choose how many you put away, then how many are left.",
+        "ps": "۶ دانې لرئ. ټولې ۶ لرې کړئ. لومړی لرې شوې او بیا پاتې دانې وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "0",
+          "ps": "۰"
+        },
+        {
+          "en": "1",
+          "ps": "۱"
+        },
+        {
+          "en": "6",
+          "ps": "۶"
+        },
+        {
+          "en": "5",
+          "ps": "۵"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        2,
+        0
+      ],
+      "hint": {
+        "en": "Look at what remains after every counter is removed.",
+        "ps": "له ټولو دانو لرې کولو وروسته پاتې وګورئ."
+      },
+      "explain": {
+        "en": "Six counters go away. Zero remain.",
+        "ps": "شپږ دانې لرې کېږي. صفر پاتې کېږي."
+      }
+    },
+    {
+      "code": "1Ni.03",
+      "prompt": {
+        "en": "Pair 8 cups with 8 plates. Choose how many pairs, then how many cups have no plate.",
+        "ps": "۸ پیالې له ۸ بشقابونو سره جوړې کړئ. لومړی جوړې، بیا بې بشقابه پیالې وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "0",
+          "ps": "۰"
+        },
+        {
+          "en": "1",
+          "ps": "۱"
+        },
+        {
+          "en": "8",
+          "ps": "۸"
+        },
+        {
+          "en": "16",
+          "ps": "۱۶"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        2,
+        0
+      ],
+      "hint": {
+        "en": "Give one plate to each cup.",
+        "ps": "هرې پیالې ته یو بشقاب ورکړئ."
+      },
+      "explain": {
+        "en": "Eight pairs leave zero cups without plates.",
+        "ps": "اته جوړې دي او صفر پیالې بې بشقابه دي."
+      }
     }
   ],
   "practice": [

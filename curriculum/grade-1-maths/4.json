@@ -228,6 +228,119 @@
         "en": "The unit is one leaf followed by two sticks.",
         "ps": "یوه پاڼه او ورپسې دوه لرګي تکرارېږي."
       }
+    },
+    {
+      "code": "1Nc.04",
+      "prompt": {
+        "en": "Start at 13. Choose the next three landings when you count back by ones.",
+        "ps": "له ۱۳ پیل وکړئ. یو یو شاته د درې ګامونو شمېرې وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "11",
+          "ps": "۱۱"
+        },
+        {
+          "en": "10",
+          "ps": "۱۰"
+        },
+        {
+          "en": "14",
+          "ps": "۱۴"
+        },
+        {
+          "en": "12",
+          "ps": "۱۲"
+        }
+      ],
+      "take": 3,
+      "solution": [
+        3,
+        0,
+        1
+      ],
+      "hint": {
+        "en": "Go to the number just before your current number each time.",
+        "ps": "هر ځل د اوسنۍ شمېرې تر مخه شمېرې ته لاړ شئ."
+      },
+      "explain": {
+        "en": "Twelve, eleven, ten.",
+        "ps": "دولس، یوولس، لس."
+      }
+    },
+    {
+      "code": "1Nc.04",
+      "prompt": {
+        "en": "Start at 3. Jump forward ten once, then forward one. Choose both stops.",
+        "ps": "له ۳ پیل کړئ. یو ځل لس مخکې او بیا یو مخکې لاړ شئ. دواړه ځایونه وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "4",
+          "ps": "۴"
+        },
+        {
+          "en": "14",
+          "ps": "۱۴"
+        },
+        {
+          "en": "12",
+          "ps": "۱۲"
+        },
+        {
+          "en": "13",
+          "ps": "۱۳"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        3,
+        1
+      ],
+      "hint": {
+        "en": "Add ten for the long jump and one for the short step.",
+        "ps": "اوږد ګام لس زیاتوي او لنډ ګام یو."
+      },
+      "explain": {
+        "en": "Thirteen, then fourteen.",
+        "ps": "دیارلس، بیا څوارلس."
+      }
+    },
+    {
+      "code": "1Nc.06",
+      "prompt": {
+        "en": "A border shows square, circle, square, triangle, then repeats. Build just one repeat.",
+        "ps": "په څنډه کې مربع، دایره، مربع، مثلث بیا بیا راځي. تکراري برخه جوړه کړئ."
+      },
+      "tiles": [
+        {
+          "en": "Circle",
+          "ps": "دایره"
+        },
+        {
+          "en": "Triangle",
+          "ps": "مثلث"
+        },
+        {
+          "en": "Square",
+          "ps": "مربع"
+        }
+      ],
+      "take": 4,
+      "solution": [
+        2,
+        0,
+        2,
+        1
+      ],
+      "hint": {
+        "en": "Say the whole part before it starts again.",
+        "ps": "له بیا پیل مخکې ټوله برخه ووایئ."
+      },
+      "explain": {
+        "en": "Square, circle, square, triangle is the repeating unit.",
+        "ps": "مربع، دایره، مربع، مثلث تکرارېږي."
+      }
     }
   ],
   "practice": [
