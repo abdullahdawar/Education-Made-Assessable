@@ -20,6 +20,13 @@ const studentPdfs = new Map([
   ['/learning/grade-1-counting-ps-worksheets-and-tests.pdf', psPractice],
 ])
 
+const expandedPdfs = import.meta.glob<string>('../../output/pdf/grade-1-maths-*.pdf', {
+  eager: true, query: '?url', import: 'default',
+})
+for (const [path, url] of Object.entries(expandedPdfs)) {
+  studentPdfs.set('/learning/' + path.split('/').at(-1), url)
+}
+
 export function chapterPdf(value?: string) {
   if (!value) return undefined
   const [path, fragment] = value.split('#', 2)

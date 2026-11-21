@@ -1,0 +1,11 @@
+.maths-lessons { display: grid; gap: 18px; }
+.maths-lessons section { min-width: 0; }
+.maths-lessons h3 { margin-block: 6px; }
+.maths-lessons figure { margin: 10px 0; padding: 12px; background: var(--sky); border-radius: 12px; }
+.maths-diagram { font-size: 1.15rem; font-weight: 750; overflow-wrap: anywhere; white-space: pre-line; }
+.maths-lessons figcaption { margin-block-start: 8px; }
+.maths-check { padding: 10px 12px; background: var(--sun); border-radius: 12px; }
+.maths-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.maths-picked { margin-block: 12px; padding: 10px; background: var(--mint); border-radius: 10px; }
+.maths-picked ol { padding-inline-start: 24px; margin-block: 4px; }
+.game-answers button[aria-disabled=true] { opacity: .7; }

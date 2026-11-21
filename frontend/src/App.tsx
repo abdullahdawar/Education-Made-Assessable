@@ -5,6 +5,7 @@ import {
 } from './curriculum'
 import { AdventureHero, ChapterJourney, ChoiceGrid, CountingIllustration } from './LearningWorld'
 import { gradeTheme } from './gradeTheme'
+import type { MathsPack } from './MathsChapter'
 import { NumberNamesLesson } from './NumberNamesLesson'
 import { numberNamesTitle, chapterNumeral } from './numberNames'
 import { ChapterVideos } from './ChapterVideos'
@@ -15,6 +16,8 @@ import './App.css'
 
 const CountingAdventure = lazy(() => import('./games/CountingAdventure').then((module) => ({ default: module.CountingAdventure })))
 const NumberExplorer = lazy(() => import('./games/NumberExplorer').then((module) => ({ default: module.NumberExplorer })))
+const MathsLesson = lazy(() => import('./MathsChapter').then(({ MathsLesson }) => ({ default: MathsLesson })))
+const MathsGame = lazy(() => import('./MathsChapter').then(({ MathsGame }) => ({ default: MathsGame })))
 const ShapeSorter = import.meta.env.DEV
   ? lazy(() => import('./games/ShapeSorter').then((module) => ({ default: module.ShapeSorter })))
   : null
@@ -65,19 +68,36 @@ function Practice({ label, count, kind, language, items, localized }: {
   </ol>
 }
 
-function Lesson({ chapter, counting, numberNames }: { chapter: Chapter; counting: boolean; numberNames: boolean }) {
+function Lesson({ chapter, counting, numberNames, expanded }: { chapter: Chapter; counting: boolean; numberNames: boolean; expanded: boolean }) {
   const [language, setLanguage] = useState<Language>('en')
   const [playing, setPlaying] = useState(false)
-  const localized = numberNames && language === 'ps'
+  const [pack, setPack] = useState<MathsPack>()
+  const [packError, setPackError] = useState(false)
+  useEffect(() => {
+    if (!expanded) return
+    let current = true
+    async function load() {
+      try {
+        const { loadMathsPack } = await import('./MathsChapter')
+        const result = await loadMathsPack(chapter.chapterNumber)
+        if (current && result?.title.en === chapter.name) setPack(result)
+      } catch {
+        if (current) setPackError(true)
+      }
+    }
+    void load()
+    return () => { current = false }
+  }, [expanded, chapter.chapterNumber, chapter.name])
+  const localized = (numberNames || expanded) && language === 'ps'
   const ps = language === 'ps'
   return <>
     <div className="language" role="group" aria-label="Lesson language">
       <button className="control" aria-pressed={language === 'en'} onClick={() => setLanguage('en')}>English</button>
       <button className="control" lang="ps" aria-pressed={language === 'ps'} onClick={() => setLanguage('ps')}>پښتو</button>
     </div>
-    {(counting || numberNames) && playing && <div className="activity-zone theme-cloud">
+    {(counting || numberNames || pack) && playing && <div className="activity-zone theme-cloud">
       <Suspense fallback={<p className="notice" role="status" lang={language}>{ps ? 'لوبه پرانیستل کېږي…' : 'Loading game…'}</p>}>
-        {numberNames ? <NumberExplorer language={language} /> : <CountingAdventure language={language} />}
+        {pack ? <MathsGame pack={pack} language={language} /> : numberNames ? <NumberExplorer language={language} /> : <CountingAdventure language={language} />}
       </Suspense>
     </div>}
     <CurriculumResults<Translation> path={`/api/chapters/${chapter.id}/content`} label="lesson content">
@@ -88,13 +108,15 @@ function Lesson({ chapter, counting, numberNames }: { chapter: Chapter; counting
           <article className="panel reading-panel" lang={language} dir={language === 'ps' ? 'rtl' : 'ltr'}>
             <h2>{lesson?.title ?? (language === 'ps' ? 'لوست' : 'Lesson')}</h2>
             {language === 'ps' && lesson && <p>د پښتو متن د ژبنۍ کتنې لپاره چمتو شوی دی.</p>}
-            {numberNames && lesson ? <NumberNamesLesson language={language} /> : <div className="lesson-text">{lesson?.content?.trim() || (language === 'ps'
+            {pack && lesson ? <Suspense fallback={<p role="status">{ps ? 'لوست پرانیستل کېږي…' : 'Loading lesson…'}</p>}>
+              <MathsLesson pack={pack} language={language} />
+            </Suspense> : numberNames && lesson ? <NumberNamesLesson language={language} /> : <div className="lesson-text">{lesson?.content?.trim() || (language === 'ps'
               ? 'د دې څپرکي پښتو لوست لا نشته.'
               : 'The English lesson for this chapter is not available yet.')}</div>}
             {counting && lesson && <CountingIllustration language={language} />}
           </article>
           <aside className="resources" aria-label={localized ? 'د څپرکي سرچینې' : 'Chapter resources'}
-            lang={numberNames ? language : undefined} dir={localized ? 'rtl' : undefined}>
+            lang={numberNames || expanded ? language : undefined} dir={localized ? 'rtl' : undefined}>
             <Resource title={localized ? 'د لوست یادښتونه' : 'PDF notes'} tone="notes" icon="▤">
               {pdf ? <a href={pdf}>{localized ? 'پښتو یادښتونه پرانیزئ (PDF)' : `Open ${ps ? 'Pashto' : 'English'} notes (PDF)`}</a> : <p>No PDF notes for this language yet.</p>}
             </Resource>
@@ -102,11 +124,11 @@ function Lesson({ chapter, counting, numberNames }: { chapter: Chapter; counting
               <ChapterVideos chapterId={chapter.id} language={language} />
             </Resource>
             <Resource title={localized ? 'کوچنۍ لوبې' : 'Mini-games'} tone="games" icon="◇">
-              {(counting || numberNames)
+              {(counting || numberNames || pack)
                 ? <button className="control" lang={language} disabled={playing} onClick={() => setPlaying(true)}>
-                  {numberNames ? (ps ? 'د شمېرو سپړنه پیل کړئ' : 'Play Number Explorer') : (ps ? 'د شمېرلو لوبه' : 'Play Counting Adventure')}
+                  {pack ? pack.game[language] : numberNames ? (ps ? 'د شمېرو سپړنه پیل کړئ' : 'Play Number Explorer') : (ps ? 'د شمېرلو لوبه' : 'Play Counting Adventure')}
                 </button>
-                : <p>No games available yet.</p>}
+                : <p>{expanded && !packError ? (ps ? 'لوبه پرانیستل کېږي…' : 'Loading game…') : (localized ? 'لوبه نشته.' : 'No games available yet.')}</p>}
             </Resource>
             <CurriculumResults<PracticeResource> path={`/api/chapters/${chapter.id}/practice`} label="worksheets and tests">
               {(resources) => <>
@@ -180,6 +202,9 @@ function App() {
       } numberNames={
         grade.name === 'Grade 1' && subject.name === 'Mathematics' && chapter.chapterNumber === 2
           && chapter.name === numberNamesTitle
+      } expanded={
+        grade.name === 'Grade 1' && subject.name === 'Mathematics'
+          && chapter.chapterNumber >= 3 && chapter.chapterNumber <= 13
       } />}
     </main>
   </div>

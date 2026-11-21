@@ -1,0 +1,291 @@
+{
+  "number": 3,
+  "title": {
+    "en": "Building, comparing and ordering numbers",
+    "ps": "د شمېرو جوړول، پرتله کول او ترتیبول"
+  },
+  "game": {
+    "en": "Number Builder",
+    "ps": "د شمېرو جوړوونکی"
+  },
+  "lessons": [
+    {
+      "code": "1Np.02",
+      "title": {
+        "en": "Build and break apart",
+        "ps": "جوړول او بېلول"
+      },
+      "explain": {
+        "en": "Put ten sticks in a bundle. Add loose sticks to make a number from 10 to 20. You can split or regroup the sticks while keeping the same total.",
+        "ps": "لس لرګي په یوه ګېډۍ کې وتړئ. بېل لرګي ورزیات کړئ چې له ۱۰ تر ۲۰ پورې یو شمېر جوړ شي. لرګي بېل یا بیا ډله کړئ؛ ټول شمېر یې هماغه پاتې کېږي."
+      },
+      "diagram": {
+        "en": "14 sticks: [10] ● ● ● ●\n14 sticks: [7] [7]",
+        "ps": "۱۴ لرګي: [۱۰] ● ● ● ●\n۱۴ لرګي: [۷] [۷]"
+      },
+      "example": {
+        "en": "Fourteen can be ten and four, or seven and seven. We moved sticks between groups and kept every stick.",
+        "ps": "څوارلس له لسو او څلورو یا له اوو او اوو جوړېږي. د لرګیو ډلې مو بدلې کړې او ټول لرګي مو وساتل."
+      },
+      "check": {
+        "en": "Build 16 and show two groupings. Check that both have the same total.",
+        "ps": "۱۶ جوړ کړئ او دوه ډوله ډلې ترې جوړې کړئ. وګورئ چې د دواړو ټول شمېر برابر دی."
+      }
+    },
+    {
+      "code": "1Np.03",
+      "title": {
+        "en": "Which group is larger?",
+        "ps": "کومه ډله لویه ده؟"
+      },
+      "explain": {
+        "en": "Match each object in one group to one in the other. The group with objects left over has more. You can also count and use a number track from 0 to 20.",
+        "ps": "د یوې ډلې هر شی د بلې ډلې له یوه شي سره برابر کړئ. په کومه ډله کې چې شیان پاتې شي، هغه ډېره ده. شمېرل او له ۰ تر ۲۰ پورې د شمېرو کرښه هم کارولی شئ."
+      },
+      "diagram": {
+        "en": "Tray A: ● ● ● ●\nTray B: ● ● ● ● ● ●",
+        "ps": "لومړی پتنوس: ● ● ● ●\nدویم پتنوس: ● ● ● ● ● ●"
+      },
+      "example": {
+        "en": "Four pairs can be made. Two dots are left in tray B, so six is greater than four.",
+        "ps": "څلور جوړې جوړېږي. په دویم پتنوس کې دوه ټکي پاتې دي، نو شپږ تر څلورو ډېر دي."
+      },
+      "check": {
+        "en": "Order 12, 0 and 8 from fewest to most. Show how you know.",
+        "ps": "۱۲، ۰ او ۸ له لږ څخه تر ډېر پورې ترتیب کړئ. وښيئ چې څنګه پوه شوئ."
+      }
+    },
+    {
+      "code": "1Np.04",
+      "title": {
+        "en": "Where in the line?",
+        "ps": "په کتار کې کوم ځای؟"
+      },
+      "explain": {
+        "en": "Start at the marked front. First, second and third tell a place in line. Keep going as far as tenth. A position tells where, while a total tells how many.",
+        "ps": "د کتار له ښودل شوي پیل څخه شروع وکړئ. لومړی، دویم او درېیم د کتار ځای ښيي. تر لسم پورې دوام ورکړئ. ځای ښيي چې شی چېرته دی او ټول شمېر ښيي چې څو دي."
+      },
+      "diagram": {
+        "en": "Front → red · blue · green · yellow",
+        "ps": "پیل: سور، آبي، شین، ژېړ"
+      },
+      "example": {
+        "en": "Blue is second from the front. There are four items altogether.",
+        "ps": "آبي له پیل څخه دویم دی. ټول څلور شیان دي."
+      },
+      "check": {
+        "en": "Line up ten objects and show a partner the fifth and tenth.",
+        "ps": "لس شیان په کتار کې کېږدئ او ملګري ته پنځم او لسم وښيئ."
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "code": "1Np.02",
+      "prompt": {
+        "en": "Build 16: choose a bundle first, then the loose sticks.",
+        "ps": "۱۶ جوړ کړئ: لومړی ګېډۍ او بیا بېل لرګي وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "10",
+          "ps": "۱۰"
+        },
+        {
+          "en": "6",
+          "ps": "۶"
+        },
+        {
+          "en": "5",
+          "ps": "۵"
+        },
+        {
+          "en": "8",
+          "ps": "۸"
+        }
+      ],
+      "solution": [
+        0,
+        1
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Start with ten. Work out how many more you need.",
+        "ps": "له لسو پیل وکړئ. وګورئ چې څو نور پکار دي."
+      },
+      "explain": {
+        "en": "Ten and six make sixteen.",
+        "ps": "لس او شپږ شپاړس کېږي."
+      }
+    },
+    {
+      "code": "1Np.03",
+      "prompt": {
+        "en": "Put the three amounts in order from fewest to most.",
+        "ps": "درې شمېرې له لږ څخه تر ډېر پورې ترتیب کړئ."
+      },
+      "tiles": [
+        {
+          "en": "12",
+          "ps": "۱۲"
+        },
+        {
+          "en": "0",
+          "ps": "۰"
+        },
+        {
+          "en": "9",
+          "ps": "۹"
+        }
+      ],
+      "solution": [
+        1,
+        2,
+        0
+      ],
+      "take": 3,
+      "hint": {
+        "en": "Find the empty amount first.",
+        "ps": "لومړی تش شمېر پیدا کړئ."
+      },
+      "explain": {
+        "en": "Zero comes before nine, and nine comes before twelve.",
+        "ps": "صفر تر نهو مخکې او نهه تر دولسو مخکې راځي."
+      }
+    },
+    {
+      "code": "1Np.04",
+      "prompt": {
+        "en": "Front: red, blue, green, yellow. Choose the second and then the fourth.",
+        "ps": "پیل: سور، آبي، شین، ژېړ. دویم او بیا څلورم وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "Green",
+          "ps": "شین"
+        },
+        {
+          "en": "Blue",
+          "ps": "آبي"
+        },
+        {
+          "en": "Yellow",
+          "ps": "ژېړ"
+        },
+        {
+          "en": "Red",
+          "ps": "سور"
+        }
+      ],
+      "solution": [
+        1,
+        2
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Count places from the red tile.",
+        "ps": "له سرې ټوټې څخه ځایونه وشمېرئ."
+      },
+      "explain": {
+        "en": "Blue is second and yellow is fourth.",
+        "ps": "آبي دویم او ژېړ څلورم دی."
+      }
+    }
+  ],
+  "practice": [
+    {
+      "codes": [
+        "1Np.02"
+      ],
+      "task": {
+        "en": "Draw a bundle of ten and loose sticks to make 12. Try again for 17.",
+        "ps": "د لسو لرګیو ګېډۍ او بېل لرګي رسم کړئ چې ۱۲ شي. بیا ۱۷ جوړ کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Np.03"
+      ],
+      "task": {
+        "en": "Draw 6 dots in one tray and 9 in another. Match pairs and circle the tray with more.",
+        "ps": "په یوه پتنوس کې ۶ او په بل کې ۹ ټکي رسم کړئ. جوړې یې کړئ او د ډېرو ټکو پتنوس په دایره کې ونیسئ."
+      }
+    },
+    {
+      "codes": [
+        "1Np.04"
+      ],
+      "task": {
+        "en": "Draw ten buttons in a line. Mark the front, then circle the third and ninth.",
+        "ps": "لس تڼۍ په کتار کې رسم کړئ. پیل وښيئ، بیا درېیمه او نهمه په دایره کې ونیسئ."
+      }
+    },
+    {
+      "codes": [
+        "1Np.02"
+      ],
+      "task": {
+        "en": "Show 18 as two groups. Rearrange the same dots into two different groups.",
+        "ps": "۱۸ په دوو ډلو کې وښيئ. هماغه ټکي په دوو بېلو ډلو کې بیا کېږدئ."
+      }
+    },
+    {
+      "codes": [
+        "1Np.02",
+        "1Np.03"
+      ],
+      "task": {
+        "en": "Make groups of 11, 15 and 20 with drawings or sticks. Order them from most to fewest.",
+        "ps": "د ۱۱، ۱۵ او ۲۰ ډلې په رسم یا لرګیو جوړې کړئ. له ډېر څخه تر لږ پورې یې ترتیب کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Np.04"
+      ],
+      "task": {
+        "en": "Draw a queue of ten children. Show the first, seventh and tenth. Put an arrow at the front.",
+        "ps": "د لسو ماشومانو کتار رسم کړئ. لومړی، اووم او لسم وښيئ. په پیل کې غشی رسم کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Np.02",
+        "1Np.03"
+      ],
+      "task": {
+        "en": "Show two ways to group 13. Explain why both groups together still make 13. Compare 13 with 16.",
+        "ps": "د ۱۳ د ډله کولو دوه لارې وښيئ. ووایئ چې ولې ټول شمېر بیا هم ۱۳ دی. ۱۳ له ۱۶ سره پرتله کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Np.02"
+      ],
+      "task": {
+        "en": "Draw 19 using one group of ten and loose dots. Show a different split of 19.",
+        "ps": "۱۹ د لسو په یوې ډلې او بېلو ټکو وښيئ. ۱۹ په بله بڼه هم ووېشئ."
+      }
+    },
+    {
+      "codes": [
+        "1Np.03",
+        "1Np.04"
+      ],
+      "task": {
+        "en": "Order 14, 4 and 20 from fewest to most. Draw a row of ten boxes and mark the sixth and tenth from the front.",
+        "ps": "۱۴، ۴ او ۲۰ له لږ څخه تر ډېر پورې کېږدئ. لس چوکاټونه په کتار کې رسم کړئ او له پیل څخه شپږم او لسم نښه کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Np.02",
+        "1Np.03"
+      ],
+      "task": {
+        "en": "Two trays have 16 and 18 counters. Compare them. Regroup the 16 counters without changing how many there are. Explain how you checked.",
+        "ps": "په دوو پتنوسونو کې ۱۶ او ۱۸ دانې دي. پرتله یې کړئ. ۱۶ دانې بې له دې چې شمېر یې بدل شي بیا ډله کړئ. ووایئ چې څنګه مو وکتل."
+      }
+    }
+  ]
+}

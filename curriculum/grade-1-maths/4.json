@@ -1,0 +1,327 @@
+{
+  "number": 4,
+  "title": {
+    "en": "Counting steps and object patterns",
+    "ps": "د شمېرلو ګامونه او د شیانو بڼې"
+  },
+  "game": {
+    "en": "Pattern Explorer",
+    "ps": "د بڼو سپړنه"
+  },
+  "lessons": [
+    {
+      "code": "1Nc.04",
+      "title": {
+        "en": "Travel on a number path",
+        "ps": "د شمېرو پر لاره تګ"
+      },
+      "explain": {
+        "en": "Start at a chosen number. Go forward by ones, twos or tens. Go back by ones or tens. Stay from 0 through 20 and keep the jump size the same.",
+        "ps": "له ټاکلې شمېرې پیل وکړئ. یو یو، دوه دوه یا لس لس مخکې لاړ شئ. یو یو یا لس لس شاته راشئ. له ۰ تر ۲۰ پورې پاتې شئ او د ګام اندازه مه بدلوئ."
+      },
+      "diagram": {
+        "en": "Forward by 2: 3 → 5 → 7\nBack by 10: 19 → 9",
+        "ps": "دوه دوه مخکې: ۳، ۵، ۷\nلس لس شاته: ۱۹، ۹"
+      },
+      "example": {
+        "en": "Starting at three, each jump of two goes two places ahead. Starting at nineteen and going ten back lands on nine.",
+        "ps": "له درېیو څخه په دوه ګامه مخکې تګ پنځو ته رسېږي. له نولسو لس ګامه شاته تګ نهو ته رسېږي."
+      },
+      "check": {
+        "en": "Start at 4 and go forward by tens. Start at 16 and count back by ones for three steps.",
+        "ps": "له ۴ څخه لس لس مخکې لاړ شئ. له ۱۶ څخه درې ځله یو یو شاته راشئ."
+      }
+    },
+    {
+      "code": "1Nc.05",
+      "title": {
+        "en": "Every other number",
+        "ps": "هره بله شمېره"
+      },
+      "explain": {
+        "en": "Count from zero. Even and odd take turns. Zero is even. The next number, one, is odd. Each even number is followed by an odd number, and each odd by an even number.",
+        "ps": "له صفر څخه وشمېرئ. جفت او طاق شمېرې په وار راځي. صفر جفت او یو طاق دی. له جفت وروسته طاق او له طاق وروسته جفت راځي."
+      },
+      "diagram": {
+        "en": "Even: 0 · 2 · 4 · 6\nOdd: 1 · 3 · 5 · 7",
+        "ps": "جفت: ۰، ۲، ۴، ۶\nطاق: ۱، ۳، ۵، ۷"
+      },
+      "example": {
+        "en": "Marking every other number starting at zero marks the even numbers.",
+        "ps": "له صفر څخه هره بله شمېره نښه کړئ؛ جفت شمېرې به نښه شي."
+      },
+      "check": {
+        "en": "Say the even and odd labels as you count from 15 to 20.",
+        "ps": "له ۱۵ تر ۲۰ پورې وشمېرئ او ووایئ چې هره شمېره جفت ده که طاق."
+      }
+    },
+    {
+      "code": "1Nc.06",
+      "title": {
+        "en": "Tell what repeats",
+        "ps": "ووایئ چې څه تکرارېږي"
+      },
+      "explain": {
+        "en": "Look for a small part that keeps coming back in the same order. Describe it in your own words so someone else can build it.",
+        "ps": "هغه کوچنۍ برخه ولټوئ چې په هماغه ترتیب بیا بیا راځي. په خپلو ټکو یې ووایئ چې بل څوک یې جوړ کړای شي."
+      },
+      "diagram": {
+        "en": "Beads: round, round, square · round, round, square",
+        "ps": "مهرې: ګرده، ګرده، مربع؛ ګرده، ګرده، مربع"
+      },
+      "example": {
+        "en": "Two round beads then one square repeat.",
+        "ps": "دوه ګردې او ورپسې یوه مربع مهره تکرارېږي."
+      },
+      "check": {
+        "en": "Make a pattern using leaves and sticks. Say the part that repeats.",
+        "ps": "له پاڼو او لرګیو بڼه جوړه کړئ. هغه برخه ووایئ چې تکرارېږي."
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "code": "1Nc.04",
+      "prompt": {
+        "en": "Start at 5. Choose the next two landings when you count forward by twos.",
+        "ps": "له ۵ څخه پیل وکړئ. دوه دوه مخکې دوه ځایونه وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "8",
+          "ps": "۸"
+        },
+        {
+          "en": "7",
+          "ps": "۷"
+        },
+        {
+          "en": "9",
+          "ps": "۹"
+        },
+        {
+          "en": "11",
+          "ps": "۱۱"
+        }
+      ],
+      "solution": [
+        1,
+        2
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Each move adds two, even from an odd start.",
+        "ps": "هر ګام دوه زیاتوي، که پیل طاق هم وي."
+      },
+      "explain": {
+        "en": "The landings are seven and nine.",
+        "ps": "اووه او نهه ځایونه دي."
+      }
+    },
+    {
+      "code": "1Nc.04",
+      "prompt": {
+        "en": "Start at 20. Choose two backward jumps of ten.",
+        "ps": "له ۲۰ څخه پیل وکړئ. دوه ځله لس لس شاته لاړ شئ."
+      },
+      "tiles": [
+        {
+          "en": "1",
+          "ps": "۱"
+        },
+        {
+          "en": "0",
+          "ps": "۰"
+        },
+        {
+          "en": "10",
+          "ps": "۱۰"
+        },
+        {
+          "en": "11",
+          "ps": "۱۱"
+        }
+      ],
+      "solution": [
+        2,
+        1
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Take ten from twenty, then another ten.",
+        "ps": "له شلو لس کم کړئ، بیا لس نور کم کړئ."
+      },
+      "explain": {
+        "en": "Twenty, ten, zero.",
+        "ps": "شل، لس، صفر."
+      }
+    },
+    {
+      "code": "1Nc.05",
+      "prompt": {
+        "en": "Choose the next even number after 16, then the odd number just after it.",
+        "ps": "له ۱۶ وروسته راتلونکې جفت شمېره او ورپسې طاق شمېره وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "17",
+          "ps": "۱۷"
+        },
+        {
+          "en": "19",
+          "ps": "۱۹"
+        },
+        {
+          "en": "20",
+          "ps": "۲۰"
+        },
+        {
+          "en": "18",
+          "ps": "۱۸"
+        }
+      ],
+      "solution": [
+        3,
+        1
+      ],
+      "take": 2,
+      "hint": {
+        "en": "The even marks are two apart.",
+        "ps": "جفت شمېرې دوه ګامه واټن لري."
+      },
+      "explain": {
+        "en": "Eighteen is even, then nineteen is odd.",
+        "ps": "اتلس جفت او ورپسې نولس طاق دی."
+      }
+    },
+    {
+      "code": "1Nc.06",
+      "prompt": {
+        "en": "Leaf, stick, stick, leaf, stick, stick. Build the repeating part.",
+        "ps": "پاڼه، لرګی، لرګی، پاڼه، لرګی، لرګی. تکراري برخه جوړه کړئ."
+      },
+      "tiles": [
+        {
+          "en": "Stick",
+          "ps": "لرګی"
+        },
+        {
+          "en": "Leaf",
+          "ps": "پاڼه"
+        },
+        {
+          "en": "Stone",
+          "ps": "تیږه"
+        }
+      ],
+      "solution": [
+        1,
+        0,
+        0
+      ],
+      "take": 3,
+      "hint": {
+        "en": "The leaf starts each repeated group.",
+        "ps": "پاڼه د هرې تکراري ډلې په پیل کې ده."
+      },
+      "explain": {
+        "en": "The unit is one leaf followed by two sticks.",
+        "ps": "یوه پاڼه او ورپسې دوه لرګي تکرارېږي."
+      }
+    }
+  ],
+  "practice": [
+    {
+      "codes": [
+        "1Nc.04"
+      ],
+      "task": {
+        "en": "Start at 3. Write the next four numbers when you count on by ones.",
+        "ps": "له ۳ څخه پیل وکړئ. یو یو مخکې شمېرلو سره څلور راتلونکې شمېرې ولیکئ."
+      }
+    },
+    {
+      "codes": [
+        "1Nc.04"
+      ],
+      "task": {
+        "en": "Start at 6. Draw jumps of two until you reach 14.",
+        "ps": "له ۶ څخه پیل وکړئ. دوه دوه ګامونه رسم کړئ تر څو ۱۴ ته ورسېږئ."
+      }
+    },
+    {
+      "codes": [
+        "1Nc.05"
+      ],
+      "task": {
+        "en": "Write 0 to 10. Mark every other number starting with 0. Name the marked numbers even or odd.",
+        "ps": "له ۰ تر ۱۰ ولیکئ. له ۰ څخه هره بله شمېره نښه کړئ. ووایئ چې نښه شوې شمېرې جفت دي که طاق."
+      }
+    },
+    {
+      "codes": [
+        "1Nc.06"
+      ],
+      "task": {
+        "en": "Draw circle, square, square twice. Describe the part that repeats and draw it again.",
+        "ps": "دایره، مربع، مربع دوه ځله رسم کړئ. تکراري برخه ووایئ او بیا یې رسم کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Nc.04"
+      ],
+      "task": {
+        "en": "Start at 2 and jump forward by ten once. Start at 18 and jump back by ten once. Draw both paths.",
+        "ps": "له ۲ څخه یو ځل لس مخکې لاړ شئ. له ۱۸ څخه یو ځل لس شاته راشئ. دواړه لارې رسم کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Nc.04",
+        "1Nc.06"
+      ],
+      "task": {
+        "en": "Make a spoon, cup, cup pattern twice. Then count back by ones from 12 to 8 as you put away five objects.",
+        "ps": "د کاشوغې، پیالې، پیالې بڼه دوه ځله جوړه کړئ. بیا د پنځو شیانو په ټولولو سره له ۱۲ تر ۸ یو یو شاته وشمېرئ."
+      }
+    },
+    {
+      "codes": [
+        "1Nc.05"
+      ],
+      "task": {
+        "en": "Write the numbers 11 to 20. Tell why the even and odd marks take turns.",
+        "ps": "له ۱۱ تر ۲۰ شمېرې ولیکئ. ووایئ چې ولې جفت او طاق نښې په وار راځي."
+      }
+    },
+    {
+      "codes": [
+        "1Nc.04"
+      ],
+      "task": {
+        "en": "Start at 7 and show three forward jumps of two. Start at 17 and show two backward steps of one.",
+        "ps": "له ۷ څخه درې ځله دوه دوه مخکې لاړ شئ. له ۱۷ څخه دوه ځله یو یو شاته راشئ."
+      }
+    },
+    {
+      "codes": [
+        "1Nc.04",
+        "1Nc.05"
+      ],
+      "task": {
+        "en": "Start at 9 and jump forward by ten. From 20 jump back by tens to zero. Label the landing numbers as odd or even.",
+        "ps": "له ۹ څخه لس مخکې لاړ شئ. له ۲۰ څخه لس لس تر صفر شاته راشئ. هغه شمېرې جفت یا طاق ونوموئ."
+      }
+    },
+    {
+      "codes": [
+        "1Nc.06"
+      ],
+      "task": {
+        "en": "A tray shows spoon, fork, fork, spoon, fork, fork. Describe the repeated part and draw the next three objects.",
+        "ps": "په پتنوس کې کاشوغه، پنجه، پنجه، کاشوغه، پنجه، پنجه دي. تکراري برخه ووایئ او راتلونکي درې شیان رسم کړئ."
+      }
+    }
+  ]
+}
