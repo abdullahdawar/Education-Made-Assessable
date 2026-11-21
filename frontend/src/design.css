@@ -1,0 +1,17 @@
+:root {
+  --ink: #20294d;
+  --muted: #4b5574;
+  --paper: #ffffff;
+  --canvas: #f7f8ff;
+  --indigo: #343088;
+  --lavender: #eae7ff;
+  --mint: #d8f4e8;
+  --peach: #ffe7d8;
+  --sun: #fff1be;
+  --sky: #dceeff;
+  --rose: #fbe0eb;
+  --line: #d9dded;
+  --radius: 18px;
+  --latin: Inter, system-ui, sans-serif;
+  --pashto: "Geeza Pro", "Noto Naskh Arabic", Arial, sans-serif;
+}

@@ -1,0 +1,298 @@
+{
+  "number": 6,
+  "title": {
+    "en": "Make ten, double and calculate",
+    "ps": "لس جوړ کړئ، دوه برابره کړئ او حساب وکړئ"
+  },
+  "game": {
+    "en": "Number Bonds",
+    "ps": "د شمېرو جوړې"
+  },
+  "lessons": [
+    {
+      "code": "1Ni.04",
+      "title": {
+        "en": "Fill ten spaces",
+        "ps": "لس ځایونه ډک کړئ"
+      },
+      "explain": {
+        "en": "Two parts can make ten. Put counters in a ten-frame and see how many spaces are empty. Fill the empty spaces to make ten.",
+        "ps": "دوه برخې لس جوړولی شي. په لس‌خانه‌ییز چوکاټ کې دانې کېږدئ او تش ځایونه وګورئ. تش ځایونه ډک کړئ چې لس شي."
+      },
+      "diagram": {
+        "en": "Full row: ● ● ● ● ●\nSecond row: ● ● □ □ □",
+        "ps": "بشپړ کتار: ● ● ● ● ●\nدویم کتار: ● ● □ □ □"
+      },
+      "example": {
+        "en": "Seven counters and three empty spaces make ten places. Seven and three are partners for ten.",
+        "ps": "اووه دانې او درې تش ځایونه لس ځایونه جوړوي. اووه او درې لس جوړوي."
+      },
+      "check": {
+        "en": "Draw a frame with six dots. Show what fills it.",
+        "ps": "له شپږو ټکو سره چوکاټ رسم کړئ. وښيئ چې څنګه ډکېږي."
+      }
+    },
+    {
+      "code": "1Ni.06",
+      "title": {
+        "en": "Two equal groups",
+        "ps": "دوه برابرې ډلې"
+      },
+      "explain": {
+        "en": "To double a number, make the same group a second time, then count both groups together. Keep both groups the same size. Practise doubles up to ten and ten.",
+        "ps": "د یوې شمېرې د دوه برابرولو لپاره هماغه ډله بیا جوړه کړئ، بیا دواړه ګډې وشمېرئ. د دواړو ډلو شمېر برابر وساتئ. د لسو تر دوه برابرولو تمرین وکړئ."
+      },
+      "diagram": {
+        "en": "First: ● ● ● ●\nSecond: ● ● ● ●",
+        "ps": "لومړۍ: ● ● ● ●\nدویمه: ● ● ● ●"
+      },
+      "example": {
+        "en": "Four and four make eight. So double four is eight.",
+        "ps": "څلور او څلور اته کېږي. د څلورو دوه برابره اته ده."
+      },
+      "check": {
+        "en": "Make double six with two rows. Then try double ten. With a partner, build every double from zero to double ten. Keep a list and look for what changes each time.",
+        "ps": "په دوو لیکو د شپږو دوه برابره جوړه کړئ. بیا د لسو دوه برابره جوړه کړئ. له ملګري سره د صفر له دوه برابرې څخه تر لسو دوه برابرې پورې ټولې جوړې کړئ. لړ یې ولیکئ او وګورئ چې هر ځل څه بدلېږي."
+      }
+    },
+    {
+      "code": "1Ni.05",
+      "title": {
+        "en": "Estimate, calculate, check",
+        "ps": "اټکل، حساب او کتنه"
+      },
+      "explain": {
+        "en": "Before you add or subtract, think about a nearby result. Then calculate exactly with counters, a number path or a known fact. Check that your exact answer makes sense.",
+        "ps": "له جمع یا کمولو مخکې یوې نږدې پایلې ته فکر وکړئ. بیا په دانو، د شمېرې پر لاره یا په پېژندل شوې طریقې دقیق حساب وکړئ. وګورئ چې دقیق ځواب مو مناسب دی."
+      },
+      "diagram": {
+        "en": "Estimate: about 10\nExact: 8 + 3 = 11\nExact: 13 − 3 = 10",
+        "ps": "اټکل: شاوخوا ۱۰\nدقیق: ⁦۸ + ۳ = ۱۱⁩\nدقیق: ⁦۱۳ − ۳ = ۱۰⁩"
+      },
+      "example": {
+        "en": "Eight plus three is near ten. Use two of the three to make ten and add the last one. Thirteen take away three reaches ten exactly.",
+        "ps": "اته جمع درې لسو ته نږدې ده. له درېیو دوه وکاروئ چې لس شي او وروستی یو ورزیات کړئ. له دیارلسو درې کمول دقیق لس کېږي."
+      },
+      "check": {
+        "en": "Estimate 18 take away 7. Work out the exact result and compare it with your estimate.",
+        "ps": "له ۱۸ څخه د ۷ کمول اټکل کړئ. دقیق ځواب پیدا کړئ او له اټکل سره یې پرتله کړئ."
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "code": "1Ni.04",
+      "prompt": {
+        "en": "Complete both totals of ten: first 8 and a partner, then 6 and a partner.",
+        "ps": "د لسو دواړه جوړې بشپړې کړئ: لومړی ۸ او ملګری یې، بیا ۶ او ملګری یې."
+      },
+      "tiles": [
+        {
+          "en": "2",
+          "ps": "۲"
+        },
+        {
+          "en": "6",
+          "ps": "۶"
+        },
+        {
+          "en": "4",
+          "ps": "۴"
+        },
+        {
+          "en": "3",
+          "ps": "۳"
+        }
+      ],
+      "solution": [
+        0,
+        2
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Imagine the empty spaces in a frame of ten.",
+        "ps": "په لس‌خانه‌ییز چوکاټ کې تشو ځایونو ته فکر وکړئ."
+      },
+      "explain": {
+        "en": "Eight needs two. Six needs four.",
+        "ps": "اته دوه او شپږ څلور غواړي."
+      }
+    },
+    {
+      "code": "1Ni.06",
+      "prompt": {
+        "en": "Build double seven: select the two equal amounts, then their total.",
+        "ps": "د اوو دوه برابره جوړه کړئ: دوه برابر شمېرونه او بیا ټول شمېر وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "14",
+          "ps": "۱۴"
+        },
+        {
+          "en": "7",
+          "ps": "۷"
+        },
+        {
+          "en": "10",
+          "ps": "۱۰"
+        },
+        {
+          "en": "6",
+          "ps": "۶"
+        }
+      ],
+      "solution": [
+        1,
+        1,
+        0
+      ],
+      "take": 3,
+      "hint": {
+        "en": "Double means using the same amount twice.",
+        "ps": "دوه برابره یعنې هماغه شمېر دوه ځله."
+      },
+      "explain": {
+        "en": "Seven and seven make fourteen.",
+        "ps": "اووه او اووه څوارلس کېږي."
+      }
+    },
+    {
+      "code": "1Ni.05",
+      "prompt": {
+        "en": "Build the exact results for 9 + 4 and 16 take away 7, in that order.",
+        "ps": "د ۹ جمع ۴ او له ۱۶ څخه د ۷ کمولو دقیقې پایلې په همدې ترتیب وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "9",
+          "ps": "۹"
+        },
+        {
+          "en": "12",
+          "ps": "۱۲"
+        },
+        {
+          "en": "13",
+          "ps": "۱۳"
+        },
+        {
+          "en": "10",
+          "ps": "۱۰"
+        }
+      ],
+      "solution": [
+        2,
+        0
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Complete ten in the first problem. Count back for the second.",
+        "ps": "په لومړۍ پوښتنه کې لس بشپړ کړئ. په دویمه کې شاته وشمېرئ."
+      },
+      "explain": {
+        "en": "Nine plus four is thirteen. Sixteen take away seven is nine.",
+        "ps": "نهه جمع څلور دیارلس ده. له شپاړسو اووه کمول نهه ده."
+      }
+    }
+  ],
+  "practice": [
+    {
+      "codes": [
+        "1Ni.04"
+      ],
+      "task": {
+        "en": "Draw ten spaces. Fill 4, then mark what is needed to fill the frame. Try filling 9 first.",
+        "ps": "لس ځایونه رسم کړئ. ۴ ډک کړئ، بیا د چوکاټ د ډکولو لپاره پاتې ځایونه نښه کړئ. بل ځل لومړی ۹ ډک کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ni.06"
+      ],
+      "task": {
+        "en": "Draw two rows of 3 and two rows of 5. Record each double.",
+        "ps": "د ۳ دوه لیکې او د ۵ دوه لیکې رسم کړئ. هره دوه برابره ولیکئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ni.05"
+      ],
+      "task": {
+        "en": "Estimate 9 + 5. Make ten, find the exact answer and show how you checked.",
+        "ps": "۹ جمع ۵ اټکل کړئ. لس جوړ کړئ، دقیق ځواب پیدا کړئ او کتنه وښيئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ni.06"
+      ],
+      "task": {
+        "en": "Build doubles of 1, 8 and 10. Count both rows each time.",
+        "ps": "د ۱، ۸ او ۱۰ دوه برابره جوړې کړئ. هر ځل دواړه لیکې وشمېرئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ni.04",
+        "1Ni.05"
+      ],
+      "task": {
+        "en": "Find what goes with 7 to make ten. Estimate 17 take away 6, then calculate.",
+        "ps": "وګورئ چې له ۷ سره څه لس جوړوي. له ۱۷ څخه د ۶ کمولو اټکل او بیا حساب وکړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ni.06",
+        "1Ni.05"
+      ],
+      "task": {
+        "en": "There are 6 pencils in each of two boxes. Estimate then find the total. Give away 4 and check what remains.",
+        "ps": "په دوو بکسونو کې هر یو ۶ پنسلونه لري. ټول لومړی اټکل او بیا حساب کړئ. ۴ ورکړئ او پاتې وګورئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ni.04",
+        "1Ni.06",
+        "1Ni.05"
+      ],
+      "task": {
+        "en": "Show two different pairs for ten. Explain a double, then explain how you checked 8 + 6.",
+        "ps": "د لسو لپاره دوه بېلې جوړې وښيئ. یوه دوه برابره تشریح کړئ او بیا ووایئ چې ۸ جمع ۶ څنګه مو وکتل."
+      }
+    },
+    {
+      "codes": [
+        "1Ni.04",
+        "1Ni.06"
+      ],
+      "task": {
+        "en": "Fill a ten-frame with 5 dots, then complete it. Find double 9 and show the groups.",
+        "ps": "په لس‌خانه‌ییز چوکاټ کې ۵ ټکي واچوئ، بیا یې ډک کړئ. د ۹ دوه برابره او ډلې وښيئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ni.05"
+      ],
+      "task": {
+        "en": "You have 7 cards and get 8 more. Estimate and calculate. Now give away 5 and record what is left.",
+        "ps": "۷ کارتونه لرئ او ۸ نور اخلئ. اټکل او حساب وکړئ. اوس ۵ ورکړئ او پاتې ولیکئ."
+      }
+    },
+    {
+      "codes": [
+        "1Ni.04",
+        "1Ni.06",
+        "1Ni.05"
+      ],
+      "task": {
+        "en": "Choose a pair that makes ten and draw it. Show why double 6 has two equal parts. Estimate and check 15 take away 8.",
+        "ps": "د لسو یوه جوړه وټاکئ او رسم یې کړئ. وښيئ چې ولې د ۶ دوه برابره دوه برابرې برخې لري. له ۱۵ څخه د ۸ کمولو اټکل او کتنه وکړئ."
+      }
+    }
+  ]
+}

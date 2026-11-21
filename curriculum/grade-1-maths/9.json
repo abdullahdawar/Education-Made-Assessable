@@ -1,0 +1,343 @@
+{
+  "number": 9,
+  "title": {
+    "en": "Flat shapes, solid shapes and turning",
+    "ps": "هوارې بڼې، کلکې بڼې او تاوول"
+  },
+  "game": {
+    "en": "Shape Explorer",
+    "ps": "د بڼو سپړنه"
+  },
+  "lessons": [
+    {
+      "code": "1Gg.01",
+      "title": {
+        "en": "Look at the sides",
+        "ps": "څنډو ته وګورئ"
+      },
+      "explain": {
+        "en": "Trace around a flat shape. Count straight sides and notice curved edges. A triangle has three straight sides. A square has four equal straight sides and four right-angle corners. A square is also a rectangle.",
+        "ps": "د هوارې بڼې شاوخوا ګوته وګرځوئ. نېغ اړخونه وشمېرئ او کږو څنډو ته وګورئ. مثلث درې نېغ اړخونه لري. مربع څلور برابر نېغ اړخونه او څلور قائمه کونجونه لري. مربع هم مستطیل دی."
+      },
+      "diagram": {
+        "en": "Triangle △ · square □ · circle ○",
+        "ps": "مثلث △، مربع □، دایره ○"
+      },
+      "example": {
+        "en": "The triangle and square have straight sides. The circle has a curved edge. Sort by edge type or count the straight sides.",
+        "ps": "مثلث او مربع نېغ اړخونه لري. دایره کږه څنډه لري. د څنډې له مخې یې ډله یا نېغ اړخونه وشمېرئ."
+      },
+      "check": {
+        "en": "Draw a triangle that points down. Explain why it is still a triangle.",
+        "ps": "لاندې خوا ته مثلث رسم کړئ. ووایئ چې ولې لا هم مثلث دی."
+      }
+    },
+    {
+      "code": "1Gg.03",
+      "title": {
+        "en": "Explore solid shapes",
+        "ps": "کلکې بڼې وڅېړئ"
+      },
+      "explain": {
+        "en": "Hold a box, a can and a ball. Trace faces and edges. A cube has six flat square faces and twelve straight edges. A cylinder like a can has two flat circular faces, a curved surface and two circular edges.",
+        "ps": "بکس، ډبی او توپ ونیسئ. مخونه او څنډې وګورئ. مکعب شپږ هوار مربع مخونه او دولس نېغې څنډې لري. استوانه لکه ډبی دوه هوار ګرد مخونه، کږه سطحه او دوه ګردې څنډې لري."
+      },
+      "diagram": {
+        "en": "Cube: flat square faces\nCylinder: flat ends and curved surface\nBall: curved surface",
+        "ps": "مکعب: هوار مربع مخونه\nاستوانه: هوار پایونه او کږه سطحه\nتوپ: کږه سطحه"
+      },
+      "example": {
+        "en": "A cube slides on a face. A ball has a curved surface and no edges where faces meet. You can sort solids by these properties.",
+        "ps": "مکعب پر مخ ښویېږي. توپ کږه سطحه لري او د مخونو د نښلېدو څنډې نه لري. کلکې بڼې په دې ځانګړنو ډلې کولی شئ."
+      },
+      "check": {
+        "en": "Find a solid with only flat faces and one with both flat and curved surfaces.",
+        "ps": "یوه کلکه بڼه یوازې له هوارو مخونو او بله له هوارې او کږې سطحې سره پیدا کړئ."
+      }
+    },
+    {
+      "code": "1Gg.06",
+      "title": {
+        "en": "Flat shape or solid object?",
+        "ps": "هواره بڼه که کلک شی؟"
+      },
+      "explain": {
+        "en": "A flat shape has a length and width. A solid object also has depth and takes up space. A face of a solid can leave a flat outline.",
+        "ps": "هواره بڼه اوږدوالی او سور لري. کلک شی ژوروالی هم لري او ځای نیسي. د کلک شي مخ هوار خط پرېښودلی شي."
+      },
+      "diagram": {
+        "en": "Outline: ○\nObject: can with round ends",
+        "ps": "هواره بڼه: ○\nشی: ډبی له ګردو پایونو سره"
+      },
+      "example": {
+        "en": "Trace the end of a can to draw a circle. The drawing is 2D and the can is 3D.",
+        "ps": "د ډبي پای رسم کړئ چې دایره شي. رسم هوار دی او ډبی درې بعدونه لري."
+      },
+      "check": {
+        "en": "Trace a small box face. Point to the drawing, then the solid.",
+        "ps": "د کوچني بکس یو مخ رسم کړئ. لومړی رسم او بیا کلک شي ته ګوته ونیسئ."
+      }
+    },
+    {
+      "code": "1Gg.07",
+      "title": {
+        "en": "Turn and match the outline",
+        "ps": "تاو یې کړئ او بڼه سره برابره کړئ"
+      },
+      "explain": {
+        "en": "Trace a shape, then turn it about its centre. Check each turn against the outline. A square can turn a quarter turn and look the same. A non-square rectangle matches after a half turn, but not after a quarter turn.",
+        "ps": "بڼه رسم کړئ، بیا یې د منځ شاوخوا تاوه کړئ. د هر تاو وروسته یې له رسم سره وګورئ. مربع په څلورمه برخه تاو هماغسې ښکاري. غیر مربع مستطیل په نیم تاو برابرېږي خو په څلورمه برخه تاو نه."
+      },
+      "diagram": {
+        "en": "Square: □ → □ after a quarter turn\nLong rectangle: ▭ → ▯ after a quarter turn",
+        "ps": "مربع: □ → □ په څلورمه برخه تاو\nاوږد مستطیل: ▭ → ▯ په څلورمه برخه تاو"
+      },
+      "example": {
+        "en": "Both cards are still the same type of shape. Only the square covers its original outline after this quarter turn.",
+        "ps": "دواړه کارتونه لا هم د هماغه ډول بڼې دي. له دې څلورمه برخه تاو وروسته یوازې مربع خپل لومړنی رسم پټوي."
+      },
+      "check": {
+        "en": "Turn a paper rectangle by a quarter and then a half turn from its start. Check both against its outline.",
+        "ps": "کاغذي مستطیل له پیل څخه څلورمه برخه او بیا نیم تاو کړئ. دواړه له رسم سره وګورئ."
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "code": "1Gg.01",
+      "prompt": {
+        "en": "Pick the shape with three straight sides, then the one with a curved edge and no straight sides.",
+        "ps": "لومړی د درېیو نېغو اړخونو بڼه او بیا هغه بڼه وټاکئ چې کږه څنډه لري او نېغ اړخ نه لري."
+      },
+      "tiles": [
+        {
+          "en": "Square □",
+          "ps": "مربع □"
+        },
+        {
+          "en": "Circle ○",
+          "ps": "دایره ○"
+        },
+        {
+          "en": "Triangle △",
+          "ps": "مثلث △"
+        },
+        {
+          "en": "Long rectangle ▭",
+          "ps": "اوږد مستطیل ▭"
+        }
+      ],
+      "solution": [
+        2,
+        1
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Trace around each shape.",
+        "ps": "د هرې بڼې شاوخوا وګورئ."
+      },
+      "explain": {
+        "en": "Triangle then circle.",
+        "ps": "مثلث، بیا دایره."
+      }
+    },
+    {
+      "code": "1Gg.03",
+      "prompt": {
+        "en": "Choose the solid with six flat square faces, then the solid with two flat circles and a curved surface.",
+        "ps": "لومړی له شپږو هوارو مربع مخونو او بیا له دوو ګردو هوارو مخونو او کږې سطحې سره کلکه بڼه وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "Ball",
+          "ps": "توپ"
+        },
+        {
+          "en": "Cylinder",
+          "ps": "استوانه"
+        },
+        {
+          "en": "Cube",
+          "ps": "مکعب"
+        }
+      ],
+      "solution": [
+        2,
+        1
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Imagine a square box and a can.",
+        "ps": "مربع بکس او ډبی په پام کې ونیسئ."
+      },
+      "explain": {
+        "en": "The cube has flat square faces. The cylinder has round ends.",
+        "ps": "مکعب هوار مربع مخونه لري. استوانه ګرد پایونه لري."
+      }
+    },
+    {
+      "code": "1Gg.06",
+      "prompt": {
+        "en": "Choose the flat outline left by tracing the end of a can. Then choose the solid object.",
+        "ps": "د ډبي د پای هواره بڼه وټاکئ. بیا کلک شی وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "Can",
+          "ps": "ډبی"
+        },
+        {
+          "en": "Circle outline",
+          "ps": "د دایرې رسم"
+        },
+        {
+          "en": "Triangle outline",
+          "ps": "د مثلث رسم"
+        }
+      ],
+      "solution": [
+        1,
+        0
+      ],
+      "take": 2,
+      "hint": {
+        "en": "The trace is flat. You can hold the can.",
+        "ps": "رسم هوار دی. ډبی نیولی شئ."
+      },
+      "explain": {
+        "en": "The circle is flat. The can is solid.",
+        "ps": "دایره هواره ده. ډبی کلک شی دی."
+      }
+    },
+    {
+      "code": "1Gg.07",
+      "prompt": {
+        "en": "Which covers its old outline after a quarter turn: a square or a long rectangle? Which covers it after a half turn if you try only the long rectangle?",
+        "ps": "په څلورمه برخه تاو کې کوم یو له خپل رسم سره برابرېږي: مربع که اوږد مستطیل؟ که یوازې اوږد مستطیل نیم تاو کړئ کوم یو برابرېږي؟"
+      },
+      "tiles": [
+        {
+          "en": "Long rectangle",
+          "ps": "اوږد مستطیل"
+        },
+        {
+          "en": "Square",
+          "ps": "مربع"
+        },
+        {
+          "en": "Neither",
+          "ps": "هېڅ یو"
+        }
+      ],
+      "solution": [
+        1,
+        0
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Imagine the long side standing upright after a quarter turn.",
+        "ps": "له څلورمه برخه تاو وروسته اوږد اړخ نېغ انځور کړئ."
+      },
+      "explain": {
+        "en": "The square matches after a quarter turn. The long rectangle matches after a half turn.",
+        "ps": "مربع په څلورمه برخه او اوږد مستطیل په نیم تاو کې برابرېږي."
+      }
+    }
+  ],
+  "practice": [
+    {
+      "codes": [
+        "1Gg.01"
+      ],
+      "task": {
+        "en": "Draw a circle, a triangle and a square. Mark which has a curved edge and count straight sides on the other two.",
+        "ps": "دایره، مثلث او مربع رسم کړئ. کږه څنډه نښه او د نورو دواړو نېغ اړخونه وشمېرئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gg.03"
+      ],
+      "task": {
+        "en": "Look at a box and a can. Draw them, then describe their flat faces and any curved surface.",
+        "ps": "بکس او ډبي ته وګورئ. رسم یې کړئ او هوار مخونه او کږه سطحه یې تشریح کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gg.06"
+      ],
+      "task": {
+        "en": "Trace the end of a tube or can. Write which is the flat outline and which is the solid.",
+        "ps": "د نل یا ډبي پای رسم کړئ. ولیکئ چې کوم یو هوار رسم او کوم یو کلک شی دی."
+      }
+    },
+    {
+      "codes": [
+        "1Gg.07"
+      ],
+      "task": {
+        "en": "Trace a square. Turn the card one quarter turn. Show how you checked whether it fits the outline.",
+        "ps": "مربع رسم کړئ. کارت څلورمه برخه تاو کړئ. وښيئ چې څنګه مو له رسم سره وکوت."
+      }
+    },
+    {
+      "codes": [
+        "1Gg.01",
+        "1Gg.03"
+      ],
+      "task": {
+        "en": "Sort pictures of a circle, triangle and rectangle by edge type. Sort a box, a can and a ball by surface type.",
+        "ps": "دایره، مثلث او مستطیل د څنډې له مخې ډلې کړئ. بکس، ډبی او توپ د سطحې له مخې ډلې کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gg.03",
+        "1Gg.06"
+      ],
+      "task": {
+        "en": "Find a round solid and a solid with flat square faces. Draw a flat outline from one of them.",
+        "ps": "یو ګرد کلک شی او یو له هوارو مربع مخونو سره پیدا کړئ. له یوه یې هوار رسم واخلئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gg.01",
+        "1Gg.07"
+      ],
+      "task": {
+        "en": "Draw a tilted triangle and explain why it is still a triangle. Show a turn of a square that leaves its appearance the same.",
+        "ps": "کږه مثلث رسم کړئ او ووایئ چې ولې لا هم مثلث دی. د مربع داسې تاو وښيئ چې بڼه یې هماغسې وي."
+      }
+    },
+    {
+      "codes": [
+        "1Gg.01",
+        "1Gg.03"
+      ],
+      "task": {
+        "en": "Draw two flat shapes with straight sides. Say how many each has. Describe the faces and edges of a cube using a model.",
+        "ps": "دوه هوارې نېغ اړخ لرونکې بڼې رسم کړئ. د هرې اړخونه ووایئ. د مکعب مخونه او څنډې په نمونه تشریح کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gg.06"
+      ],
+      "task": {
+        "en": "Draw a can and a circle. Label the 2D drawing and the 3D object and tell one difference.",
+        "ps": "ډبی او دایره رسم کړئ. هوار رسم او درې بعده شی ونوموئ او یو توپیر ووایئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gg.07"
+      ],
+      "task": {
+        "en": "Compare a square and a long rectangle after a quarter turn. Show which still matches its first outline and explain.",
+        "ps": "مربع او اوږد مستطیل له څلورمه برخه تاو وروسته پرتله کړئ. وښيئ چې کوم یې له لومړي رسم سره برابر دی او تشریح یې کړئ."
+      }
+    }
+  ]
+}
