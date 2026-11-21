@@ -1,0 +1,336 @@
+{
+  "number": 11,
+  "title": {
+    "en": "Comparing and measuring",
+    "ps": "پرتله کول او اندازه کول"
+  },
+  "game": {
+    "en": "Measurement Lab",
+    "ps": "د اندازې لابراتوار"
+  },
+  "lessons": [
+    {
+      "code": "1Gg.02",
+      "title": {
+        "en": "Longer, taller, thicker",
+        "ps": "اوږد، لوړ او پنډ"
+      },
+      "explain": {
+        "en": "Put objects at the same starting line before comparing length. Compare height from the same floor and thickness across the same kind of section.",
+        "ps": "د اوږدوالي تر پرتله کولو مخکې شیان له یوه پیل کرښې برابر کړئ. لوړوالی له یوې ځمکې او پنډوالی په ورته ځای کې پرتله کړئ."
+      },
+      "diagram": {
+        "en": "Same start: A ━━━\nSame start: B ━━━━━",
+        "ps": "یو پیل: لومړی ━━━\nیو پیل: دویم ━━━━━"
+      },
+      "example": {
+        "en": "Strip B reaches farther, so it is longer. Stand books on the same table for a fair height comparison.",
+        "ps": "دویمه پټه لرې رسېږي، نو اوږده ده. د لوړوالي د برابرې پرتلې لپاره کتابونه پر یوه مېز ودرول شي."
+      },
+      "check": {
+        "en": "Line up three pencils. Name the shortest and longest. Compare two books for thickness.",
+        "ps": "درې پنسلونه سره برابر کړئ. تر ټولو لنډ او اوږد ونوموئ. دوه کتابونه د پنډوالي له مخې پرتله کړئ."
+      }
+    },
+    {
+      "code": "1Gg.04",
+      "title": {
+        "en": "Heavier or lighter?",
+        "ps": "دروند که سپک؟"
+      },
+      "explain": {
+        "en": "Mass tells how much matter an object has. Use a balance to compare two safe objects. The heavier side goes down. A big-looking object can be lighter than a small one.",
+        "ps": "کتله ښيي چې په شي کې څومره ماده ده. دوه خوندي شیان په تله پرتله کړئ. درنه خوا ښکته ځي. لوی ښکاره شی له کوچني شي سپک کېدای شي."
+      },
+      "diagram": {
+        "en": "Balance: stone down · sponge up",
+        "ps": "تله: تیږه ښکته، اسفنج پورته"
+      },
+      "example": {
+        "en": "The stone side is lower, so the stone is heavier. The sponge is lighter.",
+        "ps": "د تیږې خوا ټیټه ده، نو تیږه درنه ده. اسفنج سپک دی."
+      },
+      "check": {
+        "en": "Compare two safe objects on a balance. Say which has more mass.",
+        "ps": "دوه خوندي شیان په تله پرتله کړئ. ووایئ چې کومه کتله ډېره ده."
+      }
+    },
+    {
+      "code": "1Gg.05",
+      "title": {
+        "en": "What holds more?",
+        "ps": "کوم ډېر ځای لري؟"
+      },
+      "explain": {
+        "en": "Capacity tells how much a container can hold when full. An empty cup can have greater capacity than a full tiny cup. Compare using the same small scoop of water each time.",
+        "ps": "ظرفیت ښيي چې لوښی په ډکېدو کې څومره ځای لري. تشه پیاله له یوې وړې ډکې پیالې ډېر ظرفیت لرلی شي. هر ځل په هماغه کاسه اوبه واچوئ او پرتله کړئ."
+      },
+      "diagram": {
+        "en": "Cup A fills with 2 scoops\nCup B fills with 4 scoops",
+        "ps": "لومړۍ پیاله: په ۲ کاشوغو ډکېږي\nدویمه پیاله: په ۴ کاشوغو ډکېږي"
+      },
+      "example": {
+        "en": "Cup B holds more when full, so it has greater capacity. Start with both empty to compare.",
+        "ps": "دویمه پیاله چې ډکه شي ډېرې اوبه لري، نو ظرفیت یې ډېر دی. د پرتلې لپاره دواړه تش پیل کړئ."
+      },
+      "check": {
+        "en": "With an adult, compare two containers with the same scoop. Say full, empty, holds less and holds more.",
+        "ps": "له یوه مشر سره دوه لوښي په هماغې کاشوغې پرتله کړئ. ډک، تش، لږ ځای او ډېر ځای ووایئ."
+      }
+    },
+    {
+      "code": "1Gg.08",
+      "title": {
+        "en": "Choose a numbered measuring tool",
+        "ps": "شمېره لرونکې اله وټاکئ"
+      },
+      "explain": {
+        "en": "The tool must match what you measure. Use a ruler for length, numbered scales for mass, a marked jug for capacity and a thermometer for temperature. Look along the ordered number marks with an adult.",
+        "ps": "اله له اندازې سره برابره وټاکئ. د اوږدوالي لپاره خط‌کش، د کتلې لپاره شمېره لرونکې تله، د ظرفیت لپاره نښه لرونکی لوښی او د تودوخې لپاره ترمامیتر وکاروئ. له یوه مشر سره شمېره لرونکې نښې وګورئ."
+      },
+      "diagram": {
+        "en": "Length: ruler 0 · 1 · 2 · 3\nCapacity: jug marks 0 · 1 · 2 · 3",
+        "ps": "اوږدوالی: خط‌کش ۰، ۱، ۲، ۳\nظرفیت: د لوښي نښې ۰، ۱، ۲، ۳"
+      },
+      "example": {
+        "en": "A ruler’s marks tell length, while marks on a measuring jug represent amounts it holds. A thermometer measures hot or cold.",
+        "ps": "د خط‌کش نښې اوږدوالی او د اندازه کولو د لوښي نښې د اوبو اندازه ښيي. ترمامیتر تودوخه ښيي."
+      },
+      "check": {
+        "en": "Say which tool you choose for a pencil, a fruit’s mass, a jug’s capacity and the temperature of the room.",
+        "ps": "ووایئ د پنسل، د مېوې کتلې، د لوښي ظرفیت او د خونې تودوخې لپاره کومې الې ټاکئ."
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "code": "1Gg.02",
+      "prompt": {
+        "en": "The strips are aligned: A stretches 3 marks and B stretches 5. Pick the longer then the shorter.",
+        "ps": "پټې برابرې دي: لومړۍ ۳ او دویمه ۵ نښې لري. لومړی اوږده او بیا لنډه وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "A strip",
+          "ps": "لومړۍ پټه"
+        },
+        {
+          "en": "B strip",
+          "ps": "دویمه پټه"
+        }
+      ],
+      "solution": [
+        1,
+        0
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Compare the ends after lining up the starts.",
+        "ps": "له یوه پیل وروسته پایونه پرتله کړئ."
+      },
+      "explain": {
+        "en": "B reaches farther than A.",
+        "ps": "دویمه تر لومړۍ لرې رسېږي."
+      }
+    },
+    {
+      "code": "1Gg.04",
+      "prompt": {
+        "en": "A balance tips down on the stone side. Pick the heavier object, then the lighter.",
+        "ps": "تله د تیږې خوا ته ښکته ده. لومړی دروند، بیا سپک شی وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "Sponge",
+          "ps": "اسفنج"
+        },
+        {
+          "en": "Stone",
+          "ps": "تیږه"
+        }
+      ],
+      "solution": [
+        1,
+        0
+      ],
+      "take": 2,
+      "hint": {
+        "en": "The heavier side is lower.",
+        "ps": "درنه خوا ټیټه ده."
+      },
+      "explain": {
+        "en": "The stone is heavier and the sponge is lighter.",
+        "ps": "تیږه درنه او اسفنج سپک دی."
+      }
+    },
+    {
+      "code": "1Gg.05",
+      "prompt": {
+        "en": "Cup A holds three scoops and cup B holds five of the same scoop. Pick the one that holds less, then more.",
+        "ps": "لومړۍ پیاله درې او دویمه د هماغې کاشوغې پنځه اخلي. لومړی لږ ځای او بیا ډېر ځای لرونکې وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "Cup B",
+          "ps": "دویمه پیاله"
+        },
+        {
+          "en": "Cup A",
+          "ps": "لومړۍ پیاله"
+        }
+      ],
+      "solution": [
+        1,
+        0
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Use the same scoop for a fair comparison.",
+        "ps": "د برابرې پرتلې لپاره هماغه کاشوغه وکاروئ."
+      },
+      "explain": {
+        "en": "Three scoops is less than five.",
+        "ps": "درې کاشوغې تر پنځو لږې دي."
+      }
+    },
+    {
+      "code": "1Gg.08",
+      "prompt": {
+        "en": "Choose a tool for water capacity, then air temperature, then pencil length, then mass of an apple.",
+        "ps": "د اوبو ظرفیت، د هوا تودوخې، د پنسل اوږدوالي او د مڼې کتلې لپاره په ترتیب اله وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "Ruler",
+          "ps": "خط‌کش"
+        },
+        {
+          "en": "Thermometer",
+          "ps": "ترمامیتر"
+        },
+        {
+          "en": "Numbered scale",
+          "ps": "شمېره لرونکې تله"
+        },
+        {
+          "en": "Marked jug",
+          "ps": "نښه لرونکی لوښی"
+        }
+      ],
+      "solution": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "take": 4,
+      "hint": {
+        "en": "Think what the numbers on each tool tell you.",
+        "ps": "فکر وکړئ چې د هرې الې شمېرې څه وايي."
+      },
+      "explain": {
+        "en": "Jug, thermometer, ruler, scales.",
+        "ps": "لوښی، ترمامیتر، خط‌کش، تله."
+      }
+    }
+  ],
+  "practice": [
+    {
+      "codes": [
+        "1Gg.02"
+      ],
+      "task": {
+        "en": "Line up two pencils at one end. Draw their starts and ends and mark the longer one. Compare two books for thickness.",
+        "ps": "دوه پنسلونه له یوه سر سره برابر کړئ. پیل او پای رسم او اوږد نښه کړئ. دوه کتابونه د پنډوالي له مخې پرتله کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gg.04"
+      ],
+      "task": {
+        "en": "Draw a balance with one side down. Mark the heavier object and describe the lighter side.",
+        "ps": "تله له یوې ښکته خوا سره رسم کړئ. دروند شی نښه او سپکه خوا تشریح کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gg.05"
+      ],
+      "task": {
+        "en": "Draw a full cup and an empty cup. Compare two different containers using the same scoop and write which holds more.",
+        "ps": "ډکه او تشه پیاله رسم کړئ. دوه لوښي په هماغې کاشوغې پرتله او ولیکئ چې کوم یو ډېر ځای لري."
+      }
+    },
+    {
+      "codes": [
+        "1Gg.08"
+      ],
+      "task": {
+        "en": "Draw or name the tools for length, mass, capacity and temperature. Point to numbered marks on one.",
+        "ps": "د اوږدوالي، کتلې، ظرفیت او تودوخې الې رسم یا ونوموئ. د یوې الې شمېره لرونکې نښې وښيئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gg.02",
+        "1Gg.04"
+      ],
+      "task": {
+        "en": "Compare a thick book and a thin book. Check on a balance which is heavier. Record both observations.",
+        "ps": "پنډ او نری کتاب پرتله کړئ. په تله وګورئ چې کوم دروند دی. دواړه کتنې ولیکئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gg.05",
+        "1Gg.08"
+      ],
+      "task": {
+        "en": "Help an adult compare two cups with a marked jug. Record which holds less and explain why the jug is a good tool.",
+        "ps": "له یوه مشر سره دوه پیالې په نښه لرونکي لوښي پرتله کړئ. لږ ځای لرونکې ولیکئ او د الې د ټاکلو لامل ووایئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gg.02",
+        "1Gg.08"
+      ],
+      "task": {
+        "en": "Show why two rulers must start at the same end when comparing objects. Choose a tool to check room temperature.",
+        "ps": "وښيئ چې ولې د پرتلې لپاره خط‌کشونه له یوه پای پیلېږي. د خونې د تودوخې لپاره اله وټاکئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gg.02",
+        "1Gg.04"
+      ],
+      "task": {
+        "en": "Draw three stems from one starting line. Label the tallest. A balance tips left. Label the heavier side.",
+        "ps": "درې ډنډرې له یوې کرښې رسم کړئ. تر ټولو لوړه ونوموئ. تله کیڼې خوا ښکته ده؛ درنه خوا ونوموئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gg.05",
+        "1Gg.08"
+      ],
+      "task": {
+        "en": "One container takes 6 scoops and another takes 4 of the same scoop. Which holds the least? Name a numbered tool for capacity and one for mass.",
+        "ps": "یو لوښی ۶ او بل د هماغې کاشوغې ۴ اخلي. کوم لږ ځای لري؟ د ظرفیت او کتلې یوه یوه شمېره لرونکې اله ونوموئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gg.02",
+        "1Gg.05",
+        "1Gg.08"
+      ],
+      "task": {
+        "en": "Explain how to compare two strips fairly and use length words. Explain why a large empty jug can hold more than a full small cup. Choose instruments for length and temperature.",
+        "ps": "د دوو پټو برابره پرتله په اوږدوالي ټکو تشریح کړئ. ووایئ چې ولې لوی تش لوښی له وړې ډکې پیالې ډېر ځای لري. د اوږدوالي او تودوخې الې وټاکئ."
+      }
+    }
+  ]
+}

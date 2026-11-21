@@ -1,0 +1,244 @@
+{
+  "number": 10,
+  "title": {
+    "en": "Position and directions",
+    "ps": "ځای او لوري"
+  },
+  "game": {
+    "en": "Red Panda Maze",
+    "ps": "د سور پانډا لاره"
+  },
+  "lessons": [
+    {
+      "code": "1Gp.01",
+      "title": {
+        "en": "Say where the object is",
+        "ps": "ووایئ چې شی چېرته دی"
+      },
+      "explain": {
+        "en": "Use a reference object when you describe position. Say above, below, beside, between or inside. For left and right agree which way you are looking before you give directions.",
+        "ps": "د ځای د تشریح لپاره یو معلوم شی وکاروئ. پورته، لاندې، څنګ، منځ یا دننه ووایئ. د کیڼ او ښي لپاره لومړی د کتلو لوری سره وټاکئ."
+      },
+      "diagram": {
+        "en": "Shelf: cup · book · bowl\nFloor: bag under the book",
+        "ps": "المارۍ: پیاله، کتاب، کاسه\nځمکه: بکس د کتاب لاندې"
+      },
+      "example": {
+        "en": "The book is between the cup and bowl. The bag is below the book.",
+        "ps": "کتاب د پیالې او کاسې تر منځ دی. بکس د کتاب لاندې دی."
+      },
+      "check": {
+        "en": "Put a pencil between two books. Tell a partner where it is.",
+        "ps": "پنسل د دوو کتابونو منځ کې کېږدئ. ملګري ته ووایئ چې چېرته دی."
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "code": "1Gp.01",
+      "prompt": {
+        "en": "The panda is on the bottom-left square. The goal is top-right, and the top-left square is blocked. Choose a two-step route.",
+        "ps": "پانډا په لاندې کیڼه خانه کې ده. موخه پورته ښي خوا ده او پورته کیڼه خانه بنده ده. دوه ګامه لاره وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "Up",
+          "ps": "پورته"
+        },
+        {
+          "en": "Down",
+          "ps": "لاندې"
+        },
+        {
+          "en": "Right",
+          "ps": "ښي خوا"
+        },
+        {
+          "en": "Left",
+          "ps": "کیڼې خوا"
+        }
+      ],
+      "solution": [
+        2,
+        0
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Avoid the blocked square. Move across before moving up.",
+        "ps": "بندې خانې ته مه ځئ. له پورته تلو مخکې بلې خوا ته لاړ شئ."
+      },
+      "explain": {
+        "en": "Move right, then up.",
+        "ps": "ښي خوا ته لاړ شئ، بیا پورته."
+      }
+    },
+    {
+      "code": "1Gp.01",
+      "prompt": {
+        "en": "On a two-by-two grid start top-right. Bottom-right is blocked. Build a route to bottom-left.",
+        "ps": "په دوه په دوه جال کې له پورته ښي خوا پیل کړئ. لاندې ښي خوا بنده ده. لاندې کیڼې خوا ته لاره جوړه کړئ."
+      },
+      "tiles": [
+        {
+          "en": "Left",
+          "ps": "کیڼې خوا"
+        },
+        {
+          "en": "Up",
+          "ps": "پورته"
+        },
+        {
+          "en": "Right",
+          "ps": "ښي خوا"
+        },
+        {
+          "en": "Down",
+          "ps": "لاندې"
+        }
+      ],
+      "solution": [
+        0,
+        3
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Stay in the top row for your first move.",
+        "ps": "په لومړي ګام کې په پورته کتار کې پاتې شئ."
+      },
+      "explain": {
+        "en": "Go left, then down.",
+        "ps": "کیڼې خوا، بیا لاندې."
+      }
+    },
+    {
+      "code": "1Gp.01",
+      "prompt": {
+        "en": "The book is between the cup and bowl. The bag is below the book. Choose what is between, then what is below.",
+        "ps": "کتاب د پیالې او کاسې تر منځ دی. بکس د کتاب لاندې دی. لومړی منځنی او بیا لاندینی شی وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "Bag",
+          "ps": "بکس"
+        },
+        {
+          "en": "Cup",
+          "ps": "پیاله"
+        },
+        {
+          "en": "Book",
+          "ps": "کتاب"
+        },
+        {
+          "en": "Bowl",
+          "ps": "کاسه"
+        }
+      ],
+      "solution": [
+        2,
+        0
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Use the cup and bowl as references for between.",
+        "ps": "د منځ لپاره پیاله او کاسه په پام کې ونیسئ."
+      },
+      "explain": {
+        "en": "The book is between. The bag is below.",
+        "ps": "کتاب په منځ او بکس لاندې دی."
+      }
+    }
+  ],
+  "practice": [
+    {
+      "codes": [
+        "1Gp.01"
+      ],
+      "task": {
+        "en": "Draw a cup on a table and a bag below the table. Say where each is.",
+        "ps": "پر مېز پیاله او تر مېز لاندې بکس رسم کړئ. د هر یوه ځای ووایئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gp.01"
+      ],
+      "task": {
+        "en": "Draw three boxes in a row. Put a star between two boxes and a dot inside one box.",
+        "ps": "درې چوکاټونه په کتار کې رسم کړئ. ستوری د دوو چوکاټونو تر منځ او ټکی په یوه کې واچوئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gp.01"
+      ],
+      "task": {
+        "en": "Face a partner’s direction. Put a pencil on your right and a book on your left. Draw their positions.",
+        "ps": "د ملګري په لوري مخ کړئ. ښي خوا ته پنسل او کیڼې خوا ته کتاب کېږدئ. ځایونه یې رسم کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gp.01"
+      ],
+      "task": {
+        "en": "Draw a two-by-two map. Start bottom-right. Move left then up. Mark where you finish.",
+        "ps": "دوه په دوه نقشه رسم کړئ. له لاندې ښي خوا پیل کړئ. کیڼې خوا او بیا پورته لاړ شئ. وروستی ځای نښه کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gp.01"
+      ],
+      "task": {
+        "en": "Describe what is beside your chair. Draw a route with two moves to an object and mark your start.",
+        "ps": "ووایئ چې د څوکۍ څنګ ته څه دي. یوه شي ته دوه ګامه لاره رسم او پیل نښه کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gp.01"
+      ],
+      "task": {
+        "en": "Give two directions to a partner to move a toy on a table. Check that you agree which way is right.",
+        "ps": "ملګري ته دوه لارښوونې ورکړئ چې لوبتکه پر مېز وخوځوي. وګورئ چې د ښي لوري په اړه سره موافق یاست."
+      }
+    },
+    {
+      "codes": [
+        "1Gp.01"
+      ],
+      "task": {
+        "en": "A partner took the wrong turn. Rewrite a direction to make it clearer. Include a starting place.",
+        "ps": "ملګری په ناسم لوري لاړ. لارښوونه بیا داسې ولیکئ چې روښانه شي. پیل هم ولیکئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gp.01"
+      ],
+      "task": {
+        "en": "Draw a ball inside a box and a star above the box. Say where the ball and star are.",
+        "ps": "توپ په چوکاټ کې او ستوری له چوکاټ پورته رسم کړئ. د توپ او ستوري ځای ووایئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gp.01"
+      ],
+      "task": {
+        "en": "On a three-by-three grid start in the centre. Go right, then down. Mark each stop.",
+        "ps": "په درې په درې جال کې له منځه پیل کړئ. ښي خوا، بیا لاندې لاړ شئ. هر ځای نښه کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gp.01"
+      ],
+      "task": {
+        "en": "Show two routes from the bottom-left to top-right of a two-by-two grid. Describe the steps of each.",
+        "ps": "د دوه په دوه جال له لاندې کیڼې خوا پورته ښي خوا ته دوه لارې وښيئ. د هرې لارې ګامونه ووایئ."
+      }
+    }
+  ]
+}
