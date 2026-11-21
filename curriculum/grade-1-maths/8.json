@@ -1,0 +1,350 @@
+{
+  "number": 8,
+  "title": {
+    "en": "Recognising local money",
+    "ps": "د ځایي پیسو پېژندل"
+  },
+  "game": {
+    "en": "Money Market",
+    "ps": "د پیسو بازار"
+  },
+  "lessons": [
+    {
+      "code": "1Nm.01",
+      "title": {
+        "en": "Read the value on a coin or note",
+        "ps": "د سکې یا نوټ ارزښت ولولئ"
+      },
+      "explain": {
+        "en": "In Pakistan money is counted in rupees. A coin is metal and a note is printed. Look for the value written on each. Size and colour can help you notice details, but read the value to check. Compare both sides using real money with an adult or approved classroom images.",
+        "ps": "په پاکستان کې پیسې په روپیو شمېرل کېږي. سکه له فلزه او نوټ چاپ شوی وي. پر هر یوه لیکل شوی ارزښت وګورئ. اندازه او رنګ د نښو په لیدلو کې مرسته کوي، خو ارزښت ولولئ. له یوه مشر سره د پیسو دواړه مخونه وګورئ یا د ټولګي منل شوي انځورونه وکاروئ."
+      },
+      "diagram": {
+        "en": "Coin labels: (1) (2) (5) (10)\nNote labels: [10] [20] [50]",
+        "ps": "سکې: (۱) (۲) (۵) (۱۰)\nنوټونه: [۱۰] [۲۰] [۵۰]"
+      },
+      "example": {
+        "en": "A ten-rupee coin and a ten-rupee note can both show 10. Their forms differ while the written rupee value is the same. These shapes are practice labels.",
+        "ps": "د لسو روپیو سکه او نوټ دواړه ۱۰ ښودلی شي. بڼې یې بېلې دي خو لیکلی ارزښت یې یو دی. دا بڼې د تمرین نښې دي."
+      },
+      "check": {
+        "en": "Find a rupee value on a coin or approved picture. Say whether it is a coin or a note and what value you can read.",
+        "ps": "پر سکه یا منل شوي انځور د روپیو ارزښت پیدا کړئ. ووایئ چې سکه ده که نوټ او څه ارزښت پرې لولئ."
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "code": "1Nm.01",
+      "prompt": {
+        "en": "Choose a five-rupee coin and then a twenty-rupee note.",
+        "ps": "لومړی د پنځو روپیو سکه او بیا د شلو روپیو نوټ وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "2 rupee coin",
+          "ps": "د ۲ روپیو سکه"
+        },
+        {
+          "en": "20 rupee note",
+          "ps": "د ۲۰ روپیو نوټ"
+        },
+        {
+          "en": "5 rupee coin",
+          "ps": "د ۵ روپیو سکه"
+        },
+        {
+          "en": "50 rupee note",
+          "ps": "د ۵۰ روپیو نوټ"
+        }
+      ],
+      "solution": [
+        2,
+        1
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Check the numeral and whether the label says coin or note.",
+        "ps": "شمېره او د سکې یا نوټ نوم وګورئ."
+      },
+      "explain": {
+        "en": "The coin is marked 5 and the note is marked 20.",
+        "ps": "سکه ۵ او نوټ ۲۰ ښيي."
+      }
+    },
+    {
+      "code": "1Nm.01",
+      "prompt": {
+        "en": "Match ten rupees in both forms. Choose the coin first.",
+        "ps": "لس روپۍ په دواړو بڼو کې ومومئ. لومړی سکه وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "10 rupee note",
+          "ps": "د ۱۰ روپیو نوټ"
+        },
+        {
+          "en": "1 rupee coin",
+          "ps": "د ۱ روپۍ سکه"
+        },
+        {
+          "en": "10 rupee coin",
+          "ps": "د ۱۰ روپیو سکه"
+        },
+        {
+          "en": "20 rupee note",
+          "ps": "د ۲۰ روپیو نوټ"
+        }
+      ],
+      "solution": [
+        2,
+        0
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Both must show ten, even if they look different.",
+        "ps": "دواړه باید لس وښيي که په بڼه کې توپیر هم ولري."
+      },
+      "explain": {
+        "en": "The coin and note both show ten rupees.",
+        "ps": "سکه او نوټ دواړه لس روپۍ ښيي."
+      }
+    },
+    {
+      "code": "1Nm.01",
+      "prompt": {
+        "en": "In the pretend market, the label says 50 rupees, then 2 rupees. Pick one matching piece for each.",
+        "ps": "په خیالي بازار کې لومړۍ نښه ۵۰ او بله ۲ روپۍ ښيي. د هرې نښې لپاره یوه برابره ټوټه وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "2 rupee coin",
+          "ps": "د ۲ روپیو سکه"
+        },
+        {
+          "en": "50 rupee note",
+          "ps": "د ۵۰ روپیو نوټ"
+        },
+        {
+          "en": "5 rupee coin",
+          "ps": "د ۵ روپیو سکه"
+        },
+        {
+          "en": "20 rupee note",
+          "ps": "د ۲۰ روپیو نوټ"
+        }
+      ],
+      "solution": [
+        1,
+        0
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Read the full number on each label.",
+        "ps": "پر هره نښه بشپړه شمېره ولولئ."
+      },
+      "explain": {
+        "en": "Match fifty to the note and two to the coin.",
+        "ps": "پنځوس له نوټ او دوه له سکې سره برابر کړئ."
+      }
+    },
+    {
+      "code": "1Nm.01",
+      "prompt": {
+        "en": "A stall marks its coins 1, 2 and 5 rupees. Select the one-rupee coin, then the two-rupee coin.",
+        "ps": "په دوکان کې د ۱، ۲ او ۵ روپیو سکې دي. د یوې روپۍ او بیا د دوو روپیو سکه وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "5 rupee coin",
+          "ps": "د ۵ روپیو سکه"
+        },
+        {
+          "en": "2 rupee coin",
+          "ps": "د ۲ روپیو سکه"
+        },
+        {
+          "en": "1 rupee coin",
+          "ps": "د ۱ روپۍ سکه"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        2,
+        1
+      ],
+      "hint": {
+        "en": "Look at the written value on each coin label.",
+        "ps": "پر هره سکه لیکلي ارزښت ته وګورئ."
+      },
+      "explain": {
+        "en": "One rupee then two rupees.",
+        "ps": "یوه روپۍ، بیا دوه روپۍ."
+      }
+    },
+    {
+      "code": "1Nm.01",
+      "prompt": {
+        "en": "A drawer has coin and note labels. Find a ten-rupee note and then a fifty-rupee note.",
+        "ps": "په کش کې د سکو او نوټونو نښې دي. د لسو او بیا د پنځوسو روپیو نوټ پیدا کړئ."
+      },
+      "tiles": [
+        {
+          "en": "10 rupee coin",
+          "ps": "د ۱۰ روپیو سکه"
+        },
+        {
+          "en": "50 rupee note",
+          "ps": "د ۵۰ روپیو نوټ"
+        },
+        {
+          "en": "20 rupee note",
+          "ps": "د ۲۰ روپیو نوټ"
+        },
+        {
+          "en": "10 rupee note",
+          "ps": "د ۱۰ روپیو نوټ"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        3,
+        1
+      ],
+      "hint": {
+        "en": "The first choice must be a note, even though both a coin and a note can show ten.",
+        "ps": "لومړی باید نوټ وي، که سکه او نوټ دواړه لس هم ښيي."
+      },
+      "explain": {
+        "en": "Both choices are notes, with values ten and fifty.",
+        "ps": "دواړه نوټونه دي او ارزښتونه یې لس او پنځوس دي."
+      }
+    },
+    {
+      "code": "1Nm.01",
+      "prompt": {
+        "en": "Both sides belong to one 5-rupee coin. Then you see one 20-rupee note. Choose the label for each item in order.",
+        "ps": "دواړه مخونه د یوې ۵ روپۍ سکې دي. بیا د ۲۰ روپیو یو نوټ وینئ. د هر شي نښه په ترتیب وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "5 rupee coin",
+          "ps": "د ۵ روپیو سکه"
+        },
+        {
+          "en": "20 rupee note",
+          "ps": "د ۲۰ روپیو نوټ"
+        },
+        {
+          "en": "2 rupee coin",
+          "ps": "د ۲ روپیو سکه"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        0,
+        1
+      ],
+      "hint": {
+        "en": "Turning over a coin does not make it a second coin.",
+        "ps": "د سکې اړول بله سکه نه جوړوي."
+      },
+      "explain": {
+        "en": "Match one coin of five and one note of twenty.",
+        "ps": "د پنځو یوه سکه او د شلو یو نوټ سره برابر کړئ."
+      }
+    }
+  ],
+  "practice": [
+    {
+      "codes": [
+        "1Nm.01"
+      ],
+      "task": {
+        "en": "Write Pakistan’s money name. Draw a round practice coin and label it with a value of 1 rupee.",
+        "ps": "د پاکستان د پیسو نوم ولیکئ. ګرده تمریني سکه رسم کړئ او د ۱ روپۍ ارزښت پرې ولیکئ."
+      }
+    },
+    {
+      "codes": [
+        "1Nm.01"
+      ],
+      "task": {
+        "en": "Draw practice labels for a 2-rupee coin and a 20-rupee note. Tell how the labels differ.",
+        "ps": "د ۲ روپیو سکې او د ۲۰ روپیو نوټ تمریني نښې رسم کړئ. د نښو توپیر ووایئ."
+      }
+    },
+    {
+      "codes": [
+        "1Nm.01"
+      ],
+      "task": {
+        "en": "Read 1, 2, 5 and 10 on four practice coins. Draw four circles and label each with its value.",
+        "ps": "پر څلورو تمریني سکو ۱، ۲، ۵ او ۱۰ ولولئ. څلور دایرې رسم کړئ او ارزښتونه پرې ولیکئ."
+      }
+    },
+    {
+      "codes": [
+        "1Nm.01"
+      ],
+      "task": {
+        "en": "Draw the 10-rupee coin and note as practice labels. What value is the same on both?",
+        "ps": "د ۱۰ روپیو سکه او نوټ د تمرین د نښو په توګه رسم کړئ. پر دواړو کوم ارزښت یو دی؟"
+      }
+    },
+    {
+      "codes": [
+        "1Nm.01"
+      ],
+      "task": {
+        "en": "Sort these labels into coins and notes: 5-rupee coin, 50-rupee note, 2-rupee coin, 20-rupee note.",
+        "ps": "دا نښې په سکو او نوټونو ووېشئ: د ۵ روپیو سکه، د ۵۰ روپیو نوټ، د ۲ روپیو سکه، د ۲۰ روپیو نوټ."
+      }
+    },
+    {
+      "codes": [
+        "1Nm.01"
+      ],
+      "task": {
+        "en": "With an adult, examine both sides of one safe coin or classroom image. Record where you saw its value.",
+        "ps": "له یوه مشر سره د سکې یا د ټولګي انځور دواړه مخونه وګورئ. ولیکئ چې ارزښت مو چېرته ولید."
+      }
+    },
+    {
+      "codes": [
+        "1Nm.01"
+      ],
+      "task": {
+        "en": "Why should you read the value on a note instead of looking only at its colour? Draw two differently labelled notes.",
+        "ps": "ولې د نوټ یوازې رنګ بسنه نه کوي او ارزښت یې باید ولولئ؟ دوه بېل ارزښت لرونکي نوټونه رسم کړئ."
+      }
+    },
+    {
+      "codes": [
+        "1Nm.01"
+      ],
+      "task": {
+        "en": "Say the name of Pakistan’s currency. Write a value you see on a classroom coin and a value you see on a note.",
+        "ps": "د پاکستان د پیسو نوم ووایئ. د ټولګي پر سکه او نوټ لیکل شوی یو یو ارزښت ولیکئ."
+      }
+    },
+    {
+      "codes": [
+        "1Nm.01"
+      ],
+      "task": {
+        "en": "Make practice labels for 5 rupees and 50 rupees. Identify which is a coin label and which is a note label.",
+        "ps": "د ۵ او ۵۰ روپیو تمریني نښې جوړې کړئ. ووایئ کومه د سکې او کومه د نوټ نښه ده."
+      }
+    },
+    {
+      "codes": [
+        "1Nm.01"
+      ],
+      "task": {
+        "en": "Two practice labels both show 10 rupees, but one is a coin. Describe how you can tell the forms apart and how you know their values match.",
+        "ps": "دوه تمریني نښې ۱۰ روپۍ ښيي، خو یوه سکه ده. ووایئ چې بڼې څنګه بېلوئ او د ارزښتونو برابري څنګه پېژنئ."
+      }
+    }
+  ]
+}

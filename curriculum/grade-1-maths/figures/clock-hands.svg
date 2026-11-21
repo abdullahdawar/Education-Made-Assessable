@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 150" width="350" height="150">
+  <g stroke="#343088" stroke-width="2" fill="white">
+    <circle cx="83" cy="75" r="67"/>
+    <circle cx="267" cy="75" r="67"/>
+  </g>
+  <g text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#20294d">
+    <text x="83" y="25">12</text><text x="137" y="80">3</text><text x="83" y="133">6</text><text x="29" y="80">9</text>
+    <text x="267" y="25">12</text><text x="321" y="80">3</text><text x="267" y="133">6</text><text x="213" y="80">9</text>
+  </g>
+  <g stroke="#343088" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M83 75 V33 M267 75 V117"/>
+    <path stroke-width="6" d="M83 75 H112 M267 75 L295 83"/>
+  </g>
+  <g fill="#343088"><circle cx="83" cy="75" r="4"/><circle cx="267" cy="75" r="4"/></g>
+</svg>

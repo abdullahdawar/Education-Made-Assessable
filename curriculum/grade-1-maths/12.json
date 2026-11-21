@@ -1,0 +1,415 @@
+{
+  "number": 12,
+  "title": {
+    "en": "Time, calendars and clocks",
+    "ps": "وخت، جنتري او ساعتونه"
+  },
+  "game": {
+    "en": "Clock Challenge",
+    "ps": "د ساعت ننګونه"
+  },
+  "lessons": [
+    {
+      "code": "1Gt.01",
+      "title": {
+        "en": "Talk about time",
+        "ps": "د وخت په اړه خبرې"
+      },
+      "explain": {
+        "en": "Use seconds for very short times, minutes for things like a short game, hours for longer activities, and days, weeks or months for longer periods. Morning, afternoon, today and tomorrow tell when things happen.",
+        "ps": "د ډېر لنډ وخت لپاره ثانیې، د لنډې لوبې لپاره دقیقې، د اوږدو کارونو لپاره ساعتونه او د لا اوږدو وختونو لپاره ورځې، اوونۍ یا میاشتې وکاروئ. سهار، ماسپښین، نن او سبا ښيي چې کار کله کېږي."
+      },
+      "diagram": {
+        "en": "A clap: a moment\nA short game: minutes\nA school day: hours",
+        "ps": "پړک: یوه شېبه\nلنډه لوبه: دقیقې\nد ښوونځي ورځ: ساعتونه"
+      },
+      "example": {
+        "en": "A clap takes a moment. A short game takes minutes. A school day lasts several hours.",
+        "ps": "پړک یوه شېبه وي. لنډه لوبه دقیقې نیسي. د ښوونځي ورځ څو ساعتونه وي."
+      },
+      "check": {
+        "en": "Which time word would you use for the length of a song? Describe when you have lunch.",
+        "ps": "د سندرې د اوږدوالي لپاره د وخت کومه کلمه کاروئ؟ ووایئ چې غرمنۍ کله خورئ."
+      }
+    },
+    {
+      "code": "1Gt.02",
+      "title": {
+        "en": "Days and months in order",
+        "ps": "ورځې او میاشتې په ترتیب"
+      },
+      "explain": {
+        "en": "Say the seven days in order and start again after the last. A calendar shows the order of the months. This example uses the Gregorian calendar.",
+        "ps": "اووه ورځې په ترتیب ووایئ او له وروستۍ وروسته بیا پیل کړئ. جنتري د میاشتو ترتیب ښيي. دا بېلګه میلادي جنتري کاروي."
+      },
+      "diagram": {
+        "en": "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday\nJanuary, February, March, April, May, June, July, August, September, October, November, December",
+        "ps": "دوشنبه، سه شنبه، چهارشنبه، پنجشنبه، جمعه، شنبه، یکشنبه\nجنوري، فبروري، مارچ، اپرېل، مې، جون، جولای، اګست، سپتمبر، اکتوبر، نومبر، دسمبر"
+      },
+      "example": {
+        "en": "Tuesday comes after Monday. February comes after January. After December we start again at January.",
+        "ps": "له دوشنبې وروسته سه شنبه راځي. له جنوري وروسته فبروري راځي. له دسمبر وروسته بیا له جنوري پیلېږي."
+      },
+      "check": {
+        "en": "Use a calendar to find today. Say the next day and the next month.",
+        "ps": "نن په جنتري کې پیدا کړئ. راتلونکې ورځ او راتلونکې میاشت ووایئ."
+      }
+    },
+    {
+      "code": "1Gt.03",
+      "title": {
+        "en": "Read the hour and half hour",
+        "ps": "بشپړ او نیم ساعت ولولئ"
+      },
+      "explain": {
+        "en": "The long minute hand points to twelve at an exact hour. The short hand points to the hour. At half past, the long hand points to six and the short hand has moved halfway to the next hour.",
+        "ps": "په بشپړ ساعت کې اوږده د دقیقو ستنه دولسو ته وي. لنډه ستنه ساعت ښيي. په نیم ساعت کې اوږده ستنه شپږو ته او لنډه د دوو ساعتونو تر منځ وي."
+      },
+      "diagram": {
+        "en": "Left: three o’clock. Right: half past three.",
+        "ps": "کیڼ: درې بجې. ښی: درې نیمې بجې."
+      },
+      "example": {
+        "en": "At 3:00 the short hand is at three and the long hand at twelve. At 3:30 the short hand sits between three and four, and the long hand points down to six.",
+        "ps": "په ۳:۰۰ کې لنډه ستنه درې او اوږده دولس ښيي. په ۳:۳۰ کې لنډه د درې او څلورو تر منځ او اوږده ښکته پر شپږ وي."
+      },
+      "check": {
+        "en": "Make a paper clock. Move both hands to show five o’clock and half past five.",
+        "ps": "کاغذي ساعت جوړ کړئ. دواړه ستنې وخوځوئ او پنځه بجې او پنځه نیمې بجې وښيئ."
+      },
+      "visual": {
+        "file": "clock-hands.svg",
+        "alt": {
+          "en": "Two clock faces. Left: long hand at 12, short hand at 3. Right: long hand at 6, short hand halfway from 3 to 4.",
+          "ps": "دوه ساعتونه. کیڼ: اوږده ستنه پر ۱۲ او لنډه پر ۳. ښی: اوږده ستنه پر ۶ او لنډه د ۳ او ۴ تر منځ."
+        }
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "code": "1Gt.01",
+      "prompt": {
+        "en": "Pick a sensible unit for one clap. Then pick one for the length of a school morning.",
+        "ps": "د یوه پړک لپاره مناسب واحد وټاکئ. بیا د ښوونځي د سهار لپاره واحد وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "Hours",
+          "ps": "ساعتونه"
+        },
+        {
+          "en": "Seconds",
+          "ps": "ثانیې"
+        },
+        {
+          "en": "Months",
+          "ps": "میاشتې"
+        }
+      ],
+      "solution": [
+        1,
+        0
+      ],
+      "take": 2,
+      "hint": {
+        "en": "A clap is very short. A morning lasts much longer.",
+        "ps": "یو پړک ډېر لنډ دی. سهار ډېر اوږد دی."
+      },
+      "explain": {
+        "en": "Seconds suit a clap. Hours suit a school morning.",
+        "ps": "ثانیې د پړک او ساعتونه د ښوونځي د سهار لپاره مناسب دي."
+      }
+    },
+    {
+      "code": "1Gt.02",
+      "prompt": {
+        "en": "Choose the next day after Wednesday, then the next month after June.",
+        "ps": "له چهارشنبې وروسته ورځ او له جون وروسته میاشت وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "July",
+          "ps": "جولای"
+        },
+        {
+          "en": "Friday",
+          "ps": "جمعه"
+        },
+        {
+          "en": "Thursday",
+          "ps": "پنجشنبه"
+        },
+        {
+          "en": "May",
+          "ps": "مې"
+        }
+      ],
+      "solution": [
+        2,
+        0
+      ],
+      "take": 2,
+      "hint": {
+        "en": "Think of the weekday list and then the month list.",
+        "ps": "لومړی د ورځو او بیا د میاشتو لړ په یاد کړئ."
+      },
+      "explain": {
+        "en": "Thursday comes after Wednesday. July comes after June.",
+        "ps": "له چهارشنبې وروسته پنجشنبه او له جون وروسته جولای راځي."
+      }
+    },
+    {
+      "code": "1Gt.03",
+      "prompt": {
+        "en": "The long hand points to 6 and the short hand is between 4 and 5. Select the previous whole-hour time, then the time shown.",
+        "ps": "اوږده ستنه ۶ ته او لنډه د ۴ او ۵ تر منځ ده. لومړی تېر بشپړ ساعت او بیا ښودل شوی وخت وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "5:00",
+          "ps": "۵:۰۰"
+        },
+        {
+          "en": "4:30",
+          "ps": "۴:۳۰"
+        },
+        {
+          "en": "4:00",
+          "ps": "۴:۰۰"
+        },
+        {
+          "en": "5:30",
+          "ps": "۵:۳۰"
+        }
+      ],
+      "solution": [
+        2,
+        1
+      ],
+      "take": 2,
+      "hint": {
+        "en": "The short hand has passed four. Six on the long hand means half past.",
+        "ps": "لنډه ستنه له څلورو تېره ده. اوږده ستنه پر شپږ د نیمایي مانا لري."
+      },
+      "explain": {
+        "en": "Four o’clock came first, then half past four.",
+        "ps": "لومړی څلور بجې وې، بیا څلور نیمې."
+      }
+    },
+    {
+      "code": "1Gt.02",
+      "prompt": {
+        "en": "Choose the day just before Monday, then the month just after December.",
+        "ps": "له دوشنبې سمدستي مخکې ورځ او له دسمبر سمدستي وروسته میاشت وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "Saturday",
+          "ps": "شنبه"
+        },
+        {
+          "en": "January",
+          "ps": "جنوري"
+        },
+        {
+          "en": "November",
+          "ps": "نومبر"
+        },
+        {
+          "en": "Sunday",
+          "ps": "یکشنبه"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        3,
+        1
+      ],
+      "hint": {
+        "en": "Days and months both repeat in a cycle.",
+        "ps": "ورځې او میاشتې په دوره کې تکرارېږي."
+      },
+      "explain": {
+        "en": "Sunday comes just before Monday. January follows December.",
+        "ps": "یکشنبه تر دوشنبې مخکې او جنوري له دسمبر وروسته راځي."
+      }
+    },
+    {
+      "code": "1Gt.03",
+      "prompt": {
+        "en": "The long hand is on 12 and the short hand is on 8. Choose that time, then the time a half hour later.",
+        "ps": "اوږده ستنه پر ۱۲ او لنډه پر ۸ ده. هماغه وخت او بیا نیم ساعت وروسته وخت وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "8:30",
+          "ps": "۸:۳۰"
+        },
+        {
+          "en": "9:00",
+          "ps": "۹:۰۰"
+        },
+        {
+          "en": "8:00",
+          "ps": "۸:۰۰"
+        },
+        {
+          "en": "7:30",
+          "ps": "۷:۳۰"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        2,
+        0
+      ],
+      "hint": {
+        "en": "At half past, the long hand points to six and the short hand is just past eight.",
+        "ps": "په نیم ساعت کې اوږده ستنه پر شپږ او لنډه له اتو تېره وي."
+      },
+      "explain": {
+        "en": "Eight o’clock, then half past eight.",
+        "ps": "اته بجې، بیا اته نیمې بجې."
+      }
+    },
+    {
+      "code": "1Gt.01",
+      "prompt": {
+        "en": "Choose a useful unit for brushing your teeth, then for a school holiday lasting about seven days.",
+        "ps": "د غاښونو مینځلو او بیا د ښوونځي د شاوخوا اوو ورځو رخصتۍ لپاره مناسب واحد وټاکئ."
+      },
+      "tiles": [
+        {
+          "en": "Weeks",
+          "ps": "اوونۍ"
+        },
+        {
+          "en": "Seconds",
+          "ps": "ثانیې"
+        },
+        {
+          "en": "Minutes",
+          "ps": "دقیقې"
+        },
+        {
+          "en": "Months",
+          "ps": "میاشتې"
+        }
+      ],
+      "take": 2,
+      "solution": [
+        2,
+        0
+      ],
+      "hint": {
+        "en": "One is a short everyday activity; the other is about a full week.",
+        "ps": "یو لنډ ورځنی کار او بل شاوخوا پوره اوونۍ ده."
+      },
+      "explain": {
+        "en": "Minutes suit brushing and weeks suit the holiday.",
+        "ps": "دقیقې د غاښونو مینځلو او اوونۍ د رخصتۍ لپاره مناسبې دي."
+      }
+    }
+  ],
+  "practice": [
+    {
+      "codes": [
+        "1Gt.01"
+      ],
+      "task": {
+        "en": "Choose seconds, minutes or hours for a clap, a short song and a school morning. Describe when you do each.",
+        "ps": "د پړک، لنډې سندرې او د ښوونځي سهار لپاره ثانیې، دقیقې یا ساعتونه وټاکئ. ووایئ چې هر کار کله کوئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gt.02"
+      ],
+      "task": {
+        "en": "Say all seven days. Write what comes after Tuesday and what comes before Sunday.",
+        "ps": "ټولې اووه ورځې ووایئ. له سه شنبې وروسته او له یکشنبې مخکې ورځ ولیکئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gt.03"
+      ],
+      "task": {
+        "en": "Draw clock hands for two o’clock and for half past two. Point to the long hand on each.",
+        "ps": "د دوو بجو او دوو نیمو بجو ستنې رسم کړئ. په هر یوه کې اوږدې ستنې ته ګوته ونیسئ."
+      },
+      "response": "draw"
+    },
+    {
+      "codes": [
+        "1Gt.02"
+      ],
+      "task": {
+        "en": "Use a calendar to name the twelve months in order. Circle the month that comes after August.",
+        "ps": "په جنتري د دولسو میاشتو نومونه په ترتیب ووایئ. له اګست وروسته میاشت په دایره کې ونیسئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gt.01",
+        "1Gt.03"
+      ],
+      "task": {
+        "en": "Describe your morning in time order. Draw one clock for six o’clock and another for half past seven.",
+        "ps": "د سهار کارونه په وختي ترتیب ووایئ. د شپږو او اوو نیمو بجو ساعتونه رسم کړئ."
+      },
+      "response": "draw"
+    },
+    {
+      "codes": [
+        "1Gt.01",
+        "1Gt.02"
+      ],
+      "task": {
+        "en": "Choose a day this week for a family activity. Name yesterday, today and tomorrow. Write whether the activity takes minutes or hours.",
+        "ps": "د کورنۍ د کار لپاره د دې اوونۍ ورځ وټاکئ. پرون، نن او سبا ونوموئ. ولیکئ چې کار دقیقې نیسي که ساعتونه."
+      }
+    },
+    {
+      "codes": [
+        "1Gt.03"
+      ],
+      "task": {
+        "en": "Explain how the minute hand shows an exact hour or a half hour. Draw four o’clock and half past four.",
+        "ps": "ووایئ چې د دقیقو ستنه بشپړ او نیم ساعت څنګه ښيي. څلور او څلور نیمې بجې رسم کړئ."
+      },
+      "response": "draw"
+    },
+    {
+      "codes": [
+        "1Gt.01",
+        "1Gt.02"
+      ],
+      "task": {
+        "en": "Choose a unit for the time to eat lunch. Say the day after Friday and month after October.",
+        "ps": "د غرمنۍ خوړلو وخت لپاره واحد وټاکئ. له جمعې وروسته ورځ او له اکتوبر وروسته میاشت ووایئ."
+      }
+    },
+    {
+      "codes": [
+        "1Gt.03"
+      ],
+      "task": {
+        "en": "The long hand is on 12 and short on 8. Write the time. Draw what the clock looks like a half hour later.",
+        "ps": "اوږده ستنه پر ۱۲ او لنډه پر ۸ ده. وخت ولیکئ. نیم ساعت وروسته بڼه رسم کړئ."
+      },
+      "response": "draw"
+    },
+    {
+      "codes": [
+        "1Gt.02",
+        "1Gt.03"
+      ],
+      "task": {
+        "en": "Explain why a clock with its long hand on 6 and short hand between 9 and 10 reads a half hour. Then explain what comes after December.",
+        "ps": "ووایئ چې ولې اوږده ستنه پر ۶ او لنډه د ۹ او ۱۰ تر منځ نیم ساعت ښيي. بیا ووایئ چې له دسمبر وروسته څه راځي."
+      }
+    }
+  ]
+}
