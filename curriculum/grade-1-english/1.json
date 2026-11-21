@@ -1,0 +1,83 @@
+{
+  "number": 1,
+  "title": "Letters, sounds and handwriting",
+  "titlePs": "توري، غږونه او لیکدود",
+  "game": "Alphabet path",
+  "icon": "🐱",
+  "intro": "Letters have names. In words, letters also represent sounds. Listen to a grown-up model a sound, then point to its letter. To blend, say the sounds together without adding a little vowel at the end.",
+  "support": "توري نومونه لري او په کلمو کې غږونه ښيي. له مشر سره غږ واورئ او توری وښيئ. د کلمې غږونه سره یو ځای کړئ.",
+  "text": "A a · B b · C c · D d · E e · F f · G g\nH h · I i · J j · K k · L l · M m · N n\nO o · P p · Q q · R r · S s · T t · U u\nV v · W w · X x · Y y · Z z\ncat · map · pin · sun",
+  "model": "In map, m, a and p record three sounds. Blend them to read map. To write m, start at the top, go down and make two humps. Sit comfortably and let your fingers hold the pencil lightly.",
+  "activity": "Point to each upper-case and lower-case pair. Say the alphabet. Air-write M and m. Then say and write a new short word.",
+  "adult": "Model the usual sounds in familiar words using your class phonics sequence. Check all 26 letter names over several sessions. Say a sound for the learner to write and observe their comfort and letter formation.",
+  "adultPs": "په اشنا کلمو کې غږونه ووایئ. د ټولو تورو نومونه په څو وارونو وګورئ. ماشوم دې اورېدلی غږ په توري ولیکي او د قلم نیول یې وګورئ.",
+  "rounds": [
+    {
+      "prompt": "Build map.",
+      "choices": [
+        "p",
+        "m",
+        "a",
+        "s"
+      ],
+      "answer": [
+        "m",
+        "a",
+        "p"
+      ],
+      "hint": "Start with m, then find the vowel.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Put the first three alphabet letters in order.",
+      "choices": [
+        "c",
+        "d",
+        "a",
+        "b"
+      ],
+      "answer": [
+        "a",
+        "b",
+        "c"
+      ],
+      "hint": "Start with a.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Find the upper-case partner of n.",
+      "choices": [
+        "M",
+        "N",
+        "P"
+      ],
+      "answer": [
+        "N"
+      ],
+      "hint": "Look for the matching letter name.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    }
+  ],
+  "tasks": [
+    "Trace A and a in the air. Write them on paper. Tell their name.",
+    "Copy B b, D d and M m. Point to the upper-case letter in each pair.",
+    "Read cat and pin to an adult. Tell how you joined the sounds.",
+    "Put g, e and f in alphabet order. Say the letters before g.",
+    "Listen to two sounds your adult chooses. Write a letter for each.",
+    "Say the sounds in sun. Write each letter and then write the whole word.",
+    "Hold a pencil comfortably and write your own simple word from sounds. Tell which letters you chose.",
+    "Recite the alphabet to an adult. Write the lower-case partner for H, R and T.",
+    "With an adult, sound out and read mat and sit. Then listen and write the sounds in a new word.",
+    "Write A a and M m without tracing. Explain where you start each lower-case letter."
+  ],
+  "audioPending": true,
+  "codes": [
+    "1Rw.01",
+    "1Rw.05",
+    "1Ww.01",
+    "1Ww.05",
+    "1Rv.04",
+    "1Wp.01",
+    "1Wp.02"
+  ]
+}

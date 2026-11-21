@@ -1,0 +1,81 @@
+{
+  "number": 2,
+  "title": "Sound teams, blends and rhymes",
+  "titlePs": "د غږونو ډلې، یوځای کول او قافیې",
+  "game": "Word workshop",
+  "icon": "🐚",
+  "intro": "Some spellings work as a team for one sound. In a blend, you can still hear both consonants. Compare the writing and listen to the sounds with an adult.",
+  "support": "ځینې توري یو غږ ښيي. په ګډو بېلو غږونو کې دواړه غږونه اورېدل کېږي. لیکنه وګورئ او له مشر سره غږونه واورئ.",
+  "text": "ship · chin · thin · rain · feet · night\nbrush · sand · clock · sock · rock",
+  "model": "The sh in ship is one sound. The b and r in brush are two separate sounds. In clock and sock the shared spelling ock helps show the rhyme. Write sh as a pair, keeping the two letters close.",
+  "activity": "Circle the sound team in night. Ask an adult to model it before you read the word. Draw the sound boxes for brush and mark its first two sounds separately.",
+  "adult": "Model consonant and vowel teams and the three-letter spelling in night. Listen to the child blend adjacent sounds. Where joined writing is taught, demonstrate an approved join for a familiar pair.",
+  "adultPs": "د تورو ګډ غږونه وښيئ. ماشوم ته غوږ ونیسئ چې نږدې غږونه سره یو ځای کړي. د ښوونځي د نمونې له مخې د تورو نښلول وښيئ.",
+  "rounds": [
+    {
+      "prompt": "Build ship from its written sound parts.",
+      "choices": [
+        "p",
+        "i",
+        "sh",
+        "ch"
+      ],
+      "answer": [
+        "sh",
+        "i",
+        "p"
+      ],
+      "hint": "Two letters work together at the start.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Choose the letters that make the sound team in night.",
+      "choices": [
+        "ai",
+        "igh",
+        "ee"
+      ],
+      "answer": [
+        "igh"
+      ],
+      "hint": "Look at the middle three letters.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Build the first two sounds of brush.",
+      "choices": [
+        "b",
+        "sh",
+        "r",
+        "d"
+      ],
+      "answer": [
+        "b",
+        "r"
+      ],
+      "hint": "You can hear both consonants.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    }
+  ],
+  "tasks": [
+    "Mark sh in ship and ch in chin. Read both to an adult.",
+    "Find the team in thin. Write the word and read it with help.",
+    "Circle the teams in rain and feet. Ask an adult to say each word.",
+    "Write night, then underline the three letters that work together.",
+    "Use an adult's model to write brush and sand from spoken sounds.",
+    "Find the part shared by clock, sock and rock. Say another rhyme.",
+    "Use your school's handwriting model to practise a join in sh. Tell what sounds you hear at the start of brush.",
+    "With an adult, read a new word with sh and a new word with ch. Point to the teams.",
+    "Listen to an adult say rain, feet and night. Match each vowel sound to its familiar spelling.",
+    "Say two words that rhyme with rock. Write their shared spelling and explain."
+  ],
+  "audioPending": true,
+  "codes": [
+    "1Rw.02",
+    "1Rw.03",
+    "1Rw.06",
+    "1Ww.02",
+    "1Ww.03",
+    "1Wp.03"
+  ]
+}

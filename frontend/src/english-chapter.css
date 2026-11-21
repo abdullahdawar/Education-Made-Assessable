@@ -1,0 +1,6 @@
+.english-lesson figure { margin: 12px 0; background: var(--sky); border-radius: 12px; padding: 14px; }
+.english-text { white-space: pre-wrap; line-height: 1.7; overflow-wrap: anywhere; font-weight: 650; }
+.english-icon { font-size: 2rem; }
+.english-lesson figcaption { margin-block-start: 10px; }
+.english-built { padding: 10px; margin-block: 12px; border-radius: 8px; background: var(--mint); overflow-wrap: anywhere; }
+.english-actions { display: flex; flex-wrap: wrap; gap: 8px; }

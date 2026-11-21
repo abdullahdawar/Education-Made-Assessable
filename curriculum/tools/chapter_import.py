@@ -42,15 +42,16 @@ def literal(value):
     return "CONVERT(X'%s' USING utf8mb4)" % value.encode().hex()
 
 
-def snapshot(chapter_number):
+def snapshot(chapter_number, subject):
+    subject_filter = f"subject_name={literal(subject)}"
     tables = {
         "grades": ("grade_number=1", "id"),
-        "subjects": ("subject_name='Mathematics'", "id"),
+        "subjects": (subject_filter, "id"),
         "grade_subjects": ("grade_id=(SELECT id FROM grades WHERE grade_number=1) AND "
-                           "subject_id=(SELECT id FROM subjects WHERE subject_name='Mathematics')",
+                           f"subject_id=(SELECT id FROM subjects WHERE {subject_filter})",
                            "grade_id subject_id"),
         "chapters": ("grade_id=(SELECT id FROM grades WHERE grade_number=1) AND "
-                     "subject_id=(SELECT id FROM subjects WHERE subject_name='Mathematics') AND "
+                     f"subject_id=(SELECT id FROM subjects WHERE {subject_filter}) AND "
                      f"chapter_number={chapter_number}", "id grade_id subject_id chapter_number chapter_title description created_at"),
     }
     chapter_filter = (f"chapter_id IN (SELECT id FROM chapters WHERE {tables['chapters'][0]})")
@@ -98,9 +99,9 @@ def save_backup(data, stem):
     print(f"Backup: {path} (SHA-256 {hashlib.sha256(saved).hexdigest()})", flush=True)
 
 
-def import_chapter(chapter_number, title, stem, lessons, resources, *, preflight=False):
+def import_chapter(chapter_number, title, stem, lessons, resources, *, preflight=False, subject="Mathematics"):
     chapter_number = int(chapter_number)
-    data = snapshot(chapter_number)
+    data = snapshot(chapter_number, subject)
     save_backup(data, stem)
     endpoint = os.environ.get("EMA_IMPORT_HOST") or os.environ.get("EMA_IMPORT_SOCKET") or "/tmp/mysql.sock"
     target = data["target"]
@@ -109,7 +110,7 @@ def import_chapter(chapter_number, title, stem, lessons, resources, *, preflight
         print(f"Previously imported chapter {verify(data, title, lessons, resources)}. No writes performed.")
         return
     if len(data["grade_subjects"]) != 1:
-        raise RuntimeError("Expected exactly one Grade 1 Mathematics mapping")
+        raise RuntimeError(f"Expected exactly one Grade 1 {subject} mapping")
     mapping, = data["grade_subjects"]
     grade_id = int(mapping["grade_id"])
     subject_id = int(mapping["subject_id"])
@@ -137,4 +138,4 @@ VALUES {values(lessons)};
 INSERT INTO chapter_resources (chapter_id, resource_type, resource_number, title, description, file_url)
 VALUES {values(resources)};
 COMMIT;""")
-    print(f"Imported chapter {verify(snapshot(chapter_number), title, lessons, resources)} with {len(lessons)} lessons and {len(resources)} resource records.")
+    print(f"Imported chapter {verify(snapshot(chapter_number, subject), title, lessons, resources)} with {len(lessons)} lessons and {len(resources)} resource records.")
