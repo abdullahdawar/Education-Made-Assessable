@@ -1,5 +1,6 @@
 """Transactional, insert-only importer for Grade 1 Mathematics chapters."""
 
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -55,15 +56,20 @@ def snapshot(chapter_number):
     chapter_filter = (f"chapter_id IN (SELECT id FROM chapters WHERE {tables['chapters'][0]})")
     tables["chapter_content"] = (chapter_filter, "id chapter_id language_code title content pdf_url audio_url created_at")
     tables["chapter_resources"] = (chapter_filter, "id chapter_id resource_type resource_number title description file_url external_url created_at")
-    statements = []
+    statements = [
+        "SELECT JSON_OBJECT('database', DATABASE(), 'serverUuid', @@server_uuid);",
+        "SELECT COALESCE(JSON_OBJECTAGG(TABLE_NAME, ENGINE), JSON_OBJECT()) "
+        "FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE() "
+        "AND TABLE_NAME IN ('chapters', 'chapter_content', 'chapter_resources');",
+    ]
     for table, (condition, fields) in tables.items():
         columns = ", ".join(f"'{field}', {field}" for field in fields.split())
         statements.append(f"SELECT COALESCE(JSON_ARRAYAGG(JSON_OBJECT({columns})), JSON_ARRAY()) FROM {table} WHERE {condition};")
     lines = query("START TRANSACTION WITH CONSISTENT SNAPSHOT, READ ONLY;\n" + "\n".join(statements) + "\nCOMMIT;")
     rows = lines.splitlines()
-    if len(rows) != len(tables):
+    if len(rows) != len(statements):
         raise RuntimeError("Unexpected number of backup results")
-    return dict(zip(tables, map(json.loads, rows)))
+    return dict(zip(("target", "engines", *tables), map(json.loads, rows), strict=True))
 
 
 def verify(data, title, lessons, resources):
@@ -78,21 +84,43 @@ def verify(data, title, lessons, resources):
     return chapter["id"]
 
 
-def import_chapter(chapter_number, title, stem, lessons, resources):
-    chapter_number = int(chapter_number)
-    data = snapshot(chapter_number)
+def save_backup(data, stem):
     directory = Path(os.environ.get("EMA_IMPORT_BACKUP_DIR",
                                     Path.home() / ".config/education-made-assessable/backups"))
     directory.mkdir(mode=0o700, parents=True, exist_ok=True)
-    with tempfile.NamedTemporaryFile(mode="w", dir=directory, prefix=f"{stem}-before-", suffix=".json", delete=False) as backup:
+    with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", dir=directory,
+                                     prefix=f"{stem}-before-", suffix=".json", delete=False) as backup:
         json.dump(data, backup, ensure_ascii=False, indent=2)
-        print(f"Backup: {backup.name}", flush=True)
+    path = Path(backup.name)
+    saved = path.read_bytes()
+    if json.loads(saved) != data:
+        raise RuntimeError("Backup read-back differs from the database snapshot")
+    print(f"Backup: {path} (SHA-256 {hashlib.sha256(saved).hexdigest()})", flush=True)
+
+
+def import_chapter(chapter_number, title, stem, lessons, resources, *, preflight=False):
+    chapter_number = int(chapter_number)
+    data = snapshot(chapter_number)
+    save_backup(data, stem)
+    endpoint = os.environ.get("EMA_IMPORT_HOST") or os.environ.get("EMA_IMPORT_SOCKET") or "/tmp/mysql.sock"
+    target = data["target"]
+    print(f"Target: {target['database']} at {endpoint} (server {target['serverUuid']})")
     if data["chapters"]:
         print(f"Previously imported chapter {verify(data, title, lessons, resources)}. No writes performed.")
         return
+    if len(data["grade_subjects"]) != 1:
+        raise RuntimeError("Expected exactly one Grade 1 Mathematics mapping")
     mapping, = data["grade_subjects"]
     grade_id = int(mapping["grade_id"])
     subject_id = int(mapping["subject_id"])
+    tables = {"chapters", "chapter_content", "chapter_resources"}
+    if data["engines"] != dict.fromkeys(tables, "InnoDB"):
+        raise RuntimeError("The three import tables must be visible and use InnoDB for transactional inserts")
+    print(f"Plan: insert chapter {chapter_number} ({title}) for grade {grade_id}, subject {subject_id}, "
+          f"with {len(lessons)} lessons and {len(resources)} resource records.")
+    if preflight:
+        print("Preflight only. No database writes performed.")
+        return
 
     def values(rows):
         return ",\n".join("(@chapter_id, " + ", ".join(
