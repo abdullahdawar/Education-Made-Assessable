@@ -18,9 +18,11 @@ func TestRoutesWithoutDatabase(t *testing.T) {
 		{"GET", "/api/grades/1/subjects", 503, ""},
 		{"GET", "/api/subjects/1/chapters", 503, ""},
 		{"GET", "/api/chapters/1/content", 503, ""},
+		{"GET", "/api/chapters/1/practice", 503, ""},
 		{"GET", "/api/grades/no/subjects", 400, ""},
 		{"GET", "/api/subjects/0/chapters", 400, ""},
 		{"GET", "/api/chapters/-1/content", 400, ""},
+		{"GET", "/api/chapters/-1/practice", 400, ""},
 		{"POST", "/api/grades", 405, ""},
 	}
 	for _, tc := range cases {
