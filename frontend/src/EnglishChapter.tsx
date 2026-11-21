@@ -18,9 +18,12 @@ export function EnglishLesson({ pack, language }: { pack: EnglishPack; language:
       <div lang="en" dir="ltr" className="english-text">{pack.text}</div>
       <figcaption lang="en" dir="ltr">{pack.model}</figcaption>
     </figure>
-    <h3>{ps ? 'تمرین' : 'Try it'}</h3>
+    <h3>{ps ? 'لیکل شوی تمرین' : 'Written practice'}</h3>
     <p lang="en" dir="ltr">{pack.activity}</p>
-    <h3>{ps ? 'د مشر لارښوونه' : 'With an adult'}</h3>
+    {pack.number === 1 && <p>{ps
+      ? 'د تورو د لیکلو مسوده د یادښتونو په پي ډي اېف کې وګورئ. د ښوونکي کتنه پاتې ده.'
+      : 'See the notes PDF for the draft letter formation reference. Educator review is pending.'}</p>}
+    <h3>{ps ? 'له مشر سره تمرین' : 'Adult-facilitated practice'}</h3>
     {pack.audioPending && <p className="notice">{audio[language]}</p>}
     <p>{ps ? pack.adultPs : pack.adult}</p>
   </div>
@@ -61,6 +64,11 @@ export function EnglishGame({ pack, language }: { pack: EnglishPack; language: L
     play: (solved, answer) => <Words round={round} language={language} solved={solved} answer={answer} />,
   })
   const [first, ...rest] = pack.rounds
-  return <GameShell title={pack.game} instructions={ps ? 'په ترتیب وټاکئ. بیړه مه کوئ.' : 'Make your choices in order. Take your time.'}
+  return <>
+    {pack.audioPending && <p className="notice">{ps
+      ? 'دا د لیکنې تمرین دی. شفاهي تمرین له مشر سره وکړئ.'
+      : 'This is written rehearsal. Practise listening and speaking with an adult.'}</p>}
+    <GameShell title={pack.game} instructions={ps ? 'په ترتیب وټاکئ. بیړه مه کوئ.' : 'Make your choices in order. Take your time.'}
     rounds={[convert(first), ...rest.map(convert)]} language={language} />
+  </>
 }

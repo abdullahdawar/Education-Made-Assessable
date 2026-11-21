@@ -6,11 +6,11 @@
   "icon": "📚",
   "intro": "Some frequent words need extra practice. Read each word in a sentence and notice any unusual spelling. Word endings can show more than one thing or a change in an action.",
   "support": "عامې کلمې په جمله کې ولولئ او ځانګړې لیکنه یې وګورئ. پایونه د ډېرو شیانو یا د کار بدلون ښودلی شي.",
-  "text": "I see one box. I see two boxes.\nThe cat jumps. It jumped. It is jumping.\nWe have one pen and two pens.\nthe · was · one · said",
-  "model": "Box becomes boxes when there is more than one. Jump keeps its base spelling in jumps, jumped and jumping. In said, pay attention to the unusual ai spelling.",
-  "activity": "Read all four common words, cover them, write them and look again to check. Start a spelling log for a word you want to remember.",
-  "adult": "Ask the learner to read the verb forms in context. Help them look up a spelling and add it to a small log for future work.",
-  "adultPs": "ماشوم دې فعلونه په جمله کې ولولي. د یوې کلمې سمه لیکنه پیدا او په وړوکي لړ کې یې ولیکئ.",
+  "text": "A duck jumps. Two ducks jump. Yesterday one duck jumped.",
+  "model": "Box takes es in boxes. Pen takes s in pens. The base jump stays the same in jumps, jumped and jumping. Tap doubles p before ed in tapped. In said, notice the unusual ai spelling.",
+  "activity": "Make a sign for a shop with one item and two items. Use cup, box or dish.",
+  "adult": "Say “one cup, two …” and pause for the learner to supply the plural. Repeat with box. Listen for the different endings.",
+  "adultPs": "cup او box ووایئ. له ماشومه وغواړئ چې د هرې کلمې جمع ووایي.",
   "rounds": [
     {
       "prompt": "Select the plural of box.",
@@ -26,7 +26,7 @@
       "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
     },
     {
-      "prompt": "Select the word for an action that already happened: It ___.",
+      "prompt": "Choose the word that fits “It ___ yesterday.”",
       "choices": [
         "jumping",
         "jumps",
@@ -50,6 +50,58 @@
       ],
       "hint": "This common word has an unusual ai spelling.",
       "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Choose the word for more than one cup.",
+      "choices": [
+        "cupes",
+        "cups",
+        "cup"
+      ],
+      "answer": [
+        "cups"
+      ],
+      "hint": "Add s to cup.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which word completes “Two dishes ___ on the mat”?",
+      "choices": [
+        "is",
+        "was",
+        "are"
+      ],
+      "answer": [
+        "are"
+      ],
+      "hint": "Two dishes means more than one.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Choose the spelling for “Yesterday I ___ the drum.”",
+      "choices": [
+        "tapping",
+        "tap",
+        "tapped"
+      ],
+      "answer": [
+        "tapped"
+      ],
+      "hint": "Use the past ending and double the final p.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which word fits “A dog is ___ in the sun”?",
+      "choices": [
+        "rests",
+        "resting",
+        "rested"
+      ],
+      "answer": [
+        "resting"
+      ],
+      "hint": "Look for the ending that fits an action happening now.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
     }
   ],
   "tasks": [
@@ -59,9 +111,9 @@
     "Read jumps, jumped and jumping. Underline their endings.",
     "Cover one and said. Write each from memory and check it.",
     "Ask someone to help spell an unfamiliar classroom word. Write it in your log.",
-    "Read the short passage aloud. Explain what boxes tells you and use it in a new sentence.",
-    "Write the plural forms of cat and dish. Say why each changes.",
-    "Read: I look. He looks. He looked. He is looking. Point to each ending.",
+    "Read “A duck jumps. Two ducks jump.” Underline the plural and use it in a new sentence.",
+    "Label a drawing of one dish and one of three dishes. Underline the plural ending.",
+    "Write two captions about tapping a drum, one about yesterday and one about now.",
     "Write a new sentence containing said. Check it against the word in your spelling log."
   ],
   "audioPending": true,
@@ -71,5 +123,8 @@
     "1Ww.04",
     "1Ww.06",
     "*1Ww.07"
+  ],
+  "adultTasks": [
+    1
   ]
 }

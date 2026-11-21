@@ -8,6 +8,7 @@ import subprocess
 from tempfile import TemporaryDirectory
 
 from english_pack import LANGUAGES, ROOT, load, stem
+from english_handwriting import diagram
 
 STYLE = (ROOT / "frontend/src/design.css").read_text() + (Path(__file__).parent / "counting-print.css").read_text() + """
 h1 { font-size: 27pt; }
@@ -15,6 +16,13 @@ h1 { font-size: 27pt; }
 .work { margin-block: 5mm; }
 .work div { height: 12mm; border-bottom: 1px solid #a8b1ca; }
 .illustration { font-size: 28pt; }
+.formation { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4mm; }
+.glyph { border: 1px solid #a8b1ca; border-radius: 2mm; padding: 1mm; text-align: center; }
+.glyph svg { width: 24mm; height: 28mm; display: block; margin-inline: auto; }
+.writing-guides { stroke: #a8b1ca; stroke-width: .6; fill: none; }
+.writing-strokes > path { stroke: #244174; stroke-width: 1.8; fill: none; }
+.writing-strokes circle { fill: #244174; }
+.writing-strokes text { fill: white; font: bold 5px Arial,sans-serif; text-anchor: middle; }
 """
 
 
@@ -36,14 +44,29 @@ def pages(p, lang):
     notes = [page(title, f'<p>{escape(intro)}</p><div class="box mint"><span class="illustration">{escape(p["icon"])}</span>'
                    + block(p["text"]) + block(p["model"]) + '</div>' + block(p["activity"])
                    + f'<div class="box sun"><p>{escape(guide)}</p><p>{audio}</p></div>', 1)]
-    work = "ځواب په انګلیسي ولیکئ یا یې ووایئ." if ps else "Write or say your answer in English."
+    if p["number"] == 1:
+        heading = "د تورو د لیکلو بېلګې" if ps else "Letter formation reference"
+        instructions = (
+            "دا مسوده د ښوونکي کتنې ته اړتیا لري. له شمېرې پیل وکړئ او غشی تعقیب کړئ."
+            if ps else
+            "Draft manuscript model for educator review. Start at 1 and follow the line to the arrow. Lift your pencil before the next number. A numbered dot with no arrow is a tap."
+        )
+        for index, letters in enumerate(("ABCDEFGHIJKLM", "NOPQRSTUVWXYZ", "abcdefghijklm", "nopqrstuvwxyz"), 2):
+            grid = "".join(f'<div class="glyph"><b>{letter}</b>{diagram(letter)}</div>' for letter in letters)
+            notes.append(page(heading, f'<p>{instructions}</p><section class="formation" dir="ltr" lang="en">{grid}</section>', index))
     practice = []
     for i, task in enumerate(p["tasks"], 1):
         name = (("تمرینپاڼه" if ps else "Worksheet") + f" {i}" if i < 8
                 else ("ازموینه" if ps else "Test") + f" {i-7}")
         support = f'<p>{escape(intro)}</p>' if ps else ""
         stimulus = f'<div class="box"><span class="illustration">{escape(p["icon"])}</span>{block(p["text"])}</div>' if i < 8 else ""
-        practice.append(page(name, support + f'<p>{work}</p>' + stimulus + block(task)
+        if i in p["adultTasks"]:
+            mode = "له مشر سره شفاهي تمرین" if ps else "Adult-facilitated oral task"
+            work = "له مشر سره په انګلیسي تمرین وکړئ." if ps else "Ask an adult to read the directions and observe your response."
+        else:
+            mode = "لیکل شوی تمرین" if ps else "Written practice"
+            work = "په انګلیسي ځواب ورکړئ." if ps else "Respond in English."
+        practice.append(page(name, support + f'<p><strong>{mode}</strong> · {work}</p>' + stimulus + block(task)
                              + '<div class="work" aria-hidden="true">' + '<div></div>' * 6 + '</div>', i))
     return {"notes": notes, "worksheets-and-tests": practice}
 

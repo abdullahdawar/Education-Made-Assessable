@@ -6,11 +6,11 @@
   "icon": "🎭",
   "intro": "Play a character in an imagined scene. Use words and actions to make the character clear. Explain how you felt about the activity and how a gesture may give a clue about a feeling.",
   "support": "په خیالي صحنه کې یو کرکټر تمثیل کړئ. خبرې او کړنې وکاروئ. ووایئ چې تمرین څنګه و او د بدن حرکت څنګه د احساس نښه کېدای شي.",
-  "text": "Rafi acts as a visitor: Hello. My name is Rafi.\nMina acts as the host: Welcome! Please sit here.\nRafi smiles and waves.\nAfter the play: I liked welcoming my partner.",
-  "model": "A wave can be a greeting. A smile might show happiness, but clues can mean different things. A personal statement can be as short as “I like acting with a partner.”",
-  "activity": "Choose visitor or host. Act out a greeting and a reply. Tell someone what you enjoyed and one thing you would change.",
-  "adult": "Offer role-play choices and model an alternative to gestures if needed. Listen to a brief personal statement and ask the learner to suggest possible feelings from an action or expression.",
-  "adultPs": "د تمثیل بېلې لارې ورکړئ. لنډه شخصي خبره واورئ او وپوښتئ چې حرکت یا څېره کوم احساس ښودلی شي.",
+  "text": "Silent rehearsal\nRafi acts as a visitor: Hello. My name is Rafi.\nMina acts as the host: Welcome! Please sit here.\nRafi smiles and waves.\nAfter the play: I liked welcoming my partner.",
+  "model": "A wave can be a greeting. A smile can suggest happiness. A movement or expression can give several possible clues. A reflection can explain what you enjoyed or what you would try next.",
+  "activity": "Read the silent script. Label the speaker of each line. Write one greeting that fits a new role.",
+  "adult": "Set up a pretend library. Let the learner choose visitor or librarian, take a turn in role and then swap roles. Ask what they enjoyed and what they might change. Record a detail from their performance. Offer words, gesture or an agreed communication aid.",
+  "adultPs": "د کتابتون تمثیل وکړئ. ماشوم دې خپل رول وټاکي، بیا دې رولونه بدل کړي. د خوښې او بدلون په اړه ترې وپوښتئ.",
   "rounds": [
     {
       "prompt": "Order the two short greetings in the script.",
@@ -51,6 +51,58 @@
       ],
       "hint": "A reflection says what the speaker thought about the activity.",
       "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "In a pretend library, which line fits the librarian’s role?",
+      "choices": [
+        "I can help you find a book.",
+        "Put the ball in the goal.",
+        "Please water the bean."
+      ],
+      "answer": [
+        "I can help you find a book."
+      ],
+      "hint": "Think about what a librarian helps visitors do.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Rafi looks down and speaks quietly. Which reflection treats that as a clue?",
+      "choices": [
+        "Rafi might feel shy.",
+        "Rafi must be angry.",
+        "Rafi cannot hear anyone."
+      ],
+      "answer": [
+        "Rafi might feel shy."
+      ],
+      "hint": "A gesture gives a possible clue about a feeling.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which line tells something about the speaker?",
+      "choices": [
+        "I like drawing birds.",
+        "Please sit here.",
+        "The library is open."
+      ],
+      "answer": [
+        "I like drawing birds."
+      ],
+      "hint": "A personal statement can tell what you enjoy.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which line suggests a change after the play?",
+      "choices": [
+        "Next time I will pause before I reply.",
+        "Welcome to the library!",
+        "Hello, my name is Rafi."
+      ],
+      "answer": [
+        "Next time I will pause before I reply."
+      ],
+      "hint": "Look for something to try on a future turn.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
     }
   ],
   "tasks": [
@@ -71,5 +123,17 @@
     "1SLp.05",
     "1SLr.01",
     "1SLr.02"
+  ],
+  "adultTasks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
   ]
 }

@@ -18,8 +18,13 @@ def load(number):
     expected = {r["code"] for r in OBJECTIVES if r["chapter"] == number}
     if pack["number"] != number or set(pack["codes"]) != expected:
         raise ValueError(f"Wrong objective mapping for chapter {number}")
-    if len(pack["tasks"]) != 10 or len(set(pack["tasks"])) != 10 or len(pack["rounds"]) < 3:
+    if len(pack["tasks"]) != 10 or len(set(pack["tasks"])) != 10 or len(pack["rounds"]) < 7:
         raise ValueError(f"Incomplete student inventory in chapter {number}")
+    if len({step["prompt"] for step in pack["rounds"]}) != len(pack["rounds"]):
+        raise ValueError(f"Repeated practice prompt in chapter {number}")
+    adult_tasks = pack["adultTasks"]
+    if len(set(adult_tasks)) != len(adult_tasks) or any(i not in range(1, 11) for i in adult_tasks):
+        raise ValueError(f"Invalid adult task index in chapter {number}")
     for step in pack["rounds"]:
         if (not step["answer"] or len(set(step["choices"])) != len(step["choices"])
                 or not set(step["answer"]) <= set(step["choices"])):

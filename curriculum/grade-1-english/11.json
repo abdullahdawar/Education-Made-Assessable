@@ -6,14 +6,14 @@
   "icon": "🗣",
   "intro": "Listen to the whole instruction before you act. Take turns, give a useful detail, and ask a short question when something is unclear. Notice how a gesture or tone can help the listener.",
   "support": "لومړی ټوله لارښوونه واورئ. په وار خبرې وکړئ، اړین معلومات ورکړئ او که څه روښانه نه وي پوښتنه وکړئ.",
-  "text": "Practice script for an adult\nPut a pencil on the table. Then put a book beside it.\nSpeaker: I felt glad when my group found the missing card.\nListener: Where did you find it?",
-  "model": "The listener asks about a missing detail. In a group, wait until the speaker is done. Look for a gesture or change in tone that helps you understand.",
-  "activity": "Work in a small group. One person describes an event. Each listener asks one relevant question, then tells what they heard.",
-  "adult": "Give a fresh sequence orally without showing the written script. Observe the actions. For group work note whether each child takes a turn, listens without interrupting, responds to a view and adjusts to a listener.",
-  "adultPs": "نوې لارښوونې یوازې په غږ ورکړئ. کړنې وګورئ. په ډله کې وار، غوږ نیول او د نورو نظر ته ځواب وګورئ.",
+  "text": "Silent rehearsal\nSpeaker: Our group found the missing card.\nListener: Where did you find it?\nSpeaker: Under the map.\nListener: I think we should put it back in the box.",
+  "model": "A listener can ask for a detail and restate what they heard. In a group, leave a pause so someone else can speak.",
+  "activity": "Read the silent script. Underline the question that asks for a detail. Write a different question.",
+  "adult": "Keep the script out of view. Say “Put a pencil on the table, then set a book beside it.” Observe both actions. Next tell the child where you found a lost object. Pause for a relevant question. In a small group, observe one turn and one response that builds on a peer’s idea.",
+  "adultPs": "شفاهي لارښوونې له ښکاره کولو پرته ووایئ. وګورئ چې ماشوم دواړه ګامونه ترسره کوي. په ډله کې وار او د ملګري خبرې ته ځواب وګورئ.",
   "rounds": [
     {
-      "prompt": "For this written rehearsal, order the two objects in the script.",
+      "prompt": "Silent rehearsal: “Put a pencil on the table. Then put a book beside it.” Select the objects in order.",
       "choices": [
         "book",
         "pencil",
@@ -40,7 +40,7 @@
       "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
     },
     {
-      "prompt": "Choose the feeling named by the speaker.",
+      "prompt": "Read: “I felt glad when we found the card.” Which word names the feeling?",
       "choices": [
         "glad",
         "tired",
@@ -51,13 +51,65 @@
       ],
       "hint": "Read the speaker line.",
       "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which reply checks where to put the book?",
+      "choices": [
+        "Do you mean next to the pencil?",
+        "My pencil is green.",
+        "Can we play later?"
+      ],
+      "answer": [
+        "Do you mean next to the pencil?"
+      ],
+      "hint": "Ask about the place you are unsure of.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "One child says “I think we should sort the cards by colour.” Which reply builds on that idea?",
+      "choices": [
+        "Let’s make a pile for each colour.",
+        "I went home early.",
+        "My lunch is in a box."
+      ],
+      "answer": [
+        "Let’s make a pile for each colour."
+      ],
+      "hint": "Stay with the group’s idea about colour.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which line invites a quiet group member to take a turn?",
+      "choices": [
+        "What do you think, Salma?",
+        "I will answer for you.",
+        "Let’s all talk at once."
+      ],
+      "answer": [
+        "What do you think, Salma?"
+      ],
+      "hint": "Choose an invitation that gives Salma space to speak.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which reply shows that the listener can restate “The card was under the map”?",
+      "choices": [
+        "So you found it beneath the map.",
+        "So the card was in a bag.",
+        "I have a new map."
+      ],
+      "answer": [
+        "So you found it beneath the map."
+      ],
+      "hint": "Under and beneath can tell the same location.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
     }
   ],
   "tasks": [
     "Listen to an adult give two actions. Do them in the order you hear.",
     "Tell a partner about one thing you did. Include where it happened.",
     "Listen to a short account and ask one question about what you heard.",
-    "Read a short message. Ask one question about what you read.",
+    "Read the message “Bring it tomorrow.” Write one question to find out what to bring.",
     "In a small group, pass a speaking object. Wait for your turn and share an idea.",
     "Restate a partner's idea in your own words before giving your own.",
     "Tell about a feeling. Use a gesture or change your tone to help the listener.",
@@ -78,5 +130,16 @@
     "*1SLg.02",
     "1SLg.03",
     "1SLg.04"
+  ],
+  "adultTasks": [
+    1,
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
   ]
 }

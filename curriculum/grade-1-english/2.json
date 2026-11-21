@@ -6,11 +6,11 @@
   "icon": "🐚",
   "intro": "Some spellings work as a team for one sound. In a blend, you can still hear both consonants. Compare the writing and listen to the sounds with an adult.",
   "support": "ځینې توري یو غږ ښيي. په ګډو بېلو غږونو کې دواړه غږونه اورېدل کېږي. لیکنه وګورئ او له مشر سره غږونه واورئ.",
-  "text": "ship · chin · thin · rain · feet · night\nbrush · sand · clock · sock · rock",
-  "model": "The sh in ship is one sound. The b and r in brush are two separate sounds. In clock and sock the shared spelling ock helps show the rhyme. Write sh as a pair, keeping the two letters close.",
-  "activity": "Circle the sound team in night. Ask an adult to model it before you read the word. Draw the sound boxes for brush and mark its first two sounds separately.",
-  "adult": "Model consonant and vowel teams and the three-letter spelling in night. Listen to the child blend adjacent sounds. Where joined writing is taught, demonstrate an approved join for a familiar pair.",
-  "adultPs": "د تورو ګډ غږونه وښيئ. ماشوم ته غوږ ونیسئ چې نږدې غږونه سره یو ځای کړي. د ښوونځي د نمونې له مخې د تورو نښلول وښيئ.",
+  "text": "ship · chin · thin · rain · feet · night\nbrush · sand · clock · sock · rock\n\nA crab can swim. A fish can dash.",
+  "model": "In ship, sh spells one sound. In brush, b and r spell two sounds. Sock and rock rhyme because the sounds from the vowel to the end match. In rain, feet and night, look for ai, ee and igh. Learn the spelling teams before reading the practice sentences.",
+  "activity": "Sort ship, chin, thin and slip by the letters that spell the first sound. Keep sh, ch and th together.",
+  "adult": "Say thin and chin without showing print. Ask the child whether the first sounds are alike. Then show the two spellings.",
+  "adultPs": "thin او chin په لوړ غږ ووایئ، خو لیکنه مه ښکاره کوئ. له ماشومه د دواړو کلمو د لومړي غږ پوښتنه وکړئ.",
   "rounds": [
     {
       "prompt": "Build ship from its written sound parts.",
@@ -55,6 +55,61 @@
       ],
       "hint": "You can hear both consonants.",
       "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Build shop from its sound spellings.",
+      "choices": [
+        "s",
+        "p",
+        "sh",
+        "o"
+      ],
+      "answer": [
+        "sh",
+        "o",
+        "p"
+      ],
+      "hint": "The first sound is spelled with two letters.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which word starts with two separate consonant sounds?",
+      "choices": [
+        "ship",
+        "slip",
+        "chip"
+      ],
+      "answer": [
+        "slip"
+      ],
+      "hint": "Say the first two sounds of slip slowly.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which word rhymes with light?",
+      "choices": [
+        "lit",
+        "night",
+        "rain"
+      ],
+      "answer": [
+        "night"
+      ],
+      "hint": "Compare the sounds from the vowel to the end.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Pick the vowel spelling in seed.",
+      "choices": [
+        "ea",
+        "ee",
+        "ai"
+      ],
+      "answer": [
+        "ee"
+      ],
+      "hint": "Find the two letters between s and d.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
     }
   ],
   "tasks": [
@@ -65,8 +120,8 @@
     "Use an adult's model to write brush and sand from spoken sounds.",
     "Find the part shared by clock, sock and rock. Say another rhyme.",
     "Use your school's handwriting model to practise a join in sh. Tell what sounds you hear at the start of brush.",
-    "With an adult, read a new word with sh and a new word with ch. Point to the teams.",
-    "Listen to an adult say rain, feet and night. Match each vowel sound to its familiar spelling.",
+    "Read shop and slip. Mark the first sound spelling in shop and the first two sound spellings in slip.",
+    "Read: A crab can swim. A fish can dash. Circle the two separate letters for the first two sounds in crab. Then underline the sound team in fish.",
     "Say two words that rhyme with rock. Write their shared spelling and explain."
   ],
   "audioPending": true,
@@ -77,5 +132,12 @@
     "1Ww.02",
     "1Ww.03",
     "1Wp.03"
+  ],
+  "adultTasks": [
+    1,
+    2,
+    3,
+    5,
+    7
   ]
 }

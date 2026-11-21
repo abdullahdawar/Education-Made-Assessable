@@ -6,11 +6,11 @@
   "icon": "📖",
   "intro": "A reader can choose a story, poem or information book. Tell what you enjoy and link it with something you know. When you read your own writing aloud, listen for one thing that works and one that could be clearer.",
   "support": "کیسه، نظم یا معلوماتي کتاب وټاکئ. د خوښې لامل ووایئ. خپله لیکنه په غږ ولولئ او وګورئ چې کوم ځای روښانه دی.",
-  "text": "Story: The Lost Ball\nPoem: Rain on My Window\nInformation book: How Seeds Grow\nMy note: I liked the rain poem. It reminded me of my window.",
-  "model": "The note gives a choice and a personal connection. You might say, “I would choose the poem again because I like the sound of the words.”",
-  "activity": "Choose a real book or short text to read or hear. Write one reason for your choice. Read your reason aloud and explain it.",
-  "adult": "Give access to real stories, rhymes and information books. Let the learner choose independently and discuss their own writing without grading their preferences.",
-  "adultPs": "کیسې، نظمونه او معلوماتي کتابونه ورکړئ. ماشوم دې خپله ټاکنه وکړي او پر خپلې لیکنې خبرې وکړي.",
+  "text": "Story: The Lost Ball\nBen looked under a bench. A red ball rolled out. He took it back to his friend.\nPoem: Rain on My Window\nDrip, drop, splash and stop.\nDrip, drop, on the top.\nInformation: How Seeds Grow\nA seed needs water. A root may grow down first.",
+  "model": "One reader may like the rain poem because of its repeated sounds. Another may choose the seed text to find a fact. Explain your choice using a detail from the text.",
+  "activity": "Choose one of the three short texts. Point to a detail that made you want to read it again.",
+  "adult": "Offer the three short texts. Ask the learner to choose one, give a reason and listen to a partner’s choice.",
+  "adultPs": "له ماشومه وغواړئ چې یوه لیکنه وټاکي او د ټاکنې دلیل ووایي. بیا دې د ملګري دلیل واوري.",
   "rounds": [
     {
       "prompt": "Which title is the information book?",
@@ -26,7 +26,7 @@
       "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
     },
     {
-      "prompt": "Choose the two words that start the personal note.",
+      "prompt": "Which pair could begin the sentence “___ ___ the rain poem because of its sounds”?",
       "choices": [
         "liked",
         "I",
@@ -37,7 +37,7 @@
         "I",
         "liked"
       ],
-      "hint": "Read the start of My note.",
+      "hint": "Start with yourself, then tell how you felt about it.",
       "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
     },
     {
@@ -52,6 +52,58 @@
       ],
       "hint": "Look at the poem label.",
       "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "In How Seeds Grow, which fact would help someone decide what to give a seed?",
+      "choices": [
+        "A seed needs water.",
+        "A root may grow down.",
+        "Ben found a red ball."
+      ],
+      "answer": [
+        "A seed needs water."
+      ],
+      "hint": "Look for the fact about what a seed needs.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which reason names something you can find in the rain poem?",
+      "choices": [
+        "I like the repeated drip, drop.",
+        "I like the character Ben.",
+        "I like the photo of a bird."
+      ],
+      "answer": [
+        "I like the repeated drip, drop."
+      ],
+      "hint": "Find a feature printed in the poem.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Ben took the ball back to his friend. What detail could make that story ending clearer?",
+      "choices": [
+        "how his friend reacted",
+        "the soil a seed needs",
+        "the sound of raindrops"
+      ],
+      "answer": [
+        "how his friend reacted"
+      ],
+      "hint": "Choose a detail about the people in this scene.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
+    },
+    {
+      "prompt": "Which note explains a reading choice?",
+      "choices": [
+        "I chose the seed text because I want to plant beans.",
+        "The ball is red.",
+        "There are three headings."
+      ],
+      "answer": [
+        "I chose the seed text because I want to plant beans."
+      ],
+      "hint": "Look for a choice and a reason.",
+      "instruction": "انګلیسي پوښتنه ولولئ او برخې په ترتیب وټاکئ."
     }
   ],
   "tasks": [
@@ -63,7 +115,7 @@
     "Write a note recommending something you read at home.",
     "Try an information book. Say what you learnt and whether you would read another.",
     "Choose one real text independently. Write a reason for choosing it.",
-    "Talk about something from a text that reminds you of a real experience.",
+    "Read: The Lost Ball ends when Ben returns the ball. Write a sentence about a time you helped someone.",
     "Read one of your own pieces aloud. Explain one word you chose and one thing you would improve."
   ],
   "audioPending": false,
@@ -72,5 +124,10 @@
     "1Ra.04",
     "1Ra.05",
     "1Wp.06"
+  ],
+  "adultTasks": [
+    3,
+    5,
+    10
   ]
 }
