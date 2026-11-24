@@ -1,1 +1,17 @@
 *-answer-keys.pdf
+
+# Local dependencies and build artifacts
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.venv/
+__pycache__/
+
+# Local configuration and scratch files
+.env
+.env.*
+!.env.example
+.DS_Store
+/.tmp/
+/output/local/
