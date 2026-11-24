@@ -24,7 +24,10 @@ func openDatabase() (*sql.DB, error) {
 	config := mysql.NewConfig()
 	config.User = user
 	config.Passwd = password
-	config.DBName = "education_made_assessable"
+	config.DBName = os.Getenv("DB_NAME")
+	if config.DBName == "" {
+		config.DBName = "education_made_assessable"
+	}
 	config.Timeout = 3 * time.Second
 	config.ReadTimeout = 5 * time.Second
 	config.WriteTimeout = 5 * time.Second
