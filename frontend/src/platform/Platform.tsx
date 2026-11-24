@@ -225,4 +225,3 @@ export function FetchStatus({ data, error, language }: { data?: unknown; error?:
   if (!data) return <p role="status">{pick(language, 'Loading…', 'پورته کېږي…')}</p>
   return null
 }
-
