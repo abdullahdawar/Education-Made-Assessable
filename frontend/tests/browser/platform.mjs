@@ -43,7 +43,8 @@ async function learningJourney(browser, engine, width) {
     assert.equal(await grades.getByRole('link').count(), 6)
     await assertNoOverflow()
     await take('homepage')
-    await page.keyboard.press('Tab')
+    // macOS WebKit uses Option-Tab to include links in sequential focus.
+    await page.keyboard.press(engine === 'webkit' && process.platform === 'darwin' ? 'Alt+Tab' : 'Tab')
     assert.equal(await page.evaluate(() => document.activeElement?.textContent?.trim()), 'Skip to content')
     await page.keyboard.press('Enter')
     assert.equal(await page.evaluate(() => document.activeElement?.id), 'main-content')
@@ -68,7 +69,8 @@ async function learningJourney(browser, engine, width) {
     const course = await context.request.get(new URL(journeyURL).origin + '/api/v2' + new URL(journeyURL).pathname)
     assert.equal(course.ok(), true)
     const lockedId = (await course.json()).units.find(unit => unit.label.en === 'Demonstration unit 2').id
-    const restricted = await context.request.get(new URL(`/api/v2/units/${lockedId}/resources/worksheet-1-en`, baseURL).href)
+    const lockedResource = new URL(`/api/v2/units/${lockedId}/resources/homework-en-1`, baseURL).href
+    const restricted = await context.request.get(lockedResource)
     assert.equal(restricted.status(), 403)
     await page.goto(new URL('/units/' + lockedId, baseURL).href)
     await page.getByRole('alert').getByText('This unit is locked.', { exact: false }).waitFor()
@@ -139,6 +141,7 @@ async function learningJourney(browser, engine, width) {
     await take('unit-unlocked')
     await clickLink('Open unit', second)
     await heading('Demonstration unit 2').waitFor()
+    assert.equal((await context.request.get(lockedResource)).status(), 200)
     await page.reload()
     await heading('Demonstration unit 2').waitFor()
     await assertNoOverflow()
