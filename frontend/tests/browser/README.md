@@ -1,6 +1,7 @@
 # Platform browser tests
 
-Run these commands from the repository root with Docker running. Use a
+Run these commands from the repository root with the local-development
+prerequisites installed. Use a
 disposable browser profile because the journey creates learner records and
 submits assessments.
 

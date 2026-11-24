@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	"mime"
 	"net/http"
 	"os"
 	"path"
@@ -255,6 +256,7 @@ func registerV2Curriculum(mux *http.ServeMux, db *sql.DB, assets *os.Root) {
 			w.Header().Set("Content-Security-Policy", "sandbox")
 			if strings.HasSuffix(strings.ToLower(item.Path), ".pdf") {
 				w.Header().Set("Content-Type", "application/pdf")
+				w.Header().Set("Content-Disposition", mime.FormatMediaType("attachment", map[string]string{"filename": path.Base(item.Path)}))
 			}
 			http.ServeContent(w, r, path.Base(item.Path), info.ModTime(), file)
 			return

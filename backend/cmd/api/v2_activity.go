@@ -123,7 +123,7 @@ func (r v2ActivityRound) validate(resources map[string]string) error {
 	}
 	if g := r.Grid; g != nil {
 		if g.Start < 0 || g.Start > 3 || g.Goal < 0 || g.Goal > 3 || g.Blocked < 0 || g.Blocked > 3 ||
-			g.Start == g.Blocked || g.Goal == g.Blocked || g.Start == g.Goal || len(g.Moves) > 64 {
+			g.Start == g.Blocked || g.Goal == g.Blocked || g.Start == g.Goal || len(g.Moves) == 0 || len(g.Moves) != len(r.Choices) {
 			return errors.New("invalid movement grid")
 		}
 		for _, move := range g.Moves {

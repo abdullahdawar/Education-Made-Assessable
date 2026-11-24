@@ -45,7 +45,10 @@ function ConfigurableActivity({ activity, language }: { activity: Activity; lang
   const dragAndDrop = activity.type === 'drag-and-drop' && sequence
   const imageURL = protectedResourceURL(round?.image?.url)
   const directions: Direction[] = ['up', 'down', 'left', 'right']
-  const moves = response.filter((step): step is Direction => directions.includes(step as Direction))
+  const moves = response.flatMap(id => {
+    const direction = round?.grid?.moves?.[choices.findIndex(choice => choice.id === id)]
+    return direction && directions.includes(direction as Direction) ? [direction as Direction] : []
+  })
   const position = round?.grid && gridPosition(round.grid.start, round.grid.blocked, moves)
 
   function choose(id: string) {
@@ -55,10 +58,6 @@ function ConfigurableActivity({ activity, language }: { activity: Activity; lang
 
   function checkAnswer() {
     if (!round) return
-    if (round.grid) {
-      setFeedback(position === round.grid.goal ? 'correct' : 'retry')
-      return
-    }
     if (round.answer === undefined) {
       setFeedback('recorded')
       return

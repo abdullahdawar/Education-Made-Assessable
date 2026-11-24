@@ -42,7 +42,7 @@ references, resources, videos and configurable practice activities.
 
 Stable assessment slots belong to a unit. Their version rows store a
 private validated definition plus a content digest. Attempts bind to an
-immutable version, and response rows persist saved and submitted answers
+immutable version, and attempt rows persist saved and submitted answers
 and marking state. Learner records use a hash of a random browser token.
 Progress is computed from durable submissions, and remembered unlocks
 are persisted. Primary keys, foreign keys, unique slots, transactions and
@@ -53,8 +53,8 @@ schema lock and detects changes to migrations already applied.
 The learner cookie is HttpOnly, SameSite Strict, and Secure for non-local
 hosts. Anonymous progress survives refreshes and normal browser restarts.
 Clearing browser data can lose access to that progress. It does not
-transfer between browsers or devices. A nullable future account link in
-the learner model leaves room for account association later.
+transfer between browsers or devices. A future account association can reference the stable learner primary key
+while keeping the assessment history attached to the same learner record.
 
 ## API
 
@@ -179,9 +179,35 @@ migration checksums and matching resource tree, then switch services
 only after validation. The developer script's private database and
 password file never belong in a release artifact.
 
+## Verification results
+
+| Check | Result |
+| --- | --- |
+| Frontend tests, lint and production build | 30 tests passed. Lint and build passed. The production output contains no assessment or combined practice PDFs. |
+| Go tests and go vet | Passed, including the disposable MySQL curriculum and assessment integrations. Run `./scripts/test-db.sh` for a fresh isolated database. |
+| MySQL migration and content import | Fresh migrations, repeat migrations, all 39 course mappings, validating with rollback, double import, conflict rollback, resource restrictions and legacy route removal verified. |
+| Assessment and progression | All four question types, answer confidentiality, learner isolation, autosave/resume, historical versions, timeout behavior and concurrent progression verified. |
+| Browser learning journey | Chrome, Firefox and WebKit passed at 320, 375, 768 and 1440 px on an isolated synthetic course. Tests cover RTL, keyboard and touch input, homework access, repeated Test 1, two distinct submissions and persisted progress after refresh. |
+| Live Grade 1 check | Verified the 13 Mathematics and 12 English units, the initial locked state, seven English and seven Pashto worksheets for the first Mathematics unit, and a successful protected PDF response. |
+| PDF migration | Five automated tests passed. Every one of the 350 extracted pages matched its source render. All 50 teaching-note files retained their original checksum. |
+| Startup and shutdown | Standard profile initialized MySQL and imported the 26-unit bundle. A controlled stop and subsequent start retained the same data. |
+
+[Browser screenshots](screenshots/platform-v2/) show the actual running
+site. Assessment and unlocking screenshots use clearly labelled synthetic
+content. The [Grade 1 Mathematics screenshot](screenshots/platform-v2/grade-1-maths.png)
+shows migrated content in the standard development profile.
+
 ## Release limitations
 
 Historical public answer-key exposure remains an unresolved production
 release blocker. Original combined source PDFs are retained outside
 student-serving roots. The content-specific educator, accessibility and
 Pashto review status is unchanged. No deployment was performed.
+
+Before a production release, investigate and resolve the historical
+exposure through a separately approved security review, audit the
+deployment's static and resource routes, and review the converted
+assessment prompts, scoring, language and accessibility. Publish the
+reviewed assessment versions to make the full existing Grade 1 journeys
+unlockable. Relocate the last Bella source archive only after the open
+QuickTime file is closed, keeping the registered Codex worktree intact.
