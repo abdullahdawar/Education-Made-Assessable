@@ -6,6 +6,7 @@ import {
 import { AdventureHero, ChapterJourney, ChoiceGrid, CountingIllustration } from './LearningWorld'
 import { gradeTheme } from './gradeTheme'
 import type { EnglishPack } from './englishPack'
+import type { SciencePack } from './sciencePack'
 import type { MathsPack } from './mathsPack'
 import { NumberNamesLesson } from './NumberNamesLesson'
 import { numberNamesTitle, chapterNumeral } from './numberNames'
@@ -21,6 +22,8 @@ const MathsLesson = lazy(() => import('./MathsChapter').then(({ MathsLesson }) =
 const MathsGame = lazy(() => import('./MathsChapter').then(({ MathsGame }) => ({ default: MathsGame })))
 const EnglishLesson = lazy(() => import('./EnglishChapter').then(({ EnglishLesson }) => ({ default: EnglishLesson })))
 const EnglishGame = lazy(() => import('./EnglishChapter').then(({ EnglishGame }) => ({ default: EnglishGame })))
+const ScienceLesson = lazy(() => import('./ScienceChapter').then(({ ScienceLesson }) => ({ default: ScienceLesson })))
+const ScienceGame = lazy(() => import('./ScienceChapter').then(({ ScienceGame }) => ({ default: ScienceGame })))
 const ShapeSorter = import.meta.env.DEV
   ? lazy(() => import('./games/ShapeSorter').then((module) => ({ default: module.ShapeSorter })))
   : null
@@ -71,10 +74,11 @@ function Practice({ label, count, kind, language, items, localized }: {
   </ol>
 }
 
-function Lesson({ chapter, counting, numberNames, expanded, english }: { chapter: Chapter; counting: boolean; numberNames: boolean; expanded: boolean; english: boolean }) {
+function Lesson({ chapter, counting, numberNames, expanded, english, science }: { chapter: Chapter; counting: boolean; numberNames: boolean; expanded: boolean; english: boolean; science: boolean }) {
   const [language, setLanguage] = useState<Language>('en')
   const [playing, setPlaying] = useState(false)
   const [literacy, setLiteracy] = useState<EnglishPack>()
+  const [sciencePack, setSciencePack] = useState<SciencePack>()
   const [pack, setPack] = useState<MathsPack>()
   const [packError, setPackError] = useState(false)
   useEffect(() => {
@@ -109,16 +113,31 @@ function Lesson({ chapter, counting, numberNames, expanded, english }: { chapter
     void load()
     return () => { current = false }
   }, [english, chapter.chapterNumber, chapter.name])
-  const localized = (numberNames || expanded || english) && language === 'ps'
+  useEffect(() => {
+    if (!science) return
+    let current = true
+    async function load() {
+      try {
+        const { loadSciencePack } = await import('./sciencePack')
+        const result = await loadSciencePack(chapter.chapterNumber)
+        if (current && result?.title.en === chapter.name) setSciencePack(result)
+      } catch {
+        // The API lesson remains available.
+      }
+    }
+    void load()
+    return () => { current = false }
+  }, [science, chapter.chapterNumber, chapter.name])
+  const localized = (numberNames || expanded || english || science) && language === 'ps'
   const ps = language === 'ps'
   return <>
     <div className="language" role="group" aria-label="Lesson language">
       <button className="control" aria-pressed={language === 'en'} onClick={() => setLanguage('en')}>English</button>
       <button className="control" lang="ps" aria-pressed={language === 'ps'} onClick={() => setLanguage('ps')}>پښتو</button>
     </div>
-    {(counting || numberNames || pack || literacy) && playing && <div className="activity-zone theme-cloud">
+    {(counting || numberNames || pack || literacy || sciencePack) && playing && <div className="activity-zone theme-cloud">
       <Suspense fallback={<p className="notice" role="status" lang={language}>{ps ? 'لوبه پرانیستل کېږي…' : 'Loading game…'}</p>}>
-        {literacy ? <EnglishGame pack={literacy} language={language} /> : pack ? <MathsGame pack={pack} language={language} /> : numberNames ? <NumberExplorer language={language} /> : <CountingAdventure language={language} />}
+        {sciencePack ? <ScienceGame pack={sciencePack} language={language} /> : literacy ? <EnglishGame pack={literacy} language={language} /> : pack ? <MathsGame pack={pack} language={language} /> : numberNames ? <NumberExplorer language={language} /> : <CountingAdventure language={language} />}
       </Suspense>
     </div>}
     <CurriculumResults<Translation> path={`/api/chapters/${chapter.id}/content`} label="lesson content">
@@ -129,7 +148,9 @@ function Lesson({ chapter, counting, numberNames, expanded, english }: { chapter
           <article className="panel reading-panel" lang={language} dir={language === 'ps' ? 'rtl' : 'ltr'}>
             <h2>{lesson?.title ?? (language === 'ps' ? 'لوست' : 'Lesson')}</h2>
             {language === 'ps' && lesson && <p>د پښتو متن د ژبنۍ کتنې لپاره چمتو شوی دی.</p>}
-            {literacy && lesson ? <Suspense fallback={<p role="status">{ps ? 'لوست پرانیستل کېږي…' : 'Loading lesson…'}</p>}>
+            {sciencePack && lesson ? <Suspense fallback={<p role="status">{ps ? 'لوست پرانیستل کېږي…' : 'Loading lesson…'}</p>}>
+              <ScienceLesson pack={sciencePack} language={language} />
+            </Suspense> : literacy && lesson ? <Suspense fallback={<p role="status">{ps ? 'لوست پرانیستل کېږي…' : 'Loading lesson…'}</p>}>
               <EnglishLesson pack={literacy} language={language} />
             </Suspense> : pack && lesson ? <Suspense fallback={<p role="status">{ps ? 'لوست پرانیستل کېږي…' : 'Loading lesson…'}</p>}>
               <MathsLesson pack={pack} language={language} />
@@ -139,7 +160,7 @@ function Lesson({ chapter, counting, numberNames, expanded, english }: { chapter
             {counting && lesson && <CountingIllustration language={language} />}
           </article>
           <aside className="resources" aria-label={localized ? 'د څپرکي سرچینې' : 'Chapter resources'}
-            lang={numberNames || expanded || english ? language : undefined} dir={localized ? 'rtl' : undefined}>
+            lang={numberNames || expanded || english || science ? language : undefined} dir={localized ? 'rtl' : undefined}>
             <Resource title={localized ? 'د لوست یادښتونه' : 'PDF notes'} tone="notes" icon="▤">
               {pdf ? <a href={pdf}>{localized ? 'پښتو یادښتونه پرانیزئ (PDF)' : `Open ${ps ? 'Pashto' : 'English'} notes (PDF)`}</a> : <p>No PDF notes for this language yet.</p>}
             </Resource>
@@ -147,9 +168,9 @@ function Lesson({ chapter, counting, numberNames, expanded, english }: { chapter
               <ChapterVideos chapterId={chapter.id} language={language} />
             </Resource>
             <Resource title={localized ? 'کوچنۍ لوبې' : 'Mini-games'} tone="games" icon="◇">
-              {(counting || numberNames || pack || literacy)
+              {(counting || numberNames || pack || literacy || sciencePack)
                 ? <button className="control" lang={language} disabled={playing} onClick={() => setPlaying(true)}>
-                  {literacy ? (ps ? 'د انګلیسي تمرین پیل کړئ' : literacy.game) : pack ? pack.game[language] : numberNames ? (ps ? 'د شمېرو سپړنه پیل کړئ' : 'Play Number Explorer') : (ps ? 'د شمېرلو لوبه' : 'Play Counting Adventure')}
+                  {sciencePack ? sciencePack.game[language] : literacy ? (ps ? 'د انګلیسي تمرین پیل کړئ' : literacy.game) : pack ? pack.game[language] : numberNames ? (ps ? 'د شمېرو سپړنه پیل کړئ' : 'Play Number Explorer') : (ps ? 'د شمېرلو لوبه' : 'Play Counting Adventure')}
                 </button>
                 : <p>{expanded && !packError ? (ps ? 'لوبه پرانیستل کېږي…' : 'Loading game…') : (localized ? 'لوبه نشته.' : 'No games available yet.')}</p>}
             </Resource>
@@ -231,6 +252,9 @@ function App() {
       } english={
         grade.name === 'Grade 1' && subject.name === 'English'
           && chapter.chapterNumber >= 1 && chapter.chapterNumber <= 12
+      } science={
+        grade.name === 'Grade 1' && subject.name === 'Science'
+          && chapter.chapterNumber >= 1 && chapter.chapterNumber <= 8
       } />}
     </main>
   </div>

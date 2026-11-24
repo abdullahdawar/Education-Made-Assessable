@@ -1,0 +1,255 @@
+{
+  "number": 1,
+  "title": {
+    "en": "Living things and their needs",
+    "ps": "ژوندي موجودات او اړتیاوې"
+  },
+  "game": {
+    "en": "Life detectives",
+    "ps": "د ژوند پلټونکي"
+  },
+  "lesson": {
+    "en": "A goat, a person and a growing plant are living things. A stone and glass have never been alive. Living things grow and need suitable conditions. A moving toy is still a toy. Paper came from a tree, so it is a different example from stone.\nAnimals, including humans, need air, water and suitable food to survive. Think of a goat in a village yard. It breathes air, drinks water and eats food that suits it. Name something a person needs too.",
+    "ps": "وزه، انسان او وده کوونکی بوټی ژوندي دي. ډبره او ښیښه هېڅکله ژوندي نه وو. ژوندي موجودات وده کوي او مناسب شرایط غواړي. خوځېدونکې نانځکه بیا هم ژوندۍ نه ده. کاغذ له ونې جوړېږي، نو د ډبرې په څېر بېلګه نه ده.\nحیوانات او انسانان هوا، اوبو او مناسب خوراک ته اړتیا لري. په انګړ کې وزه هوا اخلي، اوبه څښي او مناسب خوراک خوري."
+  },
+  "diagram": {
+    "en": "The green plant is growing. The stone beside it has never lived.",
+    "ps": "شنه بوټی وده کوي. څنګ ته یې ډبره هېڅکله ژوندۍ نه وه."
+  },
+  "investigation": {
+    "question": {
+      "en": "How can we tell a growing plant and a stone apart?",
+      "ps": "وده کوونکی بوټی او ډبره څنګه سره بېلوو؟"
+    },
+    "steps": {
+      "en": "With an adult, look at a potted plant and a large clean stone. Observe them from the same place on two different days. Look for changes. A change may be too small to notice in that time.",
+      "ps": "له مشر سره ګلدان او پاکه لویه ډبره وګورئ. دوه ورځې یې له هماغه ځایه وګورئ. کېدای شي بدلون ډېر کوچنی وي."
+    },
+    "safety": {
+      "en": "An adult chooses known plants and large samples. Keep soil and plants out of mouths. Avoid touching plants if allergies are a concern. Stay with an adult outdoors.",
+      "ps": "مشر دې پېژندل شوی بوټی او لویه ډبره وټاکي. خاوره او بوټی خولې ته مه وړئ. که حساسیت وي، بوټي ته لاس مه وروړئ. بهر له مشر سره پاتې شئ."
+    },
+    "alternative": {
+      "en": "Use two dated photos chosen by an adult and describe what you can see.",
+      "ps": "د مشر له خوا ټاکل شوي دوه نېټه لرونکي انځورونه وګورئ او خپله کتنه ووایئ."
+    }
+  },
+  "rounds": [
+    {
+      "kind": "sort",
+      "prompt": {
+        "en": "Which is alive?",
+        "ps": "کوم یو ژوندی دی؟"
+      },
+      "choices": [
+        {
+          "en": "Goat",
+          "ps": "وزه"
+        },
+        {
+          "en": "Glass cup",
+          "ps": "د ښیښې پیاله"
+        },
+        {
+          "en": "Stone",
+          "ps": "ډبره"
+        }
+      ],
+      "answer": [
+        0
+      ],
+      "hint": {
+        "en": "Which one grows?",
+        "ps": "کوم یو وده کوي؟"
+      }
+    },
+    {
+      "kind": "sort",
+      "prompt": {
+        "en": "Which has never been alive?",
+        "ps": "کوم یو هېڅکله ژوندی نه و؟"
+      },
+      "choices": [
+        {
+          "en": "Growing mint plant",
+          "ps": "د نعناع بوټی"
+        },
+        {
+          "en": "Hen",
+          "ps": "چرګه"
+        },
+        {
+          "en": "Rock",
+          "ps": "ډبره"
+        }
+      ],
+      "answer": [
+        2
+      ],
+      "hint": {
+        "en": "Think about the rock.",
+        "ps": "ډبرې ته فکر وکړئ."
+      }
+    },
+    {
+      "kind": "match",
+      "prompt": {
+        "en": "A goat and a person both breathe what?",
+        "ps": "وزه او انسان دواړه څه تنفس کوي؟"
+      },
+      "choices": [
+        {
+          "en": "Air",
+          "ps": "هوا"
+        },
+        {
+          "en": "Soil",
+          "ps": "خاوره"
+        },
+        {
+          "en": "Sand",
+          "ps": "شګه"
+        }
+      ],
+      "answer": [
+        0
+      ],
+      "hint": {
+        "en": "Think about your next breath.",
+        "ps": "خپل تنفس ته پام وکړئ."
+      }
+    },
+    {
+      "kind": "observe",
+      "prompt": {
+        "en": "A toy car moves when pushed. What does moving tell us?",
+        "ps": "نانځکه په ټېل خوځېږي. خوځېدل څه ښيي؟"
+      },
+      "choices": [
+        {
+          "en": "That it is breathing",
+          "ps": "چې ساه اخلي"
+        },
+        {
+          "en": "That motion alone does not show it is alive",
+          "ps": "یوازې خوځښت ژوند نه ښيي"
+        },
+        {
+          "en": "That it needs food",
+          "ps": "چې خوراک غواړي"
+        }
+      ],
+      "answer": [
+        1
+      ],
+      "hint": {
+        "en": "Things can be pushed without being alive.",
+        "ps": "بې ژونده شی هم په ټېل خوځېږي."
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "prompt": {
+        "en": "Draw a goat and a stone. Label the living thing. What helped you decide?",
+        "ps": "وزه او ډبره رسم کړئ. ژوندی موجود ونوموئ. خپل دلیل ووایئ."
+      },
+      "codes": [
+        "1Bp.01"
+      ],
+      "practical": false
+    },
+    {
+      "prompt": {
+        "en": "Sort these into two groups: hen, mango tree, glass and stone. Name your groups.",
+        "ps": "چرګه، د ام ونه، ښیښه او ډبره په دوو ډلو ووېشئ. ډلې ونوموئ."
+      },
+      "codes": [
+        "1TWSc.01",
+        "1Bp.01"
+      ],
+      "practical": false
+    },
+    {
+      "prompt": {
+        "en": "Draw food and water for a person. Name another thing people need to survive.",
+        "ps": "د انسان خوراک او اوبه رسم کړئ. یوه بله اړتیا یې ووایئ."
+      },
+      "codes": [
+        "1Bp.02"
+      ],
+      "practical": false
+    },
+    {
+      "prompt": {
+        "en": "Compare a moving toy and a goat. Explain why moving is not enough to tell if something lives.",
+        "ps": "خوځېدونکې نانځکه او وزه پرتله کړئ. تشریح کړئ چې یوازې خوځښت ولې د ژوند نښه نه ده."
+      },
+      "codes": [
+        "1Bp.01"
+      ],
+      "practical": false
+    },
+    {
+      "prompt": {
+        "en": "Draw what you see on the first and second day of the plant-and-stone activity. Label one detail in each drawing.",
+        "ps": "د بوټي او ډبرې د لومړۍ او دویمې ورځې کتنه رسم او نښه کړئ."
+      },
+      "codes": [
+        "1TWSc.01"
+      ],
+      "practical": true
+    },
+    {
+      "prompt": {
+        "en": "A hen and a child both need three things to survive. Draw or list all three.",
+        "ps": "چرګه او ماشوم د ژوند لپاره درې شیانو ته اړتیا لري. هغه رسم یا ولیکئ."
+      },
+      "codes": [
+        "1Bp.02"
+      ],
+      "practical": false
+    },
+    {
+      "prompt": {
+        "en": "Explain how a toy car and a stone are alike and how they are different.",
+        "ps": "د نانځکې موټر او ډبرې یوه ورته والی او یو توپیر ووایئ."
+      },
+      "codes": [
+        "1TWSc.01"
+      ],
+      "practical": false
+    },
+    {
+      "prompt": {
+        "en": "Which is living, a chick or a glass bowl? Explain one clue.",
+        "ps": "چرګوړی که د ښیښې کاسه، کوم ژوندی دی؟ یوه نښه ووایئ."
+      },
+      "codes": [
+        "1Bp.01"
+      ],
+      "practical": false
+    },
+    {
+      "prompt": {
+        "en": "What do a cat and a child both need to survive? Include three needs.",
+        "ps": "پیشو او ماشوم د ژوند لپاره کومې درې اړتیاوې لري؟"
+      },
+      "codes": [
+        "1Bp.02"
+      ],
+      "practical": false
+    },
+    {
+      "prompt": {
+        "en": "Sort a jasmine plant, a stone, a dog and a metal spoon. Explain why your groups make sense.",
+        "ps": "د یاسمین بوټی، ډبره، سپی او فلزي کاشوغه ډلبندي کړئ او دلیل ووایئ."
+      },
+      "codes": [
+        "1TWSc.01",
+        "1Bp.01"
+      ],
+      "practical": false
+    }
+  ]
+}
